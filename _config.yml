@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: aksh.ai| Data Science, Business and Strategy
+title: aksh.ai | Data Science, Business and Strategy
 email: mail@aksh.ai
 description: >- # this means to ignore newlines until "baseurl:"
   This is Akshay Regulagedda's personal blog. I lead global data-science teams during weekdays. During weekends, when I am not hanging out with wife and daughter, I try to collate 
