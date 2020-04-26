@@ -15,7 +15,7 @@ He has 15+ years of experience in utilities, real-estate, governmental services,
 Yes, he is very proud of that very clever pun between his real name and the name of this blog. 
 
 ### Blog Resources
-#### Overall Blog
+#### 1. Overall Blog
 Hosted on [GitHub Pages](https://pages.github.com) using [jekyll][jekyll-organization] / [minima](https://github.com/jekyll/minima)
 
 You can find the source code for Jekyll at GitHub:
@@ -26,7 +26,7 @@ You can find the source code for Jekyll at GitHub:
 
 _Coming up_ : Brief how-to on setting up your own blog/ custom domain quickly on GitHub Pages. It can be confusing. 
 
-### Individual Data Apps
+#### 2. Individual Data Apps
 Chances are that you've come here after seeing a data-app that Akshay hand-crafted somewhere. Each of the sub-sites are their respective GitHub projects, mostly written in Python and hosted in Heroku. 
 
 If you haven't seen any data-app as yet, don't worry. You're waay ahead of the curve. They're being brewed. 
