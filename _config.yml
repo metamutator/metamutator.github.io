@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: aksh.ai | Data Science, Strategy and Design
+title: aksh.ai | Strategy through Data-Science and Design
 email: mail@aksh.ai
 description: >- # this means to ignore newlines until "baseurl:"
-  The interface between data-science and organizational strategy via design (and occassionally, music) Published in two languages. దత్తాంశ శాస్త్రం, వ్యూహరచన 
+Executing organizational strategy through data-science with design. Published in two languages. దత్తాంశ శాస్త్రం రూప నిర్ణేతగా నిర్వహణశీల వ్యూహరచన. ద్విభాషా ప్రచురణ.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.aksh.ai" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aksh_ai
@@ -31,7 +31,7 @@ github_username:  metamutator
 theme: minima
 plugins:
   - jekyll-feed
-
+  - jekyll-seo-tag
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
