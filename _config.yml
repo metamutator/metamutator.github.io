@@ -21,7 +21,7 @@
 title: aksh.ai | Strategy through Data-Science and Design
 email: mail@aksh.ai
 description: >- # this means to ignore newlines until "baseurl:"
-  Executing organizational strategy through data-science with design. Published in two languages. దత్తాంశ శాస్త్రం రూప నిర్ణేతగా నిర్వహణశీల వ్యూహరచన. ద్విభాషా ప్రచురణ.
+  Exploring strategy through data-science with design. Published in two languages. దత్తాంశ శాస్త్రం రూప నిర్ణేతగా (నిర్వహణశీల) వ్యూహరచన అంశాలపై సోధన. ద్విభాషా ప్రచురణ.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.aksh.ai" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aksh_ai
