@@ -5,16 +5,18 @@ permalink: /about/
 ---
 
 ## This Blog
-Product strategy and implementation are being disrupted by recent advances in data-science. You will be left out unless you understand both, data-science and business. This blog explores concepts at the interface of both fields.
+This blog explores how business outcomes can be positively shaped through well-crafted data-science products. 
 
 ## The Author
-Over the last 15+ years, Akshay has led global teams building compelling tech products, some of which you probably have used already if you have paid tax in Singapore, bought phones in Singapore or have watched terrestrial television in Singapore or Malaysia. Over the last 2.5 years, he has been focussed on data-science products in particular. 
+Over the last 15+ years, I have led global teams building compelling tech products. If you have paid tax in Singapore, bought phones in Singapore or have watched terrestrial television in Singapore or Malaysia, you have used products I have architected or designed. Since 2015, I have been teaching case-analysis to MBA students. In the last 2.5 years, I have specialized particularly in crafting products using data-science techniques, such as AI, Machine Learning or optimisation.
 
-On weekends, he plays with his daughter and wife, while exploring blues riffs on his two guitars. 
+On weekends, I play with my daughter and wife, while exploring blues riffs on my two guitars. 
 
-He has 15+ years of experience in utilities, real-estate, governmental services, healthcare, business studies and various other industries. He has a Bachelors of Computing from NUS and an MBA from NTU and IESE. He is also doing an MS in Analytics from Georgia Tech in spare time. Full resume at [LinkedIn](https://www.linkedin.com/in/akshr/).
+I have a Bachelors of Computing from NUS and an MBA from NTU and IESE. I am also doing an MS in Analytics from Georgia Tech in my spare time. Full resume at [LinkedIn](https://www.linkedin.com/in/akshr/).
 
-Yes, he is very proud of that very clever pun between his real name and the name of this blog. 
+Yes, extremely  proud of that very clever pun between my real name, Akshay, and the name of this blog. 
+
+I speak five languages fluently and will occassionally blog in languages other than English.
 
 ### Blog Resources
 #### 1. Overall Blog
@@ -27,8 +29,3 @@ You can find the source code for Jekyll at GitHub:
 [jekyll-organization]: https://github.com/jekyll
 
 _Coming up_ : Brief how-to on setting up your own blog/ custom domain quickly on GitHub Pages. It can be confusing. 
-
-#### 2. Individual Data Apps
-Chances are that you've come here after seeing a data-app that Akshay hand-crafted somewhere. Each of the sub-sites are their respective GitHub projects, mostly written in Python and hosted in Heroku. 
-
-If you haven't seen any data-app as yet, don't worry. You're waay ahead of the curve. They're being brewed. 
