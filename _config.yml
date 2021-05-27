@@ -18,10 +18,10 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: aksh.ai | Strategy, Data-Science and Design
+title: aksh.ai | Business Strategy with Data Science
 email: mail@aksh.ai
 description: >- # this means to ignore newlines until "baseurl:"
-  On strategy, data-science and design. Published in two languages. దత్తాంశ శాస్త్రంతో వ్యూహరచన. ద్విభాషా ప్రచురణ.
+  On generating business outcomes through data-science and design. Some travel writing too, may be. Published in two languages. దత్తాంశ శాస్త్రంతో వ్యూహరచన. ద్విభాషా ప్రచురణ.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "http://www.aksh.ai" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: aksh_ai
