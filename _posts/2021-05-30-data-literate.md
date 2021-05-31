@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Towards a Data-literate Business Strategy"
+title:  "Data-literate Business Strategy"
 date:   2021-05-30 16:37:22 +0800
 categories: data-science, business, intro
 ---
