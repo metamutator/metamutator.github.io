@@ -2,7 +2,7 @@
 layout: post
 title:  "Data-literate Business Strategy"
 date:   2021-05-30 16:37:22 +0800
-categories: data-science, business, intro
+categories: data-science business intro
 ---
 Gartner unfortunately doesn't have a hype cycle for the term 'data-science', but raise your hand if this strikes close: they have suggested that whilst business leaders "understand the importance of using data and analytics" in their business, they often underestimate the complexities involved, and end up missing opportunities. ([Trend #7](https://www.gartner.com/smarterwithgartner/gartner-top-10-data-and-analytics-trends-for-2021/)) If there's someone who can "[speak data](https://www.gartner.com/smarterwithgartner/do-you-need-a-chief-data-officer/)" is involved in strategy, business value can be consistently increased by a factor of 2.6x. Essentially: data and analytics are moving from secondary focus to being a core function.
 

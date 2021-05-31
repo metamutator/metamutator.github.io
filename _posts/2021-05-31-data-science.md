@@ -2,7 +2,7 @@
 layout: post
 title:  "Data-Science: An old new-science"
 date:   2021-05-31 16:37:22 +0800
-categories: data-science, business, intro
+categories: data-science business intro
 ---
 ### Executive Summary
 Data-science is the science of studying and improving methods of analysing and producing data. It draws upon 50 years' of developments in computer science, statistics and related fields to generate immediate value for business.
@@ -30,7 +30,7 @@ A few elements stand out from this definition. The first, is that it is a _scien
 
 ### Overlap with Business Strategy
  <img src="/img/porter.jpg" width="579"/>
- 
+
  *Picture of me in Raffles Hotel starting at a picture of Strategy guru Michael Porter when he stayed at Raffles Hotel*
 
 The patron saint of business strategy (as my old Strategy professor used to call him) Michael Porter (_hand on heart_) defined "competitive advantage" as thus:
