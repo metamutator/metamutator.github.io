@@ -30,9 +30,10 @@ A few elements stand out from this definition. The first, is that it is a _scien
 
 ### Overlap with Business Strategy
  <img src="/img/porter.jpg" width="579"/>
+ 
  *Picture of me in Raffles Hotel starting at a picture of Strategy guru Michael Porter when he stayed at Raffles Hotel*
 
-The patron saint of business strategy (as my old Strategy professor used to call himm) Michael Porter (_hand on heart_) defined "competitive advantage" as thus:
+The patron saint of business strategy (as my old Strategy professor used to call him) Michael Porter (_hand on heart_) defined "competitive advantage" as thus:
 > **Competitive Advantage**: "If your business can produce at a lower cost than can competitors, or if it can deliver more perceived value than can competitors, or a mix of the two, then you have a competitive advantage." (p 183, _Competitive Advantage_)
 
 The bottomline is this: if you can measure your business outcome, data-science can help. Incidentally, as I will explain in further posts, you also need that unmeasurable _data-culture_ as well to reach your goal, but as a start: data-science is all about improving measurable business outcomes through a combination of statistics, computation and design.
