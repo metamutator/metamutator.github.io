@@ -12,7 +12,6 @@ That there's - wouldn't want to call _hype_, but let's just say _heightened enth
 
 This is a data-obsessed blog, so we don't just drop assertions into thin air. We look at data. As you can see, between 2000 and 2019, a lot more books have been mentioning the terms "analytics", "data science", "artificial intelligence", "machine learning", "deep learning" than before.
 <iframe name="ngram_chart" src="https://books.google.com/ngrams/interactive_chart?content=data+science%2Cartificial+intelligence%2Cmachine+learning%2Cdeep+learning%2C+analytics&year_start=2000&year_end=2019&corpus=26&smoothing=6&direct_url=t1%3B%2Cdata+science%3B%2Cc0%3B.t1%3B%2Cartificial+intelligence%3B%2Cc0%3B.t1%3B%2Cmachine+learning%3B%2Cc0%3B.t1%3B%2Cdeep+learning%3B%2Cc0%3B.t1%3B%2Canalytics%3B%2Cc0" width=900 height=500 marginwidth=0 marginheight=0 hspace=0 vspace=0 frameborder=0 scrolling=no></iframe>
-
 ### The Old New Science
 You would notice that the term "analytics" has the highest traction. The term "data-science" has the least; in fact, if you expand the search parameters to before 2000, you'll find... close to no usage. There's a reason: the earliest usage of the term in the contemporary sense only dates to 2001, to a [paper](https://www.jstor.org/stable/1403527?seq=1) written by William S Cleveland in the _International Statistical Review_.
 
@@ -30,9 +29,8 @@ A better attempt comes from David Donoho's [speech](http://courses.csail.mit.edu
 A few elements stand out from this definition. The first, is that it is a _science_ - it has its own norms and areas distinct from others. More importantly, it is about _improvement_ but in an _evidence-based_, scientific manner. You collect data, process data, understand how the data is being generated, propose improvements to those methods, and then as a final step, _measure_ how the improvements have been faring.
 
 ### Overlap with Business Strategy
-| ![Image](/img/porter.jpg) | 
-|:--:| 
-| *Picture of me in Raffles Hotel starting at a picture of Strategy guru Michael Porter when he stayed at Raffles Hotel* |
+ <img src="/img/porter.jpg" width="1158"/>
+*Picture of me in Raffles Hotel starting at a picture of Strategy guru Michael Porter when he stayed at Raffles Hotel*
 
 The patron saint of business strategy (as my old Strategy professor used to call himm) Michael Porter (_hand on heart_) defined "competitive advantage" as thus:
 > **Competitive Advantage**: "If your business can produce at a lower cost than can competitors, or if it can deliver more perceived value than can competitors, or a mix of the two, then you have a competitive advantage." (p 183, _Competitive Advantage_)
