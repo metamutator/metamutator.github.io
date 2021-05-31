@@ -12,20 +12,19 @@ Over the last 15+ years, I have led global teams building compelling tech produc
 
 On weekends, I play with my daughter and wife, while exploring blues riffs on my two guitars. 
 
-I have a Bachelors of Computing from NUS and an MBA from NTU and IESE. I am also doing an MS in Analytics from Georgia Tech in my spare time. Full resume at [LinkedIn](https://www.linkedin.com/in/akshr/).
+I have a Bachelors of Computing from NUS and an MBA from NTU and IESE. I am also doing an MS in Analytics from Georgia Tech in my spare time. Full resume at [LinkedIn](https://www.linkedin.com/in/akshr/). I'm currently available for work.
 
-Yes, extremely  proud of that very clever pun between my real name, Akshay, and the name of this blog. 
+Yes, extremely proud of that very clever pun between my given name, Akshay, and the name of this blog. 
 
 I speak five languages fluently and will occassionally blog in languages other than English.
 
 ### Blog Resources
 #### 1. Overall Blog
 Hosted on [GitHub Pages](https://pages.github.com) using [jekyll][jekyll-organization] / [minima](https://github.com/jekyll/minima)
+Scheduled upgrade soon. (Yes, even this blog has a roadmap and tech-sprints for upgrades tracked via kanban boards.)
 
 You can find the source code for Jekyll at GitHub:
 [jekyll][jekyll-organization] /
 [jekyll](https://github.com/jekyll/jekyll)
 
-[jekyll-organization]: https://github.com/jekyll
-
-_Coming up_ : Brief how-to on setting up your own blog/ custom domain quickly on GitHub Pages. It can be confusing. 
+[jekyll-organization]: https://github.com/jekyll 
