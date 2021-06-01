@@ -7,7 +7,7 @@ categories: data-science business intro
 ### Executive Summary
 Data-science is the science of studying and improving methods of analysing and producing data. It draws upon 50 years' of developments in computer science, statistics and related fields to generate immediate value for business.
 
-### Not Hype, but Heightened Enthusiasm
+### "Heightened Enthusiasm"
 That there's - wouldn't want to call _hype_, but let's just say _heightened enthusiasm_ - in analytics/ data-science/ artificial intelligence lately is to state the obvious. 
 
 This is a data-obsessed blog, so we don't just drop assertions into thin air. We look at data. As you see data from [Google's ngram viewer](https://books.google.com/ngrams/graph?content=data+science%2Cartificial+intelligence%2Cmachine+learning%2Cdeep+learning%2Canalytics&year_start=1990&year_end=2019&corpus=26&smoothing=4), between 2000 and 2019, a lot more books have been mentioning the terms "analytics", "data science", "artificial intelligence", "machine learning", "deep learning" than before.
@@ -15,28 +15,20 @@ This is a data-obsessed blog, so we don't just drop assertions into thin air. We
 ### The Old New Science
 You would notice that the term "analytics" has the highest traction. The term "data-science" has the least; in fact, if you expand the search parameters to before 2000, you'll find... close to no usage. There's a reason: the earliest usage of the term in the contemporary sense only dates to 2001, to a [paper](https://www.jstor.org/stable/1403527?seq=1) written by William S Cleveland in the _International Statistical Review_.
 
-The term may be new, but the _notion_ of data-science isn't new. Cleveland's formulation worked upon (among others) John Tukey's seminal "[The Future of Data Analysis](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-33/issue-1/The-Future-of-Data-Analysis/10.1214/aoms/1177704711.full)" first published in 1962, essentially making the modern _concept_ at least 50 years old.
+Thing is, the _notion_ of data-science isn't new. In fact, it is a catch-all term that encapsulates _all_ of the terms above it into a single whole. Cleveland's 2001 formulation worked upon (among others) John Tukey's seminal "[The Future of Data Analysis](https://projecteuclid.org/journals/annals-of-mathematical-statistics/volume-33/issue-1/The-Future-of-Data-Analysis/10.1214/aoms/1177704711.full)" first published in 1962, essentially making the modern _concept_ at least 50 years old.
 
 ### So What Is It?
-Unfortunately, there's more confusion in this regard, with inconsistencies across the board. There's snark:
+Unfortunately, there's more confusion in this regard, with inconsistencies across the board. Even big firms get it wrong; Oracle, for instance, [calls data-science a subset of AI](https://www.oracle.com/sg/data-science/what-is-data-science/), which is exactly _inverse_ of what it is (data-science does more than just AI). Even Microsoft's [Team Data Science Process](https://docs.microsoft.com/en-us/azure/machine-learning/team-data-science-process/lifecycle) is... well not wrong, but is heavily biased towards a subset of data-science applications involving predictive modelling, among others. For instance,the most valuable data-science project I led _did not_ have feature engineering.
+
+Then there's snark:
 > **Data Scientist (n.)**: Person who is better at statistics than any software engineer and better at software engineering than any statistician.
 
-This isn't necessarily untrue, but it isn't _complete_: it obscures a lot more abou data-science than it reveals. Furthermore, it doesn't explain why data-science is so useful for strategy formulation or business outcomes.
+Funny. This isn't necessarily untrue, but it isn't _complete_: it obscures a lot more about data-science than it reveals. Furthermore, it doesn't explain why data-science is so useful for strategy formulation or business outcomes.
 
-A better attempt comes from David Donoho's [speech](http://courses.csail.mit.edu/18.337/2015/docs/50YearsDataScience.pdf) at the Tukey Centennial workshop in 2015. Data-science is said to be the following:
+Time to clear away misconceptions. David Donoho's [speech](http://courses.csail.mit.edu/18.337/2015/docs/50YearsDataScience.pdf) at the Tukey Centennial workshop in 2015 offers the following definition:
 > **Data-science**: The science of learning from data. Data-science studies the methods involved in the analysis and processing of data and proposes technology to improve methods in an evidence-based manner.
 
 A few elements stand out from this definition. The first, is that it is a _science_ - it has its own norms and areas distinct from others. More importantly, it is about _improvement_ but in an _evidence-based_, scientific manner. You collect data, process data, understand how the data is being generated, propose improvements to those methods, and then as a final step, _measure_ how the improvements have been faring.
-
-### Overlap with Business Strategy
- <img src="/img/porter.jpg" width="579"/>
-
- *Picture of me in Raffles Hotel starting at a picture of Strategy guru Michael Porter when he stayed at Raffles Hotel*
-
-The patron saint of business strategy (as my old Strategy professor used to call him) Michael Porter (_hand on heart_) defined "competitive advantage" as thus:
-> **Competitive Advantage**: "If your business can produce at a lower cost than can competitors, or if it can deliver more perceived value than can competitors, or a mix of the two, then you have a competitive advantage." (p 183, _Competitive Advantage_)
-
-The bottomline is this: if you can measure your business outcome, data-science can help. Incidentally, as I will explain in further posts, you also need that unmeasurable _data-culture_ as well to reach your goal, but as a start: data-science is all about improving measurable business outcomes through a combination of statistics, computation and design.
 
 ### Elements of Data-Science
 So what does this fabled set of tools entail? Data-science may be said to consist of the following:
@@ -50,6 +42,18 @@ So what does this fabled set of tools entail? Data-science may be said to consis
     - _Predictive Modelling_ (Modern Machine Learning etc): Methods constructed which predict well over a specific concrete dataset   
 5. **Data Visualization and Presentation**: Explaining data-science's methods and results is an important element of the overall setup. Data visualizations encompass a vast range, from simple graphs, to complex dashboards or business presentations. This is where modern design concepts such as design-thinking come to play.
 6. **Science about Data Science**: Data-science doesn't end with generating results, analyses or even tools (dashboards or otherwise).  In fact, I would argue that this would be the _starting step_. For, the data-science principles one applies to business functions - measurement, analysis, improvement - can and must be applied to data-science tools themselves. That is to say, if data-science is about improving measurable business outcomes, then the _data-science tools themselves_ can be improved upon as well. Appreciating this nuance and applying it is, I believe, the single biggest element in success of data-science engagements.
+
+### Overlap with Business Strategy
+Now you'd say: alright kiddo, data-science has multiple elements. In fact, may be you're already thinking: gee, I'd like a good dashboard or two for myself. But what does it have to do with strategy. Two word answer: competitive advantage.
+
+ <img src="/img/porter.jpg" width="579"/>
+
+ *Picture of me in Raffles Hotel starting at a picture of Strategy guru Michael Porter when he stayed at Raffles Hotel*
+
+The patron saint of business strategy (as my old Strategy professor used to call him) Michael Porter (_hand on heart_) defined "competitive advantage" as thus:
+> **Competitive Advantage**: "If your business can produce at a lower cost than can competitors, or if it can deliver more perceived value than can competitors, or a mix of the two, then you have a competitive advantage." (p 183, _Competitive Advantage_)
+
+If you can measure your business outcome, data-science can help. Data-science can help find new markets, chase new revenue, make your firm produce things faster, find insights you haven't heard before and much more. The real advantage, though, is how it give you _competitive advantage_ for you, because ultimately, you're the true owner of your own data. Insights from your own data tracked in a systematic manner can give you agility, initiative and innovation. And for that, you need to cultivate  that unmeasurable _data-culture_ in your teams.
 
 ### Conclusion
 So there you have it. Data-science, the science of improving measurable outcomes, has a vast range of activities and elements embedded in it. Not all of them are sequential; indeed, in my experience, the best projects actually perform many of these elements simultaneously. Businesses can harness its full potential only when they can execute _all_ of these elements, while contributing towards a cultural change within its primary resource, teams.
