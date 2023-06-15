@@ -2,7 +2,7 @@
 title: 'Bonjour Tout Le Monde'
 date: '2023-06-15'
 categories: ['bonjour-tout-le-monde', 'test', 'hello-world']
-description: 'This is a test post that renders R Markdown.'
+description: 'This is a test post that renders R Markdown and at great expense.'
 execute: 
   message: false
   warning: false
