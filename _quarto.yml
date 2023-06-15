@@ -20,6 +20,9 @@ website:
       - icon: rss
         href: blog.xml
   google-analytics: G-N0W83S6B2J
+  comments: 
+    giscus: 
+      repo: metamutator/metamutator.github.io
   # cookie-consent: true
 
 format:
