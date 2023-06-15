@@ -1,0 +1,15 @@
+---
+title: "తెలుగులో టపాలు"
+listing:
+  contents: posts/telugu
+  sort: "date desc"
+  type: grid
+  categories: true
+  sort-ui: true
+  filter-ui: true
+  fields: [date, title, image, reading-time, description, categories]
+  feed: true
+  date-format: "DD MMM YYYY"
+page-layout: full
+title-block-banner: false
+---

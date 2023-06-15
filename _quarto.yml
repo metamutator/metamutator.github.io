@@ -1,0 +1,30 @@
+project:
+  type: website
+
+website:
+  title: "aksh.ai"
+  site-url: https://aksh.ai
+  description: "Designing Strategy Through Data"
+  navbar:
+    right:
+      - text: About
+        href: about.qmd
+      - icon: mastodon
+        href: https://social.vivaldi.net/@cydonian
+      - icon: linkedin
+        href: https://www.linkedin.com/in/akshr/
+      - icon: instagram
+        href: https://www.instagram.com/metamutator/
+      - icon: github
+        href: https://github.com/metamutator
+      - icon: rss
+        href: blog.xml
+  google-analytics: G-N0W83S6B2J
+  # cookie-consent: true
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    css: styles.css

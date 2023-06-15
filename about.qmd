@@ -1,0 +1,25 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: mastodon
+      text: Mastodon
+      href: https://social.vivaldi.net/@cydonian
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/akshr/ 
+    - icon: github
+      text: Github
+      href: https://github.com/metamutator
+
+---
+
+Interests in how tech, culture and society intersect. Former consultant. Recovering civil servant. Aspiring polymath. Ask me about how to use data-science/ AI to generate carbon savings. I speak for myself here, not my employer.
+
+Degrees in Computing, MBA (Strategy) and an MS in Analytics. Indian and Singaporean. 
+
+Will update the stock images here in a bit.
+
+I speak five languages - English, తెలుగు, हिंदी, Français and Español. Will blog in at least two.
