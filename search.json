@@ -1,0 +1,72 @@
+[
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/telugu/నమస్కారం/టపా.html",
+    "href": "posts/telugu/నమస్కారం/టపా.html",
+    "title": "తెలుగులో టపాలు",
+    "section": "",
+    "text": "తెలుగు దేల యన్న దేశంబు తెలుగేను.\nమా తెలుగు తల్లికి మల్లె పూదండ. మా కన్న తల్లికి మంగాళ హారతులు.\n\n\nహవాయి భౌగోళిక పరిస్థితి\nఇప్పుడు పేసిఫిక్ మహా సముద్రములోని హవాయి దీవుల గురించి తెలుసుకుందాము. ముఖ్యంగా వాటి భౌగోళిక పరిస్థితి: భూగోళం అంతటికీ అత్యంత సుదీర్ఘమయిన ద్వీప సమూహం హవాయి. ఈ ద్వీప సమూహంలో ఎనిమిది ద్వీపాలు ఉన్నాయి. ఈ ద్వీప సమూహం మొత్తం పొడవు 2400 కిలోమీటర్లు. కిలియా అగ్నిపర్వతపు లావా ప్రవాహాల వలన ఈ ద్వీపాల వైశాల్యం ఎప్పటికప్పుడు పెరుగుతూనే ఉంది. ఈస్టర్ ద్వీపాన్ని మినహాయిస్తే ప్రధాన భూభాగాలకు అత్యంత దూరంగా ఉన్న ద్వీపం ఇది. తనలోని ప్రత్యేక భౌగోళిక స్థితిగతుల వలన వైవిధ్యభరితమయిన వృక్ష, జీవజాతులకు హవాయి నెలవయ్యింది. హవాయిలో ఎన్నో దీవులు ఉండగా, అతి పెద్ద దీవులలో ఏడవ స్థానంలో Figure 1 దీవి ఉన్నది. ఫోటోలో నిర్మానుషంగా కనిపించినా, ఈ దీవిని రోబిన్ సన్ కుటుంబం రెండు తరాల క్రితం కేవలం $10,000కే కొనేసింది.\n\n\n\nFigure 1: నిహావు"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/bonjour-tout-le-monde/bonjour.html",
+    "href": "posts/bonjour-tout-le-monde/bonjour.html",
+    "title": "This is a dummy blog post.",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nThis is inline code plus a small code chunk.\n\nlibrary(tidyverse)\n\nggplot(mpg) +\n  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) \n\n\n\n\n\n\n\n\nTransforming OLS estimatesMaximizing likelihood\n\n\n\n\nCode\npreds_lm %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  theme_minimal(base_size = 12) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\nCode\nglm.mod &lt;- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)\n\npreds &lt;- dat %&gt;% \n  mutate(\n    prob.fit = glm.mod$fitted.values,\n    prediction = if_else(prob.fit &gt; 0.5, 'male', 'female'),\n    correct = if_else(sex == prediction, 'correct', 'incorrect')\n  )\n\n\npreds %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  theme_minimal(base_size = 10) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\n\n\\[\n\\int_0^1 f(x) \\ dx\n\\]\n\n\n\n\n\n\n\n\ngeom_density(\n  mapping = NULL,\n  data = NULL,\n  stat = \"density\",\n  position = \"identity\",\n  ...,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE,\n  outline.type = \"upper\"\n)\n\n\nstat_density(\n  mapping = NULL,\n  data = NULL,\n  geom = \"area\",\n  position = \"stack\",\n  ...,\n  bw = \"nrd0\",\n  adjust = 1,\n  kernel = \"gaussian\",\n  n = 512,\n  trim = FALSE,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE\n)\n\n\n\n\n\n\n\nggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
+  },
+  {
+    "objectID": "posts/bonjour-tout-le-monde/bonjour.html#merriweather",
+    "href": "posts/bonjour-tout-le-monde/bonjour.html#merriweather",
+    "title": "This is a dummy blog post.",
+    "section": "",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nThis is inline code plus a small code chunk.\n\nlibrary(tidyverse)\n\nggplot(mpg) +\n  geom_jitter(aes(cty, hwy), size = 4, alpha = 0.5) \n\n\n\n\n\n\n\n\nTransforming OLS estimatesMaximizing likelihood\n\n\n\n\nCode\npreds_lm %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  theme_minimal(base_size = 12) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\nCode\nglm.mod &lt;- glm(sex ~ body_mass_g + bill_length_mm + species, family = binomial, data = dat)\n\npreds &lt;- dat %&gt;% \n  mutate(\n    prob.fit = glm.mod$fitted.values,\n    prediction = if_else(prob.fit &gt; 0.5, 'male', 'female'),\n    correct = if_else(sex == prediction, 'correct', 'incorrect')\n  )\n\n\npreds %&gt;% \n  ggplot(aes(body_mass_g, bill_length_mm, col = correct)) +\n  geom_jitter(size = 4, alpha = 0.6) +\n  facet_wrap(vars(species)) +\n  scale_x_continuous(breaks = seq(3000, 6000, 1000)) +\n  scale_color_manual(values = c('grey60', thematic::okabe_ito(3)[3])) +\n  theme_minimal(base_size = 10) +\n  theme(\n    legend.position = 'top', \n    panel.background = element_rect(color = 'black'),\n    panel.grid.minor = element_blank()\n  ) +\n  labs(\n    x = 'Body mass (in g)',\n    y = 'Bill length (in mm)'\n  )\n\n\n\n\n\n\n\n\n\n\n\\[\n\\int_0^1 f(x) \\ dx\n\\]"
+  },
+  {
+    "objectID": "posts/bonjour-tout-le-monde/bonjour.html#columns",
+    "href": "posts/bonjour-tout-le-monde/bonjour.html#columns",
+    "title": "This is a dummy blog post.",
+    "section": "",
+    "text": "geom_density(\n  mapping = NULL,\n  data = NULL,\n  stat = \"density\",\n  position = \"identity\",\n  ...,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE,\n  outline.type = \"upper\"\n)\n\n\nstat_density(\n  mapping = NULL,\n  data = NULL,\n  geom = \"area\",\n  position = \"stack\",\n  ...,\n  bw = \"nrd0\",\n  adjust = 1,\n  kernel = \"gaussian\",\n  n = 512,\n  trim = FALSE,\n  na.rm = FALSE,\n  orientation = NA,\n  show.legend = NA,\n  inherit.aes = TRUE\n)"
+  },
+  {
+    "objectID": "posts/bonjour-tout-le-monde/bonjour.html#margin-captions",
+    "href": "posts/bonjour-tout-le-monde/bonjour.html#margin-captions",
+    "title": "This is a dummy blog post.",
+    "section": "",
+    "text": "ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "aksh.ai",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nThis is a dummy blog post.\n\n\n4 min\n\n\n\nbonjour-tout-le-monde\n\n\ntest\n\n\nhello-world\n\n\n\nThis is a test post that renders R Markdown.\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n1 min\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\n\n\n\n\nతెలుగులో టపాలు\n\n\n1 min\n\n\n\nbonjour-tout-le-monde\n\n\nతెలుగు\n\n\nhello-world\n\n\n\nఈ టపా తెలుగులో వ్ర్రాయబడినది.\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\n\n\n\n\nWelcome To My Blog\n\n\n1 min\n\n\n\nnews\n\n\n\n\n\n\n\n12 Jun 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Interests in how tech, culture and society intersect. Former consultant. Recovering civil servant. Aspiring polymath. Ask me about how to use data-science/ AI to generate carbon savings. I speak for myself here, not my employer.\nDegrees in Computing, MBA (Strategy) and an MS in Analytics. Indian and Singaporean.\nWill update the stock images here in a bit.\nI speak five languages - English, తెలుగు, हिंदी, Français and Español. Will blog in at least two."
+  },
+  {
+    "objectID": "telugu.html",
+    "href": "telugu.html",
+    "title": "తెలుగులో టపాలు",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nతెలుగులో టపాలు\n\n\n1 min\n\n\n\nbonjour-tout-le-monde\n\n\nతెలుగు\n\n\nhello-world\n\n\n\nఈ టపా తెలుగులో వ్ర్రాయబడినది.\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  }
+]

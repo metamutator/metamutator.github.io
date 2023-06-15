@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>aksh.ai</title>
+<link>https://aksh.ai/telugu.html</link>
+<atom:link href="https://aksh.ai/telugu.xml" rel="self" type="application/rss+xml"/>
+<description>Designing Strategy Through Data</description>
+<generator>quarto-1.3.330</generator>
+<lastBuildDate>Wed, 14 Jun 2023 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>తెలుగులో టపాలు</title>
+  <dc:creator>Akshay Regulagedda</dc:creator>
+  <link>https://aksh.ai/posts/telugu/నమస్కారం/టపా.html</link>
+  <description><![CDATA[ 
+
+
+
+<section id="తలగ-దల-యనన-దశబ-తలగన." class="level1">
+<h1>తెలుగు దేల యన్న దేశంబు తెలుగేను.</h1>
+<p>మా తెలుగు తల్లికి మల్లె పూదండ. మా కన్న తల్లికి మంగాళ హారతులు.</p>
+</section>
+<section id="హవయ-భగళక-పరసథత" class="level1">
+<h1>హవాయి భౌగోళిక పరిస్థితి</h1>
+<p>ఇప్పుడు పేసిఫిక్ మహా సముద్రములోని హవాయి దీవుల గురించి తెలుసుకుందాము. ముఖ్యంగా వాటి భౌగోళిక పరిస్థితి: భూగోళం అంతటికీ అత్యంత సుదీర్ఘమయిన ద్వీప సమూహం హవాయి. ఈ ద్వీప సమూహంలో ఎనిమిది ద్వీపాలు ఉన్నాయి. ఈ ద్వీప సమూహం మొత్తం పొడవు 2400 కిలోమీటర్లు. కిలియా అగ్నిపర్వతపు లావా ప్రవాహాల వలన ఈ ద్వీపాల వైశాల్యం ఎప్పటికప్పుడు పెరుగుతూనే ఉంది. ఈస్టర్ ద్వీపాన్ని మినహాయిస్తే ప్రధాన భూభాగాలకు అత్యంత దూరంగా ఉన్న ద్వీపం ఇది. తనలోని ప్రత్యేక భౌగోళిక స్థితిగతుల వలన వైవిధ్యభరితమయిన వృక్ష, జీవజాతులకు హవాయి నెలవయ్యింది. హవాయిలో ఎన్నో దీవులు ఉండగా, అతి పెద్ద దీవులలో ఏడవ స్థానంలో Figure&nbsp;1 దీవి ఉన్నది. ఫోటోలో నిర్మానుషంగా కనిపించినా, ఈ దీవిని రోబిన్ సన్ కుటుంబం రెండు తరాల క్రితం కేవలం $10,000కే కొనేసింది.</p>
+<div id="fig-nihau" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://aksh.ai/posts/telugu/నమస్కారం/nihau.png" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: నిహావు</figcaption><p></p>
+</figure>
+</div>
+
+
+</section>
+
+ ]]></description>
+  <category>bonjour-tout-le-monde</category>
+  <category>తెలుగు</category>
+  <category>hello-world</category>
+  <guid>https://aksh.ai/posts/telugu/నమస్కారం/టపా.html</guid>
+  <pubDate>Wed, 14 Jun 2023 16:00:00 GMT</pubDate>
+</item>
+</channel>
+</rss>
