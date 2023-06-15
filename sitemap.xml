@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://aksh.ai/posts/post-with-code/index.html</loc>
-    <lastmod>2023-06-15T09:50:13.780Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aksh.ai/posts/welcome/index.html</loc>
-    <lastmod>2023-06-15T09:50:16.368Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aksh.ai/posts/telugu/నమస్కారం/టపా.html</loc>
-    <lastmod>2023-06-15T09:50:17.112Z</lastmod>
-  </url>
-  <url>
-    <loc>https://aksh.ai/posts/bonjour-tout-le-monde/bonjour.html</loc>
-    <lastmod>2023-06-15T09:50:18.196Z</lastmod>
-  </url>
-  <url>
     <loc>https://aksh.ai/index.html</loc>
-    <lastmod>2023-06-15T09:50:19.348Z</lastmod>
+    <lastmod>2023-06-15T11:33:42.772Z</lastmod>
   </url>
   <url>
     <loc>https://aksh.ai/about.html</loc>
-    <lastmod>2023-06-15T09:50:20.072Z</lastmod>
+    <lastmod>2023-06-15T11:33:45.176Z</lastmod>
   </url>
   <url>
     <loc>https://aksh.ai/telugu.html</loc>
-    <lastmod>2023-06-15T09:50:20.940Z</lastmod>
+    <lastmod>2023-06-15T11:33:46.288Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aksh.ai/posts/telugu/నమస్కారం/టపా.html</loc>
+    <lastmod>2023-06-15T11:33:47.136Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aksh.ai/posts/post-with-code/index.html</loc>
+    <lastmod>2023-06-15T11:33:47.884Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aksh.ai/posts/bonjour-tout-le-monde/bonjour.html</loc>
+    <lastmod>2023-06-15T11:33:48.908Z</lastmod>
+  </url>
+  <url>
+    <loc>https://aksh.ai/posts/welcome/index.html</loc>
+    <lastmod>2023-06-15T11:33:49.744Z</lastmod>
   </url>
 </urlset>
