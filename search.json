@@ -4,14 +4,14 @@
     "href": "telugu.html",
     "title": "తెలుగులో టపాలు",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nతెలుగులో టపాలు\n\n\n1 min\n\n\n\nbonjour-tout-le-monde\n\n\nతెలుగు\n\n\nhello-world\n\n\n\nఈ టపా తెలుగులో వ్ర్రాయబడినది.\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "index.html",
     "href": "index.html",
     "title": "aksh.ai",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nతెలుగులో టపాలు\n\n\n1 min\n\n\n\nbonjour-tout-le-monde\n\n\nతెలుగు\n\n\nhello-world\n\n\n\nఈ టపా తెలుగులో వ్ర్రాయబడినది.\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nBonjour Tout Le Monde!\n\n\n5 min\n\n\n\nquarto\n\n\nhello-world\n\n\nsetup\n\n\nenglish\n\n\n\nIn which we say hello to the world.\n\n\n\n21 Jul 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "drafts/post-with-code/index.html",
@@ -21,18 +21,39 @@
     "text": "This is a post with executable code."
   },
   {
-    "objectID": "archive/welcome/index.html",
-    "href": "archive/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
-    "objectID": "posts/telugu/నమస్కారం/టపా.html",
-    "href": "posts/telugu/నమస్కారం/టపా.html",
+    "objectID": "archive/నమస్కారం/టపా.html",
+    "href": "archive/నమస్కారం/టపా.html",
     "title": "తెలుగులో టపాలు",
     "section": "",
     "text": "తెలుగు దేల యన్న దేశంబు తెలుగేను.\nమా తెలుగు తల్లికి మల్లె పూదండ. మా కన్న తల్లికి మంగాళ హారతులు.\n\n\nహవాయి భౌగోళిక పరిస్థితి\nఇప్పుడు పేసిఫిక్ మహా సముద్రములోని హవాయి దీవుల గురించి తెలుసుకుందాము. ముఖ్యంగా వాటి భౌగోళిక పరిస్థితి: భూగోళం అంతటికీ అత్యంత సుదీర్ఘమయిన ద్వీప సమూహం హవాయి. ఈ ద్వీప సమూహంలో ఎనిమిది ద్వీపాలు ఉన్నాయి. ఈ ద్వీప సమూహం మొత్తం పొడవు 2400 కిలోమీటర్లు. కిలియా అగ్నిపర్వతపు లావా ప్రవాహాల వలన ఈ ద్వీపాల వైశాల్యం ఎప్పటికప్పుడు పెరుగుతూనే ఉంది. ఈస్టర్ ద్వీపాన్ని మినహాయిస్తే ప్రధాన భూభాగాలకు అత్యంత దూరంగా ఉన్న ద్వీపం ఇది. తనలోని ప్రత్యేక భౌగోళిక స్థితిగతుల వలన వైవిధ్యభరితమయిన వృక్ష, జీవజాతులకు హవాయి నెలవయ్యింది. హవాయిలో ఎన్నో దీవులు ఉండగా, అతి పెద్ద దీవులలో ఏడవ స్థానంలో నిహావు దీవి (Figure 1) ఉన్నది. ఫోటోలో నిర్మానుషంగా కనిపించినా, ఈ దీవిని రోబిన్ సన్ కుటుంబం రెండు తరాల క్రితం కేవలం $10,000కే కొనేసింది.\n\n\n\nFigure 1: నిహావు"
+  },
+  {
+    "objectID": "posts/hello-world/hello.html",
+    "href": "posts/hello-world/hello.html",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "",
+    "text": "Photo by Artturi Jalli on Unsplash\nAt long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: \\[f(c)=\\dfrac{1}{b−a}∫^b_af(x)\\,dx. \\nonumber \\]\n(That’s the equation for the Mean Value Theorem, if you’re wondering)\nWhen I’m done, I push the changes to Github Pages, which through the magic of Quarto, somehow publishes it for free under my own quirky domain. I control my content fully, and choose to move it anywhere I want to.\nHere’s how I did it."
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#the-setup",
+    "href": "posts/hello-world/hello.html#the-setup",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "The Setup",
+    "text": "The Setup\nI’ve set this blog up using the Quarto framework, which is a new way of writing documents that are a mix of code and text. It’s like Jupyter Notebooks, but with a lot more flexibility. The official documentation was reasonably clear, but really, the crux was to publish it to Github Pages. Albert Rapp’s guide was very helpful in this regard, as was Bea Milz’s 10 step formulation Some bits over and above Quarto’s official documentation include getting comments (look below), and also setting up a newsletter (to be done). Lots of good content there, won’t be repeating it here. Instead, let me tell you about features and gotchas."
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#the-features",
+    "href": "posts/hello-world/hello.html#the-features",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "The Features",
+    "text": "The Features\n\n1. Comments\nI have set up comments using Utterances. It’s a free open-source service that uses Github Issues to store comments. You can see the comments on the bottom of this page. Pretty neat, non ?\n\n\n2. Search\nJust love the built-in search in Quatro. Simple but works.\n\n\n3. Visual Studio Code\nNow this is mainly for me, but I don’t have to context-switch away from Visual Studio Code just to make a post. In fact, I can even write code in the same document, and it will be executed and the results shown. This also means… I have AI enabled automatically, through GitHub Copilot. Not that it’s helpful, mind you, in fact, for long-form writing, it’s quite annoying. But hey, it exists, and is particularly helpful in all those settings files, and of course, code-chunks.\n\n\n4. Code Chunks\nNeed I say more? How cool is this, that I can just write this and it’ll be executed inline?\n\nprint(\"Hello World!\")\n\nHello World!\n\n\n\n\n5. Table of Contents\nSee the nice bar to the right listing down all the sections? That’s the Table of Contents. It’s automatically generated, and is a nice way to navigate through the document.\n\n\n6. Internationalisation\nతెలుగు, తదితర భాషలలో కూడా సునాయాసంగా టపాయించచ్చు! Je peux facilement écrire en français aussi!"
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#the-gotchas",
+    "href": "posts/hello-world/hello.html#the-gotchas",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "The Gotchas",
+    "text": "The Gotchas\nIt’s not all roses though, there are a few gotchas too.\n\n1. RSS Feed\nThe RSS feed somehow should work, but doesn’t. I’m still trying to figure out why.\n\n\n2. Posting Comments\nYou need to have a GitHub account to post comments. I’m not sure if that’s a good thing or a bad thing for you; it certainly is a good thing for me, as I can leverage on GitHub’s plumbing to manage comments. It also acts as a sort of gatekeeper for spam, for now at least.\nAlso, I really really REALLY wanted Giscus to work, but it doesn’t. Comments on one page show up on all pages. I’m not sure why; presuming it’s a settings thing, but I can’t figure out how to fix it.\nInstead, I’m using Utterances, which is a free open-source service that uses Github Issues to store comments. Same-same for you, but different for me in that Giscus uses GitHub Discussions and not Issues. Ah well.\n\n\n3. No WYSIWYG\nThere’s no WYSIWYG editor, so you have to write in Markdown. I don’t mind it, but you might.\n\n\n4. Executing Python code-chunks\nOh boy, this one was a doozy.\nSo the main attraction for Quarto/ QMD is that you can write code-chunks in any language, and it’ll be executed and the results shown. However, in Python, I typically create a new conda virtual environment for each project, with a limited set of packages for that project. Now, in the Visual Studio Code - Jupyter notebook world, this is crystal-clear; there’s a convenient dropdown to select the environment. But in Quarto, it’s not so clear.\nThis is made even harder by the fact that the Quarto plug-in for Visual Studio Code pops up an interactive window when you execute a code-chunk. And that window somehow does have a dropdown to select the environment. But hitting Render on the QMD file doesn’t use that selected environment. Instead, you need to hit command/ctrl-shift-p and select the environment there.\nIt’s all listed in this issue raised in August 2022. Some helpful checks there too. If you hit an error reading the following: No module named 'nbformat'\nThen it’s very likely that Quarto is referencing the wrong Python executable. On Macs, this is likely to be the flavour that comes with the OS, not Miniconda/ Anaconda or the environment you just chose. You can check on that by running the following in a code-chunk:\nimport sys\nprint(sys.executable)"
   },
   {
     "objectID": "archive/bonjour-tout-le-monde/bonjour.html",
@@ -67,20 +88,20 @@
     "href": "drafts/pyspark_ai/data_sleuthing.html",
     "title": "Data Explorations in Natural Language: PySpark AI",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+----------------------+\n|    Brand|US_Sales_2022|Sales_Change_From_2021|\n+---------+-------------+----------------------+\n|   Toyota|      1849751|               Down 9%|\n|     Ford|      1767439|               Down 2%|\n|Chevrolet|      1502389|                 Up 6%|\n|    Honda|       881201|              Down 33%|\n|  Hyundai|       724265|               Down 2%|\n+---------+-------------+----------------------+\nonly showing top 5 rows"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+---------------------+\n|    Brand|US_Sales_2022|Sales_Comparison_2021|\n+---------+-------------+---------------------+\n|   Toyota|      1849751|              Down 9%|\n|     Ford|      1767439|              Down 2%|\n|Chevrolet|      1502389|                Up 6%|\n|    Honda|       881201|             Down 33%|\n|  Hyundai|       724265|              Down 2%|\n+---------+-------------+---------------------+\nonly showing top 5 rows"
   },
   {
     "objectID": "drafts/pyspark_ai/data_sleuthing.html#merriweather",
     "href": "drafts/pyspark_ai/data_sleuthing.html#merriweather",
     "title": "Data Explorations in Natural Language: PySpark AI",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+----------------------+\n|    Brand|US_Sales_2022|Sales_Change_From_2021|\n+---------+-------------+----------------------+\n|   Toyota|      1849751|               Down 9%|\n|     Ford|      1767439|               Down 2%|\n|Chevrolet|      1502389|                 Up 6%|\n|    Honda|       881201|              Down 33%|\n|  Hyundai|       724265|               Down 2%|\n+---------+-------------+----------------------+\nonly showing top 5 rows"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+---------------------+\n|    Brand|US_Sales_2022|Sales_Comparison_2021|\n+---------+-------------+---------------------+\n|   Toyota|      1849751|              Down 9%|\n|     Ford|      1767439|              Down 2%|\n|Chevrolet|      1502389|                Up 6%|\n|    Honda|       881201|             Down 33%|\n|  Hyundai|       724265|              Down 2%|\n+---------+-------------+---------------------+\nonly showing top 5 rows"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "My name is Akshay. Yes, the name of this blog is a pun on my name. I like dad-jokes and I can’t lie.\nBy day, I craft strategy through data for a prominent airlines. I used to be a consultant 10+ years back, and then for a while, as a civil-servant. Switched to the data-science/ AI space in 2019, starting with power-plant networks, and now aviation since 2021.\nBy night, I often wonder how tech, culture and society intersect. My exploration in LLM’s partially comes from that angle. Aiming to be more literary or linguistic , if you will.\nI have degrees in Computing from National University of Singapore, MBA (Strategy) from Nanyang Business School and an ongoing MS in Analytics from Georgia Tech. My LinkedIn profile goes into more detail.\nI speak five languages - English, తెలుగు, دکھنی (दक्खिनी), Français and Español. Wife and daughter speak three more: Mandarin, Hokkien and Japanese. Will blog in at least two.\nI don’t speak for my current employer. You’ll be nuts to buy or sell stocks based on what I write here."
+    "text": "My name is Akshay. Yes, the name of this blog is a pun on my name. I like dad-jokes and I can’t lie.\nBy day, I craft strategy through data for a prominent airlines. I used to be a consultant 10+ years back, and then for a while, as a civil-servant. Switched to the data-science/ AI space in 2019, starting with power-plant networks, and now aviation since 2021.\nBy night, I often wonder how tech, culture and society intersect. My exploration in LLM’s partially comes from that angle. Aiming to be more literary or linguistic , if you will.\nI have a bachelors degree Computing from National University of Singapore, MBA (Strategy) from Nanyang Business School & an ongoing MS in Analytics from Georgia Tech. My LinkedIn profile goes into more detail.\nI speak five languages - English, తెలుగు, دکھنی (दक्खिनी), Français and Español. Wife and daughter speak three more: Mandarin, Hokkien and Japanese. Will blog in at least two.\nI don’t speak for my current employer. You’ll be nuts to buy or sell stocks based on what I write here."
   }
 ]

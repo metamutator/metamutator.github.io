@@ -1,14 +1,12 @@
 [
   {
     "listing": "/telugu.html",
-    "items": [
-      "/posts/telugu/నమస్కారం/టపా.html"
-    ]
+    "items": []
   },
   {
     "listing": "/index.html",
     "items": [
-      "/posts/telugu/నమస్కారం/టపా.html"
+      "/posts/hello-world/hello.html"
     ]
   }
 ]

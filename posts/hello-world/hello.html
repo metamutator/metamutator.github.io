@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Akshay Regulagedda">
+<meta name="dcterms.date" content="2023-07-21">
+<meta name="description" content="In which we say hello to the world.">
 
-<title>aksh.ai</title>
+<title>aksh.ai - Bonjour Tout Le Monde!</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,29 +23,61 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,35 +98,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-image','listing-reading-time','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-title","listing-author","listing-date","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0W83S6B2J"></script>
 
 <script type="text/javascript">
@@ -105,8 +111,9 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="aksh.ai" href="index.xml"><meta property="og:title" content="">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="aksh.ai - Bonjour Tout Le Monde!">
+<meta property="og:description" content="In which we say hello to the world.">
 <meta property="og:image" content="https://www.aksh.ai/posts/hello-world/hello_world.jpg">
 <meta property="og:site-name" content="aksh.ai">
 </head>
@@ -118,7 +125,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">aksh.ai</span>
     </a>
   </div>
@@ -129,7 +136,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -153,7 +160,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
  <span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="./blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../blog.xml" rel="" target=""><i class="bi bi-rss" role="img">
 </i> 
  <span class="menu-text"></span></a>
   </li>  
@@ -166,89 +173,151 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
     </nav>
 </header>
 <!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(1)</span></div><div class="category" data-category="english">english <span class="quarto-category-count">(1)</span></div><div class="category" data-category="hello-world">hello-world <span class="quarto-category-count">(1)</span></div><div class="category" data-category="quarto">quarto <span class="quarto-category-count">(1)</span></div><div class="category" data-category="setup">setup <span class="quarto-category-count">(1)</span></div></div></div>
-<!-- main -->
-<main class="content column-page-left" id="quarto-document-content">
-
-
-
-
-
-
-
-<div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#the-setup" id="toc-the-setup" class="nav-link active" data-scroll-target="#the-setup">The Setup</a></li>
+  <li><a href="#the-features" id="toc-the-features" class="nav-link" data-scroll-target="#the-features">The Features</a>
+  <ul class="collapse">
+  <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">1. Comments</a></li>
+  <li><a href="#search" id="toc-search" class="nav-link" data-scroll-target="#search">2. Search</a></li>
+  <li><a href="#visual-studio-code" id="toc-visual-studio-code" class="nav-link" data-scroll-target="#visual-studio-code">3. Visual Studio Code</a></li>
+  <li><a href="#code-chunks" id="toc-code-chunks" class="nav-link" data-scroll-target="#code-chunks">4. Code Chunks</a></li>
+  <li><a href="#table-of-contents" id="toc-table-of-contents" class="nav-link" data-scroll-target="#table-of-contents">5. Table of Contents</a></li>
+  <li><a href="#internationalisation" id="toc-internationalisation" class="nav-link" data-scroll-target="#internationalisation">6. Internationalisation</a></li>
+  </ul></li>
+  <li><a href="#the-gotchas" id="toc-the-gotchas" class="nav-link" data-scroll-target="#the-gotchas">The Gotchas</a>
+  <ul class="collapse">
+  <li><a href="#rss-feed" id="toc-rss-feed" class="nav-link" data-scroll-target="#rss-feed">1. RSS Feed</a></li>
+  <li><a href="#posting-comments" id="toc-posting-comments" class="nav-link" data-scroll-target="#posting-comments">2. Posting Comments</a></li>
+  <li><a href="#no-wysiwyg" id="toc-no-wysiwyg" class="nav-link" data-scroll-target="#no-wysiwyg">3. No WYSIWYG</a></li>
+  <li><a href="#executing-python-code-chunks" id="toc-executing-python-code-chunks" class="nav-link" data-scroll-target="#executing-python-code-chunks">4. Executing Python code-chunks</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Bonjour Tout Le Monde!</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">quarto</div>
+    <div class="quarto-category">hello-world</div>
+    <div class="quarto-category">setup</div>
+    <div class="quarto-category">english</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    In which we say hello to the world.
+  </div>
 </div>
-<div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="quarto,hello-world,setup,english" data-listing-date-sort="1689868800000" data-listing-file-modified-sort="1689945886361" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5">
-<a href="./posts/hello-world/hello.html" class="quarto-grid-link">
-<div class="quarto-grid-item card h-100 card-left">
-<p class="card-img-top">
-<img src="./posts/hello-world/hello_world.jpg" class="thumbnail-image card-img" style="height: 150px;">
-</p>
-<div class="card-body post-contents">
-<h5 class="no-anchor card-title listing-title">
-Bonjour Tout Le Monde!
-</h5>
-<div class="listing-reading-time card-text text-muted">
-5 min
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Akshay Regulagedda </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 21, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><img src="hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<p>At long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: <span class="math display">\[f(c)=\dfrac{1}{b−a}∫^b_af(x)\,dx. \nonumber \]</span></p>
+<p>(That’s the equation for the Mean Value Theorem, if you’re wondering)</p>
+<p>When I’m done, I push the changes to Github Pages, which through the magic of Quarto, somehow publishes it for free under my own quirky domain. I control my content fully, and choose to move it anywhere I want to.</p>
+<p>Here’s how I did it.</p>
+<section id="the-setup" class="level2">
+<h2 class="anchored" data-anchor-id="the-setup">The Setup</h2>
+<p>I’ve set this blog up using the <a href="https://quarto.org">Quarto</a> framework, which is a new way of writing documents that are a mix of code and text. It’s like Jupyter Notebooks, but with a lot more flexibility. The official documentation was reasonably clear, but really, the crux was to publish it to <em>Github Pages</em>. Albert Rapp’s <a href="https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html">guide</a> was very helpful in this regard, as was Bea Milz’s <a href="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/">10 step formulation</a> Some bits over and above Quarto’s official documentation include getting comments (look below), and also setting up a newsletter (to be done). Lots of good content there, won’t be repeating it here. Instead, let me tell you about features and gotchas.</p>
+</section>
+<section id="the-features" class="level2">
+<h2 class="anchored" data-anchor-id="the-features">The Features</h2>
+<section id="comments" class="level3">
+<h3 class="anchored" data-anchor-id="comments">1. Comments</h3>
+<p>I have set up comments using <a href="https://utteranc.es/">Utterances</a>. It’s a free open-source service that uses Github Issues to store comments. You can see the comments on the bottom of this page. Pretty neat, <em>non</em> ?</p>
+</section>
+<section id="search" class="level3">
+<h3 class="anchored" data-anchor-id="search">2. Search</h3>
+<p>Just love the built-in search in Quatro. Simple but works.</p>
+</section>
+<section id="visual-studio-code" class="level3">
+<h3 class="anchored" data-anchor-id="visual-studio-code">3. Visual Studio Code</h3>
+<p>Now this is mainly for me, but I don’t have to context-switch away from Visual Studio Code just to make a post. In fact, I can even write code in the same document, and it will be executed and the results shown. This also means… I have AI enabled automatically, through GitHub Copilot. Not that it’s helpful, mind you, in fact, for long-form writing, it’s quite annoying. But hey, it exists, and is particularly helpful in all those settings files, and of course, code-chunks.</p>
+</section>
+<section id="code-chunks" class="level3">
+<h3 class="anchored" data-anchor-id="code-chunks">4. Code Chunks</h3>
+<p>Need I say more? How cool is this, that I can just write this and it’ll be executed inline?</p>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Hello World!</code></pre>
 </div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('quarto'); return false;">
-quarto
 </div>
-<div class="listing-category" onclick="window.quartoListingCategory('hello-world'); return false;">
-hello-world
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('setup'); return false;">
-setup
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('english'); return false;">
-english
-</div>
-</div>
-<div class="card-text listing-description">
-In which we say hello to the world.
-</div>
-<div class="card-attribution card-text-small end">
-<div class="listing-date">
-21 Jul 2023
-</div>
-</div>
-</div>
-</div>
-</a>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</section>
+<section id="table-of-contents" class="level3">
+<h3 class="anchored" data-anchor-id="table-of-contents">5. Table of Contents</h3>
+<p>See the nice bar to the right listing down all the sections? That’s the Table of Contents. It’s automatically generated, and is a nice way to navigate through the document.</p>
+</section>
+<section id="internationalisation" class="level3">
+<h3 class="anchored" data-anchor-id="internationalisation">6. Internationalisation</h3>
+<p>తెలుగు, తదితర భాషలలో కూడా సునాయాసంగా టపాయించచ్చు! Je peux facilement écrire en français aussi!</p>
+</section>
+</section>
+<section id="the-gotchas" class="level2">
+<h2 class="anchored" data-anchor-id="the-gotchas">The Gotchas</h2>
+<p>It’s not all roses though, there are a few gotchas too.</p>
+<section id="rss-feed" class="level3">
+<h3 class="anchored" data-anchor-id="rss-feed">1. RSS Feed</h3>
+<p>The RSS feed somehow <em>should</em> work, but doesn’t. I’m still trying to figure out why.</p>
+</section>
+<section id="posting-comments" class="level3">
+<h3 class="anchored" data-anchor-id="posting-comments">2. Posting Comments</h3>
+<p>You need to have a GitHub account to post comments. I’m not sure if that’s a good thing or a bad thing for you; it certainly is a good thing for me, as I can leverage on GitHub’s plumbing to manage comments. It also acts as a sort of gatekeeper for spam, for now at least.</p>
+<p>Also, I really really REALLY wanted <a href="https://giscus.app/">Giscus</a> to work, but it doesn’t. Comments on one page show up on all pages. I’m not sure why; presuming it’s a settings thing, but I can’t figure out how to fix it.</p>
+<p>Instead, I’m using <a href="https://utteranc.es/">Utterances</a>, which is a free open-source service that uses Github Issues to store comments. Same-same for you, but different for me in that Giscus uses GitHub Discussions and not Issues. Ah well.</p>
+</section>
+<section id="no-wysiwyg" class="level3">
+<h3 class="anchored" data-anchor-id="no-wysiwyg">3. No WYSIWYG</h3>
+<p>There’s no WYSIWYG editor, so you have to write in Markdown. I don’t mind it, but you might.</p>
+</section>
+<section id="executing-python-code-chunks" class="level3">
+<h3 class="anchored" data-anchor-id="executing-python-code-chunks">4. Executing Python code-chunks</h3>
+<p>Oh boy, this one was a doozy.</p>
+<p>So the main attraction for Quarto/ QMD is that you can write code-chunks in any language, and it’ll be executed and the results shown. However, in Python, I typically create a new conda virtual environment for each project, with a limited set of packages for that project. Now, in the Visual Studio Code - Jupyter notebook world, this is crystal-clear; there’s a convenient dropdown to select the environment. But in Quarto, it’s not so clear.</p>
+<p>This is made even harder by the fact that the Quarto plug-in for Visual Studio Code pops up an interactive window when you execute a code-chunk. And that window somehow <em>does</em> have a dropdown to select the environment. But hitting Render on the QMD file doesn’t use that selected environment. Instead, you need to hit command/ctrl-shift-p and select the environment there.</p>
+<p>It’s all listed in this <a href="https://github.com/quarto-dev/quarto/issues/27">issue</a> raised in August 2022. Some helpful checks there too. If you hit an error reading the following: <code>No module named 'nbformat'</code></p>
+<p>Then it’s very likely that Quarto is referencing the wrong Python executable. On Macs, this is likely to be the flavour that comes with the OS, <em>not</em> Miniconda/ Anaconda or the environment you just chose. You can check on that by running the following in a code-chunk:</p>
+<pre><code>import sys
+print(sys.executable)</code></pre>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
