@@ -1,16 +1,14 @@
 [
   {
-    "listing": "/index.html",
+    "listing": "/telugu.html",
     "items": [
-      "/posts/bonjour-tout-le-monde/bonjour.html",
-      "/posts/post-with-code/index.html",
-      "/posts/telugu/నమస్కారం/టపా.html",
-      "/posts/welcome/index.html"
+      "/posts/telugu/నమస్కారం/టపా.html"
     ]
   },
   {
-    "listing": "/telugu.html",
+    "listing": "/index.html",
     "items": [
+      "/posts/post-with-code/index.html",
       "/posts/telugu/నమస్కారం/టపా.html"
     ]
   }
