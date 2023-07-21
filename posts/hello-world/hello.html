@@ -181,7 +181,8 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#the-setup" id="toc-the-setup" class="nav-link active" data-scroll-target="#the-setup">The Setup</a></li>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary">Executive Summary</a></li>
+  <li><a href="#the-setup" id="toc-the-setup" class="nav-link" data-scroll-target="#the-setup">The Setup</a></li>
   <li><a href="#the-features" id="toc-the-features" class="nav-link" data-scroll-target="#the-features">The Features</a>
   <ul class="collapse">
   <li><a href="#comments" id="toc-comments" class="nav-link" data-scroll-target="#comments">1. Comments</a></li>
@@ -198,6 +199,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
   <li><a href="#no-wysiwyg" id="toc-no-wysiwyg" class="nav-link" data-scroll-target="#no-wysiwyg">3. No WYSIWYG</a></li>
   <li><a href="#executing-python-code-chunks" id="toc-executing-python-code-chunks" class="nav-link" data-scroll-target="#executing-python-code-chunks">4. Executing Python code-chunks</a></li>
   </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
   </ul>
 </nav>
     </div>
@@ -245,10 +247,13 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </header>
 
 <p><img src="hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
 <p>At long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: <span class="math display">\[f(c)=\dfrac{1}{b−a}∫^b_af(x)\,dx. \nonumber \]</span></p>
 <p>(That’s the equation for the Mean Value Theorem, if you’re wondering)</p>
 <p>When I’m done, I push the changes to Github Pages, which through the magic of Quarto, somehow publishes it for free under my own quirky domain. I control my content fully, and choose to move it anywhere I want to.</p>
 <p>Here’s how I did it.</p>
+</section>
 <section id="the-setup" class="level2">
 <h2 class="anchored" data-anchor-id="the-setup">The Setup</h2>
 <p>I’ve set this blog up using the <a href="https://quarto.org">Quarto</a> framework, which is a new way of writing documents that are a mix of code and text. It’s like Jupyter Notebooks, but with a lot more flexibility. The official documentation was reasonably clear, but really, the crux was to publish it to <em>Github Pages</em>. Albert Rapp’s <a href="https://albert-rapp.de/posts/13_quarto_blog_writing_guide/13_quarto_blog_writing_guide.html">guide</a> was very helpful in this regard, as was Bea Milz’s <a href="https://beamilz.com/posts/2022-06-05-creating-a-blog-with-quarto/en/">10 step formulation</a> Some bits over and above Quarto’s official documentation include getting comments (look below), and also setting up a newsletter (to be done). Lots of good content there, won’t be repeating it here. Instead, let me tell you about features and gotchas.</p>
@@ -308,13 +313,19 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <p>Oh boy, this one was a doozy.</p>
 <p>So the main attraction for Quarto/ QMD is that you can write code-chunks in any language, and it’ll be executed and the results shown. However, in Python, I typically create a new conda virtual environment for each project, with a limited set of packages for that project. Now, in the Visual Studio Code - Jupyter notebook world, this is crystal-clear; there’s a convenient dropdown to select the environment. But in Quarto, it’s not so clear.</p>
 <p>This is made even harder by the fact that the Quarto plug-in for Visual Studio Code pops up an interactive window when you execute a code-chunk. And that window somehow <em>does</em> have a dropdown to select the environment. But hitting Render on the QMD file doesn’t use that selected environment. Instead, you need to hit command/ctrl-shift-p and select the environment there.</p>
-<p>It’s all listed in this <a href="https://github.com/quarto-dev/quarto/issues/27">issue</a> raised in August 2022. Some helpful checks there too. If you hit an error reading the following: <code>No module named 'nbformat'</code></p>
-<p>Then it’s very likely that Quarto is referencing the wrong Python executable. On Macs, this is likely to be the flavour that comes with the OS, <em>not</em> Miniconda/ Anaconda or the environment you just chose. You can check on that by running the following in a code-chunk:</p>
-<pre><code>import sys
-print(sys.executable)</code></pre>
-
-
+<p>It’s all listed in this <a href="https://github.com/quarto-dev/quarto/issues/27">issue</a> raised in August 2022. Some helpful checks there too. If you hit an error reading the following:</p>
+<p><code>No module named 'nbformat'</code></p>
+<p>.. then it’s very likely that Quarto is referencing the wrong Python executable. On Macs, this is likely to be the flavour that comes with the OS, <em>not</em> Miniconda/ Anaconda or the environment you just chose. You can check on that by running the following in a code-chunk:</p>
+<p><code>import sys</code></p>
+<p><code>print(sys.executable)</code></p>
+<p>If the output (in the render) is not the virtual environment you expect, then you know what the problem is. Hit command/ctrl-shift-p and select the right environment.</p>
 </section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>So there you have it. A new blog, with all the bells and whistles, and a few gotchas. I’m sure I’ll find more as I go along, but for now, I’m partying like it’s 1999.</p>
+
+
 </section>
 
 </main> <!-- /main -->
