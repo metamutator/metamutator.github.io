@@ -72,8 +72,8 @@ font-style: inherit;">"Hello World!"</span>)</span></code></pre></div>
 <h2 class="anchored" data-anchor-id="the-gotchas">The Gotchas</h2>
 <p>It’s not all roses though, there are a few gotchas too.</p>
 <section id="rss-feed" class="level3">
-<h3 class="anchored" data-anchor-id="rss-feed">1. RSS Feed</h3>
-<p>The RSS feed somehow <em>should</em> work, but doesn’t. I’m still trying to figure out why.</p>
+<h3 class="anchored" data-anchor-id="rss-feed"><del>1. RSS Feed</del></h3>
+<p><del>The RSS feed somehow <em>should</em> work, but doesn’t. I’m still trying to figure out why.</del> Fixed it.</p>
 </section>
 <section id="posting-comments" class="level3">
 <h3 class="anchored" data-anchor-id="posting-comments">2. Posting Comments</h3>
