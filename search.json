@@ -11,7 +11,28 @@
     "href": "index.html",
     "title": "aksh.ai",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPost With Code\n\n\n1 min\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\n\n\n\n\nతెలుగులో టపాలు\n\n\n1 min\n\n\n\nbonjour-tout-le-monde\n\n\nతెలుగు\n\n\nhello-world\n\n\n\nఈ టపా తెలుగులో వ్ర్రాయబడినది.\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\nతెలుగులో టపాలు\n\n\n1 min\n\n\n\nbonjour-tout-le-monde\n\n\nతెలుగు\n\n\nhello-world\n\n\n\nఈ టపా తెలుగులో వ్ర్రాయబడినది.\n\n\n\n15 Jun 2023\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "drafts/post-with-code/index.html",
+    "href": "drafts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "archive/welcome/index.html",
+    "href": "archive/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "posts/telugu/నమస్కారం/టపా.html",
+    "href": "posts/telugu/నమస్కారం/టపా.html",
+    "title": "తెలుగులో టపాలు",
+    "section": "",
+    "text": "తెలుగు దేల యన్న దేశంబు తెలుగేను.\nమా తెలుగు తల్లికి మల్లె పూదండ. మా కన్న తల్లికి మంగాళ హారతులు.\n\n\nహవాయి భౌగోళిక పరిస్థితి\nఇప్పుడు పేసిఫిక్ మహా సముద్రములోని హవాయి దీవుల గురించి తెలుసుకుందాము. ముఖ్యంగా వాటి భౌగోళిక పరిస్థితి: భూగోళం అంతటికీ అత్యంత సుదీర్ఘమయిన ద్వీప సమూహం హవాయి. ఈ ద్వీప సమూహంలో ఎనిమిది ద్వీపాలు ఉన్నాయి. ఈ ద్వీప సమూహం మొత్తం పొడవు 2400 కిలోమీటర్లు. కిలియా అగ్నిపర్వతపు లావా ప్రవాహాల వలన ఈ ద్వీపాల వైశాల్యం ఎప్పటికప్పుడు పెరుగుతూనే ఉంది. ఈస్టర్ ద్వీపాన్ని మినహాయిస్తే ప్రధాన భూభాగాలకు అత్యంత దూరంగా ఉన్న ద్వీపం ఇది. తనలోని ప్రత్యేక భౌగోళిక స్థితిగతుల వలన వైవిధ్యభరితమయిన వృక్ష, జీవజాతులకు హవాయి నెలవయ్యింది. హవాయిలో ఎన్నో దీవులు ఉండగా, అతి పెద్ద దీవులలో ఏడవ స్థానంలో నిహావు దీవి (Figure 1) ఉన్నది. ఫోటోలో నిర్మానుషంగా కనిపించినా, ఈ దీవిని రోబిన్ సన్ కుటుంబం రెండు తరాల క్రితం కేవలం $10,000కే కొనేసింది.\n\n\n\nFigure 1: నిహావు"
   },
   {
     "objectID": "archive/bonjour-tout-le-monde/bonjour.html",
@@ -42,45 +63,24 @@
     "text": "ggplot(data = gapminder::gapminder, mapping = aes(x = lifeExp, fill = continent)) +\n  stat_density(position = \"identity\", alpha = 0.5)\n\n\n\n\nBla bla bla. This is a caption in the margin. Super cool isn’t it?"
   },
   {
-    "objectID": "posts/telugu/నమస్కారం/టపా.html",
-    "href": "posts/telugu/నమస్కారం/టపా.html",
-    "title": "తెలుగులో టపాలు",
-    "section": "",
-    "text": "తెలుగు దేల యన్న దేశంబు తెలుగేను.\nమా తెలుగు తల్లికి మల్లె పూదండ. మా కన్న తల్లికి మంగాళ హారతులు.\n\n\nహవాయి భౌగోళిక పరిస్థితి\nఇప్పుడు పేసిఫిక్ మహా సముద్రములోని హవాయి దీవుల గురించి తెలుసుకుందాము. ముఖ్యంగా వాటి భౌగోళిక పరిస్థితి: భూగోళం అంతటికీ అత్యంత సుదీర్ఘమయిన ద్వీప సమూహం హవాయి. ఈ ద్వీప సమూహంలో ఎనిమిది ద్వీపాలు ఉన్నాయి. ఈ ద్వీప సమూహం మొత్తం పొడవు 2400 కిలోమీటర్లు. కిలియా అగ్నిపర్వతపు లావా ప్రవాహాల వలన ఈ ద్వీపాల వైశాల్యం ఎప్పటికప్పుడు పెరుగుతూనే ఉంది. ఈస్టర్ ద్వీపాన్ని మినహాయిస్తే ప్రధాన భూభాగాలకు అత్యంత దూరంగా ఉన్న ద్వీపం ఇది. తనలోని ప్రత్యేక భౌగోళిక స్థితిగతుల వలన వైవిధ్యభరితమయిన వృక్ష, జీవజాతులకు హవాయి నెలవయ్యింది. హవాయిలో ఎన్నో దీవులు ఉండగా, అతి పెద్ద దీవులలో ఏడవ స్థానంలో నిహావు దీవి (Figure 1) ఉన్నది. ఫోటోలో నిర్మానుషంగా కనిపించినా, ఈ దీవిని రోబిన్ సన్ కుటుంబం రెండు తరాల క్రితం కేవలం $10,000కే కొనేసింది.\n\n\n\nFigure 1: నిహావు"
-  },
-  {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code."
-  },
-  {
-    "objectID": "archive/welcome/index.html",
-    "href": "archive/welcome/index.html",
-    "title": "Welcome To My Blog",
-    "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
-  },
-  {
     "objectID": "drafts/pyspark_ai/data_sleuthing.html",
     "href": "drafts/pyspark_ai/data_sleuthing.html",
     "title": "Data Explorations in Natural Language: PySpark AI",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+---------------------+\n|    Brand|US_Sales_2022|Sales_Comparison_2021|\n+---------+-------------+---------------------+\n|   Toyota|      1849751|              Down 9%|\n|     Ford|      1767439|              Down 2%|\n|Chevrolet|      1502389|                Up 6%|\n|    Honda|       881201|             Down 33%|\n|  Hyundai|       724265|              Down 2%|\n+---------+-------------+---------------------+\nonly showing top 5 rows"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+----------------------+\n|    Brand|US_Sales_2022|Sales_Change_From_2021|\n+---------+-------------+----------------------+\n|   Toyota|      1849751|               Down 9%|\n|     Ford|      1767439|               Down 2%|\n|Chevrolet|      1502389|                 Up 6%|\n|    Honda|       881201|              Down 33%|\n|  Hyundai|       724265|               Down 2%|\n+---------+-------------+----------------------+\nonly showing top 5 rows"
   },
   {
     "objectID": "drafts/pyspark_ai/data_sleuthing.html#merriweather",
     "href": "drafts/pyspark_ai/data_sleuthing.html#merriweather",
     "title": "Data Explorations in Natural Language: PySpark AI",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+---------------------+\n|    Brand|US_Sales_2022|Sales_Comparison_2021|\n+---------+-------------+---------------------+\n|   Toyota|      1849751|              Down 9%|\n|     Ford|      1767439|              Down 2%|\n|Chevrolet|      1502389|                Up 6%|\n|    Honda|       881201|             Down 33%|\n|  Hyundai|       724265|              Down 2%|\n+---------+-------------+---------------------+\nonly showing top 5 rows"
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+----------------------+\n|    Brand|US_Sales_2022|Sales_Change_From_2021|\n+---------+-------------+----------------------+\n|   Toyota|      1849751|               Down 9%|\n|     Ford|      1767439|               Down 2%|\n|Chevrolet|      1502389|                 Up 6%|\n|    Honda|       881201|              Down 33%|\n|  Hyundai|       724265|               Down 2%|\n+---------+-------------+----------------------+\nonly showing top 5 rows"
   },
   {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "My name is Akshay. Yes, the URL is a pun on my name. I like dad-jokes and I can’t lie.\nBy day, I craft strategy through data for a prominent airlines. I used to be a consultant 10+ years back, and then for a while, as a civil-servant. Switched to the data-science/ AI space since 2019, starting with power-plant networks, and now aviation since 2021. I like to say I pretend to be a data-scientist in front of business, and pretend to be business in front of data-scientists. My greatest hits aren’t just on how to do AI, but on how you can generate business value through AI. For instance, how to get power-plants in India and Singapore to reduce carbon emissions through AI. Or how to help pilots uptake lesser fuel for the same routes. Things like that.\nBy night, I often wonder how tech, culture and society intersect. My exploration in LLM’s partially comes from that angle. Aiming to be more literary or linguistic , if you will, if not strategic.\nI have degrees in Computing from National University of Singapore, MBA (Strategy) from Nanyang Business School and an ongoing MS in Analytics from Georgia Tech. My LinkedIn profile goes into more detail.\nI speak five languages - English, తెలుగు, دکھنی (दक्खिनी), Français and Español. Wife and kid speak three more: Mandarin, Hokkien and Japanese. Will blog in at least two.\nI don’t speak for my current or former employers. You’ll be nuts to buy or sell stocks based on what I write here."
+    "text": "My name is Akshay. Yes, the name of this blog is a pun on my name. I like dad-jokes and I can’t lie.\nBy day, I craft strategy through data for a prominent airlines. I used to be a consultant 10+ years back, and then for a while, as a civil-servant. Switched to the data-science/ AI space in 2019, starting with power-plant networks, and now aviation since 2021.\nBy night, I often wonder how tech, culture and society intersect. My exploration in LLM’s partially comes from that angle. Aiming to be more literary or linguistic , if you will.\nI have degrees in Computing from National University of Singapore, MBA (Strategy) from Nanyang Business School and an ongoing MS in Analytics from Georgia Tech. My LinkedIn profile goes into more detail.\nI speak five languages - English, తెలుగు, دکھنی (दक्खिनी), Français and Español. Wife and daughter speak three more: Mandarin, Hokkien and Japanese. Will blog in at least two.\nI don’t speak for my current employer. You’ll be nuts to buy or sell stocks based on what I write here."
   }
 ]
