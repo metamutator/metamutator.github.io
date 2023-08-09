@@ -10,7 +10,774 @@
 <atom:link href="https://www.aksh.ai/index.xml" rel="self" type="application/rss+xml"/>
 <description>Designing Strategy Through Data</description>
 <generator>quarto-1.3.433</generator>
-<lastBuildDate>Sat, 22 Jul 2023 16:00:00 GMT</lastBuildDate>
+<lastBuildDate>Tue, 08 Aug 2023 16:00:00 GMT</lastBuildDate>
+<item>
+  <title>I am Time, Destroyer of Worlds</title>
+  <dc:creator>Akshay Regulagedda</dc:creator>
+  <link>https://www.aksh.ai/posts/i_am_time/index.html</link>
+  <description><![CDATA[ 
+
+
+
+<div id="fig-hero" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="https://www.aksh.ai/posts/i_am_time/viswarupa.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: <strong>I am Time</strong>: A 19th century painting of Krishna in his <em>viswarūpa</em>. <sup>1</sup></figcaption>
+</figure>
+</div>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
+<p>You may have watched in the new Nolan movie, or read it the <a href="https://archive.org/details/americanpromethe00bird/mode/1up">2005 biography</a> <span class="citation" data-cites="bird2005american">(Bird and Sherwin 2005)</span> on which the movie is based, or indeed, or have read it in the original interview <span class="citation" data-cites="barnett1949j">(Barnett 1949)</span> with <em>Life</em> magazine. Or may be you’ve known it all along. Julius Robert Oppenheimer is famously said to have <del>quoted</del> thought of a quote from the <em>Bhagavad Gitā</em> upon witnessing the first nuclear explosion:</p>
+<blockquote class="blockquote">
+<p>If the radiance of a thousand suns were to burst at once into the sky, that would be like the splendo[u]r of the mighty one</p>
+<p>Now I am become Death, the shatterer of worlds.</p>
+</blockquote>
+<p>There’s a lot of scholarship already published on this and indeed <em>Bhagavad Gita</em> in itself. This post doesn’t aim to add anything novel to that discussion, other than as a quick linguistic exploration through AI.</p>
+</section>
+<section id="the-original-verses" class="level2">
+<h2 class="anchored" data-anchor-id="the-original-verses">The Original Verses</h2>
+<p>Oppenheimer was translating Slokas 12 and 32 in Chapter 11 of the <em>Gita</em>. The verses read as follows in the original Sanskrit:</p>
+<p><strong>Chapter 11, Verse 12</strong>:</p>
+<p>divi sūrya-sahasrasya bhaved yugapad utthitā<br>
+yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
+<p><strong>Chapter 11, Verse 32</strong>:</p>
+<p><em>śhrī-bhagavān uvācha</em>:<br>
+&nbsp;&nbsp;&nbsp;kālósmi loka-kṣhaya-kṛit pravṛiddho<br>
+&nbsp;&nbsp;&nbsp;lokān samāhartum iha pravṛittaḥ<br>
+&nbsp;&nbsp;&nbsp;ṛitépi tvāṁ na bhaviṣhyanti sarve<br>
+&nbsp;&nbsp;&nbsp;yévasthitāḥ pratyanīkeṣhu yodhāḥ</p>
+<p>Historically, one learns classical Sanskrit (and classical Telugu) poetry through both a <code>prati padārtham</code> (word-by-word) translation, and a <code>bhāvam</code> (prose translation). Let’s try both here with AI.</p>
+</section>
+<section id="the-meaning" class="level2">
+<h2 class="anchored" data-anchor-id="the-meaning">The Meaning</h2>
+<section id="calling-claude-2" class="level3">
+<h3 class="anchored" data-anchor-id="calling-claude-2">Calling Claude 2</h3>
+<p>The advent of LLM’s now mean that you can write a quick function in Python that can take in any verse in Sanskrit and return both the <code>prati padārtham</code> and the <code>bhāvam</code> in JSON.</p>
+<p>Here’s how.</p>
+<div class="cell" data-execution_count="64">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> generate_sloka_meaning(sloka):</span>
+<span id="cb1-2">    prompt <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"""</span></span>
+<span id="cb1-3"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>HUMAN_PROMPT<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> Consider the following verse in Sanskrit enclosed in single quotes. Please give a JSON response with the following key/ value pairs:</span></span>
+<span id="cb1-4"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    1. 'prati padartham': Aword for word translation in English in the form of a markdown table. </span></span>
+<span id="cb1-5"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    The table should have the following columns: Word in Devanagari script, Word in Telugu script, Word in Roman Script, English Translation.</span></span>
+<span id="cb1-6"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    Return the table alone as the value.</span></span>
+<span id="cb1-7"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    2. 'bhavam': The overall meaning of the verse in English sentences. Return the meaning alone as the value.</span></span>
+<span id="cb1-8"></span>
+<span id="cb1-9"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    Please give the response in the following JSON format: </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'{"prati padartham": "table", "bhavam": "meaning"}'</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> This is important: do not give anything beyond the JSON response.</span></span>
+<span id="cb1-10"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    The verse: '</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>sloka<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span></span>
+<span id="cb1-11"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>AI_PROMPT<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> Can I check through my answer to ensure I have not missed anything?</span></span>
+<span id="cb1-12"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>HUMAN_PROMPT<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;"> Yes, please do. Make sure you have not missed anything. Particularly check if you're outputting the right script in the right column. </span></span>
+<span id="cb1-13"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">    </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>AI_PROMPT<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span></span>
+<span id="cb1-14"><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">            """</span></span>
+<span id="cb1-15">    anthropic <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Anthropic()</span>
+<span id="cb1-16">    completion <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> anthropic.completions.create(</span>
+<span id="cb1-17">        model<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"claude-2"</span>,</span>
+<span id="cb1-18">        max_tokens_to_sample<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">40000</span>,</span>
+<span id="cb1-19">        prompt<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>prompt,</span>
+<span id="cb1-20">    )</span>
+<span id="cb1-21">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> completion.completion</span>
+<span id="cb1-22"></span>
+<span id="cb1-23"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> extract_prati_padartham(sloka_meaning):</span>
+<span id="cb1-24">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#extract json value with the key 'prati padartham'</span></span>
+<span id="cb1-25">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> json.loads(sloka_meaning)[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"prati padartham"</span>]</span>
+<span id="cb1-26"></span>
+<span id="cb1-27"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> extract_bhavam(sloka_meaning):</span>
+<span id="cb1-28">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#extract json value with the key 'bhavam'</span></span>
+<span id="cb1-29">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> json.loads(sloka_meaning)[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"bhavam"</span>]</span></code></pre></div>
+</details>
+</div>
+<p>The function <code>generate_sloka_meaning</code> calls Claude 2 and gets it to generate a <code>prati padartham</code> and <code>bhavam</code>. The former is returned as a Markdown table, while the latter is plain text. We also got Claude 2 to check through the response before returning it to us (per suggestion in Anthropic’s <a href="https://docs.anthropic.com/claude/docs/ask-claude-to-think-step-by-step">docs</a>). This is because it did not generate the full meaning on some executions.</p>
+<p>Let’s now input both verses and see what Claude 2 generates for us.</p>
+<div class="cell" data-execution_count="65">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1">verses <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb2-2">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"11.12"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"divi sūryasahasrasya bhaved yugapad utthitā</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">yadi bhāḥ sadṛśī sā syād bhāsas tasya mahātmanaḥ"</span>,</span>
+<span id="cb2-3">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"11.32"</span>: <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"śhrī-bhagavān uvācha</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">kālo’smi loka-kṣaya-kṛt pravṛddho</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">lokan samāhartum iha pravṛttaḥ</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">ṛte ’pi tvāṁ na bhaviṣyanti sarve</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">ye ’vasthitāḥ pratyanīkeṣu yodhāḥ"</span>,</span>
+<span id="cb2-4">}</span>
+<span id="cb2-5"></span>
+<span id="cb2-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># for each verse, generate the meaning</span></span>
+<span id="cb2-7">sloka_meanings <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {}</span>
+<span id="cb2-8"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> verse <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> verses:</span>
+<span id="cb2-9">    sloka_meanings[verse] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></code></pre></div>
+</details>
+</div>
+</section>
+<section id="results" class="level3">
+<h3 class="anchored" data-anchor-id="results">Results</h3>
+<p>This is what we see for the two verses that Oppenheimer quoted:</p>
+<div class="cell" data-execution_count="66">
+<div class="cell-output cell-output-display">
+<div id="tbl-1112" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;1: Word-for-word translation of Verse 11.12</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Word in Devanagari</th>
+<th>Word in Telugu</th>
+<th>Word in Roman</th>
+<th>English Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>दिवि</td>
+<td>దివి</td>
+<td>divi</td>
+<td>in the sky</td>
+</tr>
+<tr class="even">
+<td>सूर्यसहस्रस्य</td>
+<td>సూర్యసహస్రస్య</td>
+<td>sūryasahasrasya</td>
+<td>of thousands of suns</td>
+</tr>
+<tr class="odd">
+<td>भवेत्</td>
+<td>భవేత్</td>
+<td>bhavet</td>
+<td>would be</td>
+</tr>
+<tr class="even">
+<td>युगपत्</td>
+<td>యుగపత్</td>
+<td>yugapat</td>
+<td>simultaneously</td>
+</tr>
+<tr class="odd">
+<td>उत्थिता</td>
+<td>ఉత్థితా</td>
+<td>utthitā</td>
+<td>risen</td>
+</tr>
+<tr class="even">
+<td>यदि</td>
+<td>యది</td>
+<td>yadi</td>
+<td>if</td>
+</tr>
+<tr class="odd">
+<td>भाः</td>
+<td>భాः</td>
+<td>bhāḥ</td>
+<td>light</td>
+</tr>
+<tr class="even">
+<td>सदृशी</td>
+<td>సదృశీ</td>
+<td>sadṛśī</td>
+<td>similar</td>
+</tr>
+<tr class="odd">
+<td>सा</td>
+<td>సా</td>
+<td>sā</td>
+<td>that</td>
+</tr>
+<tr class="even">
+<td>स्यात्</td>
+<td>స్యాత్</td>
+<td>syāt</td>
+<td>would be</td>
+</tr>
+<tr class="odd">
+<td>भासस्</td>
+<td>భాసస్</td>
+<td>bhāsas</td>
+<td>the light</td>
+</tr>
+<tr class="even">
+<td>तस्य</td>
+<td>తస్య</td>
+<td>tasya</td>
+<td>his</td>
+</tr>
+<tr class="odd">
+<td>महात्मनः</td>
+<td>మహాత్మనః</td>
+<td>mahātmanaḥ</td>
+<td>of the noble one</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="cell" data-execution_count="67">
+<div class="cell-output cell-output-display">
+<div id="tbl-1132" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;2: Word-for-word translation of Verse 11.32</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Word in Devanagari</th>
+<th>Word in Telugu</th>
+<th>Word in IAST</th>
+<th>English Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>श्री-भगवान्</td>
+<td>శ్రీ-భగవాన్</td>
+<td>śrī-bhagavān</td>
+<td>Lord Krishna</td>
+</tr>
+<tr class="even">
+<td>उवाच</td>
+<td>ఉవాచ</td>
+<td>uvāca</td>
+<td>said</td>
+</tr>
+<tr class="odd">
+<td>कालः</td>
+<td>కాలః</td>
+<td>kālaḥ</td>
+<td>time</td>
+</tr>
+<tr class="even">
+<td>अस्मि</td>
+<td>అస్మి</td>
+<td>asmi</td>
+<td>I am</td>
+</tr>
+<tr class="odd">
+<td>लोक-क्षय-कृत्</td>
+<td>లోక-క్షయ-కృత్</td>
+<td>loka-kṣaya-kṛt</td>
+<td>the destroyer of the worlds</td>
+</tr>
+<tr class="even">
+<td>प्रवृद्धः</td>
+<td>ప్రవృద్ధః</td>
+<td>pravṛddhaḥ</td>
+<td>grown</td>
+</tr>
+<tr class="odd">
+<td>लोकान्</td>
+<td>లోకాన్</td>
+<td>lokān</td>
+<td>the worlds</td>
+</tr>
+<tr class="even">
+<td>समाहर्तुम्</td>
+<td>సమాహర్తుమ్</td>
+<td>samāhartum</td>
+<td>to destroy</td>
+</tr>
+<tr class="odd">
+<td>इह</td>
+<td>ఇహ</td>
+<td>iha</td>
+<td>here</td>
+</tr>
+<tr class="even">
+<td>प्रवृत्तः</td>
+<td>ప్రవృత్తః</td>
+<td>pravṛttaḥ</td>
+<td>engaged</td>
+</tr>
+<tr class="odd">
+<td>ऋते</td>
+<td>ఋతే</td>
+<td>ṛte</td>
+<td>without</td>
+</tr>
+<tr class="even">
+<td>अपि</td>
+<td>అపి</td>
+<td>api</td>
+<td>even</td>
+</tr>
+<tr class="odd">
+<td>त्वाम्</td>
+<td>త్వామ్</td>
+<td>tvām</td>
+<td>you</td>
+</tr>
+<tr class="even">
+<td>न</td>
+<td>న</td>
+<td>na</td>
+<td>not</td>
+</tr>
+<tr class="odd">
+<td>भविष्यन्ति</td>
+<td>భవిష్యన్తి</td>
+<td>bhaviṣyanti</td>
+<td>will be</td>
+</tr>
+<tr class="even">
+<td>सर्वे</td>
+<td>సర్వే</td>
+<td>sarve</td>
+<td>all</td>
+</tr>
+<tr class="odd">
+<td>ये</td>
+<td>యే</td>
+<td>ye</td>
+<td>who</td>
+</tr>
+<tr class="even">
+<td>अवस्थिताः</td>
+<td>అవస్థితాః</td>
+<td>avasthitāḥ</td>
+<td>arrayed</td>
+</tr>
+<tr class="odd">
+<td>प्रत्यनीकेषु</td>
+<td>ప్రత్యనీకేషు</td>
+<td>pratyanīkeṣu</td>
+<td>on the opposing</td>
+</tr>
+<tr class="even">
+<td>योधाः</td>
+<td>యోధాః</td>
+<td>yodhāḥ</td>
+<td>warriors</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>( <em>Do note that Claude 2 has gotten a few Roman transliterations wrong.</em> )</p>
+<div class="cell" data-execution_count="56">
+<div class="cell-output cell-output-display">
+<p>Here are the meanings of both verses:</p>
+<blockquote class="blockquote">
+<p><strong>11.12</strong>: If thousands of suns were to rise simultaneously in the sky, that brilliance would be similar to the radiance of that noble soul.</p>
+<p><strong>11.32</strong>: In this verse, Lord Krishna reveals that He is time, the destroyer of worlds. He says that the time has come for Him to destroy the worlds, and He has set out to do so. He declares that even without you (Arjuna), all the warriors arrayed on the opposing side will cease to exist.</p>
+</blockquote>
+</div>
+</div>
+</section>
+</section>
+<section id="analysis" class="level2">
+<h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
+<p>Let’s compare the versions one by one.</p>
+<div class="cell" data-execution_count="81">
+<div class="cell-output cell-output-display">
+<div id="tbl-comparison" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;3: Comparing meanings for both verses</caption>
+<colgroup>
+<col style="width: 8%">
+<col style="width: 14%">
+<col style="width: 77%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Verse</th>
+<th style="text-align: center;">Version By</th>
+<th style="text-align: center;">Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">11.12</td>
+<td style="text-align: center;">Oppenheimer</td>
+<td style="text-align: center;">If the radiance of a thousand suns were to burst at once into the sky, that would be like the splendo[u]r of the mighty one</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">11.12</td>
+<td style="text-align: center;">Claude 2</td>
+<td style="text-align: center;">If thousands of suns were to rise in the sky simultaneously, that light would be similar to the light of that noble one.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">11.32</td>
+<td style="text-align: center;">Oppenheimer</td>
+<td style="text-align: center;">Now I am become Death, the shatterer of worlds.</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">11.32</td>
+<td style="text-align: center;">Claude 2</td>
+<td style="text-align: center;">Lord Krishna said: I am time, the destroyer of worlds, fully grown for destroying the worlds. Now I am engaged here to destroy them. Even without you, all the warriors arrayed on the opposing side shall not exist.</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>One may note the following:</p>
+<section id="light-from-a-noble-or-mighty-one" class="level3">
+<h3 class="anchored" data-anchor-id="light-from-a-noble-or-mighty-one">1. Light from a Noble or Mighty One</h3>
+<p>Oppenheimer’s translation focusses on <em>bursting</em> of light from a thousand suns, like in a nuclear explosion, while Claude 2’s translation focuses on thousands of suns <em>rising</em> in the sky (“<em>utthitā</em>”). Oppenheimer translated <em>mahātma</em> as “mighty one”, while the Claude 2 translation renders it as “noble one”.</p>
+<p>Which is to say: while in Oppenheimer’s translation, the narrator is in awe of a sudden display of immense power, in the latter, the narrator also ascribes a sense of nobility to a gentle - if less scary - display of power.</p>
+</section>
+<section id="death-or-time" class="level3">
+<h3 class="anchored" data-anchor-id="death-or-time">2. Death or Time</h3>
+<p>Oppenheimer translated <em>kālaḥ</em> as “Death”, while the Claude 2 translation rendered it as “Time”. A quick search across multiple Sanskrit dictionaries suggests that <a href="https://andhrabharati.com/dictionary/sanskrit/index.php?w=%E0%A4%95%E0%A4%BE%E0%A4%B2">kālaḥ</a> can indeed mean both “Death” and “Time”, but the latter is more common.</p>
+<p>In particular, Monier Williams 2nd Edition (1899) tried to reconcile both meanings by suggesting that <em>kālaḥ</em> could mean “death by age”, or time as an entity that “destroys all things” <span class="citation" data-cites="andhrabharati2023kala">(Bharati 2023)</span></p>
+<p>Time has been worshipped as entity in Hinduism since the Vedic Era. Rig Veda Mandala 10, Sukta 190 suggests Time originated first from the Great Ocean in the sky, and only then did the Sun and the Moon come into existence:</p>
+<div class="cell" data-execution_count="93">
+<div class="cell-output cell-output-display">
+<p><br>సముద్రాద్ అర్ణవాద్ అధి సంవత్సరో అజయాత<br><br>అహో రాత్రాణి విదధద్ విశ్వస్య మిషతో వశీ<br><br>సూర్యా చంద్రమసో ధాతా యథాపూర్వం అకల్పయత్<br><br>దివం చ ప్రథివీంచ అంతరిక్షం ఆతో స్వాహః<br><br></p>
+</div>
+</div>
+<p>Yes, of course, this too needs to be translated with the function we wrote above.</p>
+<div class="cell" data-execution_count="90">
+<div class="cell-output cell-output-display">
+<div id="tbl-rigveda" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;4: Claude 2’s translation of Rig Veda Mandala 10 Sukta 190</caption>
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Word in Devanagari</th>
+<th>Word in Telugu</th>
+<th>Word in Roman</th>
+<th>English Translation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>समुद्रात्</td>
+<td>సముద్రాద్</td>
+<td>samudrāt</td>
+<td>from the ocean</td>
+</tr>
+<tr class="even">
+<td>अर्णवात्</td>
+<td>అర్ణవాద్</td>
+<td>arṇavāt</td>
+<td>and from the sky</td>
+</tr>
+<tr class="odd">
+<td>अधि</td>
+<td>అధి</td>
+<td>adhi</td>
+<td>above</td>
+</tr>
+<tr class="even">
+<td>संवत्सर:</td>
+<td>సంవత్సరో</td>
+<td>saṃvatsaro</td>
+<td>year</td>
+</tr>
+<tr class="odd">
+<td>अजयात्</td>
+<td>అజయాత</td>
+<td>ajayāt</td>
+<td>unceasingly</td>
+</tr>
+<tr class="even">
+<td>अहो</td>
+<td>అహో</td>
+<td>aho</td>
+<td>O!</td>
+</tr>
+<tr class="odd">
+<td>रात्राणि</td>
+<td>రాత్రాణి</td>
+<td>rātrāṇi</td>
+<td>nights</td>
+</tr>
+<tr class="even">
+<td>विदधत्</td>
+<td>విదధద్</td>
+<td>vidadhat</td>
+<td>placing</td>
+</tr>
+<tr class="odd">
+<td>विश्वस्य</td>
+<td>విశ్వస్య</td>
+<td>viśvasya</td>
+<td>of the universe</td>
+</tr>
+<tr class="even">
+<td>मिषत:</td>
+<td>మిషతో</td>
+<td>miṣataḥ</td>
+<td>properly</td>
+</tr>
+<tr class="odd">
+<td>वशी</td>
+<td>వశీ</td>
+<td>vaśī</td>
+<td>the controller</td>
+</tr>
+<tr class="even">
+<td>सूर्या:</td>
+<td>సూర్యా</td>
+<td>sūryāḥ</td>
+<td>sun</td>
+</tr>
+<tr class="odd">
+<td>चन्द्रमस:</td>
+<td>చంద్రమసో</td>
+<td>candramasaḥ</td>
+<td>and moon</td>
+</tr>
+<tr class="even">
+<td>धाता</td>
+<td>ధాతా</td>
+<td>dhātā</td>
+<td>placing</td>
+</tr>
+<tr class="odd">
+<td>यथापूर्वम्</td>
+<td>యథాపూర్వం</td>
+<td>yathāpūrvam</td>
+<td>as before</td>
+</tr>
+<tr class="even">
+<td>अकल्पयत्</td>
+<td>అకల్పయత్</td>
+<td>akalpayat</td>
+<td>imagined</td>
+</tr>
+<tr class="odd">
+<td>दिवम्</td>
+<td>దివం</td>
+<td>divam</td>
+<td>heaven</td>
+</tr>
+<tr class="even">
+<td>च</td>
+<td>చ</td>
+<td>ca</td>
+<td>and</td>
+</tr>
+<tr class="odd">
+<td>पृथिवीम्</td>
+<td>ప్రథివీంచ</td>
+<td>pṛthivīṃ</td>
+<td>earth</td>
+</tr>
+<tr class="even">
+<td>च</td>
+<td>చ</td>
+<td>ca</td>
+<td>and</td>
+</tr>
+<tr class="odd">
+<td>अन्तरिक्षम्</td>
+<td>అంతరిక్షం</td>
+<td>antarikṣam</td>
+<td>space</td>
+</tr>
+<tr class="even">
+<td>आत:</td>
+<td>ఆతో</td>
+<td>ātaḥ</td>
+<td>then</td>
+</tr>
+<tr class="odd">
+<td>स्वा:</td>
+<td>స్వాహః</td>
+<td>svāḥ</td>
+<td>himself</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<p><strong>Meaning</strong>:</p>
+<blockquote class="blockquote">
+<p>The verse describes how the creator (Brahma), after bringing forth the universe consisting of the sky, heavens, earth and space between them, then created the regulating principles exemplified by the sun and moon, which go on continuously, year after year, placing day and night properly in their assigned places just as before.</p>
+</blockquote>
+</div>
+</div>
+<p><em>Note that the Claude 2 translation is non-deterministic; each execution has produced a different result.</em></p>
+<p>Time is one of the four primary forms of Vishnu per the Vishnu Purana, the other three being matter (<code>pradhāna</code>), visible substance (<code>vyakta</code>), and spirit (<code>purusha</code>) (via <a href="https://en.wikipedia.org/wiki/Kāla">Wikipedia</a>)</p>
+<p>In that sense, Krishna telling Arjuna that He is Time is not to say he <em>will</em> destroy the world, but that both creation and destruction are part of the same process, and that Krishna is the source of both.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>There is no single correct interpretation of the <em>Gita</em> or any other Sanskrit verse. The context of the narrator matters as much as the words. Oppenheimer used verses from the <em>Gita</em> to describe <em>his</em> feelings about a scary new power that could bring about destruction of the world. Death, clearly, was on his mind. Another narrator (me) in a different context would interpret the same verses differently. These could very well be describing a more benevolent power over which one has no agency, but one that encompasses not just destruction but also creation.</p>
+<p>A quick lexical analysis through the traditional approach of seeing a word-for-word translation and then a sentence-wise translation can assist in this regard. Whilst this was traditionally done by hand, now you can script it out in Python by relying on LLM’s. However, output from LLM’s can be subjective too - biased by training, and also non-deterministic. You still need to think this through for yourself.</p>
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-barnett1949j" class="csl-entry">
+Barnett, Lincoln. 1949. <span>“J. Robert Oppenheimer.”</span> <em>Life</em>, 133.
+</div>
+<div id="ref-andhrabharati2023kala" class="csl-entry">
+Bharati, Andhra. 2023. <span>“Kala.”</span> <a href="https://andhrabharati.com/dictionary/sanskrit/index.php?w=%E0%A4%95%E0%A4%BE%E0%A4%B2" class="uri">https://andhrabharati.com/dictionary/sanskrit/index.php?w=%E0%A4%95%E0%A4%BE%E0%A4%B2</a>.
+</div>
+<div id="ref-bird2005american" class="csl-entry">
+Bird, Kai, and Martin J Sherwin. 2005. <em>American Prometheus: The Triumph and Tragedy of j. Robert Oppenheimer</em>. Alfred A. Knopf.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>The image is taken from <a href="https://collections.vam.ac.uk/item/O154643/vishnu-as-vishvarupa-cosmic-or-painting-unknown/">V&amp;A’s website</a>. It used to be shown in the India collection along with other works of art the British Raj stole from the sub-continent, but now is no longer on public display. Infuriatingly, V&amp;A somehow asserts copyright and therefore conditions over an image of this 200-year-old painting.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>oppenheimer</category>
+  <category>llm</category>
+  <category>ai</category>
+  <category>Sanskrit</category>
+  <category>bhagavad-gita</category>
+  <category>anthropic</category>
+  <category>linguistics</category>
+  <guid>https://www.aksh.ai/posts/i_am_time/index.html</guid>
+  <pubDate>Tue, 08 Aug 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://www.aksh.ai/posts/i_am_time/viswarupa.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Panchanga Tantra: The Magic of the Indic Calendar System</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
@@ -1701,7 +2468,7 @@ University, Simon Fraser. 2002. <span>“Bhaskaracharya.”</span> 2002. <a href
 <h3 class="anchored" data-anchor-id="code-chunks">4. Code Chunks</h3>
 <p>Need I say more? How cool is this, that I can just write this and it’ll be executed inline?</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="bu" style="color: null;
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;

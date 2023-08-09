@@ -11,7 +11,7 @@
     "href": "index.html",
     "title": "aksh.ai",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nPanchanga Tantra: The Magic of the Indic Calendar System\n\n\n27 min\n\n\n\nmathematics\n\n\nastronomy\n\n\ncalendar\n\n\n\n‘Twentieth anniversary edition’ of my undergraduate thesis on the Indic calendar system.\n\n\n\n23 Jul 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBonjour Tout Le Monde!\n\n\n5 min\n\n\n\nquarto\n\n\nhello-world\n\n\nsetup\n\n\nenglish\n\n\n\nIn which we say hello to the world.\n\n\n\n21 Jul 2023\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Title\n        \n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\n\n\n\nI am Time, Destroyer of Worlds\n\n\n5 min\n\n\n\noppenheimer\n\n\nllm\n\n\nai\n\n\nSanskrit\n\n\nbhagavad-gita\n\n\nanthropic\n\n\nlinguistics\n\n\n\nFiling for Chapter 11 with AI assistance.\n\n\n\n09 Aug 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPanchanga Tantra: The Magic of the Indic Calendar System\n\n\n27 min\n\n\n\nmathematics\n\n\nastronomy\n\n\ncalendar\n\n\n\n‘Twentieth anniversary edition’ of my undergraduate thesis on the Indic calendar system.\n\n\n\n23 Jul 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBonjour Tout Le Monde!\n\n\n5 min\n\n\n\nquarto\n\n\nhello-world\n\n\nsetup\n\n\nenglish\n\n\n\nIn which we say hello to the world.\n\n\n\n21 Jul 2023\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "drafts/post-with-code/index.html",
@@ -26,48 +26,6 @@
     "title": "తెలుగులో టపాలు",
     "section": "",
     "text": "తెలుగు దేల యన్న దేశంబు తెలుగేను.\nమా తెలుగు తల్లికి మల్లె పూదండ. మా కన్న తల్లికి మంగాళ హారతులు.\n\n\nహవాయి భౌగోళిక పరిస్థితి\nఇప్పుడు పేసిఫిక్ మహా సముద్రములోని హవాయి దీవుల గురించి తెలుసుకుందాము. ముఖ్యంగా వాటి భౌగోళిక పరిస్థితి: భూగోళం అంతటికీ అత్యంత సుదీర్ఘమయిన ద్వీప సమూహం హవాయి. ఈ ద్వీప సమూహంలో ఎనిమిది ద్వీపాలు ఉన్నాయి. ఈ ద్వీప సమూహం మొత్తం పొడవు 2400 కిలోమీటర్లు. కిలియా అగ్నిపర్వతపు లావా ప్రవాహాల వలన ఈ ద్వీపాల వైశాల్యం ఎప్పటికప్పుడు పెరుగుతూనే ఉంది. ఈస్టర్ ద్వీపాన్ని మినహాయిస్తే ప్రధాన భూభాగాలకు అత్యంత దూరంగా ఉన్న ద్వీపం ఇది. తనలోని ప్రత్యేక భౌగోళిక స్థితిగతుల వలన వైవిధ్యభరితమయిన వృక్ష, జీవజాతులకు హవాయి నెలవయ్యింది. హవాయిలో ఎన్నో దీవులు ఉండగా, అతి పెద్ద దీవులలో ఏడవ స్థానంలో నిహావు దీవి (Figure 1) ఉన్నది. ఫోటోలో నిర్మానుషంగా కనిపించినా, ఈ దీవిని రోబిన్ సన్ కుటుంబం రెండు తరాల క్రితం కేవలం $10,000కే కొనేసింది.\n\n\n\nFigure 1: నిహావు"
-  },
-  {
-    "objectID": "posts/hello-world/hello.html",
-    "href": "posts/hello-world/hello.html",
-    "title": "Bonjour Tout Le Monde!",
-    "section": "",
-    "text": "Photo by Artturi Jalli on Unsplash"
-  },
-  {
-    "objectID": "posts/hello-world/hello.html#executive-summary",
-    "href": "posts/hello-world/hello.html#executive-summary",
-    "title": "Bonjour Tout Le Monde!",
-    "section": "Executive Summary",
-    "text": "Executive Summary\nAt long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: \\[f(c)=\\dfrac{1}{b−a}∫^b_af(x)\\,dx. \\nonumber \\]\n(That’s the equation for the Mean Value Theorem, if you’re wondering)\nWhen I’m done, I push the changes to Github Pages, which through the magic of Quarto, somehow publishes it for free under my own quirky domain. I control my content fully, and choose to move it anywhere I want to.\nHere’s how I did it."
-  },
-  {
-    "objectID": "posts/hello-world/hello.html#the-setup",
-    "href": "posts/hello-world/hello.html#the-setup",
-    "title": "Bonjour Tout Le Monde!",
-    "section": "The Setup",
-    "text": "The Setup\nI’ve set this blog up using the Quarto framework, which is a new way of writing documents that are a mix of code and text. It’s like Jupyter Notebooks, but with a lot more flexibility. The official documentation was reasonably clear, but really, the crux was to publish it to Github Pages. Albert Rapp’s guide was very helpful in this regard, as was Bea Milz’s 10 step formulation Some bits over and above Quarto’s official documentation include getting comments (look below), and also setting up a newsletter (to be done). Lots of good content there, won’t be repeating it here. Instead, let me tell you about features and gotchas."
-  },
-  {
-    "objectID": "posts/hello-world/hello.html#the-features",
-    "href": "posts/hello-world/hello.html#the-features",
-    "title": "Bonjour Tout Le Monde!",
-    "section": "The Features",
-    "text": "The Features\n\n1. Comments\nI have set up comments using Utterances. It’s a free open-source service that uses Github Issues to store comments. You can see the comments on the bottom of this page. Pretty neat, non ?\n\n\n2. Search\nJust love the built-in search in Quatro. Simple but works.\n\n\n3. Visual Studio Code\nNow this is mainly for me, but I don’t have to context-switch away from Visual Studio Code just to make a post. In fact, I can even write code in the same document, and it will be executed and the results shown. This also means… I have AI enabled automatically, through GitHub Copilot. Not that it’s helpful, mind you, in fact, for long-form writing, it’s quite annoying. But hey, it exists, and is particularly helpful in all those settings files, and of course, code-chunks.\n\n\n4. Code Chunks\nNeed I say more? How cool is this, that I can just write this and it’ll be executed inline?\n\nprint(\"Hello World!\")\n\nHello World!\n\n\n\n\n5. Table of Contents\nSee the nice bar to the right listing down all the sections? That’s the Table of Contents. It’s automatically generated, and is a nice way to navigate through the document.\n\n\n6. Internationalisation\nతెలుగు, తదితర భాషలలో కూడా సునాయాసంగా టపాయించచ్చు! Je peux facilement écrire en français aussi!"
-  },
-  {
-    "objectID": "posts/hello-world/hello.html#the-gotchas",
-    "href": "posts/hello-world/hello.html#the-gotchas",
-    "title": "Bonjour Tout Le Monde!",
-    "section": "The Gotchas",
-    "text": "The Gotchas\nIt’s not all roses though, there are a few gotchas too.\n\n1. RSS Feed\nThe RSS feed somehow should work, but doesn’t. I’m still trying to figure out why. Fixed it.\n\n\n2. Posting Comments\nYou need to have a GitHub account to post comments. I’m not sure if that’s a good thing or a bad thing for you; it certainly is a good thing for me, as I can leverage on GitHub’s plumbing to manage comments. It also acts as a sort of gatekeeper for spam, for now at least.\nAlso, I really really REALLY wanted Giscus to work, but it doesn’t. Comments on one page show up on all pages. I’m not sure why; presuming it’s a settings thing, but I can’t figure out how to fix it.\nInstead, I’m using Utterances, which is a free open-source service that uses Github Issues to store comments. Same-same for you, but different for me in that Giscus uses GitHub Discussions and not Issues. Ah well.\n\n\n3. No WYSIWYG\nThere’s no WYSIWYG editor, so you have to write in Markdown. I don’t mind it, but you might.\n\n\n4. Executing Python code-chunks\nOh boy, this one was a doozy.\nSo the main attraction for Quarto/ QMD is that you can write code-chunks in any language, and it’ll be executed and the results shown. However, in Python, I typically create a new conda virtual environment for each project, with a limited set of packages for that project. Now, in the Visual Studio Code - Jupyter notebook world, this is crystal-clear; there’s a convenient dropdown to select the environment. But in Quarto, it’s not so clear.\nThis is made even harder by the fact that the Quarto plug-in for Visual Studio Code pops up an interactive window when you execute a code-chunk. And that window somehow does have a dropdown to select the environment. But hitting Render on the QMD file doesn’t use that selected environment. Instead, you need to hit command/ctrl-shift-p and select the environment there.\nIt’s all listed in this issue raised in August 2022. Some helpful checks there too. If you hit an error reading the following:\nNo module named 'nbformat'\n.. then it’s very likely that Quarto is referencing the wrong Python executable. On Macs, this is likely to be the flavour that comes with the OS, not Miniconda/ Anaconda or the environment you just chose. You can check on that by running the following in a code-chunk:\nimport sys\nprint(sys.executable)\nIf the output (in the render) is not the virtual environment you expect, then you know what the problem is. Hit command/ctrl-shift-p and select the right environment."
-  },
-  {
-    "objectID": "posts/hello-world/hello.html#conclusion",
-    "href": "posts/hello-world/hello.html#conclusion",
-    "title": "Bonjour Tout Le Monde!",
-    "section": "Conclusion",
-    "text": "Conclusion\nSo there you have it. A new blog, with all the bells and whistles, and a few gotchas. I’m sure I’ll find more as I go along, but for now, I’m partying like it’s 1999."
   },
   {
     "objectID": "posts/panchanga-tantra/panchanga_tantra.html",
@@ -154,6 +112,97 @@
     "text": "Footnotes\n\n\nSuvrnapuri = City of Gold↩︎\nApara Ganita = One with a lot of mathematical talent.↩︎\nsaakshya = witness (in Sanskrit)↩︎"
   },
   {
+    "objectID": "posts/hello-world/hello.html",
+    "href": "posts/hello-world/hello.html",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "",
+    "text": "Photo by Artturi Jalli on Unsplash"
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#executive-summary",
+    "href": "posts/hello-world/hello.html#executive-summary",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "Executive Summary",
+    "text": "Executive Summary\nAt long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: \\[f(c)=\\dfrac{1}{b−a}∫^b_af(x)\\,dx. \\nonumber \\]\n(That’s the equation for the Mean Value Theorem, if you’re wondering)\nWhen I’m done, I push the changes to Github Pages, which through the magic of Quarto, somehow publishes it for free under my own quirky domain. I control my content fully, and choose to move it anywhere I want to.\nHere’s how I did it."
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#the-setup",
+    "href": "posts/hello-world/hello.html#the-setup",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "The Setup",
+    "text": "The Setup\nI’ve set this blog up using the Quarto framework, which is a new way of writing documents that are a mix of code and text. It’s like Jupyter Notebooks, but with a lot more flexibility. The official documentation was reasonably clear, but really, the crux was to publish it to Github Pages. Albert Rapp’s guide was very helpful in this regard, as was Bea Milz’s 10 step formulation Some bits over and above Quarto’s official documentation include getting comments (look below), and also setting up a newsletter (to be done). Lots of good content there, won’t be repeating it here. Instead, let me tell you about features and gotchas."
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#the-features",
+    "href": "posts/hello-world/hello.html#the-features",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "The Features",
+    "text": "The Features\n\n1. Comments\nI have set up comments using Utterances. It’s a free open-source service that uses Github Issues to store comments. You can see the comments on the bottom of this page. Pretty neat, non ?\n\n\n2. Search\nJust love the built-in search in Quatro. Simple but works.\n\n\n3. Visual Studio Code\nNow this is mainly for me, but I don’t have to context-switch away from Visual Studio Code just to make a post. In fact, I can even write code in the same document, and it will be executed and the results shown. This also means… I have AI enabled automatically, through GitHub Copilot. Not that it’s helpful, mind you, in fact, for long-form writing, it’s quite annoying. But hey, it exists, and is particularly helpful in all those settings files, and of course, code-chunks.\n\n\n4. Code Chunks\nNeed I say more? How cool is this, that I can just write this and it’ll be executed inline?\n\nprint(\"Hello World!\")\n\nHello World!\n\n\n\n\n5. Table of Contents\nSee the nice bar to the right listing down all the sections? That’s the Table of Contents. It’s automatically generated, and is a nice way to navigate through the document.\n\n\n6. Internationalisation\nతెలుగు, తదితర భాషలలో కూడా సునాయాసంగా టపాయించచ్చు! Je peux facilement écrire en français aussi!"
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#the-gotchas",
+    "href": "posts/hello-world/hello.html#the-gotchas",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "The Gotchas",
+    "text": "The Gotchas\nIt’s not all roses though, there are a few gotchas too.\n\n1. RSS Feed\nThe RSS feed somehow should work, but doesn’t. I’m still trying to figure out why. Fixed it.\n\n\n2. Posting Comments\nYou need to have a GitHub account to post comments. I’m not sure if that’s a good thing or a bad thing for you; it certainly is a good thing for me, as I can leverage on GitHub’s plumbing to manage comments. It also acts as a sort of gatekeeper for spam, for now at least.\nAlso, I really really REALLY wanted Giscus to work, but it doesn’t. Comments on one page show up on all pages. I’m not sure why; presuming it’s a settings thing, but I can’t figure out how to fix it.\nInstead, I’m using Utterances, which is a free open-source service that uses Github Issues to store comments. Same-same for you, but different for me in that Giscus uses GitHub Discussions and not Issues. Ah well.\n\n\n3. No WYSIWYG\nThere’s no WYSIWYG editor, so you have to write in Markdown. I don’t mind it, but you might.\n\n\n4. Executing Python code-chunks\nOh boy, this one was a doozy.\nSo the main attraction for Quarto/ QMD is that you can write code-chunks in any language, and it’ll be executed and the results shown. However, in Python, I typically create a new conda virtual environment for each project, with a limited set of packages for that project. Now, in the Visual Studio Code - Jupyter notebook world, this is crystal-clear; there’s a convenient dropdown to select the environment. But in Quarto, it’s not so clear.\nThis is made even harder by the fact that the Quarto plug-in for Visual Studio Code pops up an interactive window when you execute a code-chunk. And that window somehow does have a dropdown to select the environment. But hitting Render on the QMD file doesn’t use that selected environment. Instead, you need to hit command/ctrl-shift-p and select the environment there.\nIt’s all listed in this issue raised in August 2022. Some helpful checks there too. If you hit an error reading the following:\nNo module named 'nbformat'\n.. then it’s very likely that Quarto is referencing the wrong Python executable. On Macs, this is likely to be the flavour that comes with the OS, not Miniconda/ Anaconda or the environment you just chose. You can check on that by running the following in a code-chunk:\nimport sys\nprint(sys.executable)\nIf the output (in the render) is not the virtual environment you expect, then you know what the problem is. Hit command/ctrl-shift-p and select the right environment."
+  },
+  {
+    "objectID": "posts/hello-world/hello.html#conclusion",
+    "href": "posts/hello-world/hello.html#conclusion",
+    "title": "Bonjour Tout Le Monde!",
+    "section": "Conclusion",
+    "text": "Conclusion\nSo there you have it. A new blog, with all the bells and whistles, and a few gotchas. I’m sure I’ll find more as I go along, but for now, I’m partying like it’s 1999."
+  },
+  {
+    "objectID": "posts/i_am_time/index.html",
+    "href": "posts/i_am_time/index.html",
+    "title": "I am Time, Destroyer of Worlds",
+    "section": "",
+    "text": "Figure 1: I am Time: A 19th century painting of Krishna in his viswarūpa. 1"
+  },
+  {
+    "objectID": "posts/i_am_time/index.html#executive-summary",
+    "href": "posts/i_am_time/index.html#executive-summary",
+    "title": "I am Time, Destroyer of Worlds",
+    "section": "Executive Summary",
+    "text": "Executive Summary\nYou may have watched in the new Nolan movie, or read it the 2005 biography (Bird and Sherwin 2005) on which the movie is based, or indeed, or have read it in the original interview (Barnett 1949) with Life magazine. Or may be you’ve known it all along. Julius Robert Oppenheimer is famously said to have quoted thought of a quote from the Bhagavad Gitā upon witnessing the first nuclear explosion:\n\nIf the radiance of a thousand suns were to burst at once into the sky, that would be like the splendo[u]r of the mighty one\nNow I am become Death, the shatterer of worlds.\n\nThere’s a lot of scholarship already published on this and indeed Bhagavad Gita in itself. This post doesn’t aim to add anything novel to that discussion, other than as a quick linguistic exploration through AI."
+  },
+  {
+    "objectID": "posts/i_am_time/index.html#the-original-verses",
+    "href": "posts/i_am_time/index.html#the-original-verses",
+    "title": "I am Time, Destroyer of Worlds",
+    "section": "The Original Verses",
+    "text": "The Original Verses\nOppenheimer was translating Slokas 12 and 32 in Chapter 11 of the Gita. The verses read as follows in the original Sanskrit:\nChapter 11, Verse 12:\ndivi sūrya-sahasrasya bhaved yugapad utthitā\nyadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ\nChapter 11, Verse 32:\nśhrī-bhagavān uvācha:\n   kālósmi loka-kṣhaya-kṛit pravṛiddho\n   lokān samāhartum iha pravṛittaḥ\n   ṛitépi tvāṁ na bhaviṣhyanti sarve\n   yévasthitāḥ pratyanīkeṣhu yodhāḥ\nHistorically, one learns classical Sanskrit (and classical Telugu) poetry through both a prati padārtham (word-by-word) translation, and a bhāvam (prose translation). Let’s try both here with AI."
+  },
+  {
+    "objectID": "posts/i_am_time/index.html#the-meaning",
+    "href": "posts/i_am_time/index.html#the-meaning",
+    "title": "I am Time, Destroyer of Worlds",
+    "section": "The Meaning",
+    "text": "The Meaning\n\nCalling Claude 2\nThe advent of LLM’s now mean that you can write a quick function in Python that can take in any verse in Sanskrit and return both the prati padārtham and the bhāvam in JSON.\nHere’s how.\n\n\nCode\ndef generate_sloka_meaning(sloka):\n    prompt = f\"\"\"\n    {HUMAN_PROMPT} Consider the following verse in Sanskrit enclosed in single quotes. Please give a JSON response with the following key/ value pairs:\n    1. 'prati padartham': Aword for word translation in English in the form of a markdown table. \n    The table should have the following columns: Word in Devanagari script, Word in Telugu script, Word in Roman Script, English Translation.\n    Return the table alone as the value.\n    2. 'bhavam': The overall meaning of the verse in English sentences. Return the meaning alone as the value.\n\n    Please give the response in the following JSON format: {'{\"prati padartham\": \"table\", \"bhavam\": \"meaning\"}'} This is important: do not give anything beyond the JSON response.\n    The verse: '{sloka}'\n    {AI_PROMPT} Can I check through my answer to ensure I have not missed anything?\n    {HUMAN_PROMPT} Yes, please do. Make sure you have not missed anything. Particularly check if you're outputting the right script in the right column. \n    {AI_PROMPT}\n            \"\"\"\n    anthropic = Anthropic()\n    completion = anthropic.completions.create(\n        model=\"claude-2\",\n        max_tokens_to_sample=40000,\n        prompt=prompt,\n    )\n    return completion.completion\n\ndef extract_prati_padartham(sloka_meaning):\n    #extract json value with the key 'prati padartham'\n    return json.loads(sloka_meaning)[\"prati padartham\"]\n\ndef extract_bhavam(sloka_meaning):\n    #extract json value with the key 'bhavam'\n    return json.loads(sloka_meaning)[\"bhavam\"]\n\n\nThe function generate_sloka_meaning calls Claude 2 and gets it to generate a prati padartham and bhavam. The former is returned as a Markdown table, while the latter is plain text. We also got Claude 2 to check through the response before returning it to us (per suggestion in Anthropic’s docs). This is because it did not generate the full meaning on some executions.\nLet’s now input both verses and see what Claude 2 generates for us.\n\n\nCode\nverses = {\n    \"11.12\": \"divi sūryasahasrasya bhaved yugapad utthitā\\nyadi bhāḥ sadṛśī sā syād bhāsas tasya mahātmanaḥ\",\n    \"11.32\": \"śhrī-bhagavān uvācha\\nkālo’smi loka-kṣaya-kṛt pravṛddho\\nlokan samāhartum iha pravṛttaḥ\\nṛte ’pi tvāṁ na bhaviṣyanti sarve\\nye ’vasthitāḥ pratyanīkeṣu yodhāḥ\",\n}\n\n# for each verse, generate the meaning\nsloka_meanings = {}\nfor verse in verses:\n    sloka_meanings[verse] = generate_sloka_meaning(verses[verse])\n\n\n\n\nResults\nThis is what we see for the two verses that Oppenheimer quoted:\n\n\n\n\nTable 1: Word-for-word translation of Verse 11.12\n\n\n\n\n\n\n\n\nWord in Devanagari\nWord in Telugu\nWord in Roman\nEnglish Translation\n\n\n\n\nदिवि\nదివి\ndivi\nin the sky\n\n\nसूर्यसहस्रस्य\nసూర్యసహస్రస్య\nsūryasahasrasya\nof thousands of suns\n\n\nभवेत्\nభవేత్\nbhavet\nwould be\n\n\nयुगपत्\nయుగపత్\nyugapat\nsimultaneously\n\n\nउत्थिता\nఉత్థితా\nutthitā\nrisen\n\n\nयदि\nయది\nyadi\nif\n\n\nभाः\nభాः\nbhāḥ\nlight\n\n\nसदृशी\nసదృశీ\nsadṛśī\nsimilar\n\n\nसा\nసా\nsā\nthat\n\n\nस्यात्\nస్యాత్\nsyāt\nwould be\n\n\nभासस्\nభాసస్\nbhāsas\nthe light\n\n\nतस्य\nతస్య\ntasya\nhis\n\n\nमहात्मनः\nమహాత్మనః\nmahātmanaḥ\nof the noble one\n\n\n\n\n\n\n\n\n\n\nTable 2: Word-for-word translation of Verse 11.32\n\n\n\n\n\n\n\n\nWord in Devanagari\nWord in Telugu\nWord in IAST\nEnglish Translation\n\n\n\n\nश्री-भगवान्\nశ్రీ-భగవాన్\nśrī-bhagavān\nLord Krishna\n\n\nउवाच\nఉవాచ\nuvāca\nsaid\n\n\nकालः\nకాలః\nkālaḥ\ntime\n\n\nअस्मि\nఅస్మి\nasmi\nI am\n\n\nलोक-क्षय-कृत्\nలోక-క్షయ-కృత్\nloka-kṣaya-kṛt\nthe destroyer of the worlds\n\n\nप्रवृद्धः\nప్రవృద్ధః\npravṛddhaḥ\ngrown\n\n\nलोकान्\nలోకాన్\nlokān\nthe worlds\n\n\nसमाहर्तुम्\nసమాహర్తుమ్\nsamāhartum\nto destroy\n\n\nइह\nఇహ\niha\nhere\n\n\nप्रवृत्तः\nప్రవృత్తః\npravṛttaḥ\nengaged\n\n\nऋते\nఋతే\nṛte\nwithout\n\n\nअपि\nఅపి\napi\neven\n\n\nत्वाम्\nత్వామ్\ntvām\nyou\n\n\nन\nన\nna\nnot\n\n\nभविष्यन्ति\nభవిష్యన్తి\nbhaviṣyanti\nwill be\n\n\nसर्वे\nసర్వే\nsarve\nall\n\n\nये\nయే\nye\nwho\n\n\nअवस्थिताः\nఅవస్థితాః\navasthitāḥ\narrayed\n\n\nप्रत्यनीकेषु\nప్రత్యనీకేషు\npratyanīkeṣu\non the opposing\n\n\nयोधाः\nయోధాః\nyodhāḥ\nwarriors\n\n\n\n\n\n\n( Do note that Claude 2 has gotten a few Roman transliterations wrong. )\n\n\nHere are the meanings of both verses:\n\n11.12: If thousands of suns were to rise simultaneously in the sky, that brilliance would be similar to the radiance of that noble soul.\n11.32: In this verse, Lord Krishna reveals that He is time, the destroyer of worlds. He says that the time has come for Him to destroy the worlds, and He has set out to do so. He declares that even without you (Arjuna), all the warriors arrayed on the opposing side will cease to exist."
+  },
+  {
+    "objectID": "posts/i_am_time/index.html#analysis",
+    "href": "posts/i_am_time/index.html#analysis",
+    "title": "I am Time, Destroyer of Worlds",
+    "section": "Analysis",
+    "text": "Analysis\nLet’s compare the versions one by one.\n\n\n\n\nTable 3: Comparing meanings for both verses\n\n\n\n\n\n\n\nVerse\nVersion By\nMeaning\n\n\n\n\n11.12\nOppenheimer\nIf the radiance of a thousand suns were to burst at once into the sky, that would be like the splendo[u]r of the mighty one\n\n\n11.12\nClaude 2\nIf thousands of suns were to rise in the sky simultaneously, that light would be similar to the light of that noble one.\n\n\n11.32\nOppenheimer\nNow I am become Death, the shatterer of worlds.\n\n\n11.32\nClaude 2\nLord Krishna said: I am time, the destroyer of worlds, fully grown for destroying the worlds. Now I am engaged here to destroy them. Even without you, all the warriors arrayed on the opposing side shall not exist.\n\n\n\n\n\n\nOne may note the following:\n\n1. Light from a Noble or Mighty One\nOppenheimer’s translation focusses on bursting of light from a thousand suns, like in a nuclear explosion, while Claude 2’s translation focuses on thousands of suns rising in the sky (“utthitā”). Oppenheimer translated mahātma as “mighty one”, while the Claude 2 translation renders it as “noble one”.\nWhich is to say: while in Oppenheimer’s translation, the narrator is in awe of a sudden display of immense power, in the latter, the narrator also ascribes a sense of nobility to a gentle - if less scary - display of power.\n\n\n2. Death or Time\nOppenheimer translated kālaḥ as “Death”, while the Claude 2 translation rendered it as “Time”. A quick search across multiple Sanskrit dictionaries suggests that kālaḥ can indeed mean both “Death” and “Time”, but the latter is more common.\nIn particular, Monier Williams 2nd Edition (1899) tried to reconcile both meanings by suggesting that kālaḥ could mean “death by age”, or time as an entity that “destroys all things” (Bharati 2023)\nTime has been worshipped as entity in Hinduism since the Vedic Era. Rig Veda Mandala 10, Sukta 190 suggests Time originated first from the Great Ocean in the sky, and only then did the Sun and the Moon come into existence:\n\n\nసముద్రాద్ అర్ణవాద్ అధి సంవత్సరో అజయాతఅహో రాత్రాణి విదధద్ విశ్వస్య మిషతో వశీసూర్యా చంద్రమసో ధాతా యథాపూర్వం అకల్పయత్దివం చ ప్రథివీంచ అంతరిక్షం ఆతో స్వాహః\n\n\nYes, of course, this too needs to be translated with the function we wrote above.\n\n\n\n\nTable 4: Claude 2’s translation of Rig Veda Mandala 10 Sukta 190\n\n\n\n\n\n\n\n\nWord in Devanagari\nWord in Telugu\nWord in Roman\nEnglish Translation\n\n\n\n\nसमुद्रात्\nసముద్రాద్\nsamudrāt\nfrom the ocean\n\n\nअर्णवात्\nఅర్ణవాద్\narṇavāt\nand from the sky\n\n\nअधि\nఅధి\nadhi\nabove\n\n\nसंवत्सर:\nసంవత్సరో\nsaṃvatsaro\nyear\n\n\nअजयात्\nఅజయాత\najayāt\nunceasingly\n\n\nअहो\nఅహో\naho\nO!\n\n\nरात्राणि\nరాత్రాణి\nrātrāṇi\nnights\n\n\nविदधत्\nవిదధద్\nvidadhat\nplacing\n\n\nविश्वस्य\nవిశ్వస్య\nviśvasya\nof the universe\n\n\nमिषत:\nమిషతో\nmiṣataḥ\nproperly\n\n\nवशी\nవశీ\nvaśī\nthe controller\n\n\nसूर्या:\nసూర్యా\nsūryāḥ\nsun\n\n\nचन्द्रमस:\nచంద్రమసో\ncandramasaḥ\nand moon\n\n\nधाता\nధాతా\ndhātā\nplacing\n\n\nयथापूर्वम्\nయథాపూర్వం\nyathāpūrvam\nas before\n\n\nअकल्पयत्\nఅకల్పయత్\nakalpayat\nimagined\n\n\nदिवम्\nదివం\ndivam\nheaven\n\n\nच\nచ\nca\nand\n\n\nपृथिवीम्\nప్రథివీంచ\npṛthivīṃ\nearth\n\n\nच\nచ\nca\nand\n\n\nअन्तरिक्षम्\nఅంతరిక్షం\nantarikṣam\nspace\n\n\nआत:\nఆతో\nātaḥ\nthen\n\n\nस्वा:\nస్వాహః\nsvāḥ\nhimself\n\n\n\n\n\n\nMeaning:\n\nThe verse describes how the creator (Brahma), after bringing forth the universe consisting of the sky, heavens, earth and space between them, then created the regulating principles exemplified by the sun and moon, which go on continuously, year after year, placing day and night properly in their assigned places just as before.\n\n\n\nNote that the Claude 2 translation is non-deterministic; each execution has produced a different result.\nTime is one of the four primary forms of Vishnu per the Vishnu Purana, the other three being matter (pradhāna), visible substance (vyakta), and spirit (purusha) (via Wikipedia)\nIn that sense, Krishna telling Arjuna that He is Time is not to say he will destroy the world, but that both creation and destruction are part of the same process, and that Krishna is the source of both."
+  },
+  {
+    "objectID": "posts/i_am_time/index.html#conclusion",
+    "href": "posts/i_am_time/index.html#conclusion",
+    "title": "I am Time, Destroyer of Worlds",
+    "section": "Conclusion",
+    "text": "Conclusion\nThere is no single correct interpretation of the Gita or any other Sanskrit verse. The context of the narrator matters as much as the words. Oppenheimer used verses from the Gita to describe his feelings about a scary new power that could bring about destruction of the world. Death, clearly, was on his mind. Another narrator (me) in a different context would interpret the same verses differently. These could very well be describing a more benevolent power over which one has no agency, but one that encompasses not just destruction but also creation.\nA quick lexical analysis through the traditional approach of seeing a word-for-word translation and then a sentence-wise translation can assist in this regard. Whilst this was traditionally done by hand, now you can script it out in Python by relying on LLM’s. However, output from LLM’s can be subjective too - biased by training, and also non-deterministic. You still need to think this through for yourself."
+  },
+  {
+    "objectID": "posts/i_am_time/index.html#footnotes",
+    "href": "posts/i_am_time/index.html#footnotes",
+    "title": "I am Time, Destroyer of Worlds",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe image is taken from V&A’s website. It used to be shown in the India collection along with other works of art the British Raj stole from the sub-continent, but now is no longer on public display. Infuriatingly, V&A somehow asserts copyright and therefore conditions over an image of this 200-year-old painting.↩︎"
+  },
+  {
     "objectID": "archive/bonjour-tout-le-monde/bonjour.html",
     "href": "archive/bonjour-tout-le-monde/bonjour.html",
     "title": "Bonjour Tout Le Monde!",
@@ -184,16 +233,37 @@
   {
     "objectID": "drafts/pyspark_ai/data_sleuthing.html",
     "href": "drafts/pyspark_ai/data_sleuthing.html",
-    "title": "Data Explorations in Natural Language: PySpark AI",
+    "title": "Do Androids Dream of Riding the Iron Horse?",
     "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+---------------------+\n|    Brand|US_Sales_2022|Sales_Comparison_2021|\n+---------+-------------+---------------------+\n|   Toyota|      1849751|              Down 9%|\n|     Ford|      1767439|              Down 2%|\n|Chevrolet|      1502389|                Up 6%|\n|    Honda|       881201|             Down 33%|\n|  Hyundai|       724265|              Down 2%|\n+---------+-------------+---------------------+\nonly showing top 5 rows"
+    "text": "Photo by JK on Unsplash"
   },
   {
-    "objectID": "drafts/pyspark_ai/data_sleuthing.html#merriweather",
-    "href": "drafts/pyspark_ai/data_sleuthing.html#merriweather",
-    "title": "Data Explorations in Natural Language: PySpark AI",
-    "section": "",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam suscipit est nec dui eleifend, at dictum elit ullamcorper. Aliquam feugiat dictum bibendum. Praesent fermentum laoreet quam, cursus volutpat odio dapibus in. Fusce luctus porttitor vehicula. Donec ac tortor nisi. Donec at lectus tortor. Morbi tempor, nibh non euismod viverra, metus arcu aliquet elit, sed fringilla urna leo vel purus.\n\nimport sys\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\nauto_df = spark_ai.create_df(\"https://www.carpro.com/blog/full-year-2022-national-auto-sales-by-brand\")\nauto_df.show(n=5)\n\n+---------+-------------+---------------------+\n|    Brand|US_Sales_2022|Sales_Comparison_2021|\n+---------+-------------+---------------------+\n|   Toyota|      1849751|              Down 9%|\n|     Ford|      1767439|              Down 2%|\n|Chevrolet|      1502389|                Up 6%|\n|    Honda|       881201|             Down 33%|\n|  Hyundai|       724265|              Down 2%|\n+---------+-------------+---------------------+\nonly showing top 5 rows"
+    "objectID": "drafts/pyspark_ai/data_sleuthing.html#executive-summary",
+    "href": "drafts/pyspark_ai/data_sleuthing.html#executive-summary",
+    "title": "Do Androids Dream of Riding the Iron Horse?",
+    "section": "0. Executive Summary",
+    "text": "0. Executive Summary\nIn which we try to perform the sacred task of Exploratory Data Analysis using a combination of Spark and LLM’s through a new stack launched by DataBricks called PySpark. We will use this to try and visualize the top 50 longest train services in the world using PySpark, Google Search and GPT 4.\nYou will see us fail. As always, that’s a teachable moment."
+  },
+  {
+    "objectID": "drafts/pyspark_ai/data_sleuthing.html#introduction-1",
+    "href": "drafts/pyspark_ai/data_sleuthing.html#introduction-1",
+    "title": "Do Androids Dream of Riding the Iron Horse?",
+    "section": "1. Introduction 1",
+    "text": "1. Introduction 1\nLet me first caveat this: I’m more of a planes person than a train person. Aviation analytics, particularly with open-source data is such a vast topic that I can spend days talking about it. I do just that, in fact, 9 AM to 6PM, five days a week, sometimes more; it’s my job after all. Which is why I’m not going to talk about planes here.\nInstead, let’s talk about trains. Trains are all about slow travel, about watching the world go by idly through various landscapes amidst banter and making new friends. I lived next to trains, both in Hyderabad in my childhood, and later in Singapore in my adult life, at least until they stopped plying in 2011. Indeed, it’s been a regret of mine that I couldn’t get to travel on some routes I’ve always romanticised before they shut them down. All good reasons why it’s fun to day-dream which trains to take, and for how long. If we were to day-dream, why not consider the longest passenger train services in the world? Let’s use AI for this crucial task."
+  },
+  {
+    "objectID": "drafts/pyspark_ai/data_sleuthing.html#pyspark-ai",
+    "href": "drafts/pyspark_ai/data_sleuthing.html#pyspark-ai",
+    "title": "Do Androids Dream of Riding the Iron Horse?",
+    "section": "2. PySpark AI",
+    "text": "2. PySpark AI\n\n2.1 Big Data Meets LLM’s\nDatabricks announced last month that they were launching a new SDK to “enrich” your Spark experience through English language queries. So instead of writing in SQL or PySpark, or indeed, getting GitHub Copilot to suggest queries in SQL or PySpark, you could now write directly in English. By connecting Google search API, Langchain and GPT 4 together, you could ask queries in English to get pie charts and such.\nThe stated premise is compelling. By typing just this2:\n\nfrom pyspark_ai import SparkAI\nimport os\nimport openai\n\nspark_ai = SparkAI()\nspark_ai.activate()\n# cars_df = spark_ai.create_df(\"2022 USA national auto sales by brand\")\n# cars_df.ai.plot()\n\nYou could get the Python kernel to traverse the web to retrieve the data, parse it, and plot it for you."
+  },
+  {
+    "objectID": "drafts/pyspark_ai/data_sleuthing.html#footnotes",
+    "href": "drafts/pyspark_ai/data_sleuthing.html#footnotes",
+    "title": "Do Androids Dream of Riding the Iron Horse?",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nI originally titled this piece Do Androids Dream of Riding the Iron Rooster? as a tip o’ hat to both Philip K Dick’s Do Androids Dream of Electric Sheep? and Paul Theroux’s 1988 travelogue, Riding the Iron Rooster . Seems like the term “iron rooster” (鐵公雞) in Chinese translates to a “stingy person”. Because the then Xinjiang government was stingy in keeping up the then longest train in China, Peking to Urumqi, they used to call specifically that train as a 鐵公雞\nInstead, per Claude, ‘iron horse’ (铁马, tiě mǎ) is a more common metaphor for ‘train’. For example: 铁马在轨道上奔腾而过 (Tiě mǎ zài guǐdào shàng bēnténg ér guò): The iron horse galloped past on the tracks.↩︎\nYou will need to sign up for keys from OpenAI and Google. This is not a trivial task.\n\nSign up for OpenAI keys through these steps.\nSign up for a Google Search API following these steps\nSave those keys in your conda environment following these steps Only then will the code work as-is\n\n↩︎"
   },
   {
     "objectID": "about.html",

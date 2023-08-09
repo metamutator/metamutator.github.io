@@ -1,0 +1,983 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.433">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Akshay Regulagedda">
+<meta name="dcterms.date" content="2023-08-09">
+<meta name="description" content="In which we explore Sanskrit with AI, using Oppenheimer as an excuse.">
+
+<title>aksh.ai - I am become Gerund, Destroyer of Verbs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0W83S6B2J"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
+</script>
+<script type="module" src="../../site_libs/quarto-ojs/quarto-ojs-runtime.js"></script>
+<link href="../../site_libs/quarto-ojs/quarto-ojs.css" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="aksh.ai - I am become Gerund, Destroyer of Verbs">
+<meta property="og:description" content="In which we explore Sanskrit with AI, using Oppenheimer as an excuse.">
+<meta property="og:image" content="https://www.aksh.ai/posts/gerund/angkor-wat.jpg">
+<meta property="og:site-name" content="aksh.ai">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">aksh.ai</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://social.vivaldi.net/(cydonian?)" rel="" target=""><i class="bi bi-mastodon" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/akshr/" rel="" target=""><i class="bi bi-linkedin" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/metamutator/" rel="" target=""><i class="bi bi-instagram" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#executive-summary" id="toc-executive-summary" class="nav-link active" data-scroll-target="#executive-summary">0. Executive Summary</a>
+  <ul class="collapse">
+  <li><a href="#the-quote" id="toc-the-quote" class="nav-link" data-scroll-target="#the-quote">The Quote</a></li>
+  </ul></li>
+  <li><a href="#sanskrit-the-language" id="toc-sanskrit-the-language" class="nav-link" data-scroll-target="#sanskrit-the-language">Sanskrit: The Language</a>
+  <ul class="collapse">
+  <li><a href="#same-same-but-different" id="toc-same-same-but-different" class="nav-link" data-scroll-target="#same-same-but-different">Same-same but different</a></li>
+  <li><a href="#same-same-not-same-as-sama-sama" id="toc-same-same-not-same-as-sama-sama" class="nav-link" data-scroll-target="#same-same-not-same-as-sama-sama">Same-same not same as sama-sama</a></li>
+  <li><a href="#haksara-wrehastra-conjunct-letters" id="toc-haksara-wrehastra-conjunct-letters" class="nav-link" data-scroll-target="#haksara-wrehastra-conjunct-letters">Haksara Wrehastra: Conjunct Letters</a></li>
+  </ul></li>
+  <li><a href="#writing-sanskrit" id="toc-writing-sanskrit" class="nav-link" data-scroll-target="#writing-sanskrit">1. Writing Sanskrit</a>
+  <ul class="collapse">
+  <li><a href="#methods-for-transliteration" id="toc-methods-for-transliteration" class="nav-link" data-scroll-target="#methods-for-transliteration">1.1 Methods for Transliteration</a></li>
+  <li><a href="#trying-it-out" id="toc-trying-it-out" class="nav-link" data-scroll-target="#trying-it-out">1.2 Trying it Out</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">I am become Gerund, Destroyer of Verbs</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">oppenheimer</div>
+    <div class="quarto-category">llm</div>
+    <div class="quarto-category">ai</div>
+    <div class="quarto-category">Sanskrit</div>
+    <div class="quarto-category">bhagavad-gita</div>
+    <div class="quarto-category">anthropic</div>
+    <div class="quarto-category">linguistics</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    In which we explore Sanskrit with AI, using Oppenheimer as an excuse.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Akshay Regulagedda </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">August 9, 2023</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<div id="fig-hero" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="./angkor-wat.jpg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;1: Radiance of a thousand suns: Sun rise at Angkor Wat. Photo by <a href="https://unsplash.com/@sebalatorre?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sebastian Latorre</a> on <a href="https://unsplash.com/photos/lrG4nki2kYM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></figcaption>
+</figure>
+</div>
+<section id="executive-summary" class="level2">
+<h2 class="anchored" data-anchor-id="executive-summary">0. Executive Summary</h2>
+<p>You may have watched in Christopher Nolan’s new movie. Or you may have read it in the <a href="https://archive.org/details/americanpromethe00bird/mode/1up">2005 biography</a> <span class="citation" data-cites="bird2005american">(<a href="#ref-bird2005american" role="doc-biblioref">Bird and Sherwin 2005</a>)</span> on which the movie is based. Or may have known it all along. But <a href="https://en.wikipedia.org/wiki/J._Robert_Oppenheimer">Julius Robert Oppenheimer</a> is famously said to have <del>quoted</del> thought of a quote from the <em>Bhagavad Gitā</em> upon witnessing the first nuclear explosion:</p>
+<blockquote class="blockquote">
+<p>I am become Death, the destroyer of worlds.</p>
+</blockquote>
+<p>Can we translate the original verse differently? Let’s use AI to find out.</p>
+<section id="the-quote" class="level3">
+<h3 class="anchored" data-anchor-id="the-quote">The Quote</h3>
+<p>Per his brother Frank’s recollection, Oppenheimer’s actual words at seeing the first nuclear explosion on 16 Jul 1945 at Alamogordo, New Mexico were: <em>I guess it worked</em> .</p>
+<p>It was only later in 1949 <span class="citation" data-cites="barnett1949j">(<a href="#ref-barnett1949j" role="doc-biblioref">Barnett 1949</a>)</span> when he was interviewed for Life magazine that he said he thought of the following verse from the <em>Gitā</em> :</p>
+<blockquote class="blockquote">
+<p>If the radiance of a thousand suns were to burst at once into the sky, that would be like the splendor of the mighty one … Now I am become Death, the shatterer of worlds.</p>
+</blockquote>
+<p>Oppenheimer was always interested in “the mystical and cryptic” because he liked to learn things that were “difficult”, with science being reasonably easy. <span class="citation" data-cites="bird2005american">(<a href="#ref-bird2005american" role="doc-biblioref">Bird and Sherwin 2005, 99, 102</a>)</span> Which is why he learnt Sanskrit, and apparently read not just the <em>Bhagavad Gitā</em>, but also Kālidāsa’s 4th century lyrical poem <em>Méghadūta</em>, in the original Sanskrit. Which is why he seemingly translated the verse(s) himself.</p>
+<p>Can we do so as well? We’ll need a crash course in Sanskrit to get started.</p>
+</section>
+</section>
+<section id="sanskrit-the-language" class="level2">
+<h2 class="anchored" data-anchor-id="sanskrit-the-language">Sanskrit: The Language</h2>
+<p>I haven’t had a formal education in Sanskrit. But it is a <em>liturgical</em> language that I chant in every day, not just for Hindu slokas from the <em>Gitā</em> and the Vedas, but also for Buddhist sutras such as the <em>Prajñaparamita Hrdaya Sūtra</em>. A lot of Sanskrit words have made their way into contemporary languages in both South and South East Asia, so I do understand many words.</p>
+<section id="same-same-but-different" class="level3">
+<h3 class="anchored" data-anchor-id="same-same-but-different">Same-same but different</h3>
+<p>But those familiar waters can sometimes be treacherous. The same word could have different meanings in Sanskrit and other languages. <a href="https://en.wikipedia.org/wiki/False_friend">False Friends</a> is a Thing, more so in Indic languages than in other language families. I often need to rely on guard-rails such as <a href="https://andhrabharati.com/dictionary/sanskrit/index.php">Sanskrit Dictionary Collections</a> to keep me safe.</p>
+<p>Then there are <a href="https://en.wikipedia.org/wiki/Sandhi">sandhi’s</a>, liasons between words to form compound words. Whilst the individual word may be understandable, the compound word could feel and sound new; you will need to know how the sandhi has been formed in order to untangle the compound word into its constituents.</p>
+</section>
+<section id="same-same-not-same-as-sama-sama" class="level3">
+<h3 class="anchored" data-anchor-id="same-same-not-same-as-sama-sama">Same-same not same as sama-sama</h3>
+<p>Sanskrit has been historically written in range of scripts, down from the earliest <a href="https://en.wikipedia.org/wiki/Brahmi_script">Brahmi</a> and <a href="https://en.wikipedia.org/wiki/Kharosthi">Kharosthi</a> scripts, to more contemporary scripts across Asia.</p>
+<p>Here’s a good example of how it all intersects. Consider this quote from Kālidāsa mentioned in Wikipedia, written in various Asian scripts:</p>
+<div id="fig-sanskrit" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="Phrase_sanskrit.svg" class="img-fluid figure-img"></p>
+<figcaption class="figure-caption">Figure&nbsp;2: <em>‘May Śiva bless those who take delight in the language of gods’</em> - Kālidāsa. (From<a href="https://commons.wikimedia.org/wiki/File:Phrase_sanskrit.svg">Wikipedia</a>)</figcaption>
+</figure>
+</div>
+<p>Sanskrit is written in each of these scripts for liturgical needs in South and South East Asia. The first word is easily understood: it clearly refers to Siva, one of the gods in the Hindu pantheon. The second word is also easily understood: it’s clearly a conjugation of the word <em>raksha</em> or <em>to protect</em>. But wait: how did <em>to protect</em> become <em>bless</em>?</p>
+<p>It gets more difficult with the next word, a multi-letter monster in every script mentioned in the graphic. It is a <em>compound</em> word: among others, words meaning ‘language’, ‘god’ and ‘delight’ have been somehow strung together to form a single word. This is where it starts to become complex.</p>
+</section>
+<section id="haksara-wrehastra-conjunct-letters" class="level3">
+<h3 class="anchored" data-anchor-id="haksara-wrehastra-conjunct-letters">Haksara Wrehastra: Conjunct Letters</h3>
+<p>For, untangling conjunct words is not just a matter of giving the right amount of spaces. Most Brahmi-originated scripts have <a href="https://en.wikipedia.org/wiki/Abugida#General_description">conjunct letters</a>, complex rules where letters may be combined in certain combinations to form new letters. 36 consonants can be combined to form <a href="https://en.wikipedia.org/wiki/Devanagari_conjuncts">1296 two-letter combinations</a> in Sanskrit, but that is not all. Each of these combinations can be combined with 16 vowels to form even more complex conjuncts. There is no grammatical limit to the number of letters you can combine. At the most extreme, the word कार्त्स्न्य (“entirety”) consists of a five-letter conjunct, र्त्स्न्य <span class="citation" data-cites="stiehl2017devanagari">(<a href="#ref-stiehl2017devanagari" role="doc-biblioref">Stiehl 2017</a>)</span>.</p>
+<p>Whilst I can read many of the scripts listed in <a href="#fig-sanskrit">Figure&nbsp;2</a>, I find it easier break conjunct vowels and therefore words into their constituent parts in Telugu script. But that may not be your experience; perhaps you’re used to reading about Ghatōtgacha’s exploits in Balinese script. Which brings us to our first computational challenge: can we transliterate a Sanskrit string into a script of our choice?</p>
+</section>
+</section>
+<section id="writing-sanskrit" class="level2">
+<h2 class="anchored" data-anchor-id="writing-sanskrit">1. Writing Sanskrit</h2>
+<section id="methods-for-transliteration" class="level3">
+<h3 class="anchored" data-anchor-id="methods-for-transliteration">1.1 Methods for Transliteration</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Transliteration is to convert a string from one script to another without changing the word. This is different from translation, which is to convert a string from one language to another.</p>
+</div>
+</div>
+<p>A naive suggestion could be that an LLM could draft us a quick method in transliterate Telugu strings to Sanskrit. We tried to get Anthropic Claude 2 to do just that:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource javascript number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1"></a><span class="im">import</span> { Observable } <span class="im">from</span> <span class="st">'observable-fns'</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="kw">const</span> teluguToDevanagari <span class="op">=</span> Observable<span class="op">.</span><span class="fu">create</span>((teluguText) <span class="kw">=&gt;</span> {</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>  <span class="kw">const</span> mappings <span class="op">=</span> {</span>
+<span id="cb1-6"><a href="#cb1-6"></a>    <span class="st">'అ'</span><span class="op">:</span><span class="st">'अ'</span><span class="op">,</span> <span class="st">'ఆ'</span><span class="op">:</span><span class="st">'आ'</span><span class="op">,</span> <span class="st">'ఇ'</span><span class="op">:</span><span class="st">'इ'</span><span class="op">,</span> <span class="st">'ఈ'</span><span class="op">:</span><span class="st">'ई'</span><span class="op">,</span> <span class="st">'ఉ'</span><span class="op">:</span><span class="st">'उ'</span><span class="op">,</span> </span>
+<span id="cb1-7"><a href="#cb1-7"></a>    <span class="st">'ఊ'</span><span class="op">:</span><span class="st">'ऊ'</span><span class="op">,</span> <span class="st">'ఋ'</span><span class="op">:</span><span class="st">'ऋ'</span><span class="op">,</span> <span class="st">'ఌ'</span><span class="op">:</span><span class="st">'ऌ'</span><span class="op">,</span> <span class="st">'ఎ'</span><span class="op">:</span><span class="st">'ए'</span><span class="op">,</span> <span class="st">'ఏ'</span><span class="op">:</span><span class="st">'ऐ'</span><span class="op">,</span> </span>
+<span id="cb1-8"><a href="#cb1-8"></a>    <span class="st">'ఐ'</span><span class="op">:</span><span class="st">'ऑ'</span><span class="op">,</span> <span class="st">'ఒ'</span><span class="op">:</span><span class="st">'ओ'</span><span class="op">,</span> <span class="st">'ఓ'</span><span class="op">:</span><span class="st">'औ'</span><span class="op">,</span> <span class="st">'ఔ'</span><span class="op">:</span><span class="st">'अउ'</span><span class="op">,</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>    <span class="co">// ...add remaining mappings</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  }</span>
+<span id="cb1-11"><a href="#cb1-11"></a></span>
+<span id="cb1-12"><a href="#cb1-12"></a>  <span class="kw">let</span> devanagariText <span class="op">=</span> <span class="st">''</span></span>
+<span id="cb1-13"><a href="#cb1-13"></a></span>
+<span id="cb1-14"><a href="#cb1-14"></a>  <span class="cf">for</span>(<span class="kw">let</span> i<span class="op">=</span><span class="dv">0</span><span class="op">;</span> i<span class="op">&lt;</span>teluguText<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb1-15"><a href="#cb1-15"></a>    <span class="cf">if</span>(mappings<span class="op">.</span><span class="fu">hasOwnProperty</span>(teluguText[i])) {</span>
+<span id="cb1-16"><a href="#cb1-16"></a>      devanagariText <span class="op">+=</span> mappings[teluguText[i]]</span>
+<span id="cb1-17"><a href="#cb1-17"></a>    } <span class="cf">else</span> {</span>
+<span id="cb1-18"><a href="#cb1-18"></a>      devanagariText <span class="op">+=</span> teluguText[i] </span>
+<span id="cb1-19"><a href="#cb1-19"></a>    }</span>
+<span id="cb1-20"><a href="#cb1-20"></a>  }</span>
+<span id="cb1-21"><a href="#cb1-21"></a></span>
+<span id="cb1-22"><a href="#cb1-22"></a>  <span class="cf">return</span> devanagariText</span>
+<span id="cb1-23"><a href="#cb1-23"></a></span>
+<span id="cb1-24"><a href="#cb1-24"></a>})</span>
+<span id="cb1-25"><a href="#cb1-25"></a></span>
+<span id="cb1-26"><a href="#cb1-26"></a><span class="im">export</span> { teluguToDevanagari }</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>This obviously doesn’t work.</p>
+<p>For one, Claude didn’t complete the <code>mappings</code> constant, and instead, provided a lazy <code>// ...add remaining mappings</code> comment, which isn’t helpful. For another, this approach won’t work with conjunct vowels at all, unless you list every single one of the combination there is.</p>
+<p>We tried again, this time asking for it to be in Python:</p>
+<div class="cell" data-execution_count="2">
+<details open="">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>telugu_ranges <span class="op">=</span> [</span>
+<span id="cb2-2"><a href="#cb2-2"></a>    (<span class="st">'0C00'</span>, <span class="st">'0C7F'</span>), <span class="co"># Telugu</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a>    (<span class="st">'0C80'</span>, <span class="st">'0CFF'</span>), <span class="co"># Telugu Supplementary</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a>] </span>
+<span id="cb2-5"><a href="#cb2-5"></a></span>
+<span id="cb2-6"><a href="#cb2-6"></a>devanagari_ranges <span class="op">=</span> [</span>
+<span id="cb2-7"><a href="#cb2-7"></a>    (<span class="st">'0900'</span>, <span class="st">'097F'</span>), <span class="co"># Devanagari</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>    (<span class="st">'A8E0'</span>, <span class="st">'A8FF'</span>), <span class="co"># Devanagari Extended</span></span>
+<span id="cb2-9"><a href="#cb2-9"></a>]</span>
+<span id="cb2-10"><a href="#cb2-10"></a></span>
+<span id="cb2-11"><a href="#cb2-11"></a>telugu_to_devanagari_map <span class="op">=</span> {}</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="cf">for</span> start, end <span class="kw">in</span> telugu_ranges:</span>
+<span id="cb2-14"><a href="#cb2-14"></a>    <span class="cf">for</span> char <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">int</span>(start, base<span class="op">=</span><span class="dv">16</span>), <span class="bu">int</span>(end, base<span class="op">=</span><span class="dv">16</span>)<span class="op">+</span><span class="dv">1</span>):</span>
+<span id="cb2-15"><a href="#cb2-15"></a>        telugu_char <span class="op">=</span> <span class="bu">chr</span>(char)</span>
+<span id="cb2-16"><a href="#cb2-16"></a>        devanagari_char <span class="op">=</span> unicodedata.normalize(<span class="st">'NFKC'</span>, telugu_char)</span>
+<span id="cb2-17"><a href="#cb2-17"></a>        <span class="cf">if</span> devanagari_char <span class="kw">in</span> devanagari_ranges:</span>
+<span id="cb2-18"><a href="#cb2-18"></a>            telugu_to_devanagari_map[telugu_char] <span class="op">=</span> devanagari_char</span>
+<span id="cb2-19"><a href="#cb2-19"></a></span>
+<span id="cb2-20"><a href="#cb2-20"></a><span class="kw">def</span> transliterate(text):</span>
+<span id="cb2-21"><a href="#cb2-21"></a>    <span class="cf">return</span> <span class="st">''</span>.join([telugu_to_devanagari_map.get(char, char) <span class="cf">for</span> char <span class="kw">in</span> text])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Except that… this doesn’t work either. Here’s what happens when we execute the function:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1"></a><span class="bu">print</span>(transliterate(<span class="st">"అందరికీ నమస్కారం"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>అందరికీ నమస్కారం</code></pre>
+</div>
+</div>
+<p>… which is exactly the same text as the input. I asked Claude what the problem was, and to its credit, it did identify the error: <code>unicodedata.normalize('NFKC')</code> doesn’t convert from the Telugu character-set to Devanagari.</p>
+<p>But it didn’t fix the error directly. Only after a few rounds of hallucinations and corrections, did we arrive at this version, where we offset the Telugu character-set by 0x0900 - 0x0C00, which is the difference between the Devanagari and Telugu character-sets:</p>
+<div class="cell" data-execution_count="4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> transliterate(text):</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  </span>
+<span id="cb5-3"><a href="#cb5-3"></a>  devanagari_offset <span class="op">=</span> <span class="bn">0x0900</span> <span class="op">-</span> <span class="bn">0x0C00</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>  </span>
+<span id="cb5-5"><a href="#cb5-5"></a>  output <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>  <span class="cf">for</span> char <span class="kw">in</span> text:</span>
+<span id="cb5-7"><a href="#cb5-7"></a>    char_code <span class="op">=</span> <span class="bu">ord</span>(char)</span>
+<span id="cb5-8"><a href="#cb5-8"></a>    </span>
+<span id="cb5-9"><a href="#cb5-9"></a>    <span class="cf">if</span> <span class="bn">0x0C00</span> <span class="op">&lt;=</span> char_code <span class="op">&lt;=</span> <span class="bn">0x0CFF</span>:</span>
+<span id="cb5-10"><a href="#cb5-10"></a>      dev_code <span class="op">=</span> char_code <span class="op">+</span> devanagari_offset</span>
+<span id="cb5-11"><a href="#cb5-11"></a>      output <span class="op">+=</span> <span class="bu">chr</span>(dev_code)</span>
+<span id="cb5-12"><a href="#cb5-12"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-13"><a href="#cb5-13"></a>      output <span class="op">+=</span> char</span>
+<span id="cb5-14"><a href="#cb5-14"></a>        </span>
+<span id="cb5-15"><a href="#cb5-15"></a>  <span class="cf">return</span> output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Let’s run this method against a few examples:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1"></a>unit_tests <span class="op">=</span> [<span class="st">"అందరికీ నమస్కారం"</span>, <span class="co"># "Hello world" in Telugu</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>                <span class="st">"శివో రక్షతు గీర్వాణభాషారసాస్వాదతత్పరాన్"</span>, <span class="co">#The Kalidasa quote above</span></span>
+<span id="cb6-3"><a href="#cb6-3"></a>                <span class="st">"యెలహంక"</span> <span class="co"># See below</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>            ]</span>
+<span id="cb6-5"><a href="#cb6-5"></a><span class="co">#loop through the unit tests</span></span>
+<span id="cb6-6"><a href="#cb6-6"></a><span class="bu">print</span>(<span class="op">*</span>[transliterate(test) <span class="cf">for</span> test <span class="kw">in</span> unit_tests], sep<span class="op">=</span><span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>अंदरिकी नमस्कारं
+शिवो रक्षतु गीर्वाणभाषारसास्वादतत्परान्
+यॆलहंक</code></pre>
+</div>
+</div>
+<p>These work! A key point here is that you should not trust output from LLM’s to work blindly; you must test and validate them, not just with unit-tests, but also with real-world examples. We’ll come back to this point again soon.</p>
+<p>A linguistic point in our “unit-tests”. The last example there, <code>యెలహంక</code>, is the Telugu spelling of a Bangalore suburb, also written in Kannada as <code>ಯೇಲಹಂಕ</code>. Transliterating Kannada to Telugu is quite straightforward, as was transliterating to Sanskrit (Devanagari) as <code>येलहंक</code>. But if you read the Devanagari version with Hindi pronunciation in mind, you’ll end up reading it as ‘Yelhank’. That’s incorrect; it should be read as ‘Yelahanka’. This is a good example of False Friends among South Asian languages; Hindi and Sanskrit may be written in the same script, Devanagari, but are to be pronounced differently.</p>
+<p>But really, this method needs to be generalized for any South (East) Asian script to any other (whilst noting the potential for False Friends). Let’s expand the method to include Unicode ranges for all scripts.</p>
+<div class="cell" data-code-snippet="true" data-execution_count="6">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>script_unicode_ranges <span class="op">=</span> {</span>
+<span id="cb8-2"><a href="#cb8-2"></a>    <span class="co">#north</span></span>
+<span id="cb8-3"><a href="#cb8-3"></a>    <span class="st">'assamese'</span>: [(<span class="bn">0x0980</span>, <span class="bn">0x09FF</span>)],</span>
+<span id="cb8-4"><a href="#cb8-4"></a>    <span class="st">'bengali'</span>: [(<span class="bn">0x0980</span>, <span class="bn">0x09FF</span>)],</span>
+<span id="cb8-5"><a href="#cb8-5"></a>    <span class="st">'devanagari'</span>: [(<span class="bn">0x0900</span>, <span class="bn">0x097F</span>), (<span class="bn">0xA8E0</span>, <span class="bn">0xA8FF</span>)],</span>
+<span id="cb8-6"><a href="#cb8-6"></a>    <span class="st">'gujarati'</span>: [(<span class="bn">0x0A80</span>, <span class="bn">0x0AFF</span>)],</span>
+<span id="cb8-7"><a href="#cb8-7"></a>    <span class="st">'gurmukhi'</span>: [(<span class="bn">0x0A00</span>, <span class="bn">0x0A7F</span>)],  </span>
+<span id="cb8-8"><a href="#cb8-8"></a>    <span class="st">'oriya'</span>: [(<span class="bn">0x0B00</span>, <span class="bn">0x0B7F</span>)],</span>
+<span id="cb8-9"><a href="#cb8-9"></a>    <span class="st">'tibetan'</span>: [(<span class="bn">0x0F00</span>, <span class="bn">0x0FFF</span>)],</span>
+<span id="cb8-10"><a href="#cb8-10"></a>    <span class="co">#south</span></span>
+<span id="cb8-11"><a href="#cb8-11"></a>    <span class="st">'tamil'</span>: [(<span class="bn">0x0B80</span>, <span class="bn">0x0BFF</span>)],</span>
+<span id="cb8-12"><a href="#cb8-12"></a>    <span class="st">'telugu'</span>: [(<span class="bn">0x0C00</span>, <span class="bn">0x0C7F</span>), (<span class="bn">0x0C80</span>, <span class="bn">0x0CFF</span>)],</span>
+<span id="cb8-13"><a href="#cb8-13"></a>    <span class="st">'kannada'</span>: [(<span class="bn">0x0C80</span>, <span class="bn">0x0CFF</span>)],</span>
+<span id="cb8-14"><a href="#cb8-14"></a>    <span class="st">'malayalam'</span>: [(<span class="bn">0x0D00</span>, <span class="bn">0x0D7F</span>)],</span>
+<span id="cb8-15"><a href="#cb8-15"></a>    <span class="st">'sinhala'</span>: [(<span class="bn">0x0D80</span>, <span class="bn">0x0DFF</span>)],</span>
+<span id="cb8-16"><a href="#cb8-16"></a>    <span class="co">#SE Asia mainland</span></span>
+<span id="cb8-17"><a href="#cb8-17"></a>    <span class="st">'thai'</span>: [(<span class="bn">0x0E00</span>, <span class="bn">0x0E7F</span>)],</span>
+<span id="cb8-18"><a href="#cb8-18"></a>    <span class="st">'lao'</span>: [(<span class="bn">0x0E80</span>, <span class="bn">0x0EFF</span>)],</span>
+<span id="cb8-19"><a href="#cb8-19"></a>    <span class="st">'myanmar'</span>: [(<span class="bn">0x1000</span>, <span class="bn">0x109F</span>)],</span>
+<span id="cb8-20"><a href="#cb8-20"></a>    <span class="st">'khmer'</span>: [(<span class="bn">0x1780</span>, <span class="bn">0x17FF</span>), (<span class="bn">0x19E0</span>, <span class="bn">0x19FF</span>)],</span>
+<span id="cb8-21"><a href="#cb8-21"></a>    <span class="co">#SE Asia maritime</span></span>
+<span id="cb8-22"><a href="#cb8-22"></a>    <span class="st">'balinese'</span>: [(<span class="bn">0x1B00</span>, <span class="bn">0x1B7F</span>)],</span>
+<span id="cb8-23"><a href="#cb8-23"></a>    <span class="st">'javanese'</span>: [(<span class="bn">0xA980</span>, <span class="bn">0xA9DF</span>)],</span>
+<span id="cb8-24"><a href="#cb8-24"></a>    <span class="st">'sundanese'</span>: [(<span class="bn">0x1B80</span>, <span class="bn">0x1BBF</span>)]</span>
+<span id="cb8-25"><a href="#cb8-25"></a>}</span>
+<span id="cb8-26"><a href="#cb8-26"></a><span class="co"># write script_unicode_ranges to a file</span></span>
+<span id="cb8-27"><a href="#cb8-27"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">'script_unicode_ranges.json'</span>, <span class="st">'w'</span>) <span class="im">as</span> fp:</span>
+<span id="cb8-28"><a href="#cb8-28"></a>    json.dump(script_unicode_ranges, fp)</span>
+<span id="cb8-29"><a href="#cb8-29"></a></span>
+<span id="cb8-30"><a href="#cb8-30"></a><span class="kw">def</span> transliterate(text, source_script, target_script):</span>
+<span id="cb8-31"><a href="#cb8-31"></a>  source_range <span class="op">=</span> script_unicode_ranges[source_script]</span>
+<span id="cb8-32"><a href="#cb8-32"></a>  target_range <span class="op">=</span> script_unicode_ranges[target_script]</span>
+<span id="cb8-33"><a href="#cb8-33"></a></span>
+<span id="cb8-34"><a href="#cb8-34"></a>  output <span class="op">=</span> <span class="st">""</span></span>
+<span id="cb8-35"><a href="#cb8-35"></a>  <span class="cf">for</span> char <span class="kw">in</span> text:</span>
+<span id="cb8-36"><a href="#cb8-36"></a>   </span>
+<span id="cb8-37"><a href="#cb8-37"></a>    source_char_code <span class="op">=</span> <span class="bu">ord</span>(char)</span>
+<span id="cb8-38"><a href="#cb8-38"></a>    </span>
+<span id="cb8-39"><a href="#cb8-39"></a>    <span class="cf">if</span> in_range(source_char_code, source_range):</span>
+<span id="cb8-40"><a href="#cb8-40"></a>       target_char_code <span class="op">=</span> map_to_target(source_char_code, source_range, target_range)</span>
+<span id="cb8-41"><a href="#cb8-41"></a>       <span class="cf">if</span> target_char_code <span class="op">!=</span> <span class="bn">0xFFFD</span>:</span>
+<span id="cb8-42"><a href="#cb8-42"></a>        output <span class="op">+=</span> <span class="bu">chr</span>(target_char_code)</span>
+<span id="cb8-43"><a href="#cb8-43"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-44"><a href="#cb8-44"></a>       output <span class="op">+=</span> char</span>
+<span id="cb8-45"><a href="#cb8-45"></a>       </span>
+<span id="cb8-46"><a href="#cb8-46"></a>  <span class="cf">return</span> output</span>
+<span id="cb8-47"><a href="#cb8-47"></a></span>
+<span id="cb8-48"><a href="#cb8-48"></a><span class="kw">def</span> in_range(char_code, ranges):</span>
+<span id="cb8-49"><a href="#cb8-49"></a>    <span class="cf">return</span> <span class="bu">any</span>([start <span class="op">&lt;=</span> char_code <span class="op">&lt;=</span> end <span class="cf">for</span> start, end <span class="kw">in</span> ranges])</span>
+<span id="cb8-50"><a href="#cb8-50"></a></span>
+<span id="cb8-51"><a href="#cb8-51"></a><span class="kw">def</span> map_to_target(source_char_code, source_range, target_range):</span>
+<span id="cb8-52"><a href="#cb8-52"></a></span>
+<span id="cb8-53"><a href="#cb8-53"></a>  <span class="co"># Calculate target code point</span></span>
+<span id="cb8-54"><a href="#cb8-54"></a>  target_char_code <span class="op">=</span> source_char_code <span class="op">+</span> (target_range[<span class="dv">0</span>][<span class="dv">0</span>] <span class="op">-</span> source_range[<span class="dv">0</span>][<span class="dv">0</span>])</span>
+<span id="cb8-55"><a href="#cb8-55"></a></span>
+<span id="cb8-56"><a href="#cb8-56"></a>  <span class="co"># Check if it is an assigned Unicode character</span></span>
+<span id="cb8-57"><a href="#cb8-57"></a>  <span class="cf">if</span> (unicodedata.category(<span class="bu">chr</span>(target_char_code)) <span class="op">!=</span> <span class="st">'Cn'</span>):</span>
+<span id="cb8-58"><a href="#cb8-58"></a>    <span class="cf">return</span> target_char_code </span>
+<span id="cb8-59"><a href="#cb8-59"></a></span>
+<span id="cb8-60"><a href="#cb8-60"></a>  <span class="co"># If not, map to unspecified character code point</span></span>
+<span id="cb8-61"><a href="#cb8-61"></a>  <span class="cf">return</span> <span class="bn">0xFFFD</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
+<p>Quite a few pieces happening in there. To start with, whilst Brahmi-based scripts are <em>similar</em> to each other, they aren’t <em>same</em> ; for instance, the Bengali script does not have a letter equivalent to the Telugu letter వ, whilst Devanagari and other southern and western scripts do. So we have a check to see if the mapped character is a valid Unicode character; if not, we map it to the Unicode replacement character, <code>0xFFFD</code>.</p>
+<p>Let’s first repeat our “unit-tests”.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1"></a><span class="co">#print transliterate for all unit_tests</span></span>
+<span id="cb9-2"><a href="#cb9-2"></a><span class="bu">print</span>(<span class="op">*</span>[transliterate(test, <span class="st">'telugu'</span>, <span class="st">'devanagari'</span>) <span class="cf">for</span> test <span class="kw">in</span> unit_tests], sep<span class="op">=</span><span class="st">'</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>अंदरिकी नमस्कारं
+शिवो रक्षतु गीर्वाणभाषारसास्वादतत्परान्
+यॆलहंक</code></pre>
+</div>
+</div>
+<p>These work, but let’s try to the Kālidāsa quote with the scripts in <a href="#fig-sanskrit">Figure&nbsp;2</a>.</p>
+<div class="cell" data-execution_count="8">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>clean_scripts <span class="op">=</span> [<span class="st">'devanagari'</span>, <span class="st">'gujarati'</span>, <span class="st">'gurmukhi'</span>, <span class="st">'kannada'</span>, <span class="st">'malayalam'</span>, <span class="st">'oriya'</span>, <span class="st">'telugu'</span>, <span class="st">'sinhala'</span>]</span>
+<span id="cb11-2"><a href="#cb11-2"></a>kalidasa_quote <span class="op">=</span> unit_tests[<span class="dv">1</span>]</span>
+<span id="cb11-3"><a href="#cb11-3"></a>table_row_list <span class="op">=</span> [<span class="ss">f"</span><span class="sc">{</span>script<span class="sc">}</span><span class="ss">| </span><span class="sc">{</span>transliterate(kalidasa_quote, <span class="st">'telugu'</span>, script)<span class="sc">}</span><span class="ss">"</span> <span class="cf">for</span> script <span class="kw">in</span> clean_scripts]</span>
+<span id="cb11-4"><a href="#cb11-4"></a>table_row_text <span class="op">=</span> <span class="st">"|</span><span class="ch">\n</span><span class="st">"</span>.join(table_row_list)</span>
+<span id="cb11-5"><a href="#cb11-5"></a>display_markdown(<span class="ss">f"| Script | Transliteration |</span><span class="ch">\n</span><span class="ss">| --- | --- |</span><span class="ch">\n</span><span class="sc">{</span>table_row_text<span class="sc">}</span><span class="ss">"</span>, raw<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+<div class="cell-output cell-output-display">
+<div id="tbl-kalidasa" class="anchored">
+<table class="table table-sm table-striped small">
+<caption>Table&nbsp;1: Recreated List of Scripts showing the Kalidasa quote</caption>
+<thead>
+<tr class="header">
+<th>Script</th>
+<th>Transliteration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>devanagari</td>
+<td>शिवो रक्षतु गीर्वाणभाषारसास्वादतत्परान्</td>
+</tr>
+<tr class="even">
+<td>gujarati</td>
+<td>શિવો રક્ષતુ ગીર્વાણભાષારસાસ્વાદતત્પરાન્</td>
+</tr>
+<tr class="odd">
+<td>gurmukhi</td>
+<td>ਸ਼ਿਵੋ ਰਕ੍ਤੁ ਗੀਰ੍ਵਾਣਭਾਾਰਸਾਸ੍ਵਾਦਤਤ੍ਪਰਾਨ੍</td>
+</tr>
+<tr class="even">
+<td>kannada</td>
+<td>ಶಿವೋ ರಕ್ಷತು ಗೀರ್ವಾಣಭಾಷಾರಸಾಸ್ವಾದತತ್ಪರಾನ್</td>
+</tr>
+<tr class="odd">
+<td>malayalam</td>
+<td>ശിവോ രക്ഷതു ഗീര്വാണഭാഷാരസാസ്വാദതത്പരാന്</td>
+</tr>
+<tr class="even">
+<td>oriya</td>
+<td>ଶିଵୋ ରକ୍ଷତୁ ଗୀର୍ଵାଣଭାଷାରସାସ୍ଵାଦତତ୍ପରାନ୍</td>
+</tr>
+<tr class="odd">
+<td>telugu</td>
+<td>శివో రక్షతు గీర్వాణభాషారసాస్వాదతత్పరాన్</td>
+</tr>
+<tr class="even">
+<td>sinhala</td>
+<td>බඵ ධඕභඤශ වධඵඣතභධමමඵඦඤඤඪධඨ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>The approach seems to work for some South Asian scripts, but didn’t for Assamese, Bengali, Tamil, Tibetan or the South East Asian scripts or Tibetan. Some additional characters were rendered there. One reason could be because some of the rendered glyphs may not map one-to-one. We will come back to those in a later post. I also have no way of knowing whether it is accurate for Oriya or Sinhala. If you read either, please let me know in the comments if the transliteration is accurate.</p>
+</section>
+<section id="trying-it-out" class="level3">
+<h3 class="anchored" data-anchor-id="trying-it-out">1.2 Trying it Out</h3>
+<p>You can try out the method here:</p>
+<div class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display">
+<script type="ojs-define">{"contents": [{"name": "scriptRanges", "value": {"assamese": [[2432, 2559]], "bengali": [[2432, 2559]], "devanagari": [[2304, 2431], [43232, 43263]], "gujarati": [[2688, 2815]], "gurmukhi": [[2560, 2687]], "oriya": [[2816, 2943]], "tibetan": [[3840, 4095]], "tamil": [[2944, 3071]], "telugu": [[3072, 3199], [3200, 3327]], "kannada": [[3200, 3327]], "malayalam": [[3328, 3455]], "sinhala": [[3456, 3583]], "thai": [[3584, 3711]], "lao": [[3712, 3839]], "myanmar": [[4096, 4255]], "khmer": [[6016, 6143], [6624, 6655]], "balinese": [[6912, 7039]], "javanese": [[43392, 43487]], "sundanese": [[7040, 7103]]}}]}</script>
+</div>
+<div class="cell-output cell-output-display">
+<script type="ojs-define">{"contents": [{"name": "clean_scripts", "value": ["devanagari", "gujarati", "gurmukhi", "kannada", "malayalam", "oriya", "telugu", "sinhala"]}]}</script>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code hidden" id="cb12" data-startfrom="283" data-source-offset="-20"><pre class="sourceCode numberSource js number-lines code-with-copy"><code class="sourceCode javascript" style="counter-reset: source-line 282;"><span id="cb12-283"><a href="#cb12-283"></a>viewof txtInput <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">text</span>({<span class="dt">label</span><span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;b&gt;Input Text&lt;/b&gt;`</span><span class="op">,</span> <span class="dt">placeholder</span><span class="op">:</span> <span class="st">"Enter text here (e.g. సంస్కృతం)"</span>})<span class="op">;</span></span>
+<span id="cb12-284"><a href="#cb12-284"></a>viewof scripts <span class="op">=</span> Inputs<span class="op">.</span><span class="fu">select</span>(clean_scripts<span class="op">,</span> {<span class="dt">label</span><span class="op">:</span> <span class="fu">html</span><span class="vs">`&lt;b&gt;Target Script&lt;/b&gt;`</span><span class="op">,</span> <span class="dt">placeholder</span><span class="op">:</span> <span class="st">"Select target script"</span>})<span class="op">;</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-1" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<div id="ojs-cell-1-2" data-nodetype="declaration">
+
+</div>
+</div>
+</div>
+</div>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-barnett1949j" class="csl-entry" role="listitem">
+Barnett, Lincoln. 1949. <span>“J. Robert Oppenheimer.”</span> <em>Life</em>, 133.
+</div>
+<div id="ref-bird2005american" class="csl-entry" role="listitem">
+Bird, Kai, and Martin J Sherwin. 2005. <em>American Prometheus: The Triumph and Tragedy of j. Robert Oppenheimer</em>. Alfred A. Knopf.
+</div>
+<div id="ref-stiehl2017devanagari" class="csl-entry" role="listitem">
+Stiehl, Ulrich. 2017. <span>“Devanagari-Schreibübungen.”</span> <a href="https://www.sanskritweb.net/deutsch/devanagari.pdf" class="uri">https://www.sanskritweb.net/deutsch/devanagari.pdf</a>.
+</div>
+</div></section></div></main> <!-- /main -->
+<script type="ojs-module-contents">
+{"contents":[{"methodName":"interpret","cellName":"ojs-cell-1","inline":false,"source":"//print script_dict\nviewof txtInput = Inputs.text({label: html`<b>Input Text</b>`, placeholder: \"Enter text here (e.g. సంస్కృతం)\"});\nviewof scripts = Inputs.select(clean_scripts, {label: html`<b>Target Script</b>`, placeholder: \"Select target script\"});\n"},{"methodName":"interpretQuiet","source":"shinyInput('txtInput')"},{"methodName":"interpretQuiet","source":"shinyInput('scripts')"}]}
+</script>
+<script type="module">
+if (window.location.protocol === "file:") { alert("The OJS runtime does not work with file:// URLs. Please use a web server to view this document."); }
+window._ojs.paths.runtimeToDoc = "../../posts/gerund";
+window._ojs.paths.runtimeToRoot = "../..";
+window._ojs.paths.docToRoot = "../..";
+window._ojs.selfContained = false;
+window._ojs.runtime.interpretFromScriptTags();
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+<script src="https://utteranc.es/client.js" repo="metamutator/metamutator.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
