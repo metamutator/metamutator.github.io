@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -103,7 +104,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -112,6 +119,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -132,16 +140,16 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <meta property="og:title" content="aksh.ai - Taking Delight in the Scripts of Humans">
 <meta property="og:description" content="Transliterating Sanskrit verse in various contemporary South Asian and South East Asian scripts.">
 <meta property="og:image" content="https://www.aksh.ai/posts/brahmi-scripts/angkor-wat.jpg">
-<meta property="og:site-name" content="aksh.ai">
+<meta property="og:site_name" content="aksh.ai">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">aksh.ai</span>
     </a>
@@ -153,34 +161,34 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://social.vivaldi.net/(cydonian?)" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://social.vivaldi.net/@cydonian"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/akshr/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/akshr/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/metamutator/" rel="" target=""><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/metamutator/"> <i class="bi bi-instagram" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -251,12 +259,18 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
 
-<div id="fig-hero" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="./angkor-wat.jpg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Sanskrit verse even here: Sun rise at Angkor Wat. Photo by <a href="https://unsplash.com/@sebalatorre?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sebastian Latorre</a> on <a href="https://unsplash.com/photos/lrG4nki2kYM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></figcaption>
+
+<div id="fig-hero" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./angkor-wat.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Sanskrit verse even here: Sun rise at Angkor Wat. Photo by <a href="https://unsplash.com/@sebalatorre?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sebastian Latorre</a> on <a href="https://unsplash.com/photos/lrG4nki2kYM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+</figcaption>
 </figure>
 </div>
 <section id="sanskrit-the-language" class="level2">
@@ -271,10 +285,14 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="same-same-not-same-as-sama-sama">Same-same not same as sama-sama</h3>
 <p>Sanskrit has been historically written in range of scripts, down from the earliest <a href="https://en.wikipedia.org/wiki/Brahmi_script">Brahmi</a> and <a href="https://en.wikipedia.org/wiki/Kharosthi">Kharosthi</a> scripts, to more contemporary scripts across Asia.</p>
 <p>Here’s a good example of how it all intersects. Consider this quote from Kālidāsa mentioned in Wikipedia, written in various Asian scripts:</p>
-<div id="fig-sanskrit" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="Phrase_sanskrit.svg" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: <em>‘May Śiva bless those who take delight in the language of gods’</em> - Kālidāsa. (From<a href="https://commons.wikimedia.org/wiki/File:Phrase_sanskrit.svg">Wikipedia</a>)</figcaption>
+<div id="fig-sanskrit" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="Phrase_sanskrit.svg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <em>‘May Śiva bless those who take delight in the language of gods’</em> - Kālidāsa. (From<a href="https://commons.wikimedia.org/wiki/File:Phrase_sanskrit.svg">Wikipedia</a>)
+</figcaption>
 </figure>
 </div>
 <p>Sanskrit is written in each of these scripts for liturgical needs in South and South East Asia. The first word is easily understood: it clearly refers to Siva, one of the gods in the Hindu pantheon. The second word is also easily understood: it’s clearly a conjugation of the word <em>raksha</em> or <em>to protect</em>. But wait: how did <em>to protect</em> become <em>bless</em>?</p>
@@ -283,7 +301,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <section id="haksara-wrehastra-conjunct-letters" class="level3">
 <h3 class="anchored" data-anchor-id="haksara-wrehastra-conjunct-letters">Haksara Wrehastra: Conjunct Letters</h3>
 <p>For, untangling conjunct words is not just a matter of giving the right amount of spaces. Most Brahmi-originated scripts have <a href="https://en.wikipedia.org/wiki/Abugida#General_description">conjunct letters</a>, complex rules where letters may be combined in certain combinations to form new letters. 36 consonants can be combined to form <a href="https://en.wikipedia.org/wiki/Devanagari_conjuncts">1296 two-letter combinations</a> in Sanskrit, but that is not all. Each of these combinations can be combined with 16 vowels to form even more complex conjuncts. There is no grammatical limit to the number of letters you can combine. At the most extreme, the word कार्त्स्न्य (“entirety”) consists of a five-letter conjunct, र्त्स्न्य <span class="citation" data-cites="stiehl2017devanagari">(<a href="#ref-stiehl2017devanagari" role="doc-biblioref">Stiehl 2017</a>)</span>.</p>
-<p>Whilst I can read many of the scripts listed in <a href="#fig-sanskrit">Figure&nbsp;2</a>, I find it easier break conjunct vowels and therefore words into their constituent parts in Telugu script. But that may not be your experience; perhaps you’re used to reading about Ghatōtgacha’s exploits in Balinese script. Which brings us to our first computational challenge: can we transliterate a Sanskrit string into a script of our choice?</p>
+<p>Whilst I can read many of the scripts listed in <a href="#fig-sanskrit" class="quarto-xref">Figure&nbsp;2</a>, I find it easier break conjunct vowels and therefore words into their constituent parts in Telugu script. But that may not be your experience; perhaps you’re used to reading about Ghatōtgacha’s exploits in Balinese script. Which brings us to our first computational challenge: can we transliterate a Sanskrit string into a script of our choice?</p>
 </section>
 </section>
 <section id="writing-sanskrit" class="level2">
@@ -334,7 +352,7 @@ Note
 <p>For one, Claude didn’t complete the <code>mappings</code> constant, and instead, provided a lazy <code>// ...add remaining mappings</code> comment, which isn’t helpful. For another, this approach won’t work with conjunct vowels at all, unless you list every single one of the combination there is.</p>
 <p>We tried again, this time asking for it to be in Python:</p>
 <div class="cell" data-execution_count="2">
-<details open="">
+<details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>telugu_ranges <span class="op">=</span> [</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    (<span class="st">'0C00'</span>, <span class="st">'0C7F'</span>), <span class="co"># Telugu</span></span>
@@ -369,7 +387,7 @@ Note
 <p>… which is exactly the same text as the input. I asked Claude what the problem was, and to its credit, it did identify the error: <code>unicodedata.normalize('NFKC')</code> doesn’t convert from the Telugu character-set to Devanagari.</p>
 <p>But it didn’t fix the error directly. Only after a few rounds of hallucinations and corrections, did we arrive at this version, where we offset the Telugu character-set by 0x0900 - 0x0C00, which is the difference between the Devanagari and Telugu character-sets:</p>
 <div class="cell" data-execution_count="4">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1"></a><span class="kw">def</span> transliterate(text):</span>
 <span id="cb5-2"><a href="#cb5-2"></a>  </span>
@@ -406,7 +424,7 @@ Note
 <p>A linguistic point in our “unit-tests”. The last example there, <code>యెలహంక</code>, is the Telugu spelling of a Bangalore suburb, also written in Kannada as <code>ಯೇಲಹಂಕ</code>. Transliterating Kannada to Telugu is quite straightforward, as was transliterating to Sanskrit (Devanagari) as <code>येलहंक</code>. But if you read the Devanagari version with Hindi pronunciation in mind, you’ll end up reading it as ‘Yelhank’. That’s incorrect; it should be read as ‘Yelahanka’. This is a good example of False Friends among South Asian languages; Hindi and Sanskrit may be written in the same script, Devanagari, but are to be pronounced differently.</p>
 <p>But really, this method needs to be generalized for any South (East) Asian script to any other (whilst noting the potential for False Friends). Let’s expand the method to include Unicode ranges for all scripts.</p>
 <div class="cell" data-code-snippet="true" data-execution_count="6">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1"></a>script_unicode_ranges <span class="op">=</span> {</span>
 <span id="cb8-2"><a href="#cb8-2"></a>    <span class="co">#north</span></span>
@@ -482,9 +500,9 @@ Note
 यॆलहंक</code></pre>
 </div>
 </div>
-<p>These work, but let’s try to the Kālidāsa quote with the scripts in <a href="#fig-sanskrit">Figure&nbsp;2</a>.</p>
+<p>These work, but let’s try to the Kālidāsa quote with the scripts in <a href="#fig-sanskrit" class="quarto-xref">Figure&nbsp;2</a>.</p>
 <div class="cell" data-execution_count="8">
-<details>
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1"></a>kalidasa_quote <span class="op">=</span> unit_tests[<span class="dv">1</span>]</span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="co">#iterate through keys in script_unicode_ranges</span></span>
@@ -493,10 +511,14 @@ Note
 <span id="cb11-5"><a href="#cb11-5"></a>table_row_text <span class="op">=</span> <span class="st">"|</span><span class="ch">\n</span><span class="st">"</span>.join(table_row_list)</span>
 <span id="cb11-6"><a href="#cb11-6"></a>display_markdown(<span class="ss">f"| Script | Transliteration |</span><span class="ch">\n</span><span class="ss">| --- | --- |</span><span class="ch">\n</span><span class="sc">{</span>table_row_text<span class="sc">}</span><span class="ss">"</span>, raw<span class="op">=</span><span class="va">True</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
+<div id="tbl-kalidasa" class="cell quarto-float anchored" data-execution_count="8">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kalidasa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Recreated List of Scripts showing the Kalidasa quote
+</figcaption>
+<div aria-describedby="tbl-kalidasa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display">
-<div id="tbl-kalidasa" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;1: Recreated List of Scripts showing the Kalidasa quote</caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th>Script</th>
@@ -584,6 +606,8 @@ Note
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>The approach seems to work for some South Asian scripts, but didn’t for Assamese, Bengali, Tamil, Tibetan or the South East Asian scripts or Tibetan. Some additional characters (zero-width joiners, and vowel diatrical marks, among others) were rendered there. One reason could be because some of the rendered glyphs may not map one-to-one. We will come back to those in a later post. I also have no way of knowing whether it is accurate for Oriya or Sinhala. If you read either, please let me know in the comments if the transliteration is accurate.</p>
 </section>
@@ -596,7 +620,7 @@ Note
 </section>
 </section>
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-stiehl2017devanagari" class="csl-entry" role="listitem">
 Stiehl, Ulrich. 2017. <span>“Devanagari-Schreibübungen.”</span> <a href="https://www.sanskritweb.net/deutsch/devanagari.pdf" class="uri">https://www.sanskritweb.net/deutsch/devanagari.pdf</a>.
 </div>
@@ -642,6 +666,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -710,13 +761,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -795,10 +848,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -808,8 +860,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -822,6 +883,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -865,6 +1045,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -890,6 +1071,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -952,6 +1159,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="metamutator/metamutator.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
+
 
 
 

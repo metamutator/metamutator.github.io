@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -27,6 +27,7 @@ ul.task-list li input[type="checkbox"] {
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -69,7 +70,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -78,6 +85,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -98,7 +106,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <meta property="og:title" content="aksh.ai - Panchanga Tantra: The Magic of the Indic Calendar System">
 <meta property="og:description" content="‘Twentieth anniversary edition’ of my undergraduate thesis on the Indic calendar system.">
 <meta property="og:image" content="https://www.aksh.ai/posts/panchanga-tantra/kala-chakra.png">
-<meta property="og:site-name" content="aksh.ai">
+<meta property="og:site_name" content="aksh.ai">
 <meta property="og:image:height" content="2284">
 <meta property="og:image:width" content="2538">
 </head>
@@ -107,9 +115,9 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">aksh.ai</span>
     </a>
@@ -121,34 +129,34 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://social.vivaldi.net/(cydonian?)" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://social.vivaldi.net/@cydonian"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/akshr/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/akshr/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/metamutator/" rel="" target=""><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/metamutator/"> <i class="bi bi-instagram" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -236,12 +244,18 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
 
-<div id="fig-kalachakra" class="quarto-figure quarto-figure-left anchored">
-<figure class="figure">
-<p><img src="kala-chakra.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: Kala Chakra</figcaption>
+
+<div id="fig-kalachakra" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-kalachakra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="kala-chakra.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kalachakra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Kala Chakra
+</figcaption>
 </figure>
 </div>
 <section id="foreword" class="level2">
@@ -249,7 +263,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <section id="th-anniversary-edition-2023" class="level3">
 <h3 class="anchored" data-anchor-id="th-anniversary-edition-2023">20th Anniversary Edition (2023)</h3>
 <p>This is a “20th anniversary edition” of a thesis I wrote in 2002 for the Undergraduate Research Opportunities Programme (UROP), as part of my mathematics minor in the National University of Singapore. This is also a word-for-word republishing of the thesis, but with updates to embed graphics and tables within the text. All errors (if any) are mine, and have existed for 20+ years.</p>
-<p>For the longest time, this thesis was up on my then supervisor, Dr Helmer Aslaksen’s website at the Mathematics Department’s webpage. During this time, a great many had downloaded the PDF, but very few presumably understood it. For, this undergrad thesis found it its way to websites talking about dark magic and other related mystical concepts. Probably they got confused with the “tantra” in the title. Didn’t help that I made this mystical-looking, but perfectly scientific, graphic alluding to kaala chakra’s that would presumably sound woo-woo to unsuspecting audiences. Incidentally, I just re-did this graphic (<a href="#fig-kalachakra">Figure&nbsp;1</a>) to more exacting design standards, and perhaps would warrant another detailed explanation.</p>
+<p>For the longest time, this thesis was up on my then supervisor, Dr Helmer Aslaksen’s website at the Mathematics Department’s webpage. During this time, a great many had downloaded the PDF, but very few presumably understood it. For, this undergrad thesis found it its way to websites talking about dark magic and other related mystical concepts. Probably they got confused with the “tantra” in the title. Didn’t help that I made this mystical-looking, but perfectly scientific, graphic alluding to kaala chakra’s that would presumably sound woo-woo to unsuspecting audiences. Incidentally, I just re-did this graphic (<a href="#fig-kalachakra" class="quarto-xref">Figure&nbsp;1</a>) to more exacting design standards, and perhaps would warrant another detailed explanation.</p>
 <p>Dr Aslaksen returned to Oslo many many moons ago (pun intended). His old webpage at NUS’ website was still active for many years later, but now that it too has gone, I’m now back on the Internet to say this: nothing tantric about it. I was just punning between the Sanskrit terms ‘panchatantra’ and ‘panchangam’. In fact, this is all mathematic exploration and research, by way of Vedanga Jyotisa, Surya Siddhanta, and modelling all of those principles in Java and LISP. This is me doing that roots thing but via math. This is me claiming expertise in Indic, Chinese and Islamic calendars, of being able to tell when Chinese New Year and Deepavali can fall. Akshay researching kshaya months, if you will. That is all there is to it. Magical, but no black magic.</p>
 <p>There is one literary conceit, though.</p>
 </section>
@@ -270,21 +284,25 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <p><em>It was such an environment that Apara Ganita wanted to enter.</em></p>
 <p><em>However, as he was about to enter through the great doors guarding the garden, he heard a sonorous voice calling out his name.</em></p>
 <p><em>He stopped and turned around to see who was calling him only to saw a young woman coming towards him. With eyes burning with curiosity and a voice sweeter than a nightingale, she said:</em></p>
-<p>&nbsp;&nbsp;O Student Erudite,<br>
-&nbsp;&nbsp;What is it that you study tonight?</p>
+<div class="line-block">&nbsp;&nbsp;O Student Erudite,<br>
+&nbsp;&nbsp;What is it that you study tonight?</div>
 <p><em>Just what I needed, a mystical </em>dwara palika <em>(female door keeper), he said to himself. Shaking his head in wry amusement, he looks at the books in his hand and takes a deep breath to begin his dissertation.</em></p>
 </section>
 <section id="sthaana-prakarana-how-the-calendar-is-different-in-different-regions" class="level2">
 <h2 class="anchored" data-anchor-id="sthaana-prakarana-how-the-calendar-is-different-in-different-regions">2. <em>Sthaana Prakarana</em>: How the calendar is different in different regions</h2>
-<p><em>In a sonorous voice, the dwara palika said,</em><br>
+<div class="line-block"><em>In a sonorous voice, the dwara palika said,</em><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In order to ascertain your dissertation’s veracity,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;can I hear you talk about the calendar’s regional complexity?<br>
-<em>To which Apara Ganita listened to the multitudes of voices in the Garden, and replied thus:</em></p>
-<p>Probably the easiest way to classify Indian calendars is by the region of usage. It must be reiterated though, that such an exercise might be misleading. The classification is indeed not watertight; all calendars are intrinsically inter-linked with one another. A flowchart of the various Indian calendars and the links between them can be seen below (<a href="#fig-caluml">Figure&nbsp;2</a>).</p>
-<div id="fig-caluml" class="quarto-figure quarto-figure-left anchored">
-<figure class="figure">
-<p><img src="calendar-uml.png" class="img-fluid figure-img"></p>
-<figcaption class="figure-caption">Figure&nbsp;2: Indic Calendar System as a quasi-UML diagram</figcaption>
+<em>To which Apara Ganita listened to the multitudes of voices in the Garden, and replied thus:</em></div>
+<p>Probably the easiest way to classify Indian calendars is by the region of usage. It must be reiterated though, that such an exercise might be misleading. The classification is indeed not watertight; all calendars are intrinsically inter-linked with one another. A flowchart of the various Indian calendars and the links between them can be seen below (<a href="#fig-caluml" class="quarto-xref">Figure&nbsp;2</a>).</p>
+<div id="fig-caluml" class="quarto-figure quarto-figure-left quarto-float anchored" data-fig-align="left">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-caluml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="calendar-uml.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-caluml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Indic Calendar System as a quasi-UML diagram
+</figcaption>
 </figure>
 </div>
 <p>With this caveat, we’ll now traverse India on a calendrical vehicle of sorts. In particular, we try to ascertain the following elements in each region’s calendrical practices: - * Basis of the Calendar * Local Variation * When does the year begin? * Era Followed</p>
@@ -327,10 +345,14 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <p>Proposed by the Calendar Reform Committee of 1952 and promulgated in 1957 CE, the National Calendar is a tropical calendar with fixed lengths of days and months. However, because it was totally different from the traditional calendars, it did not find much acceptance. <span class="citation" data-cites="chatterjee1988indian">(<a href="#ref-chatterjee1988indian" role="doc-biblioref">Chatterjee 1988, 18</a>)</span></p>
 <p>We may thus summarize Indian calendars thus:</p>
 <div class="cell" data-execution_count="1">
+<div id="tbl-indian-calendars" class="cell quarto-float anchored" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-indian-calendars-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Various Indic Calendars
+</figcaption>
+<div aria-describedby="tbl-indian-calendars-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="1">
-<div id="tbl-indian-calendars" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;1: Various Indic Calendars</caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th></th>
@@ -546,16 +568,18 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>Do note that: 1. The table is not exhaustive terms of calendars nor in terms of states. Among others, Arunachal Pradesh, Manipur, Meghalaya, Mizoram, Nagaland and Sikkim were left out. 2. Chatterjee mentions that the Orissa School for deciding the beginning of the solar month is also used in Punjab and Haryana “where the solar calendar is also used”. <span class="citation" data-cites="chatterjee1988indian">(<a href="#ref-chatterjee1988indian" role="doc-biblioref">Chatterjee 1988, 14</a>)</span></p>
 </section>
 </section>
 <section id="maasa-naamakarana-how-the-months-got-their-names." class="level2">
 <h2 class="anchored" data-anchor-id="maasa-naamakarana-how-the-months-got-their-names.">3. <em>Maasa Naamakarana</em>: How the Months got their&nbsp;Names.</h2>
-<p><em>Listening to this, she said,</em><br>
+<div class="line-block"><em>Listening to this, she said,</em><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Since we are deep in this game,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Might I ask how each month got its name?<br>
-<em>To which Apara Ganita stared at a gulmohar flower with twenty-seven buds and replied thus:</em></p>
+<em>To which Apara Ganita stared at a gulmohar flower with twenty-seven buds and replied thus:</em></div>
 <p>The complexity of the Indian calendar system is not just in the plethora of calendars available, but also in the manner in which they link up with one another. A principal point of linkage of most Indian calendars is in their names of the months; as we shall see, the similar sets of month names are used in more than one calendar. In this section, we aim to formulate rules determining the naming of the months. Our motivation is not just taxonomic; month names, we shall see, are critical to understanding the Indian calendar system.</p>
 <p>We propose that there are two types of month names: -</p>
 <section id="months-named-after-nakshatras" class="level3">
@@ -564,10 +588,14 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <p>Let us then, first consider the original rule. Saha and Lahiri mention that pakshas or fortnights were differentiated based on the nakshatra “where the moon is full”.<span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 221</a>)</span> That is to say, if a particular full moon occurs near, say, the lunar asterism, Visakha, the full moon would be called as Vaisakha Purnimaasi, and the month would be Vaisakha. The earliest lunisolar months, then, were purnimaanta, that is, the name of the full moon corresponded to the name of the month. Of course, the full moon occurs at all nakshatras. Fifteen were taken into account for naming of the month, spaced more or less equally.</p>
 <p>We thus have the following set of names along with their respective nakshatras<span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 221</a>)</span>:</p>
 <div class="cell" data-execution_count="2">
+<div id="tbl-nakshatra-months" class="cell quarto-float anchored" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-nakshatra-months-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Nakshtras and Months
+</figcaption>
+<div aria-describedby="tbl-nakshatra-months-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="2">
-<div id="tbl-nakshatra-months" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;2: Nakshtras and Months</caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th></th>
@@ -640,6 +668,8 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>It may be noted that the months of <em>Aashaadha</em>, <em>Bhadrapada</em> and <em>Phalguna</em> are linked to two <em>nakshatras</em> respectively. Chatterjee and Chakravarthy give the following criteria for choosing <em>nakshatras</em> for month names<span class="citation" data-cites="chakravarty1985indian">(<a href="#ref-chakravarty1985indian" role="doc-biblioref">Chakravarty and Chatterjee 1985, 281</a>)</span>:</p>
 <ol type="1">
@@ -650,10 +680,14 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <p>To reconcile all this, we might frame a new rule, that, the amaanta lunar month takes its number from the solar month that starts in it, but its name from the solar month in which it starts, while following the purnimaanta months in chronological order. That is to say, since Chitra occurred during the purnima of this year’s first purnimaanta month, we call this month as ‘Chaitra’. Consequently, the first amaanta month would also be ‘Chaitra’, which also would be the name of the solar month during which the amaanta ‘Chaitra’ started. However, the ‘number’ of the solar month (‘1’ in the case of amaanta and purnimaanta Chaitra) is not quite the same; the solar Chaitra is the last (i.e., 12th) month of the year. The lunisolar Chaitra’s number is taken by the solar month that begins in it, namely the solar Vaisakha. All this can be seen in the graphic in the next page.</p>
 <p>The relationships for all the months may be mapped according to the following table <span class="citation" data-cites="chakravarty1985indian">(<a href="#ref-chakravarty1985indian" role="doc-biblioref">Chakravarty and Chatterjee 1985, 280</a>)</span> (Punjabi month names <span class="citation" data-cites="purewal">(<a href="#ref-purewal" role="doc-biblioref">Purewal 2002</a>)</span>):</p>
 <div class="cell" data-execution_count="3">
+<div id="tbl-month-relationships" class="cell quarto-float anchored" data-execution_count="3">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-month-relationships-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Raasis and Months in various parts of India
+</figcaption>
+<div aria-describedby="tbl-month-relationships-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="3">
-<div id="tbl-month-relationships" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;3: Raasis and Months in various parts of India</caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th></th>
@@ -791,6 +825,8 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>The Assamese, Punjabi and Tamil versions have been provided to give an idea of the linguistic variation. It is also interesting to observe that the National Calendar suggested by Saha and Lahiri also uses the same set of month names, increasing the potential confusion. As is probably obvious by now, the rule does not correspond to the Tamil, National and Nanakshahi calendars.</p>
 </section>
@@ -798,10 +834,14 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <h3 class="anchored" data-anchor-id="months-named-after-raasis">3.2 Months named after Raasis</h3>
 <p>Only solar months share their names with <em>raasis</em>. SK Chatterjee and Apurba Kumar Chakravarthy give the following names along with the associated <em>raasis</em><span class="citation" data-cites="chakravarty1985indian">(<a href="#ref-chakravarty1985indian" role="doc-biblioref">Chakravarty and Chatterjee 1985, 280</a>)</span>:</p>
 <div class="cell" data-execution_count="4">
+<div id="tbl-raasi-months" class="cell quarto-float anchored" data-execution_count="4">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-raasi-months-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Malayalam months named after <em>raasis</em>
+</figcaption>
+<div aria-describedby="tbl-raasi-months-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="4">
-<div id="tbl-raasi-months" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;4: Malayalam months named after <em>raasis</em></caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th></th>
@@ -893,6 +933,8 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>That is to say, the month shares its name with that of its corresponding <em>Sankranti</em>. For instance, if <em>Mesha Sankranti</em> occurs on a certain day, then the period until the next <em>Sankranti</em> would be <em>Mesha maasa (Medham maasam)</em>.</p>
 <p>This naming rule is followed primarily in the Malayalam calendar. Incidentally, Abhayankar says that the Oriya calendar also follows this rule. <span class="citation" data-cites="abhayankar1993debts">(<a href="#ref-abhayankar1993debts" role="doc-biblioref">Abhayankar 1993, 55</a>)</span></p>
@@ -900,16 +942,20 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </section>
 <section id="parva-dina-nirnaya-how-the-days-of-festivals-are-decided." class="level2">
 <h2 class="anchored" data-anchor-id="parva-dina-nirnaya-how-the-days-of-festivals-are-decided.">4. <em>Parva Dina&nbsp;Nirnaya</em>: How the days of festivals are&nbsp;decided.</h2>
-<p><em>Hearing him speak, she asked,</em><br>
+<div class="line-block"><em>Hearing him speak, she asked,</em><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;The cultural complexity is interesting,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but perhaps you have a festivals listing?<br>
-<em>To which Apara Ganita looked at birds chirping and replied thus:</em></p>
+<em>To which Apara Ganita looked at birds chirping and replied thus:</em></div>
 <p>We provide a list of Indian festivals, along with their (Indic) dates and the calendar used to reckon the particular festival. The list of festivals is by no means exhaustive; the entries are mostly public holidays in India.</p>
 <div class="cell" data-execution_count="5">
+<div id="tbl-indian-festivals" class="cell quarto-float anchored" data-execution_count="5">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-indian-festivals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;5: Various Indic Festivals <span class="citation" data-cites="chatterjee1988indian">(<a href="#ref-chatterjee1988indian" role="doc-biblioref">Chatterjee 1988, 60–68</a>)</span>
+</figcaption>
+<div aria-describedby="tbl-indian-festivals-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="5">
-<div id="tbl-indian-festivals" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;5: Various Indic Festivals <span class="citation" data-cites="chatterjee1988indian">(<a href="#ref-chatterjee1988indian" role="doc-biblioref">Chatterjee 1988, 60–68</a>)</span></caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th></th>
@@ -1022,6 +1068,8 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>A bit of explanation is necessary. First, the terms. “<em>Nisita</em>” is defined to be a time- period measured by two <em>ghatikas</em> (1/60th of a solar day; approximately 20 minutes) stretching on either side of midnight. “<em>Pradosha</em>” is the time-period stretching for two <em>muhurtas</em> (1/15th of the time between sunrise and sunset; approximately 1 hour 36 minutes) after sunset. “<em>Madhyahna</em>” is one-third of the time-period between sunrise and sunset. This fraction covers mid-day.</p>
 <p>Second, these dates are valid only on non-intercalary <em>thithis</em> for all lunisolar festivals. Both leap days and non-leap days in leap months are deemed unfit for festivals. (<em>Kshaya maasas</em> are not an issue here because a) <em>jugma</em> months are deemed fit for religious observance and b) in the Eastern and Northwestern schools, the extra intercalary month is deemed to be normal).</p>
@@ -1029,17 +1077,21 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </section>
 <section id="samvad-sandesha-how-eras-come-into-play" class="level2">
 <h2 class="anchored" data-anchor-id="samvad-sandesha-how-eras-come-into-play">5. <em>Samvad Sandesha</em>: How Eras come into play</h2>
-<p><em>Perceiving the response, she questioned:</em><br>
+<div class="line-block"><em>Perceiving the response, she questioned:</em><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;I do not know if this is an important part,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but from when do all calendars start?<br>
-<em>To which Apara Ganita looked at a foundation stone and replied thus:</em></p>
+<em>To which Apara Ganita looked at a foundation stone and replied thus:</em></div>
 <p>The Indian calendar system follows a wide range of eras, some of historical interest. Also, we do not attempt to link individual calendars to eras, for the same calendar may be reckoned with two different eras in two different places.</p>
 <p>Here’s the listing:</p>
 <div class="cell" data-execution_count="6">
+<div id="tbl-indian-eras" class="cell quarto-float anchored" data-execution_count="6">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-indian-eras-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;6: Various Indic Eras <span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 252–58</a>)</span>
+</figcaption>
+<div aria-describedby="tbl-indian-eras-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="6">
-<div id="tbl-indian-eras" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;6: Various Indic Eras <span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 252–58</a>)</span></caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th></th>
@@ -1083,17 +1135,19 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>In addition, some regions also name their years according to the names of the Jovian years. Saha and Lahiri point out that there are two schools for this; the Southern school names its years in continuous succession, while the Northern school names its years corresponding to the present Jovian year. <span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 272</a>)</span></p>
 </section>
 <section id="kshaya-sutra-how-certain-months-are-dropped" class="level2">
 <h2 class="anchored" data-anchor-id="kshaya-sutra-how-certain-months-are-dropped">6. <em>Kshaya Sutra</em>: How certain months are&nbsp;dropped</h2>
-<p><em>Observing the reaction, she enquired:</em><br>
+<div class="line-block"><em>Observing the reaction, she enquired:</em><br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;To calendars you seem an active saakshya <a href="#fn3" class="footnote-ref" id="fnref3" role="doc-noteref"><sup>3</sup></a>,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;but from when do all calendars start?<br>
-<em>To which, Apara Ganita looked at some fallen leaves and replied thus:</em></p>
+<em>To which, Apara Ganita looked at some fallen leaves and replied thus:</em></div>
 <p>One of the most interesting aspects of the Indian lunisolar calendar is its <em>kshaya maasas</em>, literally “decayed months”. Occasionally, certain months are dropped from the lunisolar calendar. We now try to understand the modalities behind this omission; we try to answer how, why, when and where it happens.</p>
-<p>First, let us try to define a kshaya month. Chatterjee, in his work on Indian calendars, says that a certain lunar month “may completely overlap any of the short three nirayana solar months of Margasira, Pausha and Magha”, with the result that there will be no new moon in the respective solar month. Consequently, there will be no lunar month named “after […] this solar month”. <span class="citation" data-cites="chatterjee1988indian">(<a href="#ref-chatterjee1988indian" role="doc-biblioref">Chatterjee 1988, 34</a>)</span> This interaction may be visualized in <a href="#fig-kalachakra">Figure&nbsp;1</a>.</p>
+<p>First, let us try to define a kshaya month. Chatterjee, in his work on Indian calendars, says that a certain lunar month “may completely overlap any of the short three nirayana solar months of Margasira, Pausha and Magha”, with the result that there will be no new moon in the respective solar month. Consequently, there will be no lunar month named “after […] this solar month”. <span class="citation" data-cites="chatterjee1988indian">(<a href="#ref-chatterjee1988indian" role="doc-biblioref">Chatterjee 1988, 34</a>)</span> This interaction may be visualized in <a href="#fig-kalachakra" class="quarto-xref">Figure&nbsp;1</a>.</p>
 <p>We learn the following from this statement:  1. That the solar months of Margasira, Pausa and Magha are small, 2. That at a certain time, there might be no new moon in these months, and 3. The corresponding lunar month is dropped from the calendar.</p>
 <p>Note that Chatterjee is silent on whether the dropped lunar month is amaanta or purnimaanta; a naïve assumption would be that since he talks about new moons, the month would be amaanta. But a study of the (Chaitradi) amaanta and purnimaanta calendars for the present year reveals that the difference between these two calendars is still two weeks. Therefore, it’s safe to conclude that kshaya months were dropped from the purnimaanta calendar as well.</p>
 <p>Moreover, the statement about “corresponding lunar month” is unclear; are we talking about the lunar month with the same number as the new-moon-lacking solar month? Or are we talking about the lunar month with the same name of the solar month? Running the <em>calendrica</em> code provided by Dershowitz and Reingold with their book <em>Calendrical Calculations - The Millenium Edition</em> (see table for values), we see that it is the lunar month with the same name that gets dropped.</p>
@@ -1102,12 +1156,16 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <p>“In any given lunar year, if two consecutive Sankrantis occur between two consecutive new moons, then the lunar month, whether amaanta or purnimaanta, with the same name as the solar month in which this occurs, is dropped.”</p>
 </blockquote>
 <p>As we shall see, such a re-phrasing is useful for computational purposes.</p>
-<p>Indeed, as we mentioned earlier, we ran the Dershowitz and Reingold’s calendrica package to get values for the occurrence of a kshaya month. Since searching for a kshaya month is computationally very heavy<span class="citation" data-cites="deshowitz2002calendar">(<a href="#ref-deshowitz2002calendar" role="doc-biblioref">Dershowitz and Reingold 2002, 24</a>)</span>, we used a table prepared by Saha and Lahiri (table 22 in the book)<span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 250</a>)</span> as a starting point. We also tabulated results for non- kshaya months, specifically years with gaps of 19, 46, 65, 76, 122 and 141 years respectively. The results and the graphs from these results are tabulated in <a href="#tbl-kshaya-timings">Table&nbsp;8</a>.</p>
+<p>Indeed, as we mentioned earlier, we ran the Dershowitz and Reingold’s calendrica package to get values for the occurrence of a kshaya month. Since searching for a kshaya month is computationally very heavy<span class="citation" data-cites="deshowitz2002calendar">(<a href="#ref-deshowitz2002calendar" role="doc-biblioref">Dershowitz and Reingold 2002, 24</a>)</span>, we used a table prepared by Saha and Lahiri (table 22 in the book)<span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 250</a>)</span> as a starting point. We also tabulated results for non- kshaya months, specifically years with gaps of 19, 46, 65, 76, 122 and 141 years respectively. The results and the graphs from these results are tabulated in <a href="#tbl-kshaya-timings" class="quarto-xref">Table&nbsp;8</a>.</p>
 <p>It must be noted that all cases tabulated previously have been calculated according to Surya Siddhantic rules and that we may get a different set of results if calculated according to ephemeris calculations. Indeed, as Chatterjee has pointed out, there was a difference in 1964 CE; ephemeris calculations showed Margasira to be kshaya (and Karthika, Chaitra to be adhika), while as we’ve seen, Surya Siddhantic computation showed Pausa to be kshaya (and Asvina and Chaitra to be adhika) <span class="citation" data-cites="chatterjee1988indian">(<a href="#ref-chatterjee1988indian" role="doc-biblioref">Chatterjee 1988, 38</a>)</span> Chatterjee, however, seems to be in agreement with Dershowitz and Reingold in saying that there was a kshaya in Magha in 1983 CE <span class="citation" data-cites="deshowitz2001calendrical">(<a href="#ref-deshowitz2001calendrical" role="doc-biblioref">Deshowitz and Reingold 2001, 269</a>)</span>, despite his use of ephemeris calculations.</p>
 <p>What do we get from all this? We see that a kshaya month can occur every 19, 46, 65, 76, 122 or 141 years. Indeed, Saha and Lahiri’s tabulation provide us with the following frequencies of occurrences for gaps between kshaya months <span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 250</a>)</span>:</p>
-<div id="tbl-kshaya-gap" class="anchored">
+<div id="tbl-kshaya-gap" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kshaya-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;7: Number of times a particular interval gap occurred
+</figcaption>
+<div aria-describedby="tbl-kshaya-gap-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
-<caption>Table&nbsp;7: Number of times a particular interval gap occurred</caption>
 <thead>
 <tr class="header">
 <th>Interval</th>
@@ -1141,6 +1199,8 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </tr>
 </tbody>
 </table>
+</div>
+</figure>
 </div>
 <p>We therefore see that between 525 CE and 1985 CE, kshaya occurred 11 times with a gap of 19 years, thrice with a gap of 46 years, six times with a gap of 141 years, and once each with gaps of 65, 76 and 122 years. The obvious question one would like to ask would be why. Why does kshaya occur only in these gaps?</p>
 <p>To answer this better, we re-iterate what causes kshaya in the first place. We already said that a kshaya would occur when two consecutive Sankrantis occur between two Amavasyas. That is to say, when a solar month is shorter in length than, and is completely enclosed by, a (an Amaanta) lunar month. Saha and Lahiri go on to say that the “maximum duration of a lunar month exceeds the lengths of the solar months only in the case of Margasira, Pausa and Magha” <span class="citation" data-cites="saha1992report">(<a href="#ref-saha1992report" role="doc-biblioref">Saha and Lahiri 1992, 250</a>)</span> and that, therefore, kshaya is possible only in these months.</p>
@@ -1323,7 +1383,7 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 </section>
 <section id="references" class="level2">
 <h2 class="anchored" data-anchor-id="references">8. References</h2>
-<div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-abhayankar1993debts" class="csl-entry" role="listitem">
 Abhayankar, KD. 1993. <span>“Our Debts to Our Ancestors.”</span> In <em>Treasures of Ancient Indian Astronomy</em>, edited by KD Abhayankar and Dr. BG Sidharth. Ajanta Publications, Delhi.
 </div>
@@ -1359,10 +1419,14 @@ University, Simon Fraser. 2002. <span>“Bhaskaracharya.”</span> 2002. <a href
 <section id="appendix" class="level2">
 <h2 class="anchored" data-anchor-id="appendix">9. Appendix</h2>
 <div class="cell" data-execution_count="8">
+<div id="tbl-kshaya-timings" class="cell quarto-float anchored" data-execution_count="8">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kshaya-timings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;8: Sankranti and Amavasya timings from Margasira, Pausa, Magha and Phalguna for various years.
+</figcaption>
+<div aria-describedby="tbl-kshaya-timings-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="cell-output cell-output-display" data-execution_count="8">
-<div id="tbl-kshaya-timings" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;8: Sankranti and Amavasya timings from Margasira, Pausa, Magha and Phalguna for various years.</caption>
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
 <th></th>
@@ -1860,6 +1924,8 @@ University, Simon Fraser. 2002. <span>“Bhaskaracharya.”</span> 2002. <a href
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <hr>
 
@@ -1916,6 +1982,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1984,13 +2077,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -2069,10 +2164,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -2082,8 +2176,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -2096,6 +2199,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -2139,6 +2361,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -2164,6 +2387,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -2226,6 +2475,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="metamutator/metamutator.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
+
 
 
 

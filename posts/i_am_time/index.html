@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.433">
+<meta name="generator" content="quarto-1.4.550">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -61,6 +61,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 div.csl-bib-body { }
 div.csl-entry {
   clear: both;
+  margin-bottom: 0em;
 }
 .hanging-indent div.csl-entry {
   margin-left:2em;
@@ -103,7 +104,13 @@ div.csl-indent {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -112,6 +119,7 @@ div.csl-indent {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -132,16 +140,16 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <meta property="og:title" content="aksh.ai - I am Time, Destroyer of Worlds">
 <meta property="og:description" content="Filing for Chapter 11 with AI assistance.">
 <meta property="og:image" content="https://www.aksh.ai/posts/i_am_time/viswarupa.jpg">
-<meta property="og:site-name" content="aksh.ai">
+<meta property="og:site_name" content="aksh.ai">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">aksh.ai</span>
     </a>
@@ -153,34 +161,34 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://social.vivaldi.net/(cydonian?)" rel="" target=""><i class="bi bi-mastodon" role="img">
+    <a class="nav-link" href="https://social.vivaldi.net/@cydonian"> <i class="bi bi-mastodon" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.linkedin.com/in/akshr/" rel="" target=""><i class="bi bi-linkedin" role="img">
+    <a class="nav-link" href="https://www.linkedin.com/in/akshr/"> <i class="bi bi-linkedin" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="https://www.instagram.com/metamutator/" rel="" target=""><i class="bi bi-instagram" role="img">
+    <a class="nav-link" href="https://www.instagram.com/metamutator/"> <i class="bi bi-instagram" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
   <li class="nav-item compact">
-    <a class="nav-link" href="../../index.xml" rel="" target=""><i class="bi bi-rss" role="img">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
 </i> 
- <span class="menu-text"></span></a>
+<span class="menu-text"></span></a>
   </li>  
 </ul>
-            <div class="quarto-navbar-tools">
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -253,12 +261,18 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
   </div>
   
 
+
 </header>
 
-<div id="fig-hero" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="./viswarupa.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: <strong>I am Time</strong>: A 19th century painting of Krishna in his <em>viswarūpa</em>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></figcaption>
+
+<div id="fig-hero" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./viswarupa.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <strong>I am Time</strong>: A 19th century painting of Krishna in his <em>viswarūpa</em>. <a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a>
+</figcaption>
 </figure>
 </div>
 <section id="executive-summary" class="level2">
@@ -274,14 +288,14 @@ gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
 <h2 class="anchored" data-anchor-id="the-original-verses">The Original Verses</h2>
 <p>Oppenheimer was translating Slokas 12 and 32 in Chapter 11 of the <em>Gita</em>. The verses read as follows in the original Sanskrit:</p>
 <p><strong>Chapter 11, Verse 12</strong>:</p>
-<p>divi sūrya-sahasrasya bhaved yugapad utthitā<br>
-yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
+<div class="line-block">divi sūrya-sahasrasya bhaved yugapad utthitā<br>
+yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</div>
 <p><strong>Chapter 11, Verse 32</strong>:</p>
-<p><em>śhrī-bhagavān uvācha</em>:<br>
+<div class="line-block"><em>śhrī-bhagavān uvācha</em>:<br>
 &nbsp;&nbsp;&nbsp;kālósmi loka-kṣhaya-kṛit pravṛiddho<br>
 &nbsp;&nbsp;&nbsp;lokān samāhartum iha pravṛittaḥ<br>
 &nbsp;&nbsp;&nbsp;ṛitépi tvāṁ na bhaviṣhyanti sarve<br>
-&nbsp;&nbsp;&nbsp;yévasthitāḥ pratyanīkeṣhu yodhāḥ</p>
+&nbsp;&nbsp;&nbsp;yévasthitāḥ pratyanīkeṣhu yodhāḥ</div>
 <p>Historically, one learns classical Sanskrit (and classical Telugu) poetry through both a <code>prati padārtham</code> (word-by-word) translation, and a <code>bhāvam</code> (prose translation). Let’s try both here with AI.</p>
 </section>
 <section id="the-meaning" class="level2">
@@ -290,8 +304,8 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 <h3 class="anchored" data-anchor-id="calling-claude-2">Calling Claude 2</h3>
 <p>The advent of LLM’s now mean that you can write a quick function in Python that can take in any verse in Sanskrit and return both the <code>prati padārtham</code> and the <code>bhāvam</code> in JSON.</p>
 <p>Here’s how.</p>
-<div class="cell" data-execution_count="64">
-<details open="">
+<div id="cell-6" class="cell" data-execution_count="64">
+<details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1"></a><span class="kw">def</span> generate_sloka_meaning(sloka):</span>
 <span id="cb1-2"><a href="#cb1-2"></a>    prompt <span class="op">=</span> <span class="ss">f"""</span></span>
@@ -326,8 +340,8 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 </div>
 <p>The function <code>generate_sloka_meaning</code> calls Claude 2 and gets it to generate a <code>prati padartham</code> and <code>bhavam</code>. The former is returned as a Markdown table, while the latter is plain text. We also got Claude 2 to check through the response before returning it to us (per suggestion in Anthropic’s <a href="https://docs.anthropic.com/claude/docs/ask-claude-to-think-step-by-step">docs</a>). This is because it did not generate the full meaning on some executions.</p>
 <p>Let’s now input both verses and see what Claude 2 generates for us.</p>
-<div class="cell" data-execution_count="65">
-<details>
+<div id="cell-8" class="cell" data-execution_count="65">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1"></a>verses <span class="op">=</span> {</span>
 <span id="cb2-2"><a href="#cb2-2"></a>    <span class="st">"11.12"</span>: <span class="st">"divi sūryasahasrasya bhaved yugapad utthitā</span><span class="ch">\n</span><span class="st">yadi bhāḥ sadṛśī sā syād bhāsas tasya mahātmanaḥ"</span>,</span>
@@ -345,10 +359,14 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 <h3 class="anchored" data-anchor-id="results">Results</h3>
 <p>This is what we see for the two verses that Oppenheimer quoted:</p>
 <div class="cell" data-execution_count="66">
-<div class="cell-output cell-output-display">
-<div id="tbl-1112" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;1: Word-for-word translation of Verse 11.12</caption>
+<div id="tbl-1112" class="cell quarto-float anchored" data-execution_count="66">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1112-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Word-for-word translation of Verse 11.12
+</figcaption>
+<div aria-describedby="tbl-1112-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -446,12 +464,18 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <div class="cell" data-execution_count="67">
-<div class="cell-output cell-output-display">
-<div id="tbl-1132" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;2: Word-for-word translation of Verse 11.32</caption>
+<div id="tbl-1132" class="cell quarto-float anchored" data-execution_count="67">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1132-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Word-for-word translation of Verse 11.32
+</figcaption>
+<div aria-describedby="tbl-1132-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -591,10 +615,12 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>( <em>Do note that Claude 2 has gotten a few Roman transliterations wrong.</em> )</p>
-<div class="cell" data-execution_count="56">
-<div class="cell-output cell-output-display">
+<div id="cell-13" class="cell" data-execution_count="56">
+<div class="cell-output cell-output-display cell-output-markdown">
 <p>Here are the meanings of both verses:</p>
 <blockquote class="blockquote">
 <p><strong>11.12</strong>: If thousands of suns were to rise simultaneously in the sky, that brilliance would be similar to the radiance of that noble soul.</p>
@@ -608,10 +634,14 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 <h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
 <p>Let’s compare the versions one by one.</p>
 <div class="cell" data-execution_count="81">
-<div class="cell-output cell-output-display">
-<div id="tbl-comparison" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;3: Comparing meanings for both verses</caption>
+<div id="tbl-comparison" class="cell quarto-float anchored" data-execution_count="81">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Comparing meanings for both verses
+</figcaption>
+<div aria-describedby="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 8%">
 <col style="width: 14%">
@@ -649,6 +679,8 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>One may note the following:</p>
 <section id="light-from-a-noble-or-mighty-one" class="level3">
@@ -661,17 +693,21 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 <p>Oppenheimer translated <em>kālaḥ</em> as “Death”, while the Claude 2 translation rendered it as “Time”. A quick search across multiple Sanskrit dictionaries suggests that <a href="https://andhrabharati.com/dictionary/sanskrit/index.php?w=%E0%A4%95%E0%A4%BE%E0%A4%B2">kālaḥ</a> can indeed mean both “Death” and “Time”, but the latter is more common.</p>
 <p>In particular, Monier Williams 2nd Edition (1899) tried to reconcile both meanings by suggesting that <em>kālaḥ</em> could mean “death by age”, or time as an entity that “destroys all things” <span class="citation" data-cites="andhrabharati2023kala">(<a href="#ref-andhrabharati2023kala" role="doc-biblioref">Bharati 2023</a>)</span></p>
 <p>Time has been worshipped as entity in Hinduism since the Vedic Era. Rig Veda Mandala 10, Sukta 190 suggests Time originated first from the Great Ocean in the sky, and only then did the Sun and the Moon come into existence:</p>
-<div class="cell" data-execution_count="93">
-<div class="cell-output cell-output-display">
+<div id="cell-17" class="cell" data-execution_count="93">
+<div class="cell-output cell-output-display cell-output-markdown">
 <p><br>సముద్రాద్ అర్ణవాద్ అధి సంవత్సరో అజయాత<br><br>అహో రాత్రాణి విదధద్ విశ్వస్య మిషతో వశీ<br><br>సూర్యా చంద్రమసో ధాతా యథాపూర్వం అకల్పయత్<br><br>దివం చ ప్రథివీంచ అంతరిక్షం ఆతో స్వాహః<br><br></p>
 </div>
 </div>
 <p>Yes, of course, this too needs to be translated with the function we wrote above.</p>
 <div class="cell" data-execution_count="90">
-<div class="cell-output cell-output-display">
-<div id="tbl-rigveda" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;4: Claude 2’s translation of Rig Veda Mandala 10 Sukta 190</caption>
+<div id="tbl-rigveda" class="cell quarto-float anchored" data-execution_count="90">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rigveda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Claude 2’s translation of Rig Veda Mandala 10 Sukta 190
+</figcaption>
+<div aria-describedby="tbl-rigveda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -828,12 +864,14 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 </tbody>
 </table>
 </div>
-</div>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Meaning</strong>:</p>
 <blockquote class="blockquote">
 <p>The verse describes how the creator (Brahma), after bringing forth the universe consisting of the sky, heavens, earth and space between them, then created the regulating principles exemplified by the sun and moon, which go on continuously, year after year, placing day and night properly in their assigned places just as before.</p>
 </blockquote>
+</div>
+</div>
+</figure>
 </div>
 </div>
 <p><em>Note that the Claude 2 translation is non-deterministic; each execution has produced a different result.</em></p>
@@ -851,7 +889,7 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
 <div id="ref-barnett1949j" class="csl-entry" role="listitem">
 Barnett, Lincoln. 1949. <span>“J. Robert Oppenheimer.”</span> <em>Life</em>, 133.
 </div>
@@ -908,6 +946,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -976,13 +1041,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1061,10 +1128,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     // clear code selection
     e.clearSelection();
   });
-  function tippyHover(el, contentFn) {
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1074,8 +1140,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1088,6 +1163,125 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
       return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1131,6 +1325,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1156,6 +1351,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1218,6 +1439,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <script src="https://utteranc.es/client.js" repo="metamutator/metamutator.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
 </script>
 </div> <!-- /content -->
+
 
 
 

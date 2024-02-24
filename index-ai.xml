@@ -6,23 +6,1076 @@
       version="2.0">
 <channel>
 <title>aksh.ai</title>
-<link>https://www.aksh.ai/index.html#category=ai</link>
+<link>https://www.aksh.ai/#category=ai</link>
 <atom:link href="https://www.aksh.ai/index-ai.xml" rel="self" type="application/rss+xml"/>
 <description>Designing Strategy Through Data</description>
-<generator>quarto-1.3.433</generator>
-<lastBuildDate>Tue, 08 Aug 2023 16:00:00 GMT</lastBuildDate>
+<generator>quarto-1.4.550</generator>
+<lastBuildDate>Mon, 21 Aug 2023 16:00:00 GMT</lastBuildDate>
 <item>
-  <title>I am Time, Destroyer of Worlds</title>
+  <title>Taking Delight in the Scripts of Humans</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://www.aksh.ai/posts/i_am_time/index.html</link>
+  <link>https://www.aksh.ai/posts/brahmi-scripts/</link>
   <description><![CDATA[ 
 
 
 
-<div id="fig-hero" class="quarto-figure quarto-figure-center anchored">
-<figure class="figure">
-<p><img src="https://www.aksh.ai/posts/i_am_time/viswarupa.jpg" class="img-fluid figure-img" style="width:80.0%"></p>
-<figcaption class="figure-caption">Figure&nbsp;1: <strong>I am Time</strong>: A 19th century painting of Krishna in his <em>viswarūpa</em>. <sup>1</sup></figcaption>
+
+<div id="fig-hero" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://www.aksh.ai/posts/brahmi-scripts/angkor-wat.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Sanskrit verse even here: Sun rise at Angkor Wat. Photo by <a href="https://unsplash.com/@sebalatorre?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sebastian Latorre</a> on <a href="https://unsplash.com/photos/lrG4nki2kYM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+</figcaption>
+</figure>
+</div>
+<section id="sanskrit-the-language" class="level2">
+<h2 class="anchored" data-anchor-id="sanskrit-the-language">Sanskrit: The Language</h2>
+<p>I haven’t had a formal education in Sanskrit. But it is a <em>liturgical</em> language that I chant in every day, not just for Hindu slokas from the <em>Gitā</em> and the Vedas, but also for Buddhist sutras such as the <em>Prajñaparamita Hrdaya Sūtra</em>. A lot of Sanskrit words have made their way into contemporary languages in both South and South East Asia, so I do understand many words.</p>
+<section id="same-same-but-different" class="level3">
+<h3 class="anchored" data-anchor-id="same-same-but-different">Same-same but different</h3>
+<p>But those familiar waters can sometimes be treacherous. The same word could have different meanings in Sanskrit and other languages. <a href="https://en.wikipedia.org/wiki/False_friend">False Friends</a> is a Thing, more so in Indic languages than in other language families. I often need to rely on guard-rails such as <a href="https://andhrabharati.com/dictionary/sanskrit/index.php">Sanskrit Dictionary Collections</a> to keep me safe.</p>
+<p>Then there are <a href="https://en.wikipedia.org/wiki/Sandhi">sandhi’s</a>, liasons between words to form compound words. Whilst the individual word may be understandable, the compound word could feel and sound new; you will need to know how the sandhi has been formed in order to untangle the compound word into its constituents.</p>
+</section>
+<section id="same-same-not-same-as-sama-sama" class="level3">
+<h3 class="anchored" data-anchor-id="same-same-not-same-as-sama-sama">Same-same not same as sama-sama</h3>
+<p>Sanskrit has been historically written in range of scripts, down from the earliest <a href="https://en.wikipedia.org/wiki/Brahmi_script">Brahmi</a> and <a href="https://en.wikipedia.org/wiki/Kharosthi">Kharosthi</a> scripts, to more contemporary scripts across Asia.</p>
+<p>Here’s a good example of how it all intersects. Consider this quote from Kālidāsa mentioned in Wikipedia, written in various Asian scripts:</p>
+<div id="fig-sanskrit" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://www.aksh.ai/posts/brahmi-scripts/Phrase_sanskrit.svg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: <em>‘May Śiva bless those who take delight in the language of gods’</em> - Kālidāsa. (From<a href="https://commons.wikimedia.org/wiki/File:Phrase_sanskrit.svg">Wikipedia</a>)
+</figcaption>
+</figure>
+</div>
+<p>Sanskrit is written in each of these scripts for liturgical needs in South and South East Asia. The first word is easily understood: it clearly refers to Siva, one of the gods in the Hindu pantheon. The second word is also easily understood: it’s clearly a conjugation of the word <em>raksha</em> or <em>to protect</em>. But wait: how did <em>to protect</em> become <em>bless</em>?</p>
+<p>It gets more difficult with the next word, a multi-letter monster in every script mentioned in the graphic. It is a <em>compound</em> word: among others, words meaning ‘language’, ‘god’ and ‘delight’ have been somehow strung together to form a single word. This is where it starts to become complex.</p>
+</section>
+<section id="haksara-wrehastra-conjunct-letters" class="level3">
+<h3 class="anchored" data-anchor-id="haksara-wrehastra-conjunct-letters">Haksara Wrehastra: Conjunct Letters</h3>
+<p>For, untangling conjunct words is not just a matter of giving the right amount of spaces. Most Brahmi-originated scripts have <a href="https://en.wikipedia.org/wiki/Abugida#General_description">conjunct letters</a>, complex rules where letters may be combined in certain combinations to form new letters. 36 consonants can be combined to form <a href="https://en.wikipedia.org/wiki/Devanagari_conjuncts">1296 two-letter combinations</a> in Sanskrit, but that is not all. Each of these combinations can be combined with 16 vowels to form even more complex conjuncts. There is no grammatical limit to the number of letters you can combine. At the most extreme, the word कार्त्स्न्य (“entirety”) consists of a five-letter conjunct, र्त्स्न्य <span class="citation" data-cites="stiehl2017devanagari">(Stiehl 2017)</span>.</p>
+<p>Whilst I can read many of the scripts listed in Figure&nbsp;2, I find it easier break conjunct vowels and therefore words into their constituent parts in Telugu script. But that may not be your experience; perhaps you’re used to reading about Ghatōtgacha’s exploits in Balinese script. Which brings us to our first computational challenge: can we transliterate a Sanskrit string into a script of our choice?</p>
+</section>
+</section>
+<section id="writing-sanskrit" class="level2">
+<h2 class="anchored" data-anchor-id="writing-sanskrit">1. Writing Sanskrit</h2>
+<section id="methods-for-transliteration" class="level3">
+<h3 class="anchored" data-anchor-id="methods-for-transliteration">1.1 Methods for Transliteration</h3>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Transliteration is to convert a string from one script to another without changing the word. This is different from translation, which is to convert a string from one language to another.</p>
+</div>
+</div>
+<p>A naive suggestion could be that an LLM could draft us a quick method in transliterate Telugu strings to Sanskrit. We tried to get Anthropic Claude 2 to do just that:</p>
+<div class="sourceCode" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource javascript number-lines code-with-copy"><code class="sourceCode javascript"><span id="cb1-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> { Observable } <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'observable-fns'</span></span>
+<span id="cb1-2"></span>
+<span id="cb1-3"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">const</span> teluguToDevanagari <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> Observable<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">create</span>((teluguText) <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">=&gt;</span> {</span>
+<span id="cb1-4"></span>
+<span id="cb1-5">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">const</span> mappings <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb1-6">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'అ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'अ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఆ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'आ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఇ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'इ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఈ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ई'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఉ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'उ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> </span>
+<span id="cb1-7">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఊ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ऊ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఋ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ऋ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఌ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ऌ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఎ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ए'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఏ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ऐ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> </span>
+<span id="cb1-8">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఐ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ऑ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఒ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ओ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఓ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'औ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'ఔ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">:</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'अउ'</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">,</span></span>
+<span id="cb1-9">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">// ...add remaining mappings</span></span>
+<span id="cb1-10">  }</span>
+<span id="cb1-11"></span>
+<span id="cb1-12">  <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">let</span> devanagariText <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">''</span></span>
+<span id="cb1-13"></span>
+<span id="cb1-14">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span>(<span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">let</span> i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;</span>teluguText<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="at" style="color: #657422;
+background-color: null;
+font-style: inherit;">length</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">;</span> i<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">++</span>) {</span>
+<span id="cb1-15">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span>(mappings<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">.</span><span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">hasOwnProperty</span>(teluguText[i])) {</span>
+<span id="cb1-16">      devanagariText <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> mappings[teluguText[i]]</span>
+<span id="cb1-17">    } <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> {</span>
+<span id="cb1-18">      devanagariText <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> teluguText[i] </span>
+<span id="cb1-19">    }</span>
+<span id="cb1-20">  }</span>
+<span id="cb1-21"></span>
+<span id="cb1-22">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> devanagariText</span>
+<span id="cb1-23"></span>
+<span id="cb1-24">})</span>
+<span id="cb1-25"></span>
+<span id="cb1-26"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">export</span> { teluguToDevanagari }</span></code></pre></div>
+<p>This obviously doesn’t work.</p>
+<p>For one, Claude didn’t complete the <code>mappings</code> constant, and instead, provided a lazy <code>// ...add remaining mappings</code> comment, which isn’t helpful. For another, this approach won’t work with conjunct vowels at all, unless you list every single one of the combination there is.</p>
+<p>We tried again, this time asking for it to be in Python:</p>
+<div class="cell" data-execution_count="2">
+<details open="" class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1">telugu_ranges <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [</span>
+<span id="cb2-2">    (<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'0C00'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'0C7F'</span>), <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Telugu</span></span>
+<span id="cb2-3">    (<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'0C80'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'0CFF'</span>), <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Telugu Supplementary</span></span>
+<span id="cb2-4">] </span>
+<span id="cb2-5"></span>
+<span id="cb2-6">devanagari_ranges <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [</span>
+<span id="cb2-7">    (<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'0900'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'097F'</span>), <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Devanagari</span></span>
+<span id="cb2-8">    (<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'A8E0'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'A8FF'</span>), <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Devanagari Extended</span></span>
+<span id="cb2-9">]</span>
+<span id="cb2-10"></span>
+<span id="cb2-11">telugu_to_devanagari_map <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {}</span>
+<span id="cb2-12"></span>
+<span id="cb2-13"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> start, end <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> telugu_ranges:</span>
+<span id="cb2-14">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> char <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">range</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>(start, base<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>), <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">int</span>(end, base<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">16</span>)<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>):</span>
+<span id="cb2-15">        telugu_char <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">chr</span>(char)</span>
+<span id="cb2-16">        devanagari_char <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> unicodedata.normalize(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'NFKC'</span>, telugu_char)</span>
+<span id="cb2-17">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> devanagari_char <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> devanagari_ranges:</span>
+<span id="cb2-18">            telugu_to_devanagari_map[telugu_char] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> devanagari_char</span>
+<span id="cb2-19"></span>
+<span id="cb2-20"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> transliterate(text):</span>
+<span id="cb2-21">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">''</span>.join([telugu_to_devanagari_map.get(char, char) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> char <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> text])</span></code></pre></div>
+</details>
+</div>
+<p>Except that… this doesn’t work either. Here’s what happens when we execute the function:</p>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(transliterate(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"అందరికీ నమస్కారం"</span>))</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>అందరికీ నమస్కారం</code></pre>
+</div>
+</div>
+<p>… which is exactly the same text as the input. I asked Claude what the problem was, and to its credit, it did identify the error: <code>unicodedata.normalize('NFKC')</code> doesn’t convert from the Telugu character-set to Devanagari.</p>
+<p>But it didn’t fix the error directly. Only after a few rounds of hallucinations and corrections, did we arrive at this version, where we offset the Telugu character-set by 0x0900 - 0x0C00, which is the difference between the Devanagari and Telugu character-sets:</p>
+<div class="cell" data-execution_count="4">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> transliterate(text):</span>
+<span id="cb5-2">  </span>
+<span id="cb5-3">  devanagari_offset <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0900</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0C00</span></span>
+<span id="cb5-4">  </span>
+<span id="cb5-5">  output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb5-6">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> char <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> text:</span>
+<span id="cb5-7">    char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">ord</span>(char)</span>
+<span id="cb5-8">    </span>
+<span id="cb5-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0C00</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0CFF</span>:</span>
+<span id="cb5-10">      dev_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> devanagari_offset</span>
+<span id="cb5-11">      output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">chr</span>(dev_code)</span>
+<span id="cb5-12">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb5-13">      output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> char</span>
+<span id="cb5-14">        </span>
+<span id="cb5-15">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> output</span></code></pre></div>
+</details>
+</div>
+<p>Let’s run this method against a few examples:</p>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1">unit_tests <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"అందరికీ నమస్కారం"</span>, <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># "Hello world" in Telugu</span></span>
+<span id="cb6-2">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"శివో రక్షతు గీర్వాణభాషారసాస్వాదతత్పరాన్"</span>, <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#The Kalidasa quote above</span></span>
+<span id="cb6-3">                <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"యెలహంక"</span> <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># See below</span></span>
+<span id="cb6-4">            ]</span>
+<span id="cb6-5"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#loop through the unit tests</span></span>
+<span id="cb6-6"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>[transliterate(test) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> test <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> unit_tests], sep<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>अंदरिकी नमस्कारं
+शिवो रक्षतु गीर्वाणभाषारसास्वादतत्परान्
+यॆलहंक</code></pre>
+</div>
+</div>
+<p>These work! A key point here is that you should not trust output from LLM’s to work blindly; you must test and validate them, not just with unit-tests, but also with real-world examples. We’ll come back to this point again soon.</p>
+<p>A linguistic point in our “unit-tests”. The last example there, <code>యెలహంక</code>, is the Telugu spelling of a Bangalore suburb, also written in Kannada as <code>ಯೇಲಹಂಕ</code>. Transliterating Kannada to Telugu is quite straightforward, as was transliterating to Sanskrit (Devanagari) as <code>येलहंक</code>. But if you read the Devanagari version with Hindi pronunciation in mind, you’ll end up reading it as ‘Yelhank’. That’s incorrect; it should be read as ‘Yelahanka’. This is a good example of False Friends among South Asian languages; Hindi and Sanskrit may be written in the same script, Devanagari, but are to be pronounced differently.</p>
+<p>But really, this method needs to be generalized for any South (East) Asian script to any other (whilst noting the potential for False Friends). Let’s expand the method to include Unicode ranges for all scripts.</p>
+<div class="cell" data-code-snippet="true" data-execution_count="6">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1">script_unicode_ranges <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb8-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#north</span></span>
+<span id="cb8-3">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'assamese'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0980</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x09FF</span>)],</span>
+<span id="cb8-4">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'bengali'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0980</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x09FF</span>)],</span>
+<span id="cb8-5">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'devanagari'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0900</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x097F</span>), (<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0xA8E0</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0xA8FF</span>)],</span>
+<span id="cb8-6">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gujarati'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0A80</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0AFF</span>)],</span>
+<span id="cb8-7">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'gurmukhi'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0A00</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0A7F</span>)],  </span>
+<span id="cb8-8">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'oriya'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0B00</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0B7F</span>)],</span>
+<span id="cb8-9">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'tibetan'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0F00</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0FFF</span>)],</span>
+<span id="cb8-10">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#south</span></span>
+<span id="cb8-11">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'tamil'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0B80</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0BFF</span>)],</span>
+<span id="cb8-12">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'telugu'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0C00</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0C7F</span>), (<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0C80</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0CFF</span>)],</span>
+<span id="cb8-13">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'kannada'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0C80</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0CFF</span>)],</span>
+<span id="cb8-14">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'malayalam'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0D00</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0D7F</span>)],</span>
+<span id="cb8-15">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'sinhala'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0D80</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0DFF</span>)],</span>
+<span id="cb8-16">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#SE Asia mainland</span></span>
+<span id="cb8-17">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'thai'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0E00</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0E7F</span>)],</span>
+<span id="cb8-18">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'lao'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0E80</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x0EFF</span>)],</span>
+<span id="cb8-19">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'myanmar'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x1000</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x109F</span>)],</span>
+<span id="cb8-20">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'khmer'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x1780</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x17FF</span>), (<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x19E0</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x19FF</span>)],</span>
+<span id="cb8-21">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#SE Asia maritime</span></span>
+<span id="cb8-22">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'balinese'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x1B00</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x1B7F</span>)],</span>
+<span id="cb8-23">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'javanese'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0xA980</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0xA9DF</span>)],</span>
+<span id="cb8-24">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'sundanese'</span>: [(<span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x1B80</span>, <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0x1BBF</span>)]</span>
+<span id="cb8-25">}</span>
+<span id="cb8-26"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># write script_unicode_ranges to a file</span></span>
+<span id="cb8-27"><span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">with</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">open</span>(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'script_unicode_ranges.json'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'w'</span>) <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> fp:</span>
+<span id="cb8-28">    json.dump(script_unicode_ranges, fp)</span>
+<span id="cb8-29"></span>
+<span id="cb8-30"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> transliterate(text, source_script, target_script):</span>
+<span id="cb8-31">  source_range <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> script_unicode_ranges[source_script]</span>
+<span id="cb8-32">  target_range <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> script_unicode_ranges[target_script]</span>
+<span id="cb8-33"></span>
+<span id="cb8-34">  output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">""</span></span>
+<span id="cb8-35">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> char <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> text:</span>
+<span id="cb8-36">   </span>
+<span id="cb8-37">    source_char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">ord</span>(char)</span>
+<span id="cb8-38">    </span>
+<span id="cb8-39">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> in_range(source_char_code, source_range):</span>
+<span id="cb8-40">       target_char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> map_to_target(source_char_code, source_range, target_range)</span>
+<span id="cb8-41">       <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> target_char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0xFFFD</span>:</span>
+<span id="cb8-42">        output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">chr</span>(target_char_code)</span>
+<span id="cb8-43">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span>:</span>
+<span id="cb8-44">       output <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+=</span> char</span>
+<span id="cb8-45">       </span>
+<span id="cb8-46">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> output</span>
+<span id="cb8-47"></span>
+<span id="cb8-48"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> in_range(char_code, ranges):</span>
+<span id="cb8-49">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">any</span>([start <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&lt;=</span> end <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> start, end <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> ranges])</span>
+<span id="cb8-50"></span>
+<span id="cb8-51"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> map_to_target(source_char_code, source_range, target_range):</span>
+<span id="cb8-52"></span>
+<span id="cb8-53">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Calculate target code point</span></span>
+<span id="cb8-54">  target_char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> source_char_code <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> (target_range[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>][<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span> source_range[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>][<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>])</span>
+<span id="cb8-55"></span>
+<span id="cb8-56">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Check if it is an assigned Unicode character</span></span>
+<span id="cb8-57">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> (unicodedata.category(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">chr</span>(target_char_code)) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'Cn'</span>):</span>
+<span id="cb8-58">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> target_char_code </span>
+<span id="cb8-59"></span>
+<span id="cb8-60">  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># If not, map to unspecified character code point</span></span>
+<span id="cb8-61">  <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> <span class="bn" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0xFFFD</span></span></code></pre></div>
+</details>
+</div>
+<p>Quite a few pieces happening in there. To start with, whilst Brahmi-based scripts are <em>similar</em> to each other, they aren’t <em>same</em> ; for instance, the Bengali script does not have a letter equivalent to the Telugu letter వ, whilst Devanagari and other southern and western scripts do. So we have a check to see if the mapped character is a valid Unicode character; if not, we map it to the Unicode replacement character, <code>0xFFFD</code>.</p>
+<p>Let’s first repeat our “unit-tests”.</p>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#print transliterate for all unit_tests</span></span>
+<span id="cb9-2"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>[transliterate(test, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'telugu'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'devanagari'</span>) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> test <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> unit_tests], sep<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>अंदरिकी नमस्कारं
+शिवो रक्षतु गीर्वाणभाषारसास्वादतत्परान्
+यॆलहंक</code></pre>
+</div>
+</div>
+<p>These work, but let’s try to the Kālidāsa quote with the scripts in Figure&nbsp;2.</p>
+<div class="cell" data-execution_count="8">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb11" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1">kalidasa_quote <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> unit_tests[<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>]</span>
+<span id="cb11-2"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">#iterate through keys in script_unicode_ranges</span></span>
+<span id="cb11-3">scripts <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [script <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> script <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> script_unicode_ranges.keys() <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> script <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">not</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'devanagari'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'telugu'</span>]]</span>
+<span id="cb11-4">table_row_list <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>script<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">| </span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>transliterate(kalidasa_quote, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'telugu'</span>, script)<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> script <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> script_unicode_ranges.keys()]</span>
+<span id="cb11-5">table_row_text <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"|</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>.join(table_row_list)</span>
+<span id="cb11-6">display_markdown(<span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">f"| Script | Transliteration |</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">| --- | --- |</span><span class="ch" style="color: #20794D;
+background-color: null;
+font-style: inherit;">\n</span><span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">{</span>table_row_text<span class="sc" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">}</span><span class="ss" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"</span>, raw<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>)</span></code></pre></div>
+</details>
+<div id="tbl-kalidasa" class="cell quarto-float anchored" data-execution_count="8">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-kalidasa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Recreated List of Scripts showing the Kalidasa quote
+</figcaption>
+<div aria-describedby="tbl-kalidasa-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display">
+<table class="do-not-create-environment cell table table-sm table-striped small">
+<thead>
+<tr class="header">
+<th>Script</th>
+<th>Transliteration</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>assamese</td>
+<td>শিো রক্ষতু গীর্াণভাষারসাস্াদতত্পরান্</td>
+</tr>
+<tr class="even">
+<td>bengali</td>
+<td>শিো রক্ষতু গীর্াণভাষারসাস্াদতত্পরান্</td>
+</tr>
+<tr class="odd">
+<td>devanagari</td>
+<td>शिवो रक्षतु गीर्वाणभाषारसास्वादतत्परान्</td>
+</tr>
+<tr class="even">
+<td>gujarati</td>
+<td>શિવો રક્ષતુ ગીર્વાણભાષારસાસ્વાદતત્પરાન્</td>
+</tr>
+<tr class="odd">
+<td>gurmukhi</td>
+<td>ਸ਼ਿਵੋ ਰਕ੍ਤੁ ਗੀਰ੍ਵਾਣਭਾਾਰਸਾਸ੍ਵਾਦਤਤ੍ਪਰਾਨ੍</td>
+</tr>
+<tr class="even">
+<td>oriya</td>
+<td>ଶିଵୋ ରକ୍ଷତୁ ଗୀର୍ଵାଣଭାଷାରସାସ୍ଵାଦତତ୍ପରାନ୍</td>
+</tr>
+<tr class="odd">
+<td>tibetan</td>
+<td>༶༿༵ཋ ༰༕ཌྷ༷༤ཁ ༗ཀ༰ཌྷ༵༾༣༭༾༷༾༰༸༾༸ཌྷ༵༾༦༤༤ཌྷ༪༰༾༨ཌྷ</td>
+</tr>
+<tr class="even">
+<td>tamil</td>
+<td>ஶிவோ ரக்ஷது ீர்வாணாஷாரஸாஸ்வாதத்பராந்</td>
+</tr>
+<tr class="odd">
+<td>telugu</td>
+<td>శివో రక్షతు గీర్వాణభాషారసాస్వాదతత్పరాన్</td>
+</tr>
+<tr class="even">
+<td>kannada</td>
+<td>ಶಿವೋ ರಕ್ಷತು ಗೀರ್ವಾಣಭಾಷಾರಸಾಸ್ವಾದತತ್ಪರಾನ್</td>
+</tr>
+<tr class="odd">
+<td>malayalam</td>
+<td>ശിവോ രക്ഷതു ഗീര്വാണഭാഷാരസാസ്വാദതത്പരാന്</td>
+</tr>
+<tr class="even">
+<td>sinhala</td>
+<td>බඵ ධඕභඤශ වධඵඣතභධමමඵඦඤඤඪධඨ</td>
+</tr>
+<tr class="odd">
+<td>thai</td>
+<td>ึ฿ี๋ ะตํืฤแ ทเะํีรอืะุุํีฦฤฤํสะศํ</td>
+</tr>
+<tr class="even">
+<td>lao</td>
+<td>ຶີ໋ ະຕໍືແ ທເະໍີຣອືະຸຸໍີໍສະຨໍ</td>
+</tr>
+<tr class="odd">
+<td>myanmar</td>
+<td>ံဿဵ။ ူပ၍့ဤ၁ ဗ၀ူ၍ဵှဣိှ့ှူးှး၍ဵှဦဤဤ၍ဪူှဨ၍</td>
+</tr>
+<tr class="even">
+<td>khmer</td>
+<td>ាឿ឵់ ឰផ៍ិឤេ ភៀឰ៍឵ើឣឭើិើឰីើី៍឵ើឦឤឤ៍ឪឰើឨ៍</td>
+</tr>
+<tr class="odd">
+<td>balinese</td>
+<td>ᬶᭁᭋ ᬰᬕᬷᬤᭁ ᬗᭀᬰᬵᬾᬣᬭᬾᬷᬾᬰᬸᬾᬸᬵᬾᬦᬤᬤᬪᬰᬾᬨ</td>
+</tr>
+<tr class="even">
+<td>javanese</td>
+<td>ꦶꦿꦵ꧋ ꦰꦕ꧍ꦷꦤ꧁ ꦗ꧀ꦰ꧍ꦵꦾꦣꦭꦾꦷꦾꦰꦸꦾꦸ꧍ꦵꦾꦦꦤꦤ꧍ꦪꦰꦾꦨ꧍</td>
+</tr>
+<tr class="odd">
+<td>sundanese</td>
+<td>᮶ᮿ᮵ᯋ ᮰ᮕᯍ᮷ᮤᯁ ᮗᯀ᮰ᯍ᮵ᮾᮣᮭᮾ᮷ᮾ᮰᮸ᮾ᮸ᯍ᮵ᮾᮦᮤᮤᯍ᮪᮰ᮾᮨᯍ</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>The approach seems to work for some South Asian scripts, but didn’t for Assamese, Bengali, Tamil, Tibetan or the South East Asian scripts or Tibetan. Some additional characters (zero-width joiners, and vowel diatrical marks, among others) were rendered there. One reason could be because some of the rendered glyphs may not map one-to-one. We will come back to those in a later post. I also have no way of knowing whether it is accurate for Oriya or Sinhala. If you read either, please let me know in the comments if the transliteration is accurate.</p>
+</section>
+<section id="next-steps-trying-it-out" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps-trying-it-out">1.2 Next Steps: Trying it Out</h3>
+<p>In a subsequent post, I will share this out via either Observable.js or by somehow getting the Python methods to work on the web (mostly via Gradio, perhaps). We will also investigate further why the method didn’t work for some scripts. For now, consider a simple method that allows us to transliterate text from (some) Brahmi-based scripts to others.</p>
+
+
+
+</section>
+</section>
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
+<div id="ref-stiehl2017devanagari" class="csl-entry">
+Stiehl, Ulrich. 2017. <span>“Devanagari-Schreibübungen.”</span> <a href="https://www.sanskritweb.net/deutsch/devanagari.pdf" class="uri">https://www.sanskritweb.net/deutsch/devanagari.pdf</a>.
+</div>
+</div></section></div> ]]></description>
+  <category>oppenheimer</category>
+  <category>llm</category>
+  <category>ai</category>
+  <category>Sanskrit</category>
+  <category>bhagavad-gita</category>
+  <category>anthropic</category>
+  <category>linguistics</category>
+  <guid>https://www.aksh.ai/posts/brahmi-scripts/</guid>
+  <pubDate>Mon, 21 Aug 2023 16:00:00 GMT</pubDate>
+  <media:content url="https://www.aksh.ai/posts/brahmi-scripts/angkor-wat.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>I am Time, Destroyer of Worlds</title>
+  <dc:creator>Akshay Regulagedda</dc:creator>
+  <link>https://www.aksh.ai/posts/i_am_time/</link>
+  <description><![CDATA[ 
+
+
+
+
+<div id="fig-hero" class="quarto-figure quarto-figure-center quarto-float anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://www.aksh.ai/posts/i_am_time/viswarupa.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: <strong>I am Time</strong>: A 19th century painting of Krishna in his <em>viswarūpa</em>. <sup>1</sup>
+</figcaption>
 </figure>
 </div>
 <section id="executive-summary" class="level2">
@@ -38,14 +1091,14 @@
 <h2 class="anchored" data-anchor-id="the-original-verses">The Original Verses</h2>
 <p>Oppenheimer was translating Slokas 12 and 32 in Chapter 11 of the <em>Gita</em>. The verses read as follows in the original Sanskrit:</p>
 <p><strong>Chapter 11, Verse 12</strong>:</p>
-<p>divi sūrya-sahasrasya bhaved yugapad utthitā<br>
-yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
+<div class="line-block">divi sūrya-sahasrasya bhaved yugapad utthitā<br>
+yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</div>
 <p><strong>Chapter 11, Verse 32</strong>:</p>
-<p><em>śhrī-bhagavān uvācha</em>:<br>
+<div class="line-block"><em>śhrī-bhagavān uvācha</em>:<br>
 &nbsp;&nbsp;&nbsp;kālósmi loka-kṣhaya-kṛit pravṛiddho<br>
 &nbsp;&nbsp;&nbsp;lokān samāhartum iha pravṛittaḥ<br>
 &nbsp;&nbsp;&nbsp;ṛitépi tvāṁ na bhaviṣhyanti sarve<br>
-&nbsp;&nbsp;&nbsp;yévasthitāḥ pratyanīkeṣhu yodhāḥ</p>
+&nbsp;&nbsp;&nbsp;yévasthitāḥ pratyanīkeṣhu yodhāḥ</div>
 <p>Historically, one learns classical Sanskrit (and classical Telugu) poetry through both a <code>prati padārtham</code> (word-by-word) translation, and a <code>bhāvam</code> (prose translation). Let’s try both here with AI.</p>
 </section>
 <section id="the-meaning" class="level2">
@@ -54,8 +1107,8 @@ yadi bhāḥ sadṛiśhī sā syād bhāsas tasya mahātmanaḥ</p>
 <h3 class="anchored" data-anchor-id="calling-claude-2">Calling Claude 2</h3>
 <p>The advent of LLM’s now mean that you can write a quick function in Python that can take in any verse in Sanskrit and return both the <code>prati padārtham</code> and the <code>bhāvam</code> in JSON.</p>
 <p>Here’s how.</p>
-<div class="cell" data-execution_count="64">
-<details open="">
+<div id="cell-6" class="cell" data-execution_count="64">
+<details open="" class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="kw" style="color: #003B4F;
 background-color: null;
@@ -186,8 +1239,8 @@ font-style: inherit;">"bhavam"</span>]</span></code></pre></div>
 </div>
 <p>The function <code>generate_sloka_meaning</code> calls Claude 2 and gets it to generate a <code>prati padartham</code> and <code>bhavam</code>. The former is returned as a Markdown table, while the latter is plain text. We also got Claude 2 to check through the response before returning it to us (per suggestion in Anthropic’s <a href="https://docs.anthropic.com/claude/docs/ask-claude-to-think-step-by-step">docs</a>). This is because it did not generate the full meaning on some executions.</p>
 <p>Let’s now input both verses and see what Claude 2 generates for us.</p>
-<div class="cell" data-execution_count="65">
-<details>
+<div id="cell-8" class="cell" data-execution_count="65">
+<details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode numberSource python code-overflow-wrap number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1">verses <span class="op" style="color: #5E5E5E;
 background-color: null;
@@ -245,10 +1298,14 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 <h3 class="anchored" data-anchor-id="results">Results</h3>
 <p>This is what we see for the two verses that Oppenheimer quoted:</p>
 <div class="cell" data-execution_count="66">
-<div class="cell-output cell-output-display">
-<div id="tbl-1112" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;1: Word-for-word translation of Verse 11.12</caption>
+<div id="tbl-1112" class="cell quarto-float anchored" data-execution_count="66">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1112-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Word-for-word translation of Verse 11.12
+</figcaption>
+<div aria-describedby="tbl-1112-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -346,12 +1403,18 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <div class="cell" data-execution_count="67">
-<div class="cell-output cell-output-display">
-<div id="tbl-1132" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;2: Word-for-word translation of Verse 11.32</caption>
+<div id="tbl-1132" class="cell quarto-float anchored" data-execution_count="67">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-1132-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Word-for-word translation of Verse 11.32
+</figcaption>
+<div aria-describedby="tbl-1132-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -491,10 +1554,12 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>( <em>Do note that Claude 2 has gotten a few Roman transliterations wrong.</em> )</p>
-<div class="cell" data-execution_count="56">
-<div class="cell-output cell-output-display">
+<div id="cell-13" class="cell" data-execution_count="56">
+<div class="cell-output cell-output-display cell-output-markdown">
 <p>Here are the meanings of both verses:</p>
 <blockquote class="blockquote">
 <p><strong>11.12</strong>: If thousands of suns were to rise simultaneously in the sky, that brilliance would be similar to the radiance of that noble soul.</p>
@@ -508,10 +1573,14 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 <h2 class="anchored" data-anchor-id="analysis">Analysis</h2>
 <p>Let’s compare the versions one by one.</p>
 <div class="cell" data-execution_count="81">
-<div class="cell-output cell-output-display">
-<div id="tbl-comparison" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;3: Comparing meanings for both verses</caption>
+<div id="tbl-comparison" class="cell quarto-float anchored" data-execution_count="81">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;3: Comparing meanings for both verses
+</figcaption>
+<div aria-describedby="tbl-comparison-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 8%">
 <col style="width: 14%">
@@ -549,6 +1618,8 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 </table>
 </div>
 </div>
+</figure>
+</div>
 </div>
 <p>One may note the following:</p>
 <section id="light-from-a-noble-or-mighty-one" class="level3">
@@ -561,17 +1632,21 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 <p>Oppenheimer translated <em>kālaḥ</em> as “Death”, while the Claude 2 translation rendered it as “Time”. A quick search across multiple Sanskrit dictionaries suggests that <a href="https://andhrabharati.com/dictionary/sanskrit/index.php?w=%E0%A4%95%E0%A4%BE%E0%A4%B2">kālaḥ</a> can indeed mean both “Death” and “Time”, but the latter is more common.</p>
 <p>In particular, Monier Williams 2nd Edition (1899) tried to reconcile both meanings by suggesting that <em>kālaḥ</em> could mean “death by age”, or time as an entity that “destroys all things” <span class="citation" data-cites="andhrabharati2023kala">(Bharati 2023)</span></p>
 <p>Time has been worshipped as entity in Hinduism since the Vedic Era. Rig Veda Mandala 10, Sukta 190 suggests Time originated first from the Great Ocean in the sky, and only then did the Sun and the Moon come into existence:</p>
-<div class="cell" data-execution_count="93">
-<div class="cell-output cell-output-display">
+<div id="cell-17" class="cell" data-execution_count="93">
+<div class="cell-output cell-output-display cell-output-markdown">
 <p><br>సముద్రాద్ అర్ణవాద్ అధి సంవత్సరో అజయాత<br><br>అహో రాత్రాణి విదధద్ విశ్వస్య మిషతో వశీ<br><br>సూర్యా చంద్రమసో ధాతా యథాపూర్వం అకల్పయత్<br><br>దివం చ ప్రథివీంచ అంతరిక్షం ఆతో స్వాహః<br><br></p>
 </div>
 </div>
 <p>Yes, of course, this too needs to be translated with the function we wrote above.</p>
 <div class="cell" data-execution_count="90">
-<div class="cell-output cell-output-display">
-<div id="tbl-rigveda" class="anchored">
-<table class="table table-sm table-striped small">
-<caption>Table&nbsp;4: Claude 2’s translation of Rig Veda Mandala 10 Sukta 190</caption>
+<div id="tbl-rigveda" class="cell quarto-float anchored" data-execution_count="90">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-rigveda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Claude 2’s translation of Rig Veda Mandala 10 Sukta 190
+</figcaption>
+<div aria-describedby="tbl-rigveda-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown">
+<table class="do-not-create-environment cell table table-sm table-striped small">
 <colgroup>
 <col style="width: 25%">
 <col style="width: 25%">
@@ -728,12 +1803,14 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 </tbody>
 </table>
 </div>
-</div>
-<div class="cell-output cell-output-display">
+<div class="cell-output cell-output-display cell-output-markdown">
 <p><strong>Meaning</strong>:</p>
 <blockquote class="blockquote">
 <p>The verse describes how the creator (Brahma), after bringing forth the universe consisting of the sky, heavens, earth and space between them, then created the regulating principles exemplified by the sun and moon, which go on continuously, year after year, placing day and night properly in their assigned places just as before.</p>
 </blockquote>
+</div>
+</div>
+</figure>
 </div>
 </div>
 <p><em>Note that the Claude 2 translation is non-deterministic; each execution has produced a different result.</em></p>
@@ -751,7 +1828,7 @@ font-style: inherit;">=</span> generate_sloka_meaning(verses[verse])</span></cod
 </section>
 
 
-<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0">
 <div id="ref-barnett1949j" class="csl-entry">
 Barnett, Lincoln. 1949. <span>“J. Robert Oppenheimer.”</span> <em>Life</em>, 133.
 </div>
@@ -774,7 +1851,7 @@ Bird, Kai, and Martin J Sherwin. 2005. <em>American Prometheus: The Triumph and 
   <category>bhagavad-gita</category>
   <category>anthropic</category>
   <category>linguistics</category>
-  <guid>https://www.aksh.ai/posts/i_am_time/index.html</guid>
+  <guid>https://www.aksh.ai/posts/i_am_time/</guid>
   <pubDate>Tue, 08 Aug 2023 16:00:00 GMT</pubDate>
   <media:content url="https://www.aksh.ai/posts/i_am_time/viswarupa.jpg" medium="image" type="image/jpeg"/>
 </item>
