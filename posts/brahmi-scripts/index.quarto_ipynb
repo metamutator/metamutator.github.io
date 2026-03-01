@@ -19,7 +19,7 @@
         "bibliography: citations.bib\n",
         "---"
       ],
-      "id": "845cc60e"
+      "id": "f11fdaa1"
     },
     {
       "cell_type": "code",
@@ -30,7 +30,7 @@
         "from IPython.display import display_markdown\n",
         "import json"
       ],
-      "id": "61eb6935",
+      "id": "bda51230",
       "execution_count": null,
       "outputs": []
     },
@@ -113,7 +113,7 @@
         "\n",
         "We tried again, this time asking for it to be in Python:\n"
       ],
-      "id": "1282d17a"
+      "id": "25e869af"
     },
     {
       "cell_type": "code",
@@ -144,7 +144,7 @@
         "def transliterate(text):\n",
         "    return ''.join([telugu_to_devanagari_map.get(char, char) for char in text])"
       ],
-      "id": "72751fad",
+      "id": "f20cbea7",
       "execution_count": null,
       "outputs": []
     },
@@ -154,7 +154,7 @@
       "source": [
         "Except that... this doesn't work either. Here's what happens when we execute the function:\n"
       ],
-      "id": "d31467c2"
+      "id": "4558d68c"
     },
     {
       "cell_type": "code",
@@ -162,7 +162,7 @@
       "source": [
         "print(transliterate(\"అందరికీ నమస్కారం\"))"
       ],
-      "id": "0e461bd0",
+      "id": "71966922",
       "execution_count": null,
       "outputs": []
     },
@@ -174,7 +174,7 @@
         "\n",
         "But it didn't fix the error directly. Only after a few rounds of hallucinations and corrections, did we arrive at this version, where we offset the Telugu character-set by 0x0900 - 0x0C00, which is the difference between the Devanagari and Telugu character-sets:\n"
       ],
-      "id": "38f54cc6"
+      "id": "33b24666"
     },
     {
       "cell_type": "code",
@@ -197,7 +197,7 @@
         "        \n",
         "  return output"
       ],
-      "id": "e1aaa4af",
+      "id": "38832b86",
       "execution_count": null,
       "outputs": []
     },
@@ -207,7 +207,7 @@
       "source": [
         "Let's run this method against a few examples:\n"
       ],
-      "id": "2bea82ca"
+      "id": "9fbe9db6"
     },
     {
       "cell_type": "code",
@@ -220,7 +220,7 @@
         "#loop through the unit tests\n",
         "print(*[transliterate(test) for test in unit_tests], sep='\\n')"
       ],
-      "id": "0908b8e2",
+      "id": "36d55aeb",
       "execution_count": null,
       "outputs": []
     },
@@ -234,7 +234,7 @@
         "\n",
         "But really, this method needs to be generalized for any South (East) Asian script to any other (whilst noting the potential for False Friends). Let's expand the method to include Unicode ranges for all scripts.\n"
       ],
-      "id": "dcb389ec"
+      "id": "f922c778"
     },
     {
       "cell_type": "code",
@@ -306,7 +306,7 @@
         "  # If not, map to unspecified character code point\n",
         "  return 0xFFFD"
       ],
-      "id": "533f9893",
+      "id": "e684177c",
       "execution_count": null,
       "outputs": []
     },
@@ -318,7 +318,7 @@
         "\n",
         "Let's first repeat our \"unit-tests\".\n"
       ],
-      "id": "0cf27fed"
+      "id": "5f43f680"
     },
     {
       "cell_type": "code",
@@ -328,7 +328,7 @@
         "#print transliterate for all unit_tests\n",
         "print(*[transliterate(test, 'telugu', 'devanagari') for test in unit_tests], sep='\\n')"
       ],
-      "id": "d81cd21d",
+      "id": "88315f4e",
       "execution_count": null,
       "outputs": []
     },
@@ -338,7 +338,7 @@
       "source": [
         "These work, but let's try to the Kālidāsa quote with the scripts in [@fig-sanskrit].\n"
       ],
-      "id": "48b6d196"
+      "id": "96543cbf"
     },
     {
       "cell_type": "code",
@@ -369,7 +369,7 @@
         "\n",
         "In a subsequent post, I will share this out via either Observable.js or by somehow getting the Python methods to work on the web (mostly via Gradio, perhaps). We will also investigate further why the method didn't work for some scripts. For now, consider a simple method that allows us to transliterate text from (some) Brahmi-based scripts to others."
       ],
-      "id": "fb367d36"
+      "id": "a0e4e366"
     }
   ],
   "metadata": {

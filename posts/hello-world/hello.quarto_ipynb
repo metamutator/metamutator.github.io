@@ -42,7 +42,7 @@
         "### 4. Code Chunks\n",
         "Need I say more? How cool is this, that I can just write this and it'll be executed inline? \n"
       ],
-      "id": "cb004058"
+      "id": "542b8bee"
     },
     {
       "cell_type": "code",
@@ -50,7 +50,7 @@
       "source": [
         "print(\"Hello World!\")"
       ],
-      "id": "ed3137e0",
+      "id": "7547311c",
       "execution_count": null,
       "outputs": []
     },
@@ -102,7 +102,7 @@
         "## Conclusion\n",
         "So there you have it. A new blog, with all the bells and whistles, and a few gotchas. I'm sure I'll find more as I go along, but for now, I'm partying like it's 1999."
       ],
-      "id": "610693ac"
+      "id": "85bfa3ad"
     }
   ],
   "metadata": {

@@ -2,9 +2,9 @@ project:
   type: website
 
 website:
-  title: "aksh.ai"
+  title: "ganitam.aksh.ai"
   site-url: https://ganitam.aksh.ai
-  description: "Designing Strategy Through Data"
+  description: "The Computational Appendix to aksh.ai"
   navbar:
     right:
       - text: About
