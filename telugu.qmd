@@ -1,7 +1,7 @@
----
+<!-- ---
 title: "తెలుగులో టపాలు"
 listing:
-  contents: posts/telugu
+  contents: posts/telugu/**/*.qmd
   sort: "date desc"
   type: grid
   categories: true
@@ -12,4 +12,4 @@ listing:
   date-format: "DD MMM YYYY"
 page-layout: full
 title-block-banner: false
----
+--- -->

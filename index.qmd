@@ -1,14 +1,17 @@
 ---
 # title: "aksh.ai"
 listing:
-  contents: posts/**/*.qmd
+  contents: posts
   sort: "date desc"
-  type: grid
+  type: default
   categories: true
   sort-ui: true
   filter-ui: true
   fields: [date, title, image, reading-time, description, categories]
-  feed: true
+  feed: 
+    items: 20
+    type: full
+    categories: [english, telugu, ai, travel]
   date-format: "DD MMM YYYY"
 page-layout: full
 title-block-banner: false

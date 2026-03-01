@@ -1,0 +1,24 @@
+---
+title: 'Parāsulapēṭa'
+date: '2025-08-25'
+categories: ['obituary', 'parāsulapēṭa', 'grandfather', 'travels', 'personal', 'linguistics']
+description: 'Tracing my grandfather''s footsteps across four continents'
+execute: 
+  message: false
+  warning: false
+  echo: false
+editor_options: 
+  chunk_output_type: console
+  render: false
+  draft: true
+---
+
+As far as I can tell, Parāsulapēṭa is a small corner of Machilīpaṭnam town, but well within its historic center, bound by Buṭchupēṭa to one side, Kennedy Road on the south, Parāsupēṭa Centre on the east, the Reserve Police Quarters on the top, past Raza Masjid - Ahale Sunnatwal Jamaat on the way to the Police Rāmālayam on the west, and the down south towards Kennedy Road again past the Superintendent of Police's office, and presumably bungalow via SP's Bunglow Road. You can't miss the last one; it's the big bungalow and compound with fake canons, glistening Ashoka Chakra lions and of course, police vehicles in a particularly cleaned portion of the road. All in all, an easy 1.4 km walk around what is roughly - unexpectedly- a rectangular sort of a block. Tāta would scoff at the distance of course, and would declare he can do it in 15 minutes or less. Just that, it is not particularly noteworthy by any measure, unless you're looking for "some evening snacks time" or "nice chai centres" as some Google reviews suggest.
+
+Also, on reflection, Tāta misremembered the name slightly. At least according to Google Maps, it is "Parāsupēṭa", not Parāsu*la*pēṭa, although him and I would probably discuss at length on whether it *should* indeed be Parāsulapēṭa. I would probably insist it should be, but he would probably counter back; wouldn't it matter whether the *pēṭa* - town - was established *by* the French, or *for* the French?
+
+I don't know. I imagine we would have a bit of a conversation about it. I want to imagine we would have a bit of conversation about it. After all, our last deep conversation was on the other bit - on *parāsulu -* not just on how they came to the ancestral homelands, but also how we started calling them *parāsulu*.
+
+I can't, of course. One of those things I can't have anymore. We always used to have those deep conversations, and often when he used to take me on long walks. And when I say "long", I mean *very* long. We once walked the entire length of
+
+There are times when you don't see it coming, and it can be particularly heartbreaking. And then there are times when you know it is coming. This was the latter.

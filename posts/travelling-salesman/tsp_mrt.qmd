@@ -1,0 +1,26 @@
+---
+title: 'Taking Delight in the Scripts of Humans'
+date: '2024-03-22'
+categories: ['oppenheimer', 'llm', 'ai', 'Sanskrit', 'bhagavad-gita', 'anthropic', 'linguistics']
+description: 'Transliterating Sanskrit verse in various contemporary South Asian and South East Asian scripts.'
+execute: 
+  message: false
+  warning: false
+  echo: true
+editor_options: 
+  chunk_output_type: console
+image: "tel_line.jpg"
+bibliography: citations.bib
+draft: true
+---
+
+  
+
+![The new Thomson-East Coast line at Woodlands North Station. Photo by [Jia Wei Ng](https://unsplash.com/@jiaweing?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash) on [Unsplash](https://unsplash.com/photos/red-and-white-train-in-train-station-PC8BKbvS3y4?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash)](./tel_line.jpg){#fig-hero fig-align="center"}
+
+<!-- Photo by <a href="https://unsplash.com/@horseratbros?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">HorseRat</a> on <a href="https://unsplash.com/photos/a-view-of-a-train-track-from-a-platform-qdT_Lauwb3I?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+<!-- 
+Photo by <a href="https://unsplash.com/@chromasiastudios?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Constante Lim</a> on <a href="https://unsplash.com/photos/white-and-red-train-near-trees-qcWeHHeKSgU?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+   -->
+
+<!-- Photo by <a href="https://unsplash.com/@shawnanggg?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">shawnanggg</a> on <a href="https://unsplash.com/photos/white-and-red-train-on-rail-road-during-daytime-6mdWIQD8SEc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->

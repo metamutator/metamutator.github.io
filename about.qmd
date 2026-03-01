@@ -1,6 +1,6 @@
 ---
 title: "About"
-image: profile.jpg
+image: image.jpg
 about:
   template: jolla
   links:
@@ -10,16 +10,44 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/akshr/ 
-    - icon: github
-      text: Github
+    - text: "{{< fa brands bluesky >}} BlueSky"
+      href: https://bsky.app/profile/aksh.ai 
+    - text: "{{< fa brands github >}} GitHub"
       href: https://github.com/metamutator
-
 ---
 
-Interests in how tech, culture and society intersect. Former consultant. Recovering civil servant. Aspiring polymath. Ask me about how to use data-science/ AI to generate carbon savings. I speak for myself here, not my employer.
+## Akshay
 
-Degrees in Computing, MBA (Strategy) and an MS in Analytics. Indian and Singaporean. 
+My name is spelled Akshay in English. It is also spelled అక్షయ్ in Telugu, and Akshayé in French.
 
-Will update the stock images here in a bit.
+Yes, the name of this blog is a pun on my name. I like dad-jokes and I can't lie.
 
-I speak five languages - English, తెలుగు, हिंदी, Français and Español. Will blog in at least two.
+By day, I craft tech strategy for a prominent airlines. I used to be a consultant 10+ years back, and then for a while, as a civil-servant in Singapore. Switched to the data-science space in 2019, starting with power-plant networks in Singapore and India, but have shifted to aviation since 2021.
+
+By night, I often wonder how tech, culture and society intersect. Aiming to be more *literary* or *linguistic* here, if you will. I am writing a novel too, and am translating a speculative fiction novel written in 1860's.
+
+I have a bachelors degree Computing from National University of Singapore, MBA (Strategy) from Nanyang Business School & an MS in Analytics from Georgia Tech. My LinkedIn profile goes into more detail.
+
+I speak five languages - English, తెలుగు, دکھنی (दक्खिनी), Français and Español. Wife and daughter speak three more: Mandarin, Hokkien and Japanese. Will blog in at least two.
+
+I don't speak for my current employer. You'll be nuts to buy or sell stocks based on what I write here.
+
+------------------------------------------------------------------------
+
+## .ai
+
+*(Updated 1 Nov 2025)*
+
+I first purchased this domain name back in 2018 as a lark. It is still a source of some chuckles, and want to keep it that way. However, this is 2025, and in the data/ tech world, that was a lifetime away. So a few caveats are perhaps useful.
+
+I like to think of myself as a "classical AI"-ist, the AI with regression analysis, optimisations etc which I learnt in NUS back in 2002, and again at work in 2019 and in GeorgiaTech now. That's slightly different from *Generative AI*, which is the AI that you see in the Generative Pre-trained Transformers such as ChatGPT. I've used generative transformers since Apr 2021 at least, when we used Large Language Models to categorize large volumes of textual data.
+
+I am of the opinion that AI is a [normal technology](https://www.normaltech.ai/p/a-guide-to-understanding-ai-as-normal), and specifically, GenAI is a [lossy data compression](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) technique. There are some *very* *interesting* things you can do with AI.
+
+Unfortunately, there are some systemic risks are something we are only beginning to understand now. Risks bias, sycophancy, and societal loss of skills. Risks *do not* include AGI or any Star-Trek-ian nonsense, but definitely include exploitation by some extractive overlords with deep pockets.
+
+Also: the TLD `.ai` is a reference to [Anguilla](https://en.wikipedia.org/wiki/Anguilla), a British Overseas Territory in the Caribbean of about 16,000 souls spread across a beautiful island that's 91 sq-km large. Please don't confuse Anguilla with [*Antigua*](https://en.wikipedia.org/wiki/Antigua), which is another Caribbean island with such notables as cricketing great Viv Richards.
+
+### Using AI here
+
+None of the textual or image content here will be AI-*generated*. Everything you read here will be hand-crafted by me. However, it is likely that I will discuss *how* AI can be used, *use* AI techniques to analyse large volumes of data, or to generate code that will analyse such data. In such cases, I will cite usage to the extent possible. I'm generally aligned with [Georgia Tech's policy](https://gatech.service-now.com/home?id=kb_article_view&sysparm_article=KB0044077) in this regard.

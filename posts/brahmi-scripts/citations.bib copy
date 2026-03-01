@@ -1,0 +1,35 @@
+# Bird, Kai; Sherwin, Martin J. (2005). American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer. New York: Alfred A. Knopf. ISBN 978-0-375-41202-8. OCLC 56753298.
+@book{bird2005american,
+  title={American Prometheus: The Triumph and Tragedy of J. Robert Oppenheimer},
+  author={Bird, Kai and Sherwin, Martin J},
+  year={2005},
+  publisher={Alfred A. Knopf}
+}
+
+#  Barnett, Lincoln (October 10, 1949). "J. Robert Oppenheimer". Life. p. 133.
+@article{barnett1949j,
+  title={J. Robert Oppenheimer},
+  author={Barnett, Lincoln},
+  journal={Life},
+  pages={133},
+  year={1949},
+  publisher={Time Inc}
+}
+
+#https://en.wikipedia.org/wiki/J._Robert_Oppenheimer
+@misc{wiki:xxx,
+  author = {Wikipedia},
+  title = {J. Robert Oppenheimer --- Wikipedia{,} The Free Encyclopedia},
+  year = {2019},
+  howpublished = {\url{https://en.wikipedia.org/wiki/J._Robert_Oppenheimer}},
+  note = {Online; accessed 10-October-2019}
+}
+
+#Stiehl, Ulrich. "Devanagari-Schreibübungen" (PDF). www.sanskritweb.net. Retrieved 24 July 2017.
+@misc{stiehl2017devanagari,
+  title={Devanagari-Schreibübungen},
+  author={Stiehl, Ulrich},
+  year={2017},
+  howpublished = {\url{https://www.sanskritweb.net/deutsch/devanagari.pdf}},
+  note = {Online; accessed 10-October-2019}
+}

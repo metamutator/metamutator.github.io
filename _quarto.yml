@@ -3,7 +3,7 @@ project:
 
 website:
   title: "aksh.ai"
-  site-url: https://aksh.ai
+  site-url: https://ganitam.aksh.ai
   description: "Designing Strategy Through Data"
   navbar:
     right:
@@ -15,18 +15,36 @@ website:
         href: https://www.linkedin.com/in/akshr/
       - icon: instagram
         href: https://www.instagram.com/metamutator/
-      - icon: github
-        href: https://github.com/metamutator
+      - text: "{{< fa brands bluesky >}}"
+        href: https://bsky.app/profile/aksh.ai
+      # - icon: github
+      #   href: https://github.com/metamutator
       - icon: rss
-        href: blog.xml
+        href: index.xml
   google-analytics: G-N0W83S6B2J
+  search: true
+  open-graph: true
   comments: 
-    giscus: 
+    utterances:
       repo: metamutator/metamutator.github.io
-  # cookie-consent: true
+      issue-term: pathname
+      label: "💬 comments"
+      theme: github-light
+    # giscus: 
+    #   repo: metamutator/metamutator.github.io
+    #   repo-id: R_kgDOJvmcEQ
+    #   category: Announcements
+    #   category-id: DIC_kwDOJvmcEc4CXOru
+    #   mapping: title
+    #   reactions-enabled: true
+    #   loading: lazy
+    #   input-position: bottom
+    #   # theme: dark_dimmed
+  #cookie-consent: true
 
 format:
   html:
+    include-after-body: _footer.html
     theme:
       light: flatly
       dark: darkly
