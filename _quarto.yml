@@ -41,7 +41,9 @@ website:
     #   input-position: bottom
     #   # theme: dark_dimmed
   #cookie-consent: true
-
+execute:
+  freeze: auto
+  
 format:
   html:
     include-after-body: _footer.html
