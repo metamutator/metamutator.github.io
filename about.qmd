@@ -42,7 +42,7 @@ I first purchased this domain name back in 2018 as a lark. It is still a source 
 
 I like to think of myself as a "classical AI"-ist, the AI with regression analysis, optimisations etc which I learnt in NUS back in 2002, and again at work in 2019 and in GeorgiaTech now. That's slightly different from *Generative AI*, which is the AI that you see in the Generative Pre-trained Transformers such as ChatGPT. I've used generative transformers since Apr 2021 at least, when we used Large Language Models to categorize large volumes of textual data.
 
-I am of the opinion that AI is a [normal technology](https://www.normaltech.ai/p/a-guide-to-understanding-ai-as-normal), and specifically, GenAI is a [lossy data compression](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) technique. There are some *very* *interesting* things you can do with AI.
+I am of the opinion that GenAI is a [normal technology](https://www.normaltech.ai/p/a-guide-to-understanding-ai-as-normal), and specifically, GenAI is a [lossy data compression](https://www.newyorker.com/tech/annals-of-technology/chatgpt-is-a-blurry-jpeg-of-the-web) technique. There are some *very* *interesting* things you can do with GenAI.
 
 Unfortunately, there are some systemic risks are something we are only beginning to understand now. Risks bias, sycophancy, and societal loss of skills. Risks *do not* include AGI or any Star-Trek-ian nonsense, but definitely include exploitation by some extractive overlords with deep pockets.
 

@@ -119,7 +119,7 @@
         "\n",
         "We may thus summarize Indian calendars thus:\n"
       ],
-      "id": "59f3b244"
+      "id": "cc3d8a71"
     },
     {
       "cell_type": "code",
@@ -172,7 +172,7 @@
         "\n",
         "We thus have the following set of names along with their respective nakshatras[@saha1992report, pp. 221]:\n"
       ],
-      "id": "d85b422f"
+      "id": "c97558f5"
     },
     {
       "cell_type": "code",
@@ -203,7 +203,7 @@
         "\n",
         "The relationships for all the months may be mapped according to the following table [@chakravarty1985indian, pp. 280] (Punjabi month names [@purewal]):\n"
       ],
-      "id": "1c11928a"
+      "id": "476438cb"
     },
     {
       "cell_type": "code",
@@ -229,7 +229,7 @@
         "\n",
         "Only solar months share their names with *raasis*. SK Chatterjee and Apurba Kumar Chakravarthy give the following names along with the associated *raasis*[@chakravarty1985indian, pp. 280]:\n"
       ],
-      "id": "beb33a8d"
+      "id": "e3101c7d"
     },
     {
       "cell_type": "code",
@@ -262,7 +262,7 @@
         "\n",
         "We provide a list of Indian festivals, along with their (Indic) dates and the calendar used to reckon the particular festival. The list of festivals is by no means exhaustive; the entries are mostly public holidays in India.\n"
       ],
-      "id": "9014e994"
+      "id": "50b09bbf"
     },
     {
       "cell_type": "code",
@@ -299,7 +299,7 @@
         "\n",
         "Here's the listing:\n"
       ],
-      "id": "5afd3848"
+      "id": "233a3611"
     },
     {
       "cell_type": "code",
@@ -348,7 +348,7 @@
         "\n",
         "Indeed, as we mentioned earlier, we ran the Dershowitz and Reingold's calendrica package to get values for the occurrence of a kshaya month. Since searching for a kshaya month is computationally very heavy[@deshowitz2002calendar, pp. 24], we used a table prepared by Saha and Lahiri (table 22 in the book)[@saha1992report, pp. 250] as a starting point. We also tabulated results for non- kshaya months, specifically years with gaps of 19, 46, 65, 76, 122 and 141 years respectively. The results and the graphs from these results are tabulated in @tbl-kshaya-timings.\n"
       ],
-      "id": "77b406e7"
+      "id": "75121a66"
     },
     {
       "cell_type": "code",
@@ -364,7 +364,7 @@
         "#print all columns in kshaya\n",
         "kshaya_small = kshaya_union[[\"Hindu Solar (Saka Era)\", \"Gregorian (CE)\", \"Hindu Lunar (Vikrama Era)\", \"Leap Month?\", \"Leap Day?\", \"Sankranti: hh:mm:ss\", \"Amavasya: hh:mm:ss\"]]"
       ],
-      "id": "dcc740ca",
+      "id": "874b9e0c",
       "execution_count": null,
       "outputs": []
     },
@@ -456,7 +456,7 @@
         "\n",
         "## 9. Appendix\n"
       ],
-      "id": "c6382fbe"
+      "id": "17bb9e2e"
     },
     {
       "cell_type": "code",
@@ -481,7 +481,7 @@
       "source": [
         "------------------------------------------------------------------------"
       ],
-      "id": "75f56185"
+      "id": "bad489c1"
     }
   ],
   "metadata": {
