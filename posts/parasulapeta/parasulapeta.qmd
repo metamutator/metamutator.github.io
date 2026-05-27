@@ -10,7 +10,7 @@ execute:
 editor_options: 
   chunk_output_type: console
   render: false
-  draft: true
+draft: true
 ---
 
 As far as I can tell, Parāsulapēṭa is a small corner of Machilīpaṭnam town, but well within its historic center, bound by Buṭchupēṭa to one side, Kennedy Road on the south, Parāsupēṭa Centre on the east, the Reserve Police Quarters on the top, past Raza Masjid - Ahale Sunnatwal Jamaat on the way to the Police Rāmālayam on the west, and the down south towards Kennedy Road again past the Superintendent of Police's office, and presumably bungalow via SP's Bunglow Road. You can't miss the last one; it's the big bungalow and compound with fake canons, glistening Ashoka Chakra lions and of course, police vehicles in a particularly cleaned portion of the road. All in all, an easy 1.4 km walk around what is roughly - unexpectedly- a rectangular sort of a block. Tāta would scoff at the distance of course, and would declare he can do it in 15 minutes or less. Just that, it is not particularly noteworthy by any measure, unless you're looking for "some evening snacks time" or "nice chai centres" as some Google reviews suggest.
