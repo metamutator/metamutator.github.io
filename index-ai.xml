@@ -5,16 +5,16 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>ganitam.aksh.ai</title>
-<link>https://ganitam.aksh.ai/#category=ai</link>
-<atom:link href="https://ganitam.aksh.ai/index-ai.xml" rel="self" type="application/rss+xml"/>
-<description>The Computational Appendix to aksh.ai</description>
+<title>metamutator.github.io</title>
+<link>https://metamutator.github.io/#category=ai</link>
+<atom:link href="https://metamutator.github.io/index-ai.xml" rel="self" type="application/rss+xml"/>
+<description>The Computational Appendix to yaksha.sg</description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Tue, 22 Aug 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Taking Delight in the Scripts of Humans</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://ganitam.aksh.ai/posts/brahmi-scripts/</link>
+  <link>https://metamutator.github.io/posts/brahmi-scripts/</link>
   <description><![CDATA[ 
 
 
@@ -24,7 +24,7 @@
 <div id="fig-hero" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/brahmi-scripts/angkor-wat.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+<img src="https://metamutator.github.io/posts/brahmi-scripts/angkor-wat.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Sanskrit verse even here: Sun rise at Angkor Wat. Photo by <a href="https://unsplash.com/@sebalatorre?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sebastian Latorre</a> on <a href="https://unsplash.com/photos/lrG4nki2kYM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
@@ -46,7 +46,7 @@ Figure&nbsp;1: Sanskrit verse even here: Sun rise at Angkor Wat. Photo by <a hre
 <div id="fig-sanskrit" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/brahmi-scripts/Phrase_sanskrit.svg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+<img src="https://metamutator.github.io/posts/brahmi-scripts/Phrase_sanskrit.svg" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: <em>‘May Śiva bless those who take delight in the language of gods’</em> - Kālidāsa. (From<a href="https://commons.wikimedia.org/wiki/File:Phrase_sanskrit.svg">Wikipedia</a>)
@@ -1108,14 +1108,14 @@ Stiehl, Ulrich. 2017. <em>Devanagari-Schreibübungen</em>. <a href="https://www.
   <category>anthropic</category>
   <category>linguistics</category>
   <category>indic-scripts</category>
-  <guid>https://ganitam.aksh.ai/posts/brahmi-scripts/</guid>
+  <guid>https://metamutator.github.io/posts/brahmi-scripts/</guid>
   <pubDate>Tue, 22 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://ganitam.aksh.ai/posts/brahmi-scripts/angkor-wat.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://metamutator.github.io/posts/brahmi-scripts/angkor-wat.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>I am Time, Destroyer of Worlds</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://ganitam.aksh.ai/posts/i_am_time/</link>
+  <link>https://metamutator.github.io/posts/i_am_time/</link>
   <description><![CDATA[ 
 
 
@@ -1125,7 +1125,7 @@ Stiehl, Ulrich. 2017. <em>Devanagari-Schreibübungen</em>. <a href="https://www.
 <div id="fig-hero" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/i_am_time/viswarupa.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+<img src="https://metamutator.github.io/posts/i_am_time/viswarupa.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: <strong>I am Time</strong>: A 19th century painting of Krishna in his <em>viswarūpa</em>. <sup>1</sup>
@@ -1913,9 +1913,9 @@ Bird, Kai, and Martin J Sherwin. 2005. <em>American Prometheus: The Triumph and 
   <category>bhagavad-gita</category>
   <category>anthropic</category>
   <category>linguistics</category>
-  <guid>https://ganitam.aksh.ai/posts/i_am_time/</guid>
+  <guid>https://metamutator.github.io/posts/i_am_time/</guid>
   <pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://ganitam.aksh.ai/posts/i_am_time/viswarupa.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://metamutator.github.io/posts/i_am_time/viswarupa.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

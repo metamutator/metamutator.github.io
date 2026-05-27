@@ -1,1 +1,1 @@
-Sitemap: https://ganitam.aksh.ai/sitemap.xml
+Sitemap: https://metamutator.github.io/sitemap.xml

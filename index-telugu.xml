@@ -5,11 +5,11 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>ganitam.aksh.ai</title>
-<link>https://ganitam.aksh.ai/#category=telugu</link>
-<atom:link href="https://ganitam.aksh.ai/index-telugu.xml" rel="self" type="application/rss+xml"/>
-<description>The Computational Appendix to aksh.ai</description>
+<title>metamutator.github.io</title>
+<link>https://metamutator.github.io/#category=telugu</link>
+<atom:link href="https://metamutator.github.io/index-telugu.xml" rel="self" type="application/rss+xml"/>
+<description>The Computational Appendix to yaksha.sg</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Wed, 27 May 2026 10:39:08 GMT</lastBuildDate>
+<lastBuildDate>Wed, 27 May 2026 10:42:33 GMT</lastBuildDate>
 </channel>
 </rss>

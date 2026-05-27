@@ -5,16 +5,16 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>ganitam.aksh.ai</title>
-<link>https://ganitam.aksh.ai/</link>
-<atom:link href="https://ganitam.aksh.ai/index.xml" rel="self" type="application/rss+xml"/>
-<description>The Computational Appendix to aksh.ai</description>
+<title>metamutator.github.io</title>
+<link>https://metamutator.github.io/</link>
+<atom:link href="https://metamutator.github.io/index.xml" rel="self" type="application/rss+xml"/>
+<description>The Computational Appendix to yaksha.sg</description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Mon, 25 Aug 2025 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Parāsulapēṭa</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://ganitam.aksh.ai/posts/parasulapeta/parasulapeta.html</link>
+  <link>https://metamutator.github.io/posts/parasulapeta/parasulapeta.html</link>
   <description><![CDATA[ 
 
 
@@ -36,13 +36,13 @@
   <category>travels</category>
   <category>personal</category>
   <category>linguistics</category>
-  <guid>https://ganitam.aksh.ai/posts/parasulapeta/parasulapeta.html</guid>
+  <guid>https://metamutator.github.io/posts/parasulapeta/parasulapeta.html</guid>
   <pubDate>Mon, 25 Aug 2025 00:00:00 GMT</pubDate>
 </item>
 <item>
   <title>Taking Delight in the Scripts of Humans</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://ganitam.aksh.ai/posts/brahmi-scripts/</link>
+  <link>https://metamutator.github.io/posts/brahmi-scripts/</link>
   <description><![CDATA[ 
 
 
@@ -52,7 +52,7 @@
 <div id="fig-hero" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/brahmi-scripts/angkor-wat.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+<img src="https://metamutator.github.io/posts/brahmi-scripts/angkor-wat.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Sanskrit verse even here: Sun rise at Angkor Wat. Photo by <a href="https://unsplash.com/@sebalatorre?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Sebastian Latorre</a> on <a href="https://unsplash.com/photos/lrG4nki2kYM?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
@@ -74,7 +74,7 @@ Figure&nbsp;1: Sanskrit verse even here: Sun rise at Angkor Wat. Photo by <a hre
 <div id="fig-sanskrit" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/brahmi-scripts/Phrase_sanskrit.svg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+<img src="https://metamutator.github.io/posts/brahmi-scripts/Phrase_sanskrit.svg" class="img-fluid quarto-figure quarto-figure-center figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-sanskrit-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: <em>‘May Śiva bless those who take delight in the language of gods’</em> - Kālidāsa. (From<a href="https://commons.wikimedia.org/wiki/File:Phrase_sanskrit.svg">Wikipedia</a>)
@@ -1136,14 +1136,14 @@ Stiehl, Ulrich. 2017. <em>Devanagari-Schreibübungen</em>. <a href="https://www.
   <category>anthropic</category>
   <category>linguistics</category>
   <category>indic-scripts</category>
-  <guid>https://ganitam.aksh.ai/posts/brahmi-scripts/</guid>
+  <guid>https://metamutator.github.io/posts/brahmi-scripts/</guid>
   <pubDate>Tue, 22 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://ganitam.aksh.ai/posts/brahmi-scripts/angkor-wat.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://metamutator.github.io/posts/brahmi-scripts/angkor-wat.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>I am Time, Destroyer of Worlds</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://ganitam.aksh.ai/posts/i_am_time/</link>
+  <link>https://metamutator.github.io/posts/i_am_time/</link>
   <description><![CDATA[ 
 
 
@@ -1153,7 +1153,7 @@ Stiehl, Ulrich. 2017. <em>Devanagari-Schreibübungen</em>. <a href="https://www.
 <div id="fig-hero" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/i_am_time/viswarupa.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
+<img src="https://metamutator.github.io/posts/i_am_time/viswarupa.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img" style="width:80.0%">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: <strong>I am Time</strong>: A 19th century painting of Krishna in his <em>viswarūpa</em>. <sup>1</sup>
@@ -1941,14 +1941,14 @@ Bird, Kai, and Martin J Sherwin. 2005. <em>American Prometheus: The Triumph and 
   <category>bhagavad-gita</category>
   <category>anthropic</category>
   <category>linguistics</category>
-  <guid>https://ganitam.aksh.ai/posts/i_am_time/</guid>
+  <guid>https://metamutator.github.io/posts/i_am_time/</guid>
   <pubDate>Wed, 09 Aug 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://ganitam.aksh.ai/posts/i_am_time/viswarupa.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://metamutator.github.io/posts/i_am_time/viswarupa.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Panchanga Tantra: The Magic of the Indic Calendar System</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://ganitam.aksh.ai/posts/panchanga-tantra/panchanga_tantra.html</link>
+  <link>https://metamutator.github.io/posts/panchanga-tantra/panchanga_tantra.html</link>
   <description><![CDATA[ 
 
 
@@ -1958,7 +1958,7 @@ Bird, Kai, and Martin J Sherwin. 2005. <em>American Prometheus: The Triumph and 
 <div id="fig-kalachakra" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-kalachakra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/panchanga-tantra/kala-chakra.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="https://metamutator.github.io/posts/panchanga-tantra/kala-chakra.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-kalachakra-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: Kala Chakra
@@ -2005,7 +2005,7 @@ Figure&nbsp;1: Kala Chakra
 <div id="fig-caluml" class="quarto-float quarto-figure quarto-figure-left anchored" data-fig-align="left">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-caluml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://ganitam.aksh.ai/posts/panchanga-tantra/calendar-uml.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
+<img src="https://metamutator.github.io/posts/panchanga-tantra/calendar-uml.png" class="img-fluid quarto-figure quarto-figure-left figure-img">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-caluml-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;2: Indic Calendar System as a quasi-UML diagram
@@ -3651,21 +3651,21 @@ Table&nbsp;8: Sankranti and Amavasya timings from Margasira, Pausa, Magha and Ph
   <category>mathematics</category>
   <category>astronomy</category>
   <category>calendar</category>
-  <guid>https://ganitam.aksh.ai/posts/panchanga-tantra/panchanga_tantra.html</guid>
+  <guid>https://metamutator.github.io/posts/panchanga-tantra/panchanga_tantra.html</guid>
   <pubDate>Sun, 23 Jul 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://ganitam.aksh.ai/posts/panchanga-tantra/kala-chakra.png" medium="image" type="image/png" height="130" width="144"/>
+  <media:content url="https://metamutator.github.io/posts/panchanga-tantra/kala-chakra.png" medium="image" type="image/png" height="130" width="144"/>
 </item>
 <item>
   <title>Bonjour Tout Le Monde!</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://ganitam.aksh.ai/posts/hello-world/hello.html</link>
+  <link>https://metamutator.github.io/posts/hello-world/hello.html</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p><img src="https://ganitam.aksh.ai/posts/hello-world/hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<p><img src="https://metamutator.github.io/posts/hello-world/hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 <section id="executive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
 <p>At long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: <img src="https://latex.codecogs.com/png.latex?f(c)=%5Cdfrac%7B1%7D%7Bb%E2%88%92a%7D%E2%88%AB%5Eb_af(x)%5C,dx.%20%5Cnonumber%20"></p>
@@ -3756,9 +3756,9 @@ font-style: inherit;">"Hello World!"</span>)</span></code></pre></div></div>
   <category>hello-world</category>
   <category>setup</category>
   <category>english</category>
-  <guid>https://ganitam.aksh.ai/posts/hello-world/hello.html</guid>
+  <guid>https://metamutator.github.io/posts/hello-world/hello.html</guid>
   <pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://ganitam.aksh.ai/posts/hello-world/hello_world.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://metamutator.github.io/posts/hello-world/hello_world.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
