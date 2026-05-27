@@ -2,9 +2,9 @@ project:
   type: website
 
 website:
-  title: "ganitam.aksh.ai"
-  site-url: https://ganitam.aksh.ai
-  description: "The Computational Appendix to aksh.ai"
+  title: "metamutator.github.io"
+  site-url: https://metamutator.github.io
+  description: "The Computational Appendix to yaksha.sg"
   navbar:
     right:
       - text: About
@@ -43,7 +43,7 @@ website:
   #cookie-consent: true
 execute:
   freeze: auto
-  
+
 format:
   html:
     include-after-body: _footer.html
