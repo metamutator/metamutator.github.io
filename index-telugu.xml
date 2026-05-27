@@ -5,11 +5,11 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>aksh.ai</title>
-<link>https://www.aksh.ai/#category=telugu</link>
-<atom:link href="https://www.aksh.ai/index-telugu.xml" rel="self" type="application/rss+xml"/>
-<description>Designing Strategy Through Data</description>
-<generator>quarto-1.4.550</generator>
-<lastBuildDate>Sat, 24 Feb 2024 08:30:43 GMT</lastBuildDate>
+<title>ganitam.aksh.ai</title>
+<link>https://ganitam.aksh.ai/#category=telugu</link>
+<atom:link href="https://ganitam.aksh.ai/index-telugu.xml" rel="self" type="application/rss+xml"/>
+<description>The Computational Appendix to aksh.ai</description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Wed, 27 May 2026 10:39:08 GMT</lastBuildDate>
 </channel>
 </rss>

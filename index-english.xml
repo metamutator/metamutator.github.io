@@ -5,22 +5,23 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>aksh.ai</title>
-<link>https://www.aksh.ai/#category=english</link>
-<atom:link href="https://www.aksh.ai/index-english.xml" rel="self" type="application/rss+xml"/>
-<description>Designing Strategy Through Data</description>
-<generator>quarto-1.4.550</generator>
-<lastBuildDate>Thu, 20 Jul 2023 16:00:00 GMT</lastBuildDate>
+<title>ganitam.aksh.ai</title>
+<link>https://ganitam.aksh.ai/#category=english</link>
+<atom:link href="https://ganitam.aksh.ai/index-english.xml" rel="self" type="application/rss+xml"/>
+<description>The Computational Appendix to aksh.ai</description>
+<generator>quarto-1.9.38</generator>
+<lastBuildDate>Fri, 21 Jul 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Bonjour Tout Le Monde!</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://www.aksh.ai/posts/hello-world/hello.html</link>
+  <link>https://ganitam.aksh.ai/posts/hello-world/hello.html</link>
   <description><![CDATA[ 
 
 
 
 
-<p><img src="https://www.aksh.ai/posts/hello-world/hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+
+<p><img src="https://ganitam.aksh.ai/posts/hello-world/hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 <section id="executive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
 <p>At long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: <img src="https://latex.codecogs.com/png.latex?f(c)=%5Cdfrac%7B1%7D%7Bb%E2%88%92a%7D%E2%88%AB%5Eb_af(x)%5C,dx.%20%5Cnonumber%20"></p>
@@ -50,11 +51,11 @@
 <h3 class="anchored" data-anchor-id="code-chunks">4. Code Chunks</h3>
 <p>Need I say more? How cool is this, that I can just write this and it’ll be executed inline?</p>
 <div class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="bu" style="color: null;
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="bu" style="color: null;
 background-color: null;
 font-style: inherit;">print</span>(<span class="st" style="color: #20794D;
 background-color: null;
-font-style: inherit;">"Hello World!"</span>)</span></code></pre></div>
+font-style: inherit;">"Hello World!"</span>)</span></code></pre></div></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Hello World!</code></pre>
 </div>
@@ -111,9 +112,9 @@ font-style: inherit;">"Hello World!"</span>)</span></code></pre></div>
   <category>hello-world</category>
   <category>setup</category>
   <category>english</category>
-  <guid>https://www.aksh.ai/posts/hello-world/hello.html</guid>
-  <pubDate>Thu, 20 Jul 2023 16:00:00 GMT</pubDate>
-  <media:content url="https://www.aksh.ai/posts/hello-world/hello_world.jpg" medium="image" type="image/jpeg"/>
+  <guid>https://ganitam.aksh.ai/posts/hello-world/hello.html</guid>
+  <pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://ganitam.aksh.ai/posts/hello-world/hello_world.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>
