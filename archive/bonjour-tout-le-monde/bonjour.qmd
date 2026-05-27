@@ -6,6 +6,7 @@ description: 'This is a test post that renders R Markdown and at great expense.'
 execute: 
   message: false
   warning: false
+  freeze: true
 editor_options: 
   chunk_output_type: console
 ---
