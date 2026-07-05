@@ -1,5 +1,5 @@
 ---
-# title: "aksh.ai"
+title: "aksh.ai"
 listing:
   contents: posts
   sort: "date desc"

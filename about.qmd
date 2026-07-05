@@ -16,6 +16,8 @@ about:
       href: https://github.com/metamutator
 ---
 
+![This is me. Yes, I can jump. My hair does get wild and curly when I do.](./image.jpeg){#fig-hero fig-align="center"}
+
 ## Akshay
 
 My name is spelled Akshay in English. It is also spelled అక్షయ్ in Telugu, and Akshayé in French.

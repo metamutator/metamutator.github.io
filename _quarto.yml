@@ -2,9 +2,9 @@ project:
   type: website
 
 website:
-  title: "metamutator.github.io"
-  site-url: https://metamutator.github.io
-  description: "The Computational Appendix to yaksha.sg"
+  title: "aksh.ai"
+  site-url: https://aksh.ai
+  description: "Published term papers, essays, and other writings by Akshay Regulagedda"
   navbar:
     right:
       - text: About
@@ -17,8 +17,8 @@ website:
         href: https://www.instagram.com/metamutator/
       - text: "{{< fa brands bluesky >}}"
         href: https://bsky.app/profile/aksh.ai
-      # - icon: github
-      #   href: https://github.com/metamutator
+      - icon: github
+        href: https://github.com/metamutator
       - icon: rss
         href: index.xml
   google-analytics: G-N0W83S6B2J

@@ -48,7 +48,7 @@
         "\n",
         "Need I say more? How cool is this, that I can just write this and it'll be executed inline?\n"
       ],
-      "id": "03da9aca"
+      "id": "62003fae"
     },
     {
       "cell_type": "code",
@@ -56,7 +56,7 @@
       "source": [
         "print(\"Hello World!\")"
       ],
-      "id": "16e95958",
+      "id": "6e0785aa",
       "execution_count": null,
       "outputs": []
     },
@@ -116,7 +116,7 @@
         "\n",
         "So there you have it. A new blog, with all the bells and whistles, and a few gotchas. I'm sure I'll find more as I go along, but for now, I'm partying like it's 1999."
       ],
-      "id": "02c0b3fb"
+      "id": "5d3a0cb8"
     }
   ],
   "metadata": {
