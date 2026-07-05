@@ -374,8 +374,7 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#foreword" id="toc-foreword" class="nav-link active" data-scroll-target="#foreword">Foreword</a></li>
-  <li><a href="#problem-statement1" id="toc-problem-statement1" class="nav-link" data-scroll-target="#problem-statement1">Problem Statement</a></li>
+  <li><a href="#problem-statement1" id="toc-problem-statement1" class="nav-link active" data-scroll-target="#problem-statement1">Problem Statement</a></li>
   <li><a href="#sec-lit-survey" id="toc-sec-lit-survey" class="nav-link" data-scroll-target="#sec-lit-survey">Literature Survey &amp; Novelty</a></li>
   <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
   <ul class="collapse">
@@ -465,18 +464,15 @@ Figure&nbsp;1: Working through an English - Tamil dictionary. Photo by <a href="
 </figcaption>
 </figure>
 </div>
-<section id="foreword" class="level2">
-<h2 class="anchored" data-anchor-id="foreword">Foreword</h2>
-<p>This is the final term project I did towards the completion of my <a href="https://www.analytics.gatech.edu">Master of Science in Analytics</a> degree from Georgia Institute of Technology.</p>
-</section>
+<p><em>This is the final term project I did towards the completion of my <a href="https://www.analytics.gatech.edu">Master of Science in Analytics</a> degree from Georgia Institute of Technology.</em></p>
 <section id="problem-statement1" class="level2">
 <h2 class="anchored" data-anchor-id="problem-statement1">Problem Statement<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
 <p>Whilst multi-lingual anglophone writers may easily find a large readership for their writing in English, they often find it hard to find a ready audience for their writings in other vernacular languages. This is particularly so if they have very niche or domain-specific interests that may not have equivalent readership across language communities. And indeed, a sufficiently large readership is a crucial signal to motivate writers to write more, especially if they would like to practise or improve their writing talent.</p>
 <p>Wikipedia translation offers perhaps the most accessible medium for such writers. In this sense, we see Wikipedia as a platform that connects interested writers and readers across a hidden dimension, that of language. But the difficulty for a sufficiently motivated writer is to find articles that are at the intersection of their own interests and what reasonably large number of readers would read. We explore Wikipedia as a two-sided market balancing the demand-side (readership, as measured in page-views) and the supply-side (translator interest or effort).</p>
 <p>Put simply, the question we ask ourselves is this: how can we create a recommendation model that works similar to that on TikTok or Instagram Reels, but for <em>volunteer translators on Wikipedia</em>?</p>
-<p>To this end, we have implemented a model that recommends articles for an interested translator using an explore-exploit approach (“The Multi-Armed Bandit problem”). The model balances the translator’s own interest whilst optimising for readership potential. In a later section, we will share a brief literature review on this problem (<a href="#sec-lit-survey" class="quarto-xref">Section&nbsp;3</a>), and why the approach is unique both in its application to the problem area (motivating translators) and in its technical implementation.</p>
+<p>To this end, we have implemented a model that recommends articles for an interested translator using an explore-exploit approach (“The Multi-Armed Bandit problem”). The model balances the translator’s own interest whilst optimising for readership potential. In a later section, we will share a brief literature review on this problem (<a href="#sec-lit-survey" class="quarto-xref">Section&nbsp;2</a>), and why the approach is unique both in its application to the problem area (motivating translators) and in its technical implementation.</p>
 <p>We executed this model using Telugu Wikipedia as a primary case study, a language with 80 million native speakers yet dramatically underserved relative to comparable language communities.</p>
-<p>We had previously proposed a detailed pipeline (<a href="#sec-pipeline" class="quarto-xref">Section&nbsp;4.1</a>) - from seeding interest by a translator to expanding, filtering, scoring, clustering and eventually recommending articles in the English Wikipedia back to them. In this report, we will not only elaborate on that pipeline, but also discuss nuances in implementation: how the problem was broken down into 9 JIRA-style epics with associated user-stories, how we optimized processing time for data gathering by a factor of 8 through parallelisation and batch API’s, and so on. We will evaluate the implementation both from a quantitative perspective - by considering MAE’s across a range of approaches - and a qualitative evaluation of the categories chosen. We will finally recommend a set of actions in the final section on how this framework can be taken forward.</p>
+<p>We had previously proposed a detailed pipeline (<a href="#sec-pipeline" class="quarto-xref">Section&nbsp;3.1</a>) - from seeding interest by a translator to expanding, filtering, scoring, clustering and eventually recommending articles in the English Wikipedia back to them. In this report, we will not only elaborate on that pipeline, but also discuss nuances in implementation: how the problem was broken down into 9 JIRA-style epics with associated user-stories, how we optimized processing time for data gathering by a factor of 8 through parallelisation and batch API’s, and so on. We will evaluate the implementation both from a quantitative perspective - by considering MAE’s across a range of approaches - and a qualitative evaluation of the categories chosen. We will finally recommend a set of actions in the final section on how this framework can be taken forward.</p>
 </section>
 <section id="sec-lit-survey" class="level2">
 <h2 class="anchored" data-anchor-id="sec-lit-survey">Literature Survey &amp; Novelty</h2>
@@ -723,7 +719,7 @@ Figure&nbsp;2: Pipeline
 <li><strong>Linear Regression</strong>: This was meant to be a <em>baseline model</em> as we need a continuous variable to rank articles. Linear regression’s simplicity and interpretability via coefficients make it a natural reference point against which to measure the added value of more complex models. The model was preprocessed with continous variables standardized (with zero mean, unit variance), while binary category flags were left unscaled.</li>
 <li><strong>Random Forest</strong>: This was meant to be a <em>primary model</em>, as it can capture non-linear relationships between features and the composite score, which is something that linear regression cannot do. Random Forest is also useful for understanding feature importance. No scaling required here.</li>
 </ul>
-<p>We will discuss the results later in <a href="#sec-eval" class="quarto-xref">Section&nbsp;5</a>.</p>
+<p>We will discuss the results later in <a href="#sec-eval" class="quarto-xref">Section&nbsp;4</a>.</p>
 </section>
 </section>
 <section id="epic-6-clustering-topical-diversity" class="level3">
