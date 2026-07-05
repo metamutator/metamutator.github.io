@@ -1,0 +1,1674 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Akshay Regulagedda">
+<meta name="dcterms.date" content="2026-07-05">
+<meta name="description" content="In which we decided to create a TikTok-style recommendation model for Wikipedia translations.">
+
+<title>Can the Multi-Armed Subaltern Write? – metamutator.github.io</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-6b6957c917596b414ec0b78690761e87.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-de63f62b328812d8e578a4d74e282472.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-effe84fbcd9f820149f16a6da5308148.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-c1151668bfe6d4d3fec30c83fe4578b8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-effe84fbcd9f820149f16a6da5308148.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/all.min.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-6.7.2/latex-fontsize.css" rel="stylesheet">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-N0W83S6B2J"></script>
+
+<script type="text/javascript">
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-N0W83S6B2J', { 'anonymize_ip': true});
+</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Can the Multi-Armed Subaltern Write? – metamutator.github.io">
+<meta property="og:description" content="In which we decided to create a TikTok-style recommendation model for Wikipedia translations.">
+<meta property="og:image" content="https://metamutator.github.io/posts/multi-armed-subaltern/english-tamil-dict-small.jpg">
+<meta property="og:site_name" content="metamutator.github.io">
+</head>
+
+<body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">metamutator.github.io</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://social.vivaldi.net/@cydonian"> <i class="bi bi-mastodon" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/akshr/"> <i class="bi bi-linkedin" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.instagram.com/metamutator/"> <i class="bi bi-instagram" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="https://bsky.app/profile/aksh.ai"> 
+<span class="menu-text"><i class="fa-brands fa-bluesky" aria-label="bluesky"></i></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../index.xml"> <i class="bi bi-rss" role="img">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#foreword" id="toc-foreword" class="nav-link active" data-scroll-target="#foreword">Foreword</a></li>
+  <li><a href="#problem-statement1" id="toc-problem-statement1" class="nav-link" data-scroll-target="#problem-statement1">Problem Statement</a></li>
+  <li><a href="#sec-lit-survey" id="toc-sec-lit-survey" class="nav-link" data-scroll-target="#sec-lit-survey">Literature Survey &amp; Novelty</a></li>
+  <li><a href="#methodology" id="toc-methodology" class="nav-link" data-scroll-target="#methodology">Methodology</a>
+  <ul class="collapse">
+  <li><a href="#sec-pipeline" id="toc-sec-pipeline" class="nav-link" data-scroll-target="#sec-pipeline">Overview</a></li>
+  <li><a href="#epic-1-project-scaffolding" id="toc-epic-1-project-scaffolding" class="nav-link" data-scroll-target="#epic-1-project-scaffolding">Epic 1: Project Scaffolding</a></li>
+  <li><a href="#sec-data-sources" id="toc-sec-data-sources" class="nav-link" data-scroll-target="#sec-data-sources">Epic 2: Data Acquisition</a></li>
+  <li><a href="#sec-candidate-pool" id="toc-sec-candidate-pool" class="nav-link" data-scroll-target="#sec-candidate-pool">Epic 3: Candidate Pool Construction</a></li>
+  <li><a href="#epic-4-feature-engineering" id="toc-epic-4-feature-engineering" class="nav-link" data-scroll-target="#epic-4-feature-engineering">Epic 4: Feature Engineering</a></li>
+  <li><a href="#epic-5-scoring-model" id="toc-epic-5-scoring-model" class="nav-link" data-scroll-target="#epic-5-scoring-model">Epic 5: Scoring Model</a></li>
+  <li><a href="#epic-6-clustering-topical-diversity" id="toc-epic-6-clustering-topical-diversity" class="nav-link" data-scroll-target="#epic-6-clustering-topical-diversity">Epic 6: Clustering (Topical Diversity)</a></li>
+  <li><a href="#epic-7-recommendation-through-explore-exploit" id="toc-epic-7-recommendation-through-explore-exploit" class="nav-link" data-scroll-target="#epic-7-recommendation-through-explore-exploit">Epic 7: Recommendation Through Explore-Exploit</a></li>
+  <li><a href="#epic-8-take-feedback" id="toc-epic-8-take-feedback" class="nav-link" data-scroll-target="#epic-8-take-feedback">Epic 8: Take Feedback</a></li>
+  </ul></li>
+  <li><a href="#sec-eval" id="toc-sec-eval" class="nav-link" data-scroll-target="#sec-eval">Results &amp; Observations (Epic 9)</a>
+  <ul class="collapse">
+  <li><a href="#evaluation-premise" id="toc-evaluation-premise" class="nav-link" data-scroll-target="#evaluation-premise">Evaluation Premise</a></li>
+  <li><a href="#result-1-supply-demand-tension" id="toc-result-1-supply-demand-tension" class="nav-link" data-scroll-target="#result-1-supply-demand-tension">Result 1: Supply Demand Tension</a></li>
+  <li><a href="#result-2-evaluating-models" id="toc-result-2-evaluating-models" class="nav-link" data-scroll-target="#result-2-evaluating-models">Result 2: Evaluating Models</a></li>
+  <li><a href="#result-3-evaluating-cold-start-proxy" id="toc-result-3-evaluating-cold-start-proxy" class="nav-link" data-scroll-target="#result-3-evaluating-cold-start-proxy">Result 3: Evaluating Cold Start Proxy</a></li>
+  <li><a href="#result-4-gmm-exploit-explore-mechanism" id="toc-result-4-gmm-exploit-explore-mechanism" class="nav-link" data-scroll-target="#result-4-gmm-exploit-explore-mechanism">Result 4: GMM Exploit/ Explore Mechanism</a></li>
+  <li><a href="#result-5-clustering" id="toc-result-5-clustering" class="nav-link" data-scroll-target="#result-5-clustering">Result 5: Clustering</a></li>
+  </ul></li>
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a>
+  <ul class="collapse">
+  <li><a href="#next-steps" id="toc-next-steps" class="nav-link" data-scroll-target="#next-steps">Next Steps</a></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  </ul></li>
+  <li><a href="#bibliography" id="toc-bibliography" class="nav-link" data-scroll-target="#bibliography">Bibliography</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Can the Multi-Armed Subaltern Write?</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">multi-armed bandit</div>
+    <div class="quarto-category">wikipedia</div>
+    <div class="quarto-category">translations</div>
+    <div class="quarto-category">GMM</div>
+    <div class="quarto-category">spectral-clustering</div>
+    <div class="quarto-category">recommendation model</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    In which we decided to create a TikTok-style recommendation model for Wikipedia translations.
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Akshay Regulagedda </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">July 5, 2026</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<div id="fig-hero" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./english-tamil-dict-small.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Working through an English - Tamil dictionary. Photo by <a href="https://unsplash.com/@hyson?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Antony Hyson Seltran</a> on <a href="https://unsplash.com/photos/an-open-book-sitting-on-top-of-a-table-pT4Cot62pE4?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+</figcaption>
+</figure>
+</div>
+<section id="foreword" class="level2">
+<h2 class="anchored" data-anchor-id="foreword">Foreword</h2>
+<p>This is the final term project I did towards the completion of my <a href="https://www.analytics.gatech.edu">Master of Science in Analytics</a> degree from Georgia Institute of Technology.</p>
+</section>
+<section id="problem-statement1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement1">Problem Statement<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a></h2>
+<p>Whilst multi-lingual anglophone writers may easily find a large readership for their writing in English, they often find it hard to find a ready audience for their writings in other vernacular languages. This is particularly so if they have very niche or domain-specific interests that may not have equivalent readership across language communities. And indeed, a sufficiently large readership is a crucial signal to motivate writers to write more, especially if they would like to practise or improve their writing talent.</p>
+<p>Wikipedia translation offers perhaps the most accessible medium for such writers. In this sense, we see Wikipedia as a platform that connects interested writers and readers across a hidden dimension, that of language. But the difficulty for a sufficiently motivated writer is to find articles that are at the intersection of their own interests and what reasonably large number of readers would read. We explore Wikipedia as a two-sided market balancing the demand-side (readership, as measured in page-views) and the supply-side (translator interest or effort).</p>
+<p>Put simply, the question we ask ourselves is this: how can we create a recommendation model that works similar to that on TikTok or Instagram Reels, but for <em>volunteer translators on Wikipedia</em>?</p>
+<p>To this end, we have implemented a model that recommends articles for an interested translator using an explore-exploit approach (“The Multi-Armed Bandit problem”). The model balances the translator’s own interest whilst optimising for readership potential. In a later section, we will share a brief literature review on this problem (<a href="#sec-lit-survey" class="quarto-xref">Section&nbsp;3</a>), and why the approach is unique both in its application to the problem area (motivating translators) and in its technical implementation.</p>
+<p>We executed this model using Telugu Wikipedia as a primary case study, a language with 80 million native speakers yet dramatically underserved relative to comparable language communities.</p>
+<p>We had previously proposed a detailed pipeline (<a href="#sec-pipeline" class="quarto-xref">Section&nbsp;4.1</a>) - from seeding interest by a translator to expanding, filtering, scoring, clustering and eventually recommending articles in the English Wikipedia back to them. In this report, we will not only elaborate on that pipeline, but also discuss nuances in implementation: how the problem was broken down into 9 JIRA-style epics with associated user-stories, how we optimized processing time for data gathering by a factor of 8 through parallelisation and batch API’s, and so on. We will evaluate the implementation both from a quantitative perspective - by considering MAE’s across a range of approaches - and a qualitative evaluation of the categories chosen. We will finally recommend a set of actions in the final section on how this framework can be taken forward.</p>
+</section>
+<section id="sec-lit-survey" class="level2">
+<h2 class="anchored" data-anchor-id="sec-lit-survey">Literature Survey &amp; Novelty</h2>
+<p>Silva et al <span class="citation" data-cites="silva2022">(<a href="#ref-silva2022" role="doc-biblioref">2022</a>)</span> have observed that recommendation systems have “attracted a lot of attention from both industry and academia” as a response to exponential growth of digital information, which had led to “stressful situation[s]” of information overload for many users, particularly when comes to purchase decisions. Indeed, a lot of the effort has been towards recommending videos and such on Netflix <span class="citation" data-cites="ko2022a">(<a href="#ref-ko2022a" role="doc-biblioref">Ko et al. 2022</a>)</span>, and of course, TikTok, which, Zhang et al <span class="citation" data-cites="zhang2021">(<a href="#ref-zhang2021" role="doc-biblioref">2021</a>)</span> have found, to be “impressive” in not just improving loyalty from users, but also drawing them “into new intersecting areas”.</p>
+<p>Silva et al’s <span class="citation" data-cites="silva2022">(<a href="#ref-silva2022" role="doc-biblioref">2022</a>)</span> systematic literature review found 230 articles on Google Scholar published between 2000 and 2020 that used the Multi-Armed Bandit approach to develop recommendation systems. The field has had a growing interest in recent years; they found that more than 50% of such works were published between 2016 and 2020. Most applications, however, deal with recommending news, users’ purchases (e.g.&nbsp;on Amazon),songs, advertisements, points-of-interest, bookmarks, food, jobs, and even jokes. None of the papers in their meta-analysis dealt with recommending articles to be translated.</p>
+<p>Wulczyn et al’s three-month study did generate a model to recommend articles for translators to translate from English to French Wikipedia. However, it did so by ranking articles that it deemed “missing” (and then matched translators to them) <span class="citation" data-cites="wulczyn2016">(<a href="#ref-wulczyn2016" role="doc-biblioref">2016</a>)</span>. The starting point wasn’t necessarily the translator’s own interest, but achieving a certain completeness in the French Wikipedia compared to that in English. Translators in the study had raised questions of “language imperialism”, as Wulcyzn et al themselves had documented.</p>
+<p>In comparison, our approach is centered on the Telugu Wikipedia and on the personal: the goal isn’t necessarily for the Telugu Wikipedia to reach parity, so to speak, with the English Wikipedia in terms of articles. Instead, the focus is essentially writer’s own interest first: on what they would like to see in the Telugu Wikipedia primarily, whilst maximizing for readership.</p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<section id="sec-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="sec-pipeline">Overview</h3>
+<p>We proposed the pipeline in our project proposal seen in <a href="#fig-pipeline" class="quarto-xref">Figure&nbsp;2</a>.</p>
+<div id="fig-pipeline" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="./pipeline diagram.png" class="img-fluid figure-img" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Pipeline
+</figcaption>
+</figure>
+</div>
+<p>The pipeline was implemented largely as proposed using the Agile methodology, as Epics with self-contained user-stories. This project was essentially done beyond work-hours and on weekend afternoons. As such, we needed a way to break the overall task down into small chunks (that can be executed over lunch for example), while at the same time, have assured code quality when we integrated it all. Having self-contained unit-tests per user-story helped us tremendously in this regard.</p>
+<p>Some optimisations were later found necessary for data gathering and processing.</p>
+</section>
+<section id="epic-1-project-scaffolding" class="level3">
+<h3 class="anchored" data-anchor-id="epic-1-project-scaffolding">Epic 1: Project Scaffolding</h3>
+<p>We used the Agile methodology to breakdown the pipeline into a series of epics and JIRA-style user-stories to be implemented sequentially. Each user-story had its own set of self-contained unit-tests. The overall project has a <code>pyproject.toml</code> file declaring all dependencies and a <code>config.yaml</code> to store values for <code>alpha</code>, <code>curated_categories</code>, <code>traversal_depth</code>, <code>quality_filter_threshold</code>, <code>epsilon</code>, <code>cold_start_window_days</code></p>
+</section>
+<section id="sec-data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="sec-data-sources">Epic 2: Data Acquisition</h3>
+<p>We combined manual ratings with openly available data from various Wikipedia API’s:</p>
+<table class="caption-top table">
+<caption>Data Sources &amp; Feature Set</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 47%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Signal Type</th>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Manual Ratings</td>
+<td>Supply side “seed”</td>
+<td>Translator interest rating</td>
+</tr>
+<tr class="even">
+<td>MediaWiki API</td>
+<td>Relevance (Features for Step #2: Expand)</td>
+<td>Article categories</td>
+</tr>
+<tr class="odd">
+<td>MediaWiki API</td>
+<td>Feasibility features</td>
+<td>Article length (word count)</td>
+</tr>
+<tr class="even">
+<td>MediaWiki API</td>
+<td>Feasibility features</td>
+<td>Article quality rating</td>
+</tr>
+<tr class="odd">
+<td>Pageviews API</td>
+<td>Reader demand</td>
+<td>Demand gap score</td>
+</tr>
+</tbody>
+</table>
+<section id="optimisations" class="level4">
+<h4 class="anchored" data-anchor-id="optimisations">Optimisations</h4>
+<p>Our initial versions for client-classes for MediaWiki and Pageviews API’s called each Wikipedia article individually. In later stages, we realized that meant calling the API more than 2000 times in quick succession, especially if the constructed candidate pool was large. With enough throttling, that meant processing times of more than 45 minutes each time a candidate pool was constructed. Instead, we implemented the following:</p>
+<ol type="1">
+<li><strong>Batch Processing</strong>: We combined calls for multiple Wikipedia pages together into a single call. The API allowed up to 50 pages to be batched together</li>
+<li><strong>Parallel Processing:</strong> We parallelized API calls into multiple threads using <code>ThreadPoolExecutor</code>.</li>
+<li><strong>Throttling:</strong> Should an API call encounter a 429 error, we spaced out subsequent re-try attempts based on the message.</li>
+</ol>
+</section>
+</section>
+<section id="sec-candidate-pool" class="level3">
+<h3 class="anchored" data-anchor-id="sec-candidate-pool">Epic 3: Candidate Pool Construction</h3>
+<p>The candidate pool was constructed through the following inputs:</p>
+<ol type="1">
+<li><p><strong>Seed Articles:</strong> The user would suggest a list of 10-15 Wikipedia articles to seed the model first. In the final evaluation, we seeded the following articles:</p>
+<table class="caption-top table">
+<caption>Seed Articles for the Final Evaluation</caption>
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li>Caitika</li>
+<li>1915 Singapore Mutiny</li>
+<li>Ngogo chimpanzee war</li>
+<li>Longest flights</li>
+<li>Westray to Papa Westray flight</li>
+<li>Boat Mail Express</li>
+<li>Shangri-La</li>
+<li>Tea Horse Road</li>
+</ul></td>
+<td><ul>
+<li>List of tallest buildings in India</li>
+<li>Longest train services of Indian Railways</li>
+<li>Johor Bahru–Singapore Rapid Transit System</li>
+<li>Montreal</li>
+<li>Quebec</li>
+<li>Montréal–Trudeau International Airport</li>
+<li>Orlando: A Biography</li>
+</ul></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Categories:</strong> Querying the full English Wikipedia corpus of over 7 million articles is not just computationally infeasible, but semantically unfocussed. Therefore, we constrained the candidate pool of articles to a curated set of top-level Wikipedia categories specified by the user. This was defined in <code>config.yaml</code></p>
+<p>We seeded the following categories in the final evaluation:</p>
+<table class="caption-top table">
+<caption>Categories for the Final Evaluation</caption>
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li>Transport-related lists of superlatives</li>
+<li>Military history of Singapore</li>
+<li>Named passenger trains of India</li>
+<li>Mahayana sutras</li>
+<li>Monks of Nalanda</li>
+<li>Telugu monarchs</li>
+</ul></td>
+<td><ul>
+<li>Novels about transgender topics</li>
+<li>Metafictional novels</li>
+<li>History of Andhra Pradesh</li>
+<li>Chinese classic texts</li>
+<li>Buddhist holy sites in Andhra Pradesh</li>
+<li>Philosophical skepticism</li>
+</ul></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Depth of Category Traversal:</strong> The level to which the categories may be traversed can be set in <code>config.yaml</code> We initially tested the model with <code>1</code>, but executed it with <code>2</code>.</p></li>
+</ol>
+</section>
+<section id="epic-4-feature-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="epic-4-feature-engineering">Epic 4: Feature Engineering</h3>
+<p>The raw data collected in the previous epic is to be transformed it into model inputs here, through the following features:</p>
+<section id="article-quality-rating" class="level4">
+<h4 class="anchored" data-anchor-id="article-quality-rating">1. Article Quality Rating</h4>
+<p>Per Wikimedia’s own guidance, articles in the English Wikipedia can be ranked using the following quality classes in order of quality: FA, GA, B, C, START, and STUB <span class="citation" data-cites="Johnson_Aragón_2022">(<a href="#ref-Johnson_Aragón_2022" role="doc-biblioref">Johnson and Aragón 2022</a>)</span>. Other language Wikipedias also have their own quality classifications, even if they may not exactly match those in English.</p>
+<p>We grouped all quality classes into three tiers, as follows:</p>
+<table class="caption-top table">
+<caption>Quality Classes in English Wikipedia grouped into three tiers</caption>
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>Classes</th>
+<th>Encoded Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>High quality</td>
+<td>FA, A, GA</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Mid quality</td>
+<td>B, C</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Low quality</td>
+<td>Start, Stub</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>All articles in low quality (<code>encoded value = 1</code>) were excluded from the candidate pool entirely before scoring.</p>
+</section>
+<section id="article-length" class="level4">
+<h4 class="anchored" data-anchor-id="article-length">2. Article Length</h4>
+<p>MediaWiki API returns a <code>wordcount</code>, which was used to signify length of an article. However, because the range of length of articles can be very wide indeed, we normalized this metric through a log transformation (<code>log(wordcount)</code>). In general, the difference in translation effort between a 500 and 1000 word article is much more significant than that between a 9,500 word and a 10,000 word article. A log transformation would naturally account for this and compress skewness in article length distribution.</p>
+</section>
+<section id="category-membership" class="level4">
+<h4 class="anchored" data-anchor-id="category-membership">3. Category Membership</h4>
+<p>Whilst we curated the list of top-level categories to a limited set, Wikipedia articles are still classified under multiple categories. This can be challenging in encoding the information, which we have addressed in the following manner.</p>
+<p>If <span class="math inline">\(k\)</span> is the number of curated top-level categories, each article would have: <span class="math display">\[ category_i = \begin{cases}
+\text{1}, &amp; \text{if article belongs to category i} \\
+\text{0}, &amp; \text{if it doesn't}
+\end{cases}\]</span> where <span class="math inline">\(i = 1, 2, .... k\)</span></p>
+<p>This gave us a sparse binary vector per article. We can avoid the curse of dimensionality because we are manually curating less than 15 top-level categories, thus ensuring <span class="math inline">\(k\)</span> is small and fixed.</p>
+</section>
+<section id="demand-gap-score" class="level4">
+<h4 class="anchored" data-anchor-id="demand-gap-score">4. Demand Gap Score</h4>
+<p>Whilst the features thus far <em>describe</em> a Wikipedia article, we also would like some demand-side signals. To this end, we used a a <strong>demand gap score</strong> to measure is how different readership is for the same page between the English and Telugu Wikipedia. The feature is derived from PageViews API as <span class="math display">\[\text{Demand Gap Score}=1-\frac{\text{Telugu views}}{\text{English views}} \]</span></p>
+<p>This provides a normalized measure of unmet readership demand that is comparable across articles of varying popularity.</p>
+</section>
+<section id="cold-start-gap" class="level4">
+<h4 class="anchored" data-anchor-id="cold-start-gap">5. Cold-Start Gap</h4>
+<p>Whilst we can calculate a demand gap score between versions in English and Telugu Wikipedia, there is a possibility that a Telugu version may not exist at all (i.e., <span class="math inline">\(\text{Telugu views} = 0\)</span>) In such a case, demand gap score will be 1 (undefined) for every untranslated article.</p>
+<p>Which is to say, we may have a <em>cold start problem</em> - we will not gather sufficient pageview data for translated articles until well after the translations have been written. In such cases, we would use views for the Hindi language versions as a proxy instead:</p>
+<p><span class="math display">\[\text{Cold Start Proxy} = 1 - \frac{\text{Hindi views}}{\text{English views}}\]</span></p>
+<p>We chose Hindi as a proxy because we have seen that Hindi readership for the Wikipedia page on the Indian city Hyderabad (where both Hindi and Telugu are spoken) was 3-4 times that of the Telugu readership.<span class="citation" data-cites="langview">(<a href="#ref-langview" role="doc-biblioref"><em>Langviews Analysis</em>, n.d.</a>)</span> There is a very good chance that Hindi and Telugu readers may have overlapping topical interests for culturally proximate subjects: indeed, in many cases, they may be the same individuals as well, as many are fluent in both languages. Once sufficient Telugu pageview data has accumulated following the 3-month window, the model will transition back to the standard demand gap score.</p>
+<p>This is naturally a hypothesis; it was evaluated independently in a later section. However, we took care to build this as a feature in this epic itself.</p>
+<p>We also defined the following guardrails that can be set in <code>config.yaml</code>:</p>
+<ol type="1">
+<li>Small constant guarding against division by zero in demand gap score: <code>epsilon: 1.0e-6</code></li>
+<li>Days after a translation before switching from Hindi cold-start proxy to real Telugu views: <code>cold_start_window_days: 90</code></li>
+</ol>
+</section>
+<section id="epic-3-4-output" class="level4">
+<h4 class="anchored" data-anchor-id="epic-3-4-output">Epic 3 &amp; 4 Output</h4>
+<p>An output Excel was generated at the end of executing all the stories here with a constructed candidate pool expanding on the seed articles and categories with the features listed above, whilst filtering out low-quality articles. The pool is now ready for a translator to rate. In the final execution, 78 articles were retrieved.</p>
+</section>
+</section>
+<section id="epic-5-scoring-model" class="level3">
+<h3 class="anchored" data-anchor-id="epic-5-scoring-model">Epic 5: Scoring Model</h3>
+<section id="translator-rating" class="level4">
+<h4 class="anchored" data-anchor-id="translator-rating">Translator Rating</h4>
+<p>This “supply-side” feature, that of translator’s own interest, is captured on a scale of three, roughly on par with swiping left or right as one does on some contemporary apps: <strong>-1</strong> (<em>dislike</em>), <strong>0</strong> (<em>neutral</em>) or <strong>+1</strong> (<em>like</em>).</p>
+<p>In the final execution, 29 out of the 78 retrieved articles were rated either -1, 0, or 1.</p>
+</section>
+<section id="target-variable-composite-score" class="level4">
+<h4 class="anchored" data-anchor-id="target-variable-composite-score">Target Variable: Composite Score</h4>
+<p>We first normalized the translator’s ratings to <span class="math inline">\({0, 0.5, 1}\)</span> and then combined them with the demand gap score into a composite score:</p>
+<p><span class="math display">\[\text{Composite Score} = \alpha \cdot \frac{\text{Translator Rating}+1}{2} + (1-\alpha)\cdot\text{Demand Gap Score}\]</span></p>
+<p>where the coefficient <span class="math inline">\(\alpha \in [0,1]\)</span> was tuned through cross-validation.</p>
+</section>
+<section id="models-baseline-and-primary" class="level4">
+<h4 class="anchored" data-anchor-id="models-baseline-and-primary">Models: Baseline and Primary</h4>
+<p>We generated models that tried to learn the relationship between input features such as article length, quality tier etc and the target variable, composite score. The models will then be able to predict scores for articles that had not been evaluated as yet.</p>
+<p>We compared three models:</p>
+<ul>
+<li><strong>Naive Baseline</strong>: Demand gap score used directly as predicted composite score</li>
+<li><strong>Linear Regression</strong>: This was meant to be a <em>baseline model</em> as we need a continuous variable to rank articles. Linear regression’s simplicity and interpretability via coefficients make it a natural reference point against which to measure the added value of more complex models. The model was preprocessed with continous variables standardized (with zero mean, unit variance), while binary category flags were left unscaled.</li>
+<li><strong>Random Forest</strong>: This was meant to be a <em>primary model</em>, as it can capture non-linear relationships between features and the composite score, which is something that linear regression cannot do. Random Forest is also useful for understanding feature importance. No scaling required here.</li>
+</ul>
+<p>We will discuss the results later in <a href="#sec-eval" class="quarto-xref">Section&nbsp;5</a>.</p>
+</section>
+</section>
+<section id="epic-6-clustering-topical-diversity" class="level3">
+<h3 class="anchored" data-anchor-id="epic-6-clustering-topical-diversity">Epic 6: Clustering (Topical Diversity)</h3>
+<section id="purpose" class="level4">
+<h4 class="anchored" data-anchor-id="purpose">Purpose</h4>
+<p>A scoring model that ranks articles by composite score alone is not sufficient for diversity. Without clustering, the recommendations could easily collapse into a single high-scoring topic cluster. Such an outcome would defeat the purpose of a personalized recommender and will accelerate translator burnout. Instead, to ensure topical variability, we performed clustering as a diversity mechanism, sampling top candidates from each cluster, rather than take just the global top N by score.</p>
+</section>
+<section id="choice-of-algorithm" class="level4">
+<h4 class="anchored" data-anchor-id="choice-of-algorithm">Choice of Algorithm</h4>
+<p>We used spectral clustering to cluster the articles by topic. The articles may share multiple category flags out of the 10-15 curated top-level categories, that is to say they are likely to have sparse binary vectors for categories. Consequently, while the articles are topically related, their relationship is geometric in a non-Euclidean sense. Connectivity-based similarity is better handled by spectral clustering than k-means.</p>
+<p>The number of clusters <span class="math inline">\(k\)</span> is determined by the eigenvalue gap: we examined the eigenvalues of the graph Laplacian and choose <span class="math inline">\(k\)</span> where there’s a natural gap between the <span class="math inline">\(k\)</span>-th and <span class="math inline">\((k+1)\)</span>-th eigenvalue. The eigenvalue structure of the similarity matrix tells us how many natural topic communities exist in the article graph.</p>
+</section>
+<section id="feature-choice" class="level4">
+<h4 class="anchored" data-anchor-id="feature-choice">Feature Choice</h4>
+<p>Since the purpose of clustering is topical diversity rather than quality filtering, we excluded score and length features, and used category flags alone for clustering. This is to ensure that clusters reflect topical neighbourhoods and not quality or length neighbourhoods.</p>
+</section>
+</section>
+<section id="epic-7-recommendation-through-explore-exploit" class="level3">
+<h3 class="anchored" data-anchor-id="epic-7-recommendation-through-explore-exploit">Epic 7: Recommendation Through Explore-Exploit</h3>
+<section id="takkari-donga-the-multi-armed-bandit" class="level4">
+<h4 class="anchored" data-anchor-id="takkari-donga-the-multi-armed-bandit"><em>Takkari Donga</em>: The Multi-Armed Bandit</h4>
+<p>With articles scored by interest and opportunity, and clustered by topic, we know what a translator’s preferences are, which are primed to be <em>exploited</em>. However, we also need to <em>explore</em> new territory to learn more about their preferences, a problem known as the Multi-Armed Bandit problem in reinforcement learning. Since we are dealing with the Telugu Wikipedia after all, one might call this the <em>Takkari Donga</em> problem<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a>: how does the clever bandit (in Telugu) explore and exploit learned preferences and opportunities for the motivated translator?</p>
+<p>A key element here is to model distribution of reader interest across topic clusters, that is to say, to ask where the latent demand is concentrated. Density estimation via Gaussian Mixture Model (GMM) was a likely approach: if GMM flagged an article as sitting in a sparse, uncertain region, that article is worth exploring. This is not to say that the translator will necessarily <em>like</em> the article, but that the user’s rating will give the most <em>new information</em> to improve the model. Consequently, a recommendation list would be a shortlist balancing exploit (articles with high composite scores) and explore (sparse GMM regions): the clever thief takes not just what is of high value, but also explores what <em>could be</em> of high value.</p>
+</section>
+<section id="recommendation-logic" class="level4">
+<h4 class="anchored" data-anchor-id="recommendation-logic">Recommendation Logic</h4>
+<p>The recommendation logic per cluster, can simply be stated as follows:</p>
+<ol type="1">
+<li>We take all scored, clustered unrated candidates</li>
+<li>We fit GMM on feature vectors of already-rated articles</li>
+<li>We then compute the log-likelihood of each candidate under GMM</li>
+<li><strong>Exploit:</strong> Within each cluster, we sort articles in <em>descending order</em> of composite score, taking the top 1 as an exploit candidate</li>
+<li><strong>Explore:</strong> Within each cluster, we sort articles in <em>ascending order</em> of log-likelihood, taking the top 1 as an explore candidate</li>
+<li>We surface two such articles per cluster as recommendations. The total recommendations offered to the translator, therefore, would be <span class="math inline">\(2k\)</span> articles, where <span class="math inline">\(k\)</span> is the number of clusters. The translator’s ratings on these recommendations then feed into the feedback loop, updating the model for the next round.</li>
+</ol>
+</section>
+<section id="epic-7-output" class="level4">
+<h4 class="anchored" data-anchor-id="epic-7-output">Epic 7 Output</h4>
+<p>An eigenvalue-gap plot using spectral clustering was generated. Having fitted a Gaussian Mixture Model, we generated 1 exploit (highest composite score) and 1 explore (lowest GMM log-likelihood).</p>
+</section>
+</section>
+<section id="epic-8-take-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="epic-8-take-feedback">Epic 8: Take Feedback</h3>
+<section id="feedback-loop" class="level4">
+<h4 class="anchored" data-anchor-id="feedback-loop">Feedback Loop</h4>
+<p>Once recommendations are made, ratings given and the translations done, the model was intended to have a feedback loop with the following elements:</p>
+<ol type="1">
+<li><p><strong>When an update is triggered:</strong> The model will need to learn how readers have been taking to the translations. This would need sufficient time for organic readership to discover and engage with newly translated articles. To this end, we propose making updates every 3 months.</p></li>
+<li><p><strong>What gets updated:</strong> We envisage a production update cadence as follows to give sufficient time for a model to learn:</p>
+<ol type="1">
+<li><strong>Continuous updates:</strong> Each time new ratings are added</li>
+<li><strong>Annual</strong>: Retuning <span class="math inline">\(\alpha\)</span> every 12 months</li>
+<li><strong>Biennial</strong>: Retraining the full model</li>
+</ol>
+<p>This is obviously not possible within the term project cadence. But we simulated one manual update cycle using the author’s own ratings.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="sec-eval" class="level2">
+<h2 class="anchored" data-anchor-id="sec-eval">Results &amp; Observations (Epic 9)</h2>
+<section id="evaluation-premise" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-premise">Evaluation Premise</h3>
+<p>We measured Mean Absolute Error (MAE) between predicted and actual composite scores. MAE is appropriate here because it treats all errors equally, which is appropriate given that the composite score is bounded [0,1]. For a recommendation system where consistent ranking is more important than avoiding large errors, MAE is perhaps more appropriate than other error metrics such as Root Mean Squared Error (RMSE)</p>
+<p>Our assumption was that we would arrive at the following evaluation hierarchy:</p>
+<ul>
+<li><strong>Naive baseline</strong>: As mentioned, we used demand gap score directly as a predicted composite score and measure its error against the computed composite score. This is equivalent to setting translator interest weight, <span class="math inline">\(\alpha = 0\)</span>.</li>
+<li><strong>Linear Regression</strong>: MAE computed from model output and composite score via k-fold cross-validation</li>
+<li><strong>Random Forest</strong>: MAE computed against composite score via k-fold cross-validation.</li>
+</ul>
+<p>Looking beyond MAE, feature importance scores from Random Forest could be examined to understand which signals drive recommendation quality most strongly.</p>
+<p><strong>Recommendation Quality</strong></p>
+<p>The model does more than predict scores, it produces a ranked list of recommendations. While we used MAE to tell us how well the model predicts scores, we will need to evaluate whether the ordering of recommendations is correct.</p>
+<p>For such an evaluation, we first defined a threshold on the composite score. Given the range [0,1], we took the midpoint, 0.5, as the threshold. Articles above this score will be labelled as good candidates.</p>
+<p>We then computed precision as the fraction of recommended articles exceeding this threshold, and compared this across naive baseline, Linear Regression and Random Forest.</p>
+<p><strong>Single-user bias</strong></p>
+<p>The approach would take a single user’s (the author) preferences (“translator ratings”) and build upon it, which could open up the chance that the translator’s niche interests could diverge from mass readership.</p>
+<p>We had earlier proposed exploring this through a simple diagnostic: we compute a correlation between translator ratings and pageview gap across recommended articles. This will lead us to two possible outcomes:</p>
+<ol type="1">
+<li><strong>High Positive Correlation</strong>: The model’s two-sided approach is coherent: the translator’s interests and reader demand are well-aligned.</li>
+<li><strong>Negative Correlation</strong>: Such an outcome would reveal a genuine tension between supply and demand - the translator’s niche interests diverge from mass readership. This is exactly the problem the model is designed to navigate (and therefore, the more interesting finding, academically speaking)</li>
+</ol>
+</section>
+<section id="result-1-supply-demand-tension" class="level3">
+<h3 class="anchored" data-anchor-id="result-1-supply-demand-tension">Result 1: Supply Demand Tension</h3>
+<p>The model’s core motivation - that there could be a genuine tension between a translator’s interests from mass readership - may be validated. Pearson <code>r</code> between a translator’s ratings and demand gap scores across rated articles calculates to <code>-0.282</code>, with a <code>p=0.049</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="supply_demand_alignment.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Supply - Demand Alignment</figcaption>
+</figure>
+</div>
+</section>
+<section id="result-2-evaluating-models" class="level3">
+<h3 class="anchored" data-anchor-id="result-2-evaluating-models">Result 2: Evaluating Models</h3>
+<section id="mae" class="level4">
+<h4 class="anchored" data-anchor-id="mae">MAE</h4>
+<p>We expected Random Forest to have the least MAE followed by Linear Regression and Naive Baseline. Fascinatingly enough, that is <strong>not</strong> what we observed:</p>
+<table class="caption-top table">
+<caption>MAE by Model</caption>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Mean MAE</th>
+<th>Std MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NaiveBaseline</td>
+<td>0.202</td>
+<td>0.122</td>
+</tr>
+<tr class="even">
+<td>LinearRegression</td>
+<td>0.217</td>
+<td>0.032</td>
+</tr>
+<tr class="odd">
+<td>RandomForest</td>
+<td>0.216</td>
+<td>0.042</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>Very High Demand Gap:</strong> In effect, we found that demand gap had essentially no variance, with a mean = 0.995, STD = 0.014 and the 50th percentile at 1. The candidate pool in retrospect was scoped to categories likely to be untranslated into Telugu; consequently, every article has near-zero Telugu views. This essentially meant the demand gap <span class="math inline">\(d \approx 1.0\)</span> everywhere.</p></li>
+<li><p><strong>Model Ordering Failure</strong>: The naive baseline here was the demand gap. When the demand gap is close to constant, it is trivially hard to beat.</p></li>
+<li><p><strong>Precision@0.5 = 1.000 for all models</strong>: Essentially, <code>composite_score = demand_gap</code> <span class="math inline">\(\approx 1.0 &gt; 0.5\)</span> for all articles.</p></li>
+<li><p><strong>CV tuning returned</strong> <span class="math inline">\(\alpha = 0\)</span>: In effect, with near-constant demand gap, translator preference added no discriminating signal to the composite score on this dataset.</p></li>
+</ul>
+</section>
+<section id="feature-importance" class="level4">
+<h4 class="anchored" data-anchor-id="feature-importance">Feature Importance</h4>
+<p>We found <code>log_wordcount</code> to be of overwhelming importance compared with every other feature.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="rf_feature_importances_top15.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Top 15 Features by Random Forest</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="result-3-evaluating-cold-start-proxy" class="level3">
+<h3 class="anchored" data-anchor-id="result-3-evaluating-cold-start-proxy">Result 3: Evaluating Cold Start Proxy</h3>
+<p>We computed a Pearson <code>r</code> between the Hindi proxy demand gap and actual Telugu demand gap on a separate set of articles. If <code>r&gt; 0.7</code>, then the proxy would be justified.</p>
+<p>We chose a list of generic Wikipedia articles that are likely to be available on both Hindi and Telugu Wikipedias:</p>
+<table class="caption-top table">
+<caption>Evaluating Cold Start Proxy</caption>
+<thead>
+<tr class="header">
+<th>title</th>
+<th>hindi_proxy</th>
+<th>actual_gap</th>
+<th>abs_proxy_error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mahabharata</td>
+<td>0.836706</td>
+<td>0.967915</td>
+<td>0.131209</td>
+</tr>
+<tr class="even">
+<td>Shiva</td>
+<td>0.917235</td>
+<td>0.988801</td>
+<td>0.071566</td>
+</tr>
+<tr class="odd">
+<td>Yoga</td>
+<td>0.933242</td>
+<td>0.995607</td>
+<td>0.062365</td>
+</tr>
+<tr class="even">
+<td>Telugu language</td>
+<td>0.995403</td>
+<td>0.943378</td>
+<td>0.052025</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td>0.952274</td>
+<td>0.996127</td>
+<td>0.043853</td>
+</tr>
+<tr class="even">
+<td>Hinduism</td>
+<td>0.968478</td>
+<td>0.996320</td>
+<td>0.027842</td>
+</tr>
+<tr class="odd">
+<td>Hyderabad</td>
+<td>0.974165</td>
+<td>0.989439</td>
+<td>0.015274</td>
+</tr>
+<tr class="even">
+<td>Turmeric</td>
+<td>0.980290</td>
+<td>0.994050</td>
+<td>0.013760</td>
+</tr>
+<tr class="odd">
+<td>Rice</td>
+<td>0.988496</td>
+<td>0.997720</td>
+<td>0.009223</td>
+</tr>
+<tr class="even">
+<td>Andhra Pradesh</td>
+<td>0.965983</td>
+<td>0.973239</td>
+<td>0.007257</td>
+</tr>
+</tbody>
+</table>
+<p>At a computed <code>r=0.474, p=0.0040</code>, the choice of a proxy was <strong>not</strong> justified:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="cold_start_validation.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Validating Hindi as a choice for Cold Start Proxy</figcaption>
+</figure>
+</div>
+</section>
+<section id="result-4-gmm-exploit-explore-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="result-4-gmm-exploit-explore-mechanism">Result 4: GMM Exploit/ Explore Mechanism</h3>
+<p>We received the following set of recommendations from the GMM model:</p>
+<table class="caption-top table">
+<caption>Exploit/ Explore Results</caption>
+<colgroup>
+<col style="width: 31%">
+<col style="width: 13%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>title</th>
+<th style="text-align: center;">cluster_id</th>
+<th style="text-align: center;">recommendation_<br>
+type</th>
+<th style="text-align: center;">composite_<br>
+score</th>
+<th style="text-align: center;">gmm_log_<br>
+likelihood</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hopscotch (Cortázar novel)</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">12.05</td>
+</tr>
+<tr class="even">
+<td>The World According to Garp</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">-37.75</td>
+</tr>
+<tr class="odd">
+<td>Twenty-Four Histories</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">12.54</td>
+</tr>
+<tr class="even">
+<td>Vijayawada</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.94</td>
+<td style="text-align: center;">9.91</td>
+</tr>
+<tr class="odd">
+<td>Robert Brooke-Popham</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">10.48</td>
+</tr>
+<tr class="even">
+<td>Royal Malay Regiment</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.54</td>
+</tr>
+<tr class="odd">
+<td>John Tremayne Babington</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.92</td>
+</tr>
+<tr class="even">
+<td>Kalinga (region)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.98</td>
+<td style="text-align: center;">9.79</td>
+</tr>
+<tr class="odd">
+<td>Nüwa</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.52</td>
+</tr>
+<tr class="even">
+<td>Michel de Montaigne</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.19</td>
+</tr>
+<tr class="odd">
+<td>Sextus Empiricus</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">12.57</td>
+</tr>
+<tr class="even">
+<td>Sarvepalli Radhakrishnan</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.92</td>
+<td style="text-align: center;">11.52</td>
+</tr>
+<tr class="odd">
+<td>Laozi</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.98</td>
+</tr>
+<tr class="even">
+<td>Lord Mountbatten</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">7.38</td>
+</tr>
+<tr class="odd">
+<td>Jizi</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.44</td>
+</tr>
+<tr class="even">
+<td>Pierre Bayle</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">13.16</td>
+</tr>
+<tr class="odd">
+<td>Rajahmundry</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.93</td>
+<td style="text-align: center;">10.64</td>
+</tr>
+<tr class="even">
+<td>Trincomalee</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">0.99</td>
+<td style="text-align: center;">11.52</td>
+</tr>
+<tr class="odd">
+<td>Malayan campaign</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.48</td>
+</tr>
+<tr class="even">
+<td>Mazu</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.03</td>
+</tr>
+</tbody>
+</table>
+<p>The explore/ exploit distinction has partially collapsed here: several explore candidates have composite scores of 1. This is a consequence of what we saw earlier in Results 2: composite score has lost its discriminating power, even as GMM is doing the differentiation work alone.</p>
+<p>It is also notable that <em>The World According to Garp</em> has a GMM value of -37.75. This is because it is the only article in the pool whose category, <em>Novels about transgender topics</em> appears in zero rated articles. This makes it genuinely maximally out-of-distribution for the GMM.</p>
+<p>That being said, it is quite fascinating to see recommendations emerging from such a diverse set. Seeding Singapore history gave us Robert Brooke-Popham (a <em>British</em> Air Marshal), and the Malay Regiment for exploit and explore from Cluster 2. Likewise, we see Nüwa (a Chinese goddess) and Michel de Montaigne (a French philosopher) for exploit and explore from the same cluster, Cluster 4.</p>
+</section>
+<section id="result-5-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="result-5-clustering">Result 5: Clustering</h3>
+<p>Clustering resulted an extremely unbalanced set. While Cluster 0 has 53 out of 78 articles (68%), there were 42 disconnected components in 78 articles. This meant the category co-membership graph is very sparse. Effectively, topical diversity was largely undermined, making it one giant cluster and 11 micro-clusters.</p>
+<p>This was an entirely unexpected result as we deliberately chose to seed our categories in a diverse manner. Further drilling down, we note that four of twelve curated categories - such as <em>Telugu monarchs</em> or <em>Buddhist holy sites in Andhra Pradesh</em> - contributed zero candidates after quality filtering. This is because English Wikipedia’s coverage of these topics is predominantly at stub or start tier. What is utterly fascinating here is that this is <strong>not</strong> incidental: the same structural under-representation that motivates Telugu Wikipedia expansion is reproduced on the supply side. The quality filter, which was designed to source translatable articles, inadvertently maps the contours of the original problem.</p>
+<p>In effect, our clever multi-armed bandit - the <em>takkari donga -</em> needs to operate in English as well as Telugu. We will not just need to find articles to translate <em>to</em> Telugu, we also would need to find articles a few degrees removed from Telugu culture in English Wikipedia and perhaps work towards improving their quality as well.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this paper, we have confirmed our core motivation: that there is a genuine tension between supply (articles in the English Wikipedia that a translator would like to translate) and demand (what gets read in Telugu Wikipedia). We have seen that the demand gap had collapsed in this evaluation - either interesting articles of high quality had no translations at all to Telugu, or that categories likely to be of interest to Telugu readers did not have high quality articles in English Wikipedia. The cold start proxy hypothesis - that we may use Hindi pageviews as a proxy for Telugu pageviews while Telugu pageviews build up - was not empirically justifiable.</p>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>The code pipeline exists, and can be generated for any Wikipedia translator across any language pair. An immediate next step could be try the model out with more focussed categories or seed articles, whilst bearing in mind the quality of the articles. Other languages such as Kannada or Tamil could also be used as a cold start proxy.</p>
+<p>Alternatively, replacing the language-proxy demand gap with a normalized quality tier score (<code>quality_tier/3.0)</code> provides a content-based signal that is immune to the pageview degeneracy problem. Indeed, doing so gives us the following fallback shortlist:</p>
+<table class="caption-top table">
+<caption>Fallback Shortlist</caption>
+<thead>
+<tr class="header">
+<th>title</th>
+<th>cluster_id</th>
+<th>composite_score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zuo Zhuan</td>
+<td>0</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<td>Vijayawada</td>
+<td>1</td>
+<td>0.943860</td>
+</tr>
+<tr class="odd">
+<td>Robert Brooke-Popham</td>
+<td>2</td>
+<td>0.666667</td>
+</tr>
+<tr class="even">
+<td>Kalinga (region)</td>
+<td>3</td>
+<td>0.983580</td>
+</tr>
+<tr class="odd">
+<td>Michel de Montaigne</td>
+<td>4</td>
+<td>0.666667</td>
+</tr>
+<tr class="even">
+<td>Sarvepalli Radhakrishnan</td>
+<td>5</td>
+<td>0.923803</td>
+</tr>
+<tr class="odd">
+<td>Lord Mountbatten</td>
+<td>6</td>
+<td>0.999332</td>
+</tr>
+<tr class="even">
+<td>Jizi</td>
+<td>7</td>
+<td>0.666667</td>
+</tr>
+<tr class="odd">
+<td>Rajahmundry</td>
+<td>8</td>
+<td>0.925769</td>
+</tr>
+<tr class="even">
+<td>Trincomalee</td>
+<td>9</td>
+<td>0.666667</td>
+</tr>
+<tr class="odd">
+<td>Malayan campaign</td>
+<td>10</td>
+<td>0.666667</td>
+</tr>
+</tbody>
+</table>
+<p>(Scores of 0.067 reflect <code>quality_tier = 2</code> normalized to 2/3, while 1 reflects <code>quality_tier = 3</code>)</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>Whilst such tweaks can address some limitations in the model, to this multi-lingual writer, the problem perhaps is larger and must be seen across languages. The challenge here is not to bring English Wikipedia articles to Telugu Wikipedia, but to bring articles of interest to a Telugu-speaking milieu to <em>both</em> English and Telugu Wikipedias. <em>Takkari donga</em>, the clever multi-armed bandit, was multi-lingual all along. They need to write not just in Telugu, but in that other Indian language spoken and read widely, English.</p>
+</section>
+</section>
+<section id="bibliography" class="level2">
+
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliography</h2><div id="refs" class="references csl-bib-body hanging-indent" role="list">
+<div id="ref-Johnson_Aragón_2022" class="csl-entry" role="listitem">
+Johnson, Isaac, and Pablo Aragón. 2022. <span>“Research:cross-Lingual Article Quality Assessment - Meta-Wiki.”</span> In <em>Meta</em>. <a href="https://meta.wikimedia.org/wiki/Research:Cross-lingual_article_quality_assessment">https://meta.wikimedia.org/wiki/Research:Cross-lingual_article_quality_assessment</a>.
+</div>
+<div id="ref-ko2022a" class="csl-entry" role="listitem">
+Ko, Hyeyoung, Suyeon Lee, Yoonseo Park, and Anna Choi. 2022. <span>“A Survey of Recommendation Systems: Recommendation Models, Techniques, and Application Fields.”</span> <em>Electronics</em> 11 (1). <a href="https://doi.org/10.3390/electronics11010141">https://doi.org/10.3390/electronics11010141</a>.
+</div>
+<div id="ref-langview" class="csl-entry" role="listitem">
+<em>Langviews Analysis</em>. n.d. <a href="https://pageviews.wmcloud.org/langviews/?project=en.wikipedia.org&amp;platform=all-access&amp;agent=user&amp;start=2015-07-01&amp;end=2026-03-15&amp;page=Hyderabad&amp;sort=views&amp;direction=1&amp;view=list&amp;page=Hyderabad">https://pageviews.wmcloud.org/langviews/?project=en.wikipedia.org&amp;platform=all-access&amp;agent=user&amp;start=2015-07-01&amp;end=2026-03-15&amp;page=Hyderabad&amp;sort=views&amp;direction=1&amp;view=list&amp;page=Hyderabad</a>.
+</div>
+<div id="ref-silva2022" class="csl-entry" role="listitem">
+Silva, Nícollas, Heitor Werneck, Thiago Silva, Adriano C. M. Pereira, and Leonardo Rocha. 2022. <span>“Multi-Armed Bandits in Recommendation Systems: A Survey of the State-of-the-Art and Future Directions.”</span> <em>Expert Systems with Applications</em> 197: 116669. https://doi.org/<a href="https://doi.org/10.1016/j.eswa.2022.116669">https://doi.org/10.1016/j.eswa.2022.116669</a>.
+</div>
+<div id="ref-Spivak1988" class="csl-entry" role="listitem">
+Spivak, Gayatri Chakravorty. 1988. <em>Can the Subaltern Speak?</em> 271–313.
+</div>
+<div id="ref-wulczyn2016" class="csl-entry" role="listitem">
+Wulczyn, Ellery, Robert West, Leila Zia, and Jure Leskovec. 2016. <span>“WWW ’16: 25th International World Wide Web Conference.”</span> (Montréal Québec Canada), April 11, 975–85. <a href="https://doi.org/10.1145/2872427.2883077">https://doi.org/10.1145/2872427.2883077</a>.
+</div>
+<div id="ref-zhang2021" class="csl-entry" role="listitem">
+Zhang, Min, and Yiqun Liu. 2021. <span>“A Commentary of TikTok Recommendation Algorithms in MIT Technology Review 2021.”</span> <em>Fundamental Research</em> 1 (6): 846–47. https://doi.org/<a href="https://doi.org/10.1016/j.fmre.2021.11.015">https://doi.org/10.1016/j.fmre.2021.11.015</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>With tongue firmly in cheek, the title makes a pun to not just the Multi-Armed Bandit problem, but also to Gayatri Chakravorty Spivak’s seminal essay, <em>Can the Subaltern Speak?</em> <span class="citation" data-cites="Spivak1988">(<a href="#ref-Spivak1988" role="doc-biblioref">Spivak 1988</a>)</span>. In that piece, Spivak famously questioned whether subalterns - colonial populations excluded from hierarchies of power - could express their native thought / reasoning without conforming to Western ways.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p><em>Takkari Donga,</em> or the clever bandit, is also as a reference to much forgotten Telugu belter from early 2000’s where the singer celebrates the fact that he finds success going off the beaten path.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
+<div class="newsletter-footer">
+  <div class="container">
+    <h3>Get new posts in your inbox!</h3>
+    <p>Subscribe to get my latest posts by email.</p>
+    <script async="" data-uid="79f3d99834" src="https://yakshagana.kit.com/79f3d99834/index.js"></script>
+  </div>
+</div>
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp("https:\/\/metamutator\.github\.io");
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+<script src="https://utteranc.es/client.js" repo="metamutator/metamutator.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

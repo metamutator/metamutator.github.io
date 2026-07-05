@@ -10,7 +10,818 @@
 <atom:link href="https://metamutator.github.io/index.xml" rel="self" type="application/rss+xml"/>
 <description>The Computational Appendix to yaksha.sg</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Tue, 22 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 05 Jul 2026 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Can the Multi-Armed Subaltern Write?</title>
+  <dc:creator>Akshay Regulagedda</dc:creator>
+  <link>https://metamutator.github.io/posts/multi-armed-subaltern/multi_armed_subaltern.html</link>
+  <description><![CDATA[ 
+
+
+
+
+
+<div id="fig-hero" class="quarto-float quarto-figure quarto-figure-center anchored" data-fig-align="center">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://metamutator.github.io/posts/multi-armed-subaltern/english-tamil-dict-small.jpg" class="img-fluid quarto-figure quarto-figure-center figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-hero-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1: Working through an English - Tamil dictionary. Photo by <a href="https://unsplash.com/@hyson?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Antony Hyson Seltran</a> on <a href="https://unsplash.com/photos/an-open-book-sitting-on-top-of-a-table-pT4Cot62pE4?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a>
+</figcaption>
+</figure>
+</div>
+<section id="foreword" class="level2">
+<h2 class="anchored" data-anchor-id="foreword">Foreword</h2>
+<p>This is the final term project I did towards the completion of my <a href="https://www.analytics.gatech.edu">Master of Science in Analytics</a> degree from Georgia Institute of Technology.</p>
+</section>
+<section id="problem-statement1" class="level2">
+<h2 class="anchored" data-anchor-id="problem-statement1">Problem Statement<sup>1</sup></h2>
+<p>Whilst multi-lingual anglophone writers may easily find a large readership for their writing in English, they often find it hard to find a ready audience for their writings in other vernacular languages. This is particularly so if they have very niche or domain-specific interests that may not have equivalent readership across language communities. And indeed, a sufficiently large readership is a crucial signal to motivate writers to write more, especially if they would like to practise or improve their writing talent.</p>
+<p>Wikipedia translation offers perhaps the most accessible medium for such writers. In this sense, we see Wikipedia as a platform that connects interested writers and readers across a hidden dimension, that of language. But the difficulty for a sufficiently motivated writer is to find articles that are at the intersection of their own interests and what reasonably large number of readers would read. We explore Wikipedia as a two-sided market balancing the demand-side (readership, as measured in page-views) and the supply-side (translator interest or effort).</p>
+<p>Put simply, the question we ask ourselves is this: how can we create a recommendation model that works similar to that on TikTok or Instagram Reels, but for <em>volunteer translators on Wikipedia</em>?</p>
+<p>To this end, we have implemented a model that recommends articles for an interested translator using an explore-exploit approach (“The Multi-Armed Bandit problem”). The model balances the translator’s own interest whilst optimising for readership potential. In a later section, we will share a brief literature review on this problem (Section&nbsp;3), and why the approach is unique both in its application to the problem area (motivating translators) and in its technical implementation.</p>
+<p>We executed this model using Telugu Wikipedia as a primary case study, a language with 80 million native speakers yet dramatically underserved relative to comparable language communities.</p>
+<p>We had previously proposed a detailed pipeline (Section&nbsp;4.1) - from seeding interest by a translator to expanding, filtering, scoring, clustering and eventually recommending articles in the English Wikipedia back to them. In this report, we will not only elaborate on that pipeline, but also discuss nuances in implementation: how the problem was broken down into 9 JIRA-style epics with associated user-stories, how we optimized processing time for data gathering by a factor of 8 through parallelisation and batch API’s, and so on. We will evaluate the implementation both from a quantitative perspective - by considering MAE’s across a range of approaches - and a qualitative evaluation of the categories chosen. We will finally recommend a set of actions in the final section on how this framework can be taken forward.</p>
+</section>
+<section id="sec-lit-survey" class="level2">
+<h2 class="anchored" data-anchor-id="sec-lit-survey">Literature Survey &amp; Novelty</h2>
+<p>Silva et al <span class="citation" data-cites="silva2022">(2022)</span> have observed that recommendation systems have “attracted a lot of attention from both industry and academia” as a response to exponential growth of digital information, which had led to “stressful situation[s]” of information overload for many users, particularly when comes to purchase decisions. Indeed, a lot of the effort has been towards recommending videos and such on Netflix <span class="citation" data-cites="ko2022a">(Ko et al. 2022)</span>, and of course, TikTok, which, Zhang et al <span class="citation" data-cites="zhang2021">(2021)</span> have found, to be “impressive” in not just improving loyalty from users, but also drawing them “into new intersecting areas”.</p>
+<p>Silva et al’s <span class="citation" data-cites="silva2022">(2022)</span> systematic literature review found 230 articles on Google Scholar published between 2000 and 2020 that used the Multi-Armed Bandit approach to develop recommendation systems. The field has had a growing interest in recent years; they found that more than 50% of such works were published between 2016 and 2020. Most applications, however, deal with recommending news, users’ purchases (e.g.&nbsp;on Amazon),songs, advertisements, points-of-interest, bookmarks, food, jobs, and even jokes. None of the papers in their meta-analysis dealt with recommending articles to be translated.</p>
+<p>Wulczyn et al’s three-month study did generate a model to recommend articles for translators to translate from English to French Wikipedia. However, it did so by ranking articles that it deemed “missing” (and then matched translators to them) <span class="citation" data-cites="wulczyn2016">(2016)</span>. The starting point wasn’t necessarily the translator’s own interest, but achieving a certain completeness in the French Wikipedia compared to that in English. Translators in the study had raised questions of “language imperialism”, as Wulcyzn et al themselves had documented.</p>
+<p>In comparison, our approach is centered on the Telugu Wikipedia and on the personal: the goal isn’t necessarily for the Telugu Wikipedia to reach parity, so to speak, with the English Wikipedia in terms of articles. Instead, the focus is essentially writer’s own interest first: on what they would like to see in the Telugu Wikipedia primarily, whilst maximizing for readership.</p>
+</section>
+<section id="methodology" class="level2">
+<h2 class="anchored" data-anchor-id="methodology">Methodology</h2>
+<section id="sec-pipeline" class="level3">
+<h3 class="anchored" data-anchor-id="sec-pipeline">Overview</h3>
+<p>We proposed the pipeline in our project proposal seen in Figure&nbsp;2.</p>
+<div id="fig-pipeline" class="quarto-float quarto-figure quarto-figure-center anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="https://metamutator.github.io/posts/multi-armed-subaltern/pipeline diagram.png" class="img-fluid figure-img" width="600">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-pipeline-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Pipeline
+</figcaption>
+</figure>
+</div>
+<p>The pipeline was implemented largely as proposed using the Agile methodology, as Epics with self-contained user-stories. This project was essentially done beyond work-hours and on weekend afternoons. As such, we needed a way to break the overall task down into small chunks (that can be executed over lunch for example), while at the same time, have assured code quality when we integrated it all. Having self-contained unit-tests per user-story helped us tremendously in this regard.</p>
+<p>Some optimisations were later found necessary for data gathering and processing.</p>
+</section>
+<section id="epic-1-project-scaffolding" class="level3">
+<h3 class="anchored" data-anchor-id="epic-1-project-scaffolding">Epic 1: Project Scaffolding</h3>
+<p>We used the Agile methodology to breakdown the pipeline into a series of epics and JIRA-style user-stories to be implemented sequentially. Each user-story had its own set of self-contained unit-tests. The overall project has a <code>pyproject.toml</code> file declaring all dependencies and a <code>config.yaml</code> to store values for <code>alpha</code>, <code>curated_categories</code>, <code>traversal_depth</code>, <code>quality_filter_threshold</code>, <code>epsilon</code>, <code>cold_start_window_days</code></p>
+</section>
+<section id="sec-data-sources" class="level3">
+<h3 class="anchored" data-anchor-id="sec-data-sources">Epic 2: Data Acquisition</h3>
+<p>We combined manual ratings with openly available data from various Wikipedia API’s:</p>
+<table class="caption-top table">
+<caption>Data Sources &amp; Feature Set</caption>
+<colgroup>
+<col style="width: 18%">
+<col style="width: 47%">
+<col style="width: 32%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>Signal Type</th>
+<th>Feature</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Manual Ratings</td>
+<td>Supply side “seed”</td>
+<td>Translator interest rating</td>
+</tr>
+<tr class="even">
+<td>MediaWiki API</td>
+<td>Relevance (Features for Step #2: Expand)</td>
+<td>Article categories</td>
+</tr>
+<tr class="odd">
+<td>MediaWiki API</td>
+<td>Feasibility features</td>
+<td>Article length (word count)</td>
+</tr>
+<tr class="even">
+<td>MediaWiki API</td>
+<td>Feasibility features</td>
+<td>Article quality rating</td>
+</tr>
+<tr class="odd">
+<td>Pageviews API</td>
+<td>Reader demand</td>
+<td>Demand gap score</td>
+</tr>
+</tbody>
+</table>
+<section id="optimisations" class="level4">
+<h4 class="anchored" data-anchor-id="optimisations">Optimisations</h4>
+<p>Our initial versions for client-classes for MediaWiki and Pageviews API’s called each Wikipedia article individually. In later stages, we realized that meant calling the API more than 2000 times in quick succession, especially if the constructed candidate pool was large. With enough throttling, that meant processing times of more than 45 minutes each time a candidate pool was constructed. Instead, we implemented the following:</p>
+<ol type="1">
+<li><strong>Batch Processing</strong>: We combined calls for multiple Wikipedia pages together into a single call. The API allowed up to 50 pages to be batched together</li>
+<li><strong>Parallel Processing:</strong> We parallelized API calls into multiple threads using <code>ThreadPoolExecutor</code>.</li>
+<li><strong>Throttling:</strong> Should an API call encounter a 429 error, we spaced out subsequent re-try attempts based on the message.</li>
+</ol>
+</section>
+</section>
+<section id="sec-candidate-pool" class="level3">
+<h3 class="anchored" data-anchor-id="sec-candidate-pool">Epic 3: Candidate Pool Construction</h3>
+<p>The candidate pool was constructed through the following inputs:</p>
+<ol type="1">
+<li><p><strong>Seed Articles:</strong> The user would suggest a list of 10-15 Wikipedia articles to seed the model first. In the final evaluation, we seeded the following articles:</p>
+<table class="caption-top table">
+<caption>Seed Articles for the Final Evaluation</caption>
+<colgroup>
+<col style="width: 43%">
+<col style="width: 56%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li>Caitika</li>
+<li>1915 Singapore Mutiny</li>
+<li>Ngogo chimpanzee war</li>
+<li>Longest flights</li>
+<li>Westray to Papa Westray flight</li>
+<li>Boat Mail Express</li>
+<li>Shangri-La</li>
+<li>Tea Horse Road</li>
+</ul></td>
+<td><ul>
+<li>List of tallest buildings in India</li>
+<li>Longest train services of Indian Railways</li>
+<li>Johor Bahru–Singapore Rapid Transit System</li>
+<li>Montreal</li>
+<li>Quebec</li>
+<li>Montréal–Trudeau International Airport</li>
+<li>Orlando: A Biography</li>
+</ul></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Categories:</strong> Querying the full English Wikipedia corpus of over 7 million articles is not just computationally infeasible, but semantically unfocussed. Therefore, we constrained the candidate pool of articles to a curated set of top-level Wikipedia categories specified by the user. This was defined in <code>config.yaml</code></p>
+<p>We seeded the following categories in the final evaluation:</p>
+<table class="caption-top table">
+<caption>Categories for the Final Evaluation</caption>
+<colgroup>
+<col style="width: 51%">
+<col style="width: 48%">
+</colgroup>
+<tbody>
+<tr class="odd">
+<td><ul>
+<li>Transport-related lists of superlatives</li>
+<li>Military history of Singapore</li>
+<li>Named passenger trains of India</li>
+<li>Mahayana sutras</li>
+<li>Monks of Nalanda</li>
+<li>Telugu monarchs</li>
+</ul></td>
+<td><ul>
+<li>Novels about transgender topics</li>
+<li>Metafictional novels</li>
+<li>History of Andhra Pradesh</li>
+<li>Chinese classic texts</li>
+<li>Buddhist holy sites in Andhra Pradesh</li>
+<li>Philosophical skepticism</li>
+</ul></td>
+</tr>
+</tbody>
+</table></li>
+<li><p><strong>Depth of Category Traversal:</strong> The level to which the categories may be traversed can be set in <code>config.yaml</code> We initially tested the model with <code>1</code>, but executed it with <code>2</code>.</p></li>
+</ol>
+</section>
+<section id="epic-4-feature-engineering" class="level3">
+<h3 class="anchored" data-anchor-id="epic-4-feature-engineering">Epic 4: Feature Engineering</h3>
+<p>The raw data collected in the previous epic is to be transformed it into model inputs here, through the following features:</p>
+<section id="article-quality-rating" class="level4">
+<h4 class="anchored" data-anchor-id="article-quality-rating">1. Article Quality Rating</h4>
+<p>Per Wikimedia’s own guidance, articles in the English Wikipedia can be ranked using the following quality classes in order of quality: FA, GA, B, C, START, and STUB <span class="citation" data-cites="Johnson_Aragón_2022">(Johnson and Aragón 2022)</span>. Other language Wikipedias also have their own quality classifications, even if they may not exactly match those in English.</p>
+<p>We grouped all quality classes into three tiers, as follows:</p>
+<table class="caption-top table">
+<caption>Quality Classes in English Wikipedia grouped into three tiers</caption>
+<thead>
+<tr class="header">
+<th>Tier</th>
+<th>Classes</th>
+<th>Encoded Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>High quality</td>
+<td>FA, A, GA</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td>Mid quality</td>
+<td>B, C</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td>Low quality</td>
+<td>Start, Stub</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>All articles in low quality (<code>encoded value = 1</code>) were excluded from the candidate pool entirely before scoring.</p>
+</section>
+<section id="article-length" class="level4">
+<h4 class="anchored" data-anchor-id="article-length">2. Article Length</h4>
+<p>MediaWiki API returns a <code>wordcount</code>, which was used to signify length of an article. However, because the range of length of articles can be very wide indeed, we normalized this metric through a log transformation (<code>log(wordcount)</code>). In general, the difference in translation effort between a 500 and 1000 word article is much more significant than that between a 9,500 word and a 10,000 word article. A log transformation would naturally account for this and compress skewness in article length distribution.</p>
+</section>
+<section id="category-membership" class="level4">
+<h4 class="anchored" data-anchor-id="category-membership">3. Category Membership</h4>
+<p>Whilst we curated the list of top-level categories to a limited set, Wikipedia articles are still classified under multiple categories. This can be challenging in encoding the information, which we have addressed in the following manner.</p>
+<p>If <img src="https://latex.codecogs.com/png.latex?k"> is the number of curated top-level categories, each article would have: <img src="https://latex.codecogs.com/png.latex?%20category_i%20=%20%5Cbegin%7Bcases%7D%0A%5Ctext%7B1%7D,%20&amp;%20%5Ctext%7Bif%20article%20belongs%20to%20category%20i%7D%20%5C%5C%0A%5Ctext%7B0%7D,%20&amp;%20%5Ctext%7Bif%20it%20doesn't%7D%0A%5Cend%7Bcases%7D"> where <img src="https://latex.codecogs.com/png.latex?i%20=%201,%202,%20....%20k"></p>
+<p>This gave us a sparse binary vector per article. We can avoid the curse of dimensionality because we are manually curating less than 15 top-level categories, thus ensuring <img src="https://latex.codecogs.com/png.latex?k"> is small and fixed.</p>
+</section>
+<section id="demand-gap-score" class="level4">
+<h4 class="anchored" data-anchor-id="demand-gap-score">4. Demand Gap Score</h4>
+<p>Whilst the features thus far <em>describe</em> a Wikipedia article, we also would like some demand-side signals. To this end, we used a a <strong>demand gap score</strong> to measure is how different readership is for the same page between the English and Telugu Wikipedia. The feature is derived from PageViews API as <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BDemand%20Gap%20Score%7D=1-%5Cfrac%7B%5Ctext%7BTelugu%20views%7D%7D%7B%5Ctext%7BEnglish%20views%7D%7D%20"></p>
+<p>This provides a normalized measure of unmet readership demand that is comparable across articles of varying popularity.</p>
+</section>
+<section id="cold-start-gap" class="level4">
+<h4 class="anchored" data-anchor-id="cold-start-gap">5. Cold-Start Gap</h4>
+<p>Whilst we can calculate a demand gap score between versions in English and Telugu Wikipedia, there is a possibility that a Telugu version may not exist at all (i.e., <img src="https://latex.codecogs.com/png.latex?%5Ctext%7BTelugu%20views%7D%20=%200">) In such a case, demand gap score will be 1 (undefined) for every untranslated article.</p>
+<p>Which is to say, we may have a <em>cold start problem</em> - we will not gather sufficient pageview data for translated articles until well after the translations have been written. In such cases, we would use views for the Hindi language versions as a proxy instead:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BCold%20Start%20Proxy%7D%20=%201%20-%20%5Cfrac%7B%5Ctext%7BHindi%20views%7D%7D%7B%5Ctext%7BEnglish%20views%7D%7D"></p>
+<p>We chose Hindi as a proxy because we have seen that Hindi readership for the Wikipedia page on the Indian city Hyderabad (where both Hindi and Telugu are spoken) was 3-4 times that of the Telugu readership.<span class="citation" data-cites="langview">(<em>Langviews Analysis</em>, n.d.)</span> There is a very good chance that Hindi and Telugu readers may have overlapping topical interests for culturally proximate subjects: indeed, in many cases, they may be the same individuals as well, as many are fluent in both languages. Once sufficient Telugu pageview data has accumulated following the 3-month window, the model will transition back to the standard demand gap score.</p>
+<p>This is naturally a hypothesis; it was evaluated independently in a later section. However, we took care to build this as a feature in this epic itself.</p>
+<p>We also defined the following guardrails that can be set in <code>config.yaml</code>:</p>
+<ol type="1">
+<li>Small constant guarding against division by zero in demand gap score: <code>epsilon: 1.0e-6</code></li>
+<li>Days after a translation before switching from Hindi cold-start proxy to real Telugu views: <code>cold_start_window_days: 90</code></li>
+</ol>
+</section>
+<section id="epic-3-4-output" class="level4">
+<h4 class="anchored" data-anchor-id="epic-3-4-output">Epic 3 &amp; 4 Output</h4>
+<p>An output Excel was generated at the end of executing all the stories here with a constructed candidate pool expanding on the seed articles and categories with the features listed above, whilst filtering out low-quality articles. The pool is now ready for a translator to rate. In the final execution, 78 articles were retrieved.</p>
+</section>
+</section>
+<section id="epic-5-scoring-model" class="level3">
+<h3 class="anchored" data-anchor-id="epic-5-scoring-model">Epic 5: Scoring Model</h3>
+<section id="translator-rating" class="level4">
+<h4 class="anchored" data-anchor-id="translator-rating">Translator Rating</h4>
+<p>This “supply-side” feature, that of translator’s own interest, is captured on a scale of three, roughly on par with swiping left or right as one does on some contemporary apps: <strong>-1</strong> (<em>dislike</em>), <strong>0</strong> (<em>neutral</em>) or <strong>+1</strong> (<em>like</em>).</p>
+<p>In the final execution, 29 out of the 78 retrieved articles were rated either -1, 0, or 1.</p>
+</section>
+<section id="target-variable-composite-score" class="level4">
+<h4 class="anchored" data-anchor-id="target-variable-composite-score">Target Variable: Composite Score</h4>
+<p>We first normalized the translator’s ratings to <img src="https://latex.codecogs.com/png.latex?%7B0,%200.5,%201%7D"> and then combined them with the demand gap score into a composite score:</p>
+<p><img src="https://latex.codecogs.com/png.latex?%5Ctext%7BComposite%20Score%7D%20=%20%5Calpha%20%5Ccdot%20%5Cfrac%7B%5Ctext%7BTranslator%20Rating%7D+1%7D%7B2%7D%20+%20(1-%5Calpha)%5Ccdot%5Ctext%7BDemand%20Gap%20Score%7D"></p>
+<p>where the coefficient <img src="https://latex.codecogs.com/png.latex?%5Calpha%20%5Cin%20%5B0,1%5D"> was tuned through cross-validation.</p>
+</section>
+<section id="models-baseline-and-primary" class="level4">
+<h4 class="anchored" data-anchor-id="models-baseline-and-primary">Models: Baseline and Primary</h4>
+<p>We generated models that tried to learn the relationship between input features such as article length, quality tier etc and the target variable, composite score. The models will then be able to predict scores for articles that had not been evaluated as yet.</p>
+<p>We compared three models:</p>
+<ul>
+<li><strong>Naive Baseline</strong>: Demand gap score used directly as predicted composite score</li>
+<li><strong>Linear Regression</strong>: This was meant to be a <em>baseline model</em> as we need a continuous variable to rank articles. Linear regression’s simplicity and interpretability via coefficients make it a natural reference point against which to measure the added value of more complex models. The model was preprocessed with continous variables standardized (with zero mean, unit variance), while binary category flags were left unscaled.</li>
+<li><strong>Random Forest</strong>: This was meant to be a <em>primary model</em>, as it can capture non-linear relationships between features and the composite score, which is something that linear regression cannot do. Random Forest is also useful for understanding feature importance. No scaling required here.</li>
+</ul>
+<p>We will discuss the results later in Section&nbsp;5.</p>
+</section>
+</section>
+<section id="epic-6-clustering-topical-diversity" class="level3">
+<h3 class="anchored" data-anchor-id="epic-6-clustering-topical-diversity">Epic 6: Clustering (Topical Diversity)</h3>
+<section id="purpose" class="level4">
+<h4 class="anchored" data-anchor-id="purpose">Purpose</h4>
+<p>A scoring model that ranks articles by composite score alone is not sufficient for diversity. Without clustering, the recommendations could easily collapse into a single high-scoring topic cluster. Such an outcome would defeat the purpose of a personalized recommender and will accelerate translator burnout. Instead, to ensure topical variability, we performed clustering as a diversity mechanism, sampling top candidates from each cluster, rather than take just the global top N by score.</p>
+</section>
+<section id="choice-of-algorithm" class="level4">
+<h4 class="anchored" data-anchor-id="choice-of-algorithm">Choice of Algorithm</h4>
+<p>We used spectral clustering to cluster the articles by topic. The articles may share multiple category flags out of the 10-15 curated top-level categories, that is to say they are likely to have sparse binary vectors for categories. Consequently, while the articles are topically related, their relationship is geometric in a non-Euclidean sense. Connectivity-based similarity is better handled by spectral clustering than k-means.</p>
+<p>The number of clusters <img src="https://latex.codecogs.com/png.latex?k"> is determined by the eigenvalue gap: we examined the eigenvalues of the graph Laplacian and choose <img src="https://latex.codecogs.com/png.latex?k"> where there’s a natural gap between the <img src="https://latex.codecogs.com/png.latex?k">-th and <img src="https://latex.codecogs.com/png.latex?(k+1)">-th eigenvalue. The eigenvalue structure of the similarity matrix tells us how many natural topic communities exist in the article graph.</p>
+</section>
+<section id="feature-choice" class="level4">
+<h4 class="anchored" data-anchor-id="feature-choice">Feature Choice</h4>
+<p>Since the purpose of clustering is topical diversity rather than quality filtering, we excluded score and length features, and used category flags alone for clustering. This is to ensure that clusters reflect topical neighbourhoods and not quality or length neighbourhoods.</p>
+</section>
+</section>
+<section id="epic-7-recommendation-through-explore-exploit" class="level3">
+<h3 class="anchored" data-anchor-id="epic-7-recommendation-through-explore-exploit">Epic 7: Recommendation Through Explore-Exploit</h3>
+<section id="takkari-donga-the-multi-armed-bandit" class="level4">
+<h4 class="anchored" data-anchor-id="takkari-donga-the-multi-armed-bandit"><em>Takkari Donga</em>: The Multi-Armed Bandit</h4>
+<p>With articles scored by interest and opportunity, and clustered by topic, we know what a translator’s preferences are, which are primed to be <em>exploited</em>. However, we also need to <em>explore</em> new territory to learn more about their preferences, a problem known as the Multi-Armed Bandit problem in reinforcement learning. Since we are dealing with the Telugu Wikipedia after all, one might call this the <em>Takkari Donga</em> problem<sup>2</sup>: how does the clever bandit (in Telugu) explore and exploit learned preferences and opportunities for the motivated translator?</p>
+<p>A key element here is to model distribution of reader interest across topic clusters, that is to say, to ask where the latent demand is concentrated. Density estimation via Gaussian Mixture Model (GMM) was a likely approach: if GMM flagged an article as sitting in a sparse, uncertain region, that article is worth exploring. This is not to say that the translator will necessarily <em>like</em> the article, but that the user’s rating will give the most <em>new information</em> to improve the model. Consequently, a recommendation list would be a shortlist balancing exploit (articles with high composite scores) and explore (sparse GMM regions): the clever thief takes not just what is of high value, but also explores what <em>could be</em> of high value.</p>
+</section>
+<section id="recommendation-logic" class="level4">
+<h4 class="anchored" data-anchor-id="recommendation-logic">Recommendation Logic</h4>
+<p>The recommendation logic per cluster, can simply be stated as follows:</p>
+<ol type="1">
+<li>We take all scored, clustered unrated candidates</li>
+<li>We fit GMM on feature vectors of already-rated articles</li>
+<li>We then compute the log-likelihood of each candidate under GMM</li>
+<li><strong>Exploit:</strong> Within each cluster, we sort articles in <em>descending order</em> of composite score, taking the top 1 as an exploit candidate</li>
+<li><strong>Explore:</strong> Within each cluster, we sort articles in <em>ascending order</em> of log-likelihood, taking the top 1 as an explore candidate</li>
+<li>We surface two such articles per cluster as recommendations. The total recommendations offered to the translator, therefore, would be <img src="https://latex.codecogs.com/png.latex?2k"> articles, where <img src="https://latex.codecogs.com/png.latex?k"> is the number of clusters. The translator’s ratings on these recommendations then feed into the feedback loop, updating the model for the next round.</li>
+</ol>
+</section>
+<section id="epic-7-output" class="level4">
+<h4 class="anchored" data-anchor-id="epic-7-output">Epic 7 Output</h4>
+<p>An eigenvalue-gap plot using spectral clustering was generated. Having fitted a Gaussian Mixture Model, we generated 1 exploit (highest composite score) and 1 explore (lowest GMM log-likelihood).</p>
+</section>
+</section>
+<section id="epic-8-take-feedback" class="level3">
+<h3 class="anchored" data-anchor-id="epic-8-take-feedback">Epic 8: Take Feedback</h3>
+<section id="feedback-loop" class="level4">
+<h4 class="anchored" data-anchor-id="feedback-loop">Feedback Loop</h4>
+<p>Once recommendations are made, ratings given and the translations done, the model was intended to have a feedback loop with the following elements:</p>
+<ol type="1">
+<li><p><strong>When an update is triggered:</strong> The model will need to learn how readers have been taking to the translations. This would need sufficient time for organic readership to discover and engage with newly translated articles. To this end, we propose making updates every 3 months.</p></li>
+<li><p><strong>What gets updated:</strong> We envisage a production update cadence as follows to give sufficient time for a model to learn:</p>
+<ol type="1">
+<li><strong>Continuous updates:</strong> Each time new ratings are added</li>
+<li><strong>Annual</strong>: Retuning <img src="https://latex.codecogs.com/png.latex?%5Calpha"> every 12 months</li>
+<li><strong>Biennial</strong>: Retraining the full model</li>
+</ol>
+<p>This is obviously not possible within the term project cadence. But we simulated one manual update cycle using the author’s own ratings.</p></li>
+</ol>
+</section>
+</section>
+</section>
+<section id="sec-eval" class="level2">
+<h2 class="anchored" data-anchor-id="sec-eval">Results &amp; Observations (Epic 9)</h2>
+<section id="evaluation-premise" class="level3">
+<h3 class="anchored" data-anchor-id="evaluation-premise">Evaluation Premise</h3>
+<p>We measured Mean Absolute Error (MAE) between predicted and actual composite scores. MAE is appropriate here because it treats all errors equally, which is appropriate given that the composite score is bounded [0,1]. For a recommendation system where consistent ranking is more important than avoiding large errors, MAE is perhaps more appropriate than other error metrics such as Root Mean Squared Error (RMSE)</p>
+<p>Our assumption was that we would arrive at the following evaluation hierarchy:</p>
+<ul>
+<li><strong>Naive baseline</strong>: As mentioned, we used demand gap score directly as a predicted composite score and measure its error against the computed composite score. This is equivalent to setting translator interest weight, <img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%200">.</li>
+<li><strong>Linear Regression</strong>: MAE computed from model output and composite score via k-fold cross-validation</li>
+<li><strong>Random Forest</strong>: MAE computed against composite score via k-fold cross-validation.</li>
+</ul>
+<p>Looking beyond MAE, feature importance scores from Random Forest could be examined to understand which signals drive recommendation quality most strongly.</p>
+<p><strong>Recommendation Quality</strong></p>
+<p>The model does more than predict scores, it produces a ranked list of recommendations. While we used MAE to tell us how well the model predicts scores, we will need to evaluate whether the ordering of recommendations is correct.</p>
+<p>For such an evaluation, we first defined a threshold on the composite score. Given the range [0,1], we took the midpoint, 0.5, as the threshold. Articles above this score will be labelled as good candidates.</p>
+<p>We then computed precision as the fraction of recommended articles exceeding this threshold, and compared this across naive baseline, Linear Regression and Random Forest.</p>
+<p><strong>Single-user bias</strong></p>
+<p>The approach would take a single user’s (the author) preferences (“translator ratings”) and build upon it, which could open up the chance that the translator’s niche interests could diverge from mass readership.</p>
+<p>We had earlier proposed exploring this through a simple diagnostic: we compute a correlation between translator ratings and pageview gap across recommended articles. This will lead us to two possible outcomes:</p>
+<ol type="1">
+<li><strong>High Positive Correlation</strong>: The model’s two-sided approach is coherent: the translator’s interests and reader demand are well-aligned.</li>
+<li><strong>Negative Correlation</strong>: Such an outcome would reveal a genuine tension between supply and demand - the translator’s niche interests diverge from mass readership. This is exactly the problem the model is designed to navigate (and therefore, the more interesting finding, academically speaking)</li>
+</ol>
+</section>
+<section id="result-1-supply-demand-tension" class="level3">
+<h3 class="anchored" data-anchor-id="result-1-supply-demand-tension">Result 1: Supply Demand Tension</h3>
+<p>The model’s core motivation - that there could be a genuine tension between a translator’s interests from mass readership - may be validated. Pearson <code>r</code> between a translator’s ratings and demand gap scores across rated articles calculates to <code>-0.282</code>, with a <code>p=0.049</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://metamutator.github.io/posts/multi-armed-subaltern/supply_demand_alignment.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Supply - Demand Alignment</figcaption>
+</figure>
+</div>
+</section>
+<section id="result-2-evaluating-models" class="level3">
+<h3 class="anchored" data-anchor-id="result-2-evaluating-models">Result 2: Evaluating Models</h3>
+<section id="mae" class="level4">
+<h4 class="anchored" data-anchor-id="mae">MAE</h4>
+<p>We expected Random Forest to have the least MAE followed by Linear Regression and Naive Baseline. Fascinatingly enough, that is <strong>not</strong> what we observed:</p>
+<table class="caption-top table">
+<caption>MAE by Model</caption>
+<thead>
+<tr class="header">
+<th>Model</th>
+<th>Mean MAE</th>
+<th>Std MAE</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>NaiveBaseline</td>
+<td>0.202</td>
+<td>0.122</td>
+</tr>
+<tr class="even">
+<td>LinearRegression</td>
+<td>0.217</td>
+<td>0.032</td>
+</tr>
+<tr class="odd">
+<td>RandomForest</td>
+<td>0.216</td>
+<td>0.042</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>Very High Demand Gap:</strong> In effect, we found that demand gap had essentially no variance, with a mean = 0.995, STD = 0.014 and the 50th percentile at 1. The candidate pool in retrospect was scoped to categories likely to be untranslated into Telugu; consequently, every article has near-zero Telugu views. This essentially meant the demand gap <img src="https://latex.codecogs.com/png.latex?d%20%5Capprox%201.0"> everywhere.</p></li>
+<li><p><strong>Model Ordering Failure</strong>: The naive baseline here was the demand gap. When the demand gap is close to constant, it is trivially hard to beat.</p></li>
+<li><p><strong>Precision@0.5 = 1.000 for all models</strong>: Essentially, <code>composite_score = demand_gap</code> <img src="https://latex.codecogs.com/png.latex?%5Capprox%201.0%20%3E%200.5"> for all articles.</p></li>
+<li><p><strong>CV tuning returned</strong> <img src="https://latex.codecogs.com/png.latex?%5Calpha%20=%200">: In effect, with near-constant demand gap, translator preference added no discriminating signal to the composite score on this dataset.</p></li>
+</ul>
+</section>
+<section id="feature-importance" class="level4">
+<h4 class="anchored" data-anchor-id="feature-importance">Feature Importance</h4>
+<p>We found <code>log_wordcount</code> to be of overwhelming importance compared with every other feature.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://metamutator.github.io/posts/multi-armed-subaltern/rf_feature_importances_top15.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Top 15 Features by Random Forest</figcaption>
+</figure>
+</div>
+</section>
+</section>
+<section id="result-3-evaluating-cold-start-proxy" class="level3">
+<h3 class="anchored" data-anchor-id="result-3-evaluating-cold-start-proxy">Result 3: Evaluating Cold Start Proxy</h3>
+<p>We computed a Pearson <code>r</code> between the Hindi proxy demand gap and actual Telugu demand gap on a separate set of articles. If <code>r&gt; 0.7</code>, then the proxy would be justified.</p>
+<p>We chose a list of generic Wikipedia articles that are likely to be available on both Hindi and Telugu Wikipedias:</p>
+<table class="caption-top table">
+<caption>Evaluating Cold Start Proxy</caption>
+<thead>
+<tr class="header">
+<th>title</th>
+<th>hindi_proxy</th>
+<th>actual_gap</th>
+<th>abs_proxy_error</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Mahabharata</td>
+<td>0.836706</td>
+<td>0.967915</td>
+<td>0.131209</td>
+</tr>
+<tr class="even">
+<td>Shiva</td>
+<td>0.917235</td>
+<td>0.988801</td>
+<td>0.071566</td>
+</tr>
+<tr class="odd">
+<td>Yoga</td>
+<td>0.933242</td>
+<td>0.995607</td>
+<td>0.062365</td>
+</tr>
+<tr class="even">
+<td>Telugu language</td>
+<td>0.995403</td>
+<td>0.943378</td>
+<td>0.052025</td>
+</tr>
+<tr class="odd">
+<td>India</td>
+<td>0.952274</td>
+<td>0.996127</td>
+<td>0.043853</td>
+</tr>
+<tr class="even">
+<td>Hinduism</td>
+<td>0.968478</td>
+<td>0.996320</td>
+<td>0.027842</td>
+</tr>
+<tr class="odd">
+<td>Hyderabad</td>
+<td>0.974165</td>
+<td>0.989439</td>
+<td>0.015274</td>
+</tr>
+<tr class="even">
+<td>Turmeric</td>
+<td>0.980290</td>
+<td>0.994050</td>
+<td>0.013760</td>
+</tr>
+<tr class="odd">
+<td>Rice</td>
+<td>0.988496</td>
+<td>0.997720</td>
+<td>0.009223</td>
+</tr>
+<tr class="even">
+<td>Andhra Pradesh</td>
+<td>0.965983</td>
+<td>0.973239</td>
+<td>0.007257</td>
+</tr>
+</tbody>
+</table>
+<p>At a computed <code>r=0.474, p=0.0040</code>, the choice of a proxy was <strong>not</strong> justified:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="https://metamutator.github.io/posts/multi-armed-subaltern/cold_start_validation.png" class="img-fluid figure-img" width="500"></p>
+<figcaption>Validating Hindi as a choice for Cold Start Proxy</figcaption>
+</figure>
+</div>
+</section>
+<section id="result-4-gmm-exploit-explore-mechanism" class="level3">
+<h3 class="anchored" data-anchor-id="result-4-gmm-exploit-explore-mechanism">Result 4: GMM Exploit/ Explore Mechanism</h3>
+<p>We received the following set of recommendations from the GMM model:</p>
+<table class="caption-top table">
+<caption>Exploit/ Explore Results</caption>
+<colgroup>
+<col style="width: 31%">
+<col style="width: 13%">
+<col style="width: 21%">
+<col style="width: 15%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>title</th>
+<th style="text-align: center;">cluster_id</th>
+<th style="text-align: center;">recommendation_<br>
+type</th>
+<th style="text-align: center;">composite_<br>
+score</th>
+<th style="text-align: center;">gmm_log_<br>
+likelihood</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Hopscotch (Cortázar novel)</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">12.05</td>
+</tr>
+<tr class="even">
+<td>The World According to Garp</td>
+<td style="text-align: center;">0</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">-37.75</td>
+</tr>
+<tr class="odd">
+<td>Twenty-Four Histories</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">12.54</td>
+</tr>
+<tr class="even">
+<td>Vijayawada</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.94</td>
+<td style="text-align: center;">9.91</td>
+</tr>
+<tr class="odd">
+<td>Robert Brooke-Popham</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">10.48</td>
+</tr>
+<tr class="even">
+<td>Royal Malay Regiment</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.54</td>
+</tr>
+<tr class="odd">
+<td>John Tremayne Babington</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.92</td>
+</tr>
+<tr class="even">
+<td>Kalinga (region)</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.98</td>
+<td style="text-align: center;">9.79</td>
+</tr>
+<tr class="odd">
+<td>Nüwa</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.52</td>
+</tr>
+<tr class="even">
+<td>Michel de Montaigne</td>
+<td style="text-align: center;">4</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.19</td>
+</tr>
+<tr class="odd">
+<td>Sextus Empiricus</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">12.57</td>
+</tr>
+<tr class="even">
+<td>Sarvepalli Radhakrishnan</td>
+<td style="text-align: center;">5</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.92</td>
+<td style="text-align: center;">11.52</td>
+</tr>
+<tr class="odd">
+<td>Laozi</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">9.98</td>
+</tr>
+<tr class="even">
+<td>Lord Mountbatten</td>
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">7.38</td>
+</tr>
+<tr class="odd">
+<td>Jizi</td>
+<td style="text-align: center;">7</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.44</td>
+</tr>
+<tr class="even">
+<td>Pierre Bayle</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">13.16</td>
+</tr>
+<tr class="odd">
+<td>Rajahmundry</td>
+<td style="text-align: center;">8</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">0.93</td>
+<td style="text-align: center;">10.64</td>
+</tr>
+<tr class="even">
+<td>Trincomalee</td>
+<td style="text-align: center;">9</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">0.99</td>
+<td style="text-align: center;">11.52</td>
+</tr>
+<tr class="odd">
+<td>Malayan campaign</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">exploit</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.48</td>
+</tr>
+<tr class="even">
+<td>Mazu</td>
+<td style="text-align: center;">10</td>
+<td style="text-align: center;">explore</td>
+<td style="text-align: center;">1.00</td>
+<td style="text-align: center;">11.03</td>
+</tr>
+</tbody>
+</table>
+<p>The explore/ exploit distinction has partially collapsed here: several explore candidates have composite scores of 1. This is a consequence of what we saw earlier in Results 2: composite score has lost its discriminating power, even as GMM is doing the differentiation work alone.</p>
+<p>It is also notable that <em>The World According to Garp</em> has a GMM value of -37.75. This is because it is the only article in the pool whose category, <em>Novels about transgender topics</em> appears in zero rated articles. This makes it genuinely maximally out-of-distribution for the GMM.</p>
+<p>That being said, it is quite fascinating to see recommendations emerging from such a diverse set. Seeding Singapore history gave us Robert Brooke-Popham (a <em>British</em> Air Marshal), and the Malay Regiment for exploit and explore from Cluster 2. Likewise, we see Nüwa (a Chinese goddess) and Michel de Montaigne (a French philosopher) for exploit and explore from the same cluster, Cluster 4.</p>
+</section>
+<section id="result-5-clustering" class="level3">
+<h3 class="anchored" data-anchor-id="result-5-clustering">Result 5: Clustering</h3>
+<p>Clustering resulted an extremely unbalanced set. While Cluster 0 has 53 out of 78 articles (68%), there were 42 disconnected components in 78 articles. This meant the category co-membership graph is very sparse. Effectively, topical diversity was largely undermined, making it one giant cluster and 11 micro-clusters.</p>
+<p>This was an entirely unexpected result as we deliberately chose to seed our categories in a diverse manner. Further drilling down, we note that four of twelve curated categories - such as <em>Telugu monarchs</em> or <em>Buddhist holy sites in Andhra Pradesh</em> - contributed zero candidates after quality filtering. This is because English Wikipedia’s coverage of these topics is predominantly at stub or start tier. What is utterly fascinating here is that this is <strong>not</strong> incidental: the same structural under-representation that motivates Telugu Wikipedia expansion is reproduced on the supply side. The quality filter, which was designed to source translatable articles, inadvertently maps the contours of the original problem.</p>
+<p>In effect, our clever multi-armed bandit - the <em>takkari donga -</em> needs to operate in English as well as Telugu. We will not just need to find articles to translate <em>to</em> Telugu, we also would need to find articles a few degrees removed from Telugu culture in English Wikipedia and perhaps work towards improving their quality as well.</p>
+</section>
+</section>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>In this paper, we have confirmed our core motivation: that there is a genuine tension between supply (articles in the English Wikipedia that a translator would like to translate) and demand (what gets read in Telugu Wikipedia). We have seen that the demand gap had collapsed in this evaluation - either interesting articles of high quality had no translations at all to Telugu, or that categories likely to be of interest to Telugu readers did not have high quality articles in English Wikipedia. The cold start proxy hypothesis - that we may use Hindi pageviews as a proxy for Telugu pageviews while Telugu pageviews build up - was not empirically justifiable.</p>
+<section id="next-steps" class="level3">
+<h3 class="anchored" data-anchor-id="next-steps">Next Steps</h3>
+<p>The code pipeline exists, and can be generated for any Wikipedia translator across any language pair. An immediate next step could be try the model out with more focussed categories or seed articles, whilst bearing in mind the quality of the articles. Other languages such as Kannada or Tamil could also be used as a cold start proxy.</p>
+<p>Alternatively, replacing the language-proxy demand gap with a normalized quality tier score (<code>quality_tier/3.0)</code> provides a content-based signal that is immune to the pageview degeneracy problem. Indeed, doing so gives us the following fallback shortlist:</p>
+<table class="caption-top table">
+<caption>Fallback Shortlist</caption>
+<thead>
+<tr class="header">
+<th>title</th>
+<th>cluster_id</th>
+<th>composite_score</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Zuo Zhuan</td>
+<td>0</td>
+<td>1.000000</td>
+</tr>
+<tr class="even">
+<td>Vijayawada</td>
+<td>1</td>
+<td>0.943860</td>
+</tr>
+<tr class="odd">
+<td>Robert Brooke-Popham</td>
+<td>2</td>
+<td>0.666667</td>
+</tr>
+<tr class="even">
+<td>Kalinga (region)</td>
+<td>3</td>
+<td>0.983580</td>
+</tr>
+<tr class="odd">
+<td>Michel de Montaigne</td>
+<td>4</td>
+<td>0.666667</td>
+</tr>
+<tr class="even">
+<td>Sarvepalli Radhakrishnan</td>
+<td>5</td>
+<td>0.923803</td>
+</tr>
+<tr class="odd">
+<td>Lord Mountbatten</td>
+<td>6</td>
+<td>0.999332</td>
+</tr>
+<tr class="even">
+<td>Jizi</td>
+<td>7</td>
+<td>0.666667</td>
+</tr>
+<tr class="odd">
+<td>Rajahmundry</td>
+<td>8</td>
+<td>0.925769</td>
+</tr>
+<tr class="even">
+<td>Trincomalee</td>
+<td>9</td>
+<td>0.666667</td>
+</tr>
+<tr class="odd">
+<td>Malayan campaign</td>
+<td>10</td>
+<td>0.666667</td>
+</tr>
+</tbody>
+</table>
+<p>(Scores of 0.067 reflect <code>quality_tier = 2</code> normalized to 2/3, while 1 reflects <code>quality_tier = 3</code>)</p>
+</section>
+<section id="conclusion" class="level3">
+<h3 class="anchored" data-anchor-id="conclusion">Conclusion</h3>
+<p>Whilst such tweaks can address some limitations in the model, to this multi-lingual writer, the problem perhaps is larger and must be seen across languages. The challenge here is not to bring English Wikipedia articles to Telugu Wikipedia, but to bring articles of interest to a Telugu-speaking milieu to <em>both</em> English and Telugu Wikipedias. <em>Takkari donga</em>, the clever multi-armed bandit, was multi-lingual all along. They need to write not just in Telugu, but in that other Indian language spoken and read widely, English.</p>
+</section>
+</section>
+<section id="bibliography" class="level2">
+
+
+
+
+</section>
+
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Bibliography</h2><div id="refs" class="references csl-bib-body hanging-indent">
+<div id="ref-Johnson_Aragón_2022" class="csl-entry">
+Johnson, Isaac, and Pablo Aragón. 2022. <span>“Research:cross-Lingual Article Quality Assessment - Meta-Wiki.”</span> In <em>Meta</em>. <a href="https://meta.wikimedia.org/wiki/Research:Cross-lingual_article_quality_assessment">https://meta.wikimedia.org/wiki/Research:Cross-lingual_article_quality_assessment</a>.
+</div>
+<div id="ref-ko2022a" class="csl-entry">
+Ko, Hyeyoung, Suyeon Lee, Yoonseo Park, and Anna Choi. 2022. <span>“A Survey of Recommendation Systems: Recommendation Models, Techniques, and Application Fields.”</span> <em>Electronics</em> 11 (1). <a href="https://doi.org/10.3390/electronics11010141">https://doi.org/10.3390/electronics11010141</a>.
+</div>
+<div id="ref-langview" class="csl-entry">
+<em>Langviews Analysis</em>. n.d. <a href="https://pageviews.wmcloud.org/langviews/?project=en.wikipedia.org&amp;platform=all-access&amp;agent=user&amp;start=2015-07-01&amp;end=2026-03-15&amp;page=Hyderabad&amp;sort=views&amp;direction=1&amp;view=list&amp;page=Hyderabad">https://pageviews.wmcloud.org/langviews/?project=en.wikipedia.org&amp;platform=all-access&amp;agent=user&amp;start=2015-07-01&amp;end=2026-03-15&amp;page=Hyderabad&amp;sort=views&amp;direction=1&amp;view=list&amp;page=Hyderabad</a>.
+</div>
+<div id="ref-silva2022" class="csl-entry">
+Silva, Nícollas, Heitor Werneck, Thiago Silva, Adriano C. M. Pereira, and Leonardo Rocha. 2022. <span>“Multi-Armed Bandits in Recommendation Systems: A Survey of the State-of-the-Art and Future Directions.”</span> <em>Expert Systems with Applications</em> 197: 116669. https://doi.org/<a href="https://doi.org/10.1016/j.eswa.2022.116669">https://doi.org/10.1016/j.eswa.2022.116669</a>.
+</div>
+<div id="ref-Spivak1988" class="csl-entry">
+Spivak, Gayatri Chakravorty. 1988. <em>Can the Subaltern Speak?</em> 271–313.
+</div>
+<div id="ref-wulczyn2016" class="csl-entry">
+Wulczyn, Ellery, Robert West, Leila Zia, and Jure Leskovec. 2016. <span>“WWW ’16: 25th International World Wide Web Conference.”</span> (Montréal Québec Canada), April 11, 975–85. <a href="https://doi.org/10.1145/2872427.2883077">https://doi.org/10.1145/2872427.2883077</a>.
+</div>
+<div id="ref-zhang2021" class="csl-entry">
+Zhang, Min, and Yiqun Liu. 2021. <span>“A Commentary of TikTok Recommendation Algorithms in MIT Technology Review 2021.”</span> <em>Fundamental Research</em> 1 (6): 846–47. https://doi.org/<a href="https://doi.org/10.1016/j.fmre.2021.11.015">https://doi.org/10.1016/j.fmre.2021.11.015</a>.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>With tongue firmly in cheek, the title makes a pun to not just the Multi-Armed Bandit problem, but also to Gayatri Chakravorty Spivak’s seminal essay, <em>Can the Subaltern Speak?</em> <span class="citation" data-cites="Spivak1988">(Spivak 1988)</span>. In that piece, Spivak famously questioned whether subalterns - colonial populations excluded from hierarchies of power - could express their native thought / reasoning without conforming to Western ways.↩︎</p></li>
+<li id="fn2"><p><em>Takkari Donga,</em> or the clever bandit, is also as a reference to much forgotten Telugu belter from early 2000’s where the singer celebrates the fact that he finds success going off the beaten path.↩︎</p></li>
+</ol>
+</section></div> ]]></description>
+  <category>multi-armed bandit</category>
+  <category>wikipedia</category>
+  <category>translations</category>
+  <category>GMM</category>
+  <category>spectral-clustering</category>
+  <category>recommendation model</category>
+  <guid>https://metamutator.github.io/posts/multi-armed-subaltern/multi_armed_subaltern.html</guid>
+  <pubDate>Sun, 05 Jul 2026 00:00:00 GMT</pubDate>
+  <media:content url="https://metamutator.github.io/posts/multi-armed-subaltern/english-tamil-dict-small.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>Taking Delight in the Scripts of Humans</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
