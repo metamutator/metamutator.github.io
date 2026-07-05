@@ -10,9 +10,7 @@ bibliography: references.bib
 
 ![Working through an English - Tamil dictionary. Photo by [Antony Hyson Seltran](https://unsplash.com/@hyson?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/an-open-book-sitting-on-top-of-a-table-pT4Cot62pE4?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)](./english-tamil-dict-small.jpg){#fig-hero fig-align="center"}
 
-## Foreword
-
-This is the final term project I did towards the completion of my [Master of Science in Analytics](https://www.analytics.gatech.edu) degree from Georgia Institute of Technology.
+_This is the final term project I did towards the completion of my [Master of Science in Analytics](https://www.analytics.gatech.edu) degree from Georgia Institute of Technology._
 
 ## Problem Statement[^1]
 
