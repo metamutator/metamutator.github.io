@@ -5,23 +5,23 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>metamutator.github.io</title>
-<link>https://metamutator.github.io/#category=english</link>
-<atom:link href="https://metamutator.github.io/index-english.xml" rel="self" type="application/rss+xml"/>
-<description>The Computational Appendix to yaksha.sg</description>
+<title>aksh.ai</title>
+<link>https://aksh.ai/#category=english</link>
+<atom:link href="https://aksh.ai/index-english.xml" rel="self" type="application/rss+xml"/>
+<description>Published term papers, essays, and other writings by Akshay Regulagedda</description>
 <generator>quarto-1.9.38</generator>
 <lastBuildDate>Fri, 21 Jul 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Bonjour Tout Le Monde!</title>
   <dc:creator>Akshay Regulagedda</dc:creator>
-  <link>https://metamutator.github.io/posts/hello-world/hello.html</link>
+  <link>https://aksh.ai/posts/hello-world/hello.html</link>
   <description><![CDATA[ 
 
 
 
 
 
-<p><img src="https://metamutator.github.io/posts/hello-world/hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
+<p><img src="https://aksh.ai/posts/hello-world/hello_world.jpg" class="img-fluid" alt="Hello"> Photo by <a href="https://unsplash.com/@artturijalli?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Artturi Jalli</a> on <a href="https://unsplash.com/photos/g5_rxRjvKmg?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></p>
 <section id="executive-summary" class="level2">
 <h2 class="anchored" data-anchor-id="executive-summary">Executive Summary</h2>
 <p>At long last, we have finally re-launched a new blog at great expense. I’m writing this in Markdown in Visual Studio Code, but can choose to add in visualisations or AI results through code-chunks. I can even write mathematical equations such as this easily: <img src="https://latex.codecogs.com/png.latex?f(c)=%5Cdfrac%7B1%7D%7Bb%E2%88%92a%7D%E2%88%AB%5Eb_af(x)%5C,dx.%20%5Cnonumber%20"></p>
@@ -112,9 +112,9 @@ font-style: inherit;">"Hello World!"</span>)</span></code></pre></div></div>
   <category>hello-world</category>
   <category>setup</category>
   <category>english</category>
-  <guid>https://metamutator.github.io/posts/hello-world/hello.html</guid>
+  <guid>https://aksh.ai/posts/hello-world/hello.html</guid>
   <pubDate>Fri, 21 Jul 2023 00:00:00 GMT</pubDate>
-  <media:content url="https://metamutator.github.io/posts/hello-world/hello_world.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://aksh.ai/posts/hello-world/hello_world.jpg" medium="image" type="image/jpeg"/>
 </item>
 </channel>
 </rss>

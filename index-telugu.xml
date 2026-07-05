@@ -5,11 +5,11 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>metamutator.github.io</title>
-<link>https://metamutator.github.io/#category=telugu</link>
-<atom:link href="https://metamutator.github.io/index-telugu.xml" rel="self" type="application/rss+xml"/>
-<description>The Computational Appendix to yaksha.sg</description>
+<title>aksh.ai</title>
+<link>https://aksh.ai/#category=telugu</link>
+<atom:link href="https://aksh.ai/index-telugu.xml" rel="self" type="application/rss+xml"/>
+<description>Published term papers, essays, and other writings by Akshay Regulagedda</description>
 <generator>quarto-1.9.38</generator>
-<lastBuildDate>Sun, 05 Jul 2026 09:45:20 GMT</lastBuildDate>
+<lastBuildDate>Sun, 05 Jul 2026 10:04:45 GMT</lastBuildDate>
 </channel>
 </rss>
