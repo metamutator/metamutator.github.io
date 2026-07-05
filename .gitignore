@@ -1,3 +1,5 @@
 /.quarto/
 /_site/
 .op/plugins/openai.json
+posts/.DS_Store
+.DS_Store
